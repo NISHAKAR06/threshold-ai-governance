@@ -1,1 +1,1 @@
-# app/__init__.py — Sentinel AI Governance Platform
+# app/__init__.py — THRESHOLD AI Governance Platform

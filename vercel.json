@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/:path*",
-      "destination": "https://api.example.com/api/:path*"
+      "src": "app/main.py",
+      "use": "@vercel/python"
     }
   ],
-  "redirects": [
-    { "source": "/", "destination": "/dashboard", "permanent": false }
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app/main.py"
+    }
   ]
 }

@@ -1,10 +1,10 @@
 /**
- * websocket.js — Sentinel AI Governance Platform
+ * websocket.js — THRESHOLD AI Governance Platform
  * Manages WebSocket connections for all four channels.
  * Auto-reconnect, heartbeat, typed event dispatch to page handlers.
  */
 
-const SentinelWS = (() => {
+const THRESHOLDWS = (() => {
   /* ── State ───────────────────────────────────────────────── */
   const sockets     = {};          // channel → WebSocket
   const listeners   = {};          // eventType → [handler]
@@ -44,7 +44,7 @@ const SentinelWS = (() => {
 
     const path  = CHANNELS[channel] || '/ws';
     const proto = location.protocol === 'https:' ? 'wss' : 'ws';
-    const token = SentinelAPI.getToken();
+    const token = THRESHOLDAPI.getToken();
     const url   = `${proto}://${location.host}${path}${token ? `?token=${encodeURIComponent(token)}` : ''}`;
 
     let ws;

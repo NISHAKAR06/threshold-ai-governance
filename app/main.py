@@ -1,5 +1,5 @@
 """
-main.py — Sentinel AI Governance Platform — FastAPI application entry point.
+main.py — THRESHOLD AI Governance Platform — FastAPI application entry point.
 """
 from __future__ import annotations
 
@@ -15,13 +15,13 @@ import uvicorn
 
 from app.config import settings
 from app.core.logger import app_logger, log_request, log_response
-from app.core.exceptions import SentinelBaseException, to_http_exception
+from app.core.exceptions import THRESHOLDBaseException, to_http_exception
 
 
 # ── Lifespan: startup + shutdown ──────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    app_logger.info("Sentinel AI starting up…")
+    app_logger.info("THRESHOLD AI starting up…")
     # ── Init DB tables ────────────────────────────────────────
     try:
         from app.database.init_db import init_db
@@ -33,7 +33,7 @@ async def lifespan(app: FastAPI):
 
     yield
 
-    app_logger.info("Sentinel AI shutting down.")
+    app_logger.info("THRESHOLD AI shutting down.")
 
 
 # ── Application factory ───────────────────────────────────────
@@ -66,8 +66,8 @@ async def logging_middleware(request: Request, call_next):
     return response
 
 # ── Domain exception handler ──────────────────────────────────
-@app.exception_handler(SentinelBaseException)
-async def sentinel_exception_handler(request: Request, exc: SentinelBaseException):
+@app.exception_handler(THRESHOLDBaseException)
+async def THRESHOLD_exception_handler(request: Request, exc: THRESHOLDBaseException):
     http_exc = to_http_exception(exc)
     return JSONResponse(
         status_code=http_exc.status_code,
@@ -128,7 +128,7 @@ async def profile_page(request: Request):
 @app.get("/logout",    include_in_schema=False)
 async def logout():
     response = RedirectResponse(url="/login")
-    response.delete_cookie("sentinel_token")
+    response.delete_cookie("THRESHOLD_token")
     return response
 
 # ── Auth routes ───────────────────────────────────────────────

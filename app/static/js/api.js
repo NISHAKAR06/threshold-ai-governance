@@ -1,5 +1,5 @@
 /**
- * api.js — Sentinel AI Governance Platform
+ * api.js — THRESHOLD AI Governance Platform
  * Centralised async Fetch client with:
  *   - Automatic JWT injection
  *   - Retry logic (exponential backoff)
@@ -8,16 +8,16 @@
  *   - All real FastAPI /api/v1/* endpoints
  */
 
-const SentinelAPI = (() => {
+const THRESHOLDAPI = (() => {
   /* ── Config ──────────────────────────────────────────────── */
   const BASE    = '/api/v1';
   const MAX_RETRY = 2;
   const RETRY_DELAY_MS = 500;
 
   /* ── Token helpers ───────────────────────────────────────── */
-  const getToken  = () => localStorage.getItem('sentinel_token') || sessionStorage.getItem('sentinel_token');
-  const setToken  = (t, remember = false) => (remember ? localStorage : sessionStorage).setItem('sentinel_token', t);
-  const clearToken = () => { localStorage.removeItem('sentinel_token'); sessionStorage.removeItem('sentinel_token'); };
+  const getToken  = () => localStorage.getItem('THRESHOLD_token') || sessionStorage.getItem('THRESHOLD_token');
+  const setToken  = (t, remember = false) => (remember ? localStorage : sessionStorage).setItem('THRESHOLD_token', t);
+  const clearToken = () => { localStorage.removeItem('THRESHOLD_token'); sessionStorage.removeItem('THRESHOLD_token'); };
 
   /* ── Loading state ───────────────────────────────────────── */
   let _pending = 0;
@@ -119,6 +119,7 @@ const SentinelAPI = (() => {
   /* ── Governance ──────────────────────────────────────────── */
   const governance = {
     assess:   (actionId)  => get(`/governance/assess/${actionId}`, { silent: true }),
+    latest:   ()          => get('/governance/latest', { silent: true }),
     decide:   (payload)   => post('/governance/decide', payload),
     policies: ()          => get('/governance/policies', { silent: true }),
   };

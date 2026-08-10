@@ -13,7 +13,7 @@ const AuditPage = (() => {
       if (filters.search)           params.query      = filters.search;
       if (filters.dateFrom)         params.date_from  = filters.dateFrom;
       if (filters.dateTo)           params.date_to    = filters.dateTo;
-      const data = await SentinelAPI.audit.list(params);
+      const data = await THRESHOLDAPI.audit.list(params);
       allLogs  = data.items || data || [];
       filtered = allLogs;
       page = 1;
@@ -155,7 +155,7 @@ const AuditPage = (() => {
       const params = {};
       if (filters.risk !== 'all')   params.risk_level = filters.risk;
       if (filters.status !== 'all') params.outcome    = filters.status;
-      await SentinelAPI.downloadFile(`/api/v1/audit/export/csv?${new URLSearchParams(params)}`,
+      await THRESHOLDAPI.downloadFile(`/api/v1/audit/export/csv?${new URLSearchParams(params)}`,
         `audit_logs_${new Date().toISOString().slice(0,10)}.csv`);
     } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Export failed', e.message); }
   }
@@ -176,7 +176,7 @@ const AuditPage = (() => {
 
   /* ── WS live ─────────────────────────────────────────────── */
   function _initWS() {
-    SentinelWS.on('audit_new', entry => {
+    THRESHOLDWS.on('audit_new', entry => {
       allLogs.unshift(entry);
       _applyFilters();
     });

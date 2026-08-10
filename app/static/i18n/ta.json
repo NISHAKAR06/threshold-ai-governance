@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Sentinel AI",
+    "name": "THRESHOLD AI",
     "tagline": "AI ஆட்சி தளம்",
     "version": "v2.0"
   },
@@ -62,7 +62,7 @@
     "subtitle": "நிர்வகிக்கப்பட்ட AI செயல்களுடன் தொடர்பு கொள்ளுங்கள்",
     "placeholder": "AI செய்ய வேண்டிய செயலை விவரிக்கவும்...",
     "send": "அனுப்பு",
-    "thinking": "Sentinel உங்கள் கோரிக்கையை பகுப்பாய்வு செய்கிறது...",
+    "thinking": "THRESHOLD உங்கள் கோரிக்கையை பகுப்பாய்வு செய்கிறது...",
     "typing": "தட்டச்சு செய்கிறது...",
     "suggested_prompts": "பரிந்துரைக்கப்பட்ட கோரிக்கைகள்",
     "clear_conversation": "உரையாடலை அழி",
@@ -80,9 +80,9 @@
     "conversation_history": "உரையாடல் வரலாறு",
     "new_conversation": "புதிய உரையாடல்",
     "you": "நீங்கள்",
-    "assistant_label": "Sentinel AI",
+    "assistant_label": "THRESHOLD AI",
     "empty_state": "தொடங்க உரையாடலை ஆரம்பிக்கவும்",
-    "empty_hint": "உங்கள் உள்கட்டமைப்பில் நிர்வகிக்கப்பட்ட செயல்களை செய்ய Sentinel AI யிடம் கேளுங்கள்",
+    "empty_hint": "உங்கள் உள்கட்டமைப்பில் நிர்வகிக்கப்பட்ட செயல்களை செய்ய THRESHOLD AI யிடம் கேளுங்கள்",
     "copy": "நகலெடு",
     "copied": "நகலெடுக்கப்பட்டது!"
   },
@@ -311,7 +311,7 @@
     "select": "தேர்ந்தெடு"
   },
   "login": {
-    "title": "Sentinel AI இல் உள்நுழைக",
+    "title": "THRESHOLD AI இல் உள்நுழைக",
     "subtitle": "நிறுவன AI ஆட்சி தளம்",
     "username": "பயனர்பெயர்",
     "password": "கடவுச்சொல்",

@@ -73,7 +73,7 @@ TOKEN_HEADER = "Authorization"
 TOKEN_PREFIX = "Bearer"
 
 # ── App metadata ─────────────────────────────────────────────
-APP_NAME    = "Sentinel AI"
+APP_NAME    = "THRESHOLD AI"
 APP_VERSION = "2.0.0"
 
 # ── Risk level thresholds ─────────────────────────────────────

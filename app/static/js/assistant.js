@@ -30,13 +30,13 @@ const AssistantPage = (() => {
     const time = _rel(ts || new Date());
     const isUser = role === 'user';
     const div = document.createElement('div');
-    div.className = `message-row ${isUser ? 'user' : 'sentinel'}`;
+    div.className = `message-row ${isUser ? 'user' : 'THRESHOLD'}`;
     div.innerHTML = `
-      <div class="message-avatar ${isUser ? 'user' : 'sentinel'}">${isUser ? '<i class="fa-solid fa-user"></i>' : 'AI'}</div>
+      <div class="message-avatar ${isUser ? 'user' : 'THRESHOLD'}">${isUser ? '<i class="fa-solid fa-user"></i>' : 'AI'}</div>
       <div class="message-content">
-        <div class="message-bubble ${isUser ? 'user' : 'sentinel'}">${_fmt(content)}</div>
+        <div class="message-bubble ${isUser ? 'user' : 'THRESHOLD'}">${_fmt(content)}</div>
         <div class="message-meta">
-          <span class="message-time">${isUser ? 'You' : 'Sentinel AI'} · ${time}</span>
+          <span class="message-time">${isUser ? 'You' : 'THRESHOLD AI'} · ${time}</span>
         </div>
       </div>`;
     refs.msgs.appendChild(div);
@@ -49,13 +49,13 @@ const AssistantPage = (() => {
     if (!refs.msgs) return;
     const div = document.createElement('div');
     div.id = 'thinking-row';
-    div.className = 'message-row sentinel';
+    div.className = 'message-row THRESHOLD';
     div.innerHTML = `
-      <div class="message-avatar sentinel">AI</div>
+      <div class="message-avatar THRESHOLD">AI</div>
       <div class="message-content">
         <div class="thinking-bubble">
           <div class="loading-dots"><span></span><span></span><span></span></div>
-          <span class="thinking-text text-sm">Sentinel is analysing your request…</span>
+          <span class="thinking-text text-sm">THRESHOLD is analysing your request…</span>
         </div>
       </div>`;
     refs.msgs.appendChild(div);
@@ -153,7 +153,7 @@ const AssistantPage = (() => {
     _showThinking();
 
     try {
-      const res = await SentinelAPI.chat.send({
+      const res = await THRESHOLDAPI.chat.send({
         message:         text,
         conversation_id: convId,
       });
@@ -176,7 +176,7 @@ const AssistantPage = (() => {
   /* ── Approve / reject ────────────────────────────────────── */
   async function approveAction(actionId) {
     try {
-      await SentinelAPI.review.approve(actionId, 'Approved from AI Assistant');
+      await THRESHOLDAPI.review.approve(actionId, 'Approved from AI Assistant');
       if (typeof Toast !== 'undefined') Toast.success('Action approved');
       _clearPreview();
     } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Approval failed', e.message); }
@@ -190,7 +190,7 @@ const AssistantPage = (() => {
         type: 'danger',
         onConfirm: async () => {
           try {
-            await SentinelAPI.review.reject(actionId, 'Rejected from AI Assistant');
+            await THRESHOLDAPI.review.reject(actionId, 'Rejected from AI Assistant');
             if (typeof Toast !== 'undefined') Toast.danger('Action rejected');
             _clearPreview();
           } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); }
@@ -198,7 +198,7 @@ const AssistantPage = (() => {
       });
     } else {
       if (!confirm('Reject this action?')) return;
-      await SentinelAPI.review.reject(actionId, 'Rejected from AI Assistant').catch(() => {});
+      await THRESHOLDAPI.review.reject(actionId, 'Rejected from AI Assistant').catch(() => {});
       _clearPreview();
     }
   }
@@ -268,14 +268,14 @@ const AssistantPage = (() => {
       if (refs.charCount) refs.charCount.textContent = refs.ta.value.length;
     });
     refs.clear?.addEventListener('click', async () => {
-      await SentinelAPI.chat.clear().catch(() => {});
+      await THRESHOLDAPI.chat.clear().catch(() => {});
       convId = null;
       messages.length = 0;
       if (refs.msgs) refs.msgs.innerHTML = `
         <div class="chat-welcome">
           <div class="chat-welcome-icon"><i class="fa-solid fa-robot"></i></div>
           <h2 class="chat-welcome-title">Start a conversation to get started</h2>
-          <p class="chat-welcome-desc">Ask Sentinel AI to perform governed operations on your infrastructure</p>
+          <p class="chat-welcome-desc">Ask THRESHOLD AI to perform governed operations on your infrastructure</p>
         </div>`;
       _clearPreview();
     });

@@ -1,5 +1,5 @@
 /* ============================================================
-   SENTINEL AI — DASHBOARD PAGE STYLES
+   THRESHOLD AI — DASHBOARD PAGE STYLES
    ============================================================ */
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-5);margin-bottom:var(--space-8)}
 .dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5);margin-bottom:var(--space-5)}

@@ -1,15 +1,24 @@
 /* ============================================================
-   SENTINEL AI — AI ASSISTANT PAGE STYLES
+   THRESHOLD AI — AI ASSISTANT PAGE STYLES
    assistant.css
    ============================================================ */
 
 /* ── Layout ──────────────────────────────────────────────── */
+.assistant-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
 .assistant-layout {
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: var(--space-5);
-  height: calc(100vh - var(--navbar-height) - var(--space-8) * 2);
+  flex: 1;
   min-height: 0;
+  overflow: hidden;
 }
 
 /* ── Chat Panel ──────────────────────────────────────────── */
@@ -38,7 +47,7 @@
   align-items: center;
   gap: var(--space-3);
 }
-.chat-sentinel-avatar {
+.chat-THRESHOLD-avatar {
   width: 36px; height: 36px;
   border-radius: var(--border-radius);
   background: linear-gradient(135deg, var(--color-primary), #7C3AED);
@@ -49,12 +58,12 @@
   flex-shrink: 0;
   letter-spacing: -0.5px;
 }
-.chat-sentinel-name {
+.chat-THRESHOLD-name {
   font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--text-primary);
 }
-.chat-sentinel-status {
+.chat-THRESHOLD-status {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -165,7 +174,7 @@
   display: flex; align-items: center; justify-content: center;
   font-size: 12px; font-weight: 600;
 }
-.message-avatar.sentinel {
+.message-avatar.THRESHOLD {
   background: linear-gradient(135deg, var(--color-primary), #7C3AED);
   color: #fff;
 }
@@ -186,7 +195,7 @@
   word-break: break-word;
   position: relative;
 }
-.message-bubble.sentinel {
+.message-bubble.THRESHOLD {
   background: var(--bg-surface-2);
   color: var(--text-primary);
   border: 1px solid var(--border-color);

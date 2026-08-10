@@ -182,7 +182,7 @@ class LLMService:
                 "The action will now proceed through the governance workflow for risk assessment."
             )
         return (
-            "I have received your request and am processing it through the Sentinel AI "
+            "I have received your request and am processing it through the THRESHOLD AI "
             "governance pipeline. Please review the action details on the right."
         )
 

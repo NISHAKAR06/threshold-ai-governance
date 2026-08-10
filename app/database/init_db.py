@@ -20,7 +20,7 @@ import app.models.audit      # noqa: F401
 import app.models.settings   # noqa: F401
 import app.models.action     # noqa: F401
 
-logger = get_logger("sentinel.init_db")
+logger = get_logger("THRESHOLD.init_db")
 
 
 async def init_db(seed: bool = False) -> None:

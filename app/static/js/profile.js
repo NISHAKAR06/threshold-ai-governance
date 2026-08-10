@@ -4,7 +4,7 @@
 const ProfilePage = (() => {
   async function load() {
     try {
-      const data = await SentinelAPI.profile.get();
+      const data = await THRESHOLDAPI.profile.get();
       _populate(data);
     } catch (e) { console.warn('[Profile]', e.message); }
   }
@@ -66,7 +66,7 @@ const ProfilePage = (() => {
         email:      document.getElementById('profile-email')?.value.trim(),
         department: document.getElementById('profile-department')?.value.trim(),
       };
-      await SentinelAPI.profile.update(payload);
+      await THRESHOLDAPI.profile.update(payload);
       // Reflect changes immediately
       const dName = document.getElementById('display-name');
       const dDept = document.getElementById('display-dept');

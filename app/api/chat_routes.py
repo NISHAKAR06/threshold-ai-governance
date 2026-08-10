@@ -35,7 +35,7 @@ def _build_services(db: AsyncSession):
     return audit_repo, action_repo, review_repo
 
 
-@router.post("/send", response_model=ChatResponse, summary="Send a chat message to Sentinel AI")
+@router.post("/send", response_model=ChatResponse, summary="Send a chat message to THRESHOLD AI")
 async def send_chat(
     payload: ChatRequest,
     request: Request,

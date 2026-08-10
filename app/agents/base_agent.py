@@ -1,5 +1,5 @@
 """
-base_agent.py — Abstract base for all Sentinel AI agents.
+base_agent.py — Abstract base for all THRESHOLD AI agents.
 Every agent must implement execute(context) and nothing else is public.
 """
 from __future__ import annotations

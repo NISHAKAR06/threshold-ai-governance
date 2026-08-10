@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🪬 Sentinel AI Governance Platform
+# 🪬 THRESHOLD AI Governance Platform
 **Enterprise AI Governance, Observability & Graduated Autonomy Engine**
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
@@ -16,12 +16,12 @@
 ---
 
 ## 🚀 Live Production Deployments
-- **Web App**: [https://sentinel-ai-governance.onrender.com/](https://sentinel-ai-governance.onrender.com/)
+- **Web App**: [https://threshold-ai-governance.onrender.com/](https://threshold-ai-governance.onrender.com/)
 
 ---
 
 ## 📖 Overview
-**Sentinel AI Governance Platform** is an enterprise-grade "Trust Layer" designed to securely manage, monitor, and audit autonomous AI systems. As organizations scale AI agents into production, the lack of observability and compliance guardrails creates significant operational risk. Sentinel bridges this gap.
+**THRESHOLD AI Governance Platform** is an enterprise-grade "Trust Layer" designed to securely manage, monitor, and audit autonomous AI systems. As organizations scale AI agents into production, the lack of observability and compliance guardrails creates significant operational risk. THRESHOLD bridges this gap.
 
 Built on a high-performance FastAPI architecture and natively integrated with Google Gemini, this platform provides:
 
@@ -29,7 +29,7 @@ Built on a high-performance FastAPI architecture and natively integrated with Go
 - **Graduated Autonomy**: Enforced policy checks and automated Human-in-the-Loop (HITL) workflows when agents attempt high-risk or uncertain operations.
 - **Real-time Observability**: Live monitoring of agent behaviors, risk metrics, and system health via bi-directional WebSockets.
 
-By wrapping AI execution in strict, observable guardrails, Sentinel empowers enterprises to confidently deploy autonomous systems while maintaining absolute alignment with corporate and regulatory standards.
+By wrapping AI execution in strict, observable guardrails, THRESHOLD empowers enterprises to confidently deploy autonomous systems while maintaining absolute alignment with corporate and regulatory standards.
 
 ## ✨ Core Capabilities
 
@@ -44,7 +44,7 @@ By wrapping AI execution in strict, observable guardrails, Sentinel empowers ent
 
 ## 🏛️ System Architecture
 
-The Sentinel platform operates through a deeply layered architecture, ensuring that every AI action is validated, governed, and completely auditable.
+The THRESHOLD platform operates through a deeply layered architecture, ensuring that every AI action is validated, governed, and completely auditable.
 
 ```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -238,7 +238,7 @@ The Sentinel platform operates through a deeply layered architecture, ensuring t
 ## 📂 Repository Structure
 
 ```text
-sentinel-ai-governance/
+threshold-ai-governance/
 │
 ├── app/
 │   │
@@ -423,8 +423,8 @@ sentinel-ai-governance/
 Clone the repository and isolate dependencies within a virtual environment:
 
 ```bash
-git clone https://github.com/your-org/sentinel-ai-governance.git
-cd sentinel-ai-governance
+git clone https://github.com/your-org/threshold-ai-governance.git
+cd threshold-ai-governance
 
 # Initialize and activate the virtual environment
 python -m venv .venv
@@ -439,7 +439,7 @@ The platform relies heavily on environment variables for security and configurat
 
 ```ini
 # Application Settings
-APP_NAME="Sentinel AI Governance"
+APP_NAME="THRESHOLD AI Governance"
 APP_VERSION="1.0.0"
 DEBUG=true
 PORT=8000
@@ -447,7 +447,7 @@ HOST="0.0.0.0"
 
 # Database Configuration
 # Format: postgresql+asyncpg://user:password@host:port/dbname
-DATABASE_URL="postgresql+asyncpg://postgres:postgres@localhost:5432/sentinel_db"
+DATABASE_URL="postgresql+asyncpg://postgres:postgres@localhost:5432/THRESHOLD_db"
 
 # Security Credentials
 SECRET_KEY="<generate-a-secure-random-string>"
@@ -476,17 +476,17 @@ uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 
 ## 🐳 Deployment Architecture
 
-The Sentinel platform is container-native and designed to run anywhere.
+The THRESHOLD platform is container-native and designed to run anywhere.
 
 ### Docker Infrastructure
 A robust `Dockerfile` and `docker-compose.yml` are provided for immediate containerized deployment (ideal for AWS EC2, ECS, or GCP).
 
 ```bash
 # Build the application image
-docker build -t sentinel-ai-governance .
+docker build -t threshold-ai-governance .
 
 # Launch as a background daemon
-docker run -d -p 8000:8000 --env-file .env sentinel-ai-governance
+docker run -d -p 8000:8000 --env-file .env threshold-ai-governance
 ```
 
 ### Serverless & Vercel
@@ -498,7 +498,7 @@ This repository is pre-configured with a `vercel.json` file, enabling zero-confi
 
 ## 🧪 Quality Assurance & Testing
 
-Sentinel maintains strict quality controls. Execute the comprehensive Pytest suite to validate the core routing, database abstractions, and agent logic:
+THRESHOLD maintains strict quality controls. Execute the comprehensive Pytest suite to validate the core routing, database abstractions, and agent logic:
 
 ```bash
 # Run unit and integration tests with verbosity

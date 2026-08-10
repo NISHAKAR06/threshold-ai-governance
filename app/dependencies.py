@@ -13,7 +13,7 @@ from app.core.security import decode_access_token, extract_token
 from app.database.session import AsyncSessionLocal
 from app.core.logger import get_logger
 
-logger = get_logger("sentinel.deps")
+logger = get_logger("THRESHOLD.deps")
 
 
 # ── Database session ──────────────────────────────────────────

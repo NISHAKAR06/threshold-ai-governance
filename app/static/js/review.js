@@ -14,7 +14,7 @@ const ReviewPage = (() => {
       if (filters.status !== 'all')   params.status = filters.status;
       if (filters.search)             params.query  = filters.search;
       if (filters.priority !== 'all') params.priority = filters.priority;
-      const data = await SentinelAPI.review.list(params);
+      const data = await THRESHOLDAPI.review.list(params);
       allRows = data.items || data || [];
       _applyFilters();
       _updateStats();
@@ -202,7 +202,7 @@ const ReviewPage = (() => {
 
   async function _approve(id) {
     try {
-      await SentinelAPI.review.approve(id, '');
+      await THRESHOLDAPI.review.approve(id, '');
       allRows = allRows.filter(r => r.id !== id);
       selected.delete(id);
       _applyFilters(); _updateStats(); _updateBulkBar();
@@ -220,7 +220,7 @@ const ReviewPage = (() => {
     } else {
       const reason = prompt('Reason for rejection:');
       if (reason === null) return;
-      SentinelAPI.review.reject(id, reason || 'Rejected')
+      THRESHOLDAPI.review.reject(id, reason || 'Rejected')
         .then(() => {
           allRows = allRows.filter(r => r.id !== id);
           _applyFilters(); _updateStats();
@@ -247,7 +247,7 @@ const ReviewPage = (() => {
       const reason = document.getElementById('reject-reason')?.value.trim();
       if (!id || !reason) return;
       try {
-        await SentinelAPI.review.reject(id, reason);
+        await THRESHOLDAPI.review.reject(id, reason);
         if (typeof Modal !== 'undefined') Modal.close('reject-modal');
         allRows = allRows.filter(r => r.id !== id);
         _applyFilters(); _updateStats();
@@ -291,7 +291,7 @@ const ReviewPage = (() => {
     try {
       const params = {};
       if (filters.status !== 'all') params.status = filters.status;
-      await SentinelAPI.downloadFile(`/api/v1/review/export?${new URLSearchParams(params)}`,
+      await THRESHOLDAPI.downloadFile(`/api/v1/review/export?${new URLSearchParams(params)}`,
         `review_queue_${new Date().toISOString().slice(0,10)}.csv`);
     } catch {
       // fallback: build CSV client-side
@@ -307,11 +307,11 @@ const ReviewPage = (() => {
 
   /* ── WebSocket live ──────────────────────────────────────── */
   function _initWS() {
-    SentinelWS.on('review_new', async () => {
+    THRESHOLDWS.on('review_new', async () => {
       await load();
       if (typeof Toast !== 'undefined') Toast.info('New review assigned');
     });
-    SentinelWS.on('review_update', data => {
+    THRESHOLDWS.on('review_update', data => {
       const idx = allRows.findIndex(r => r.id === data.review_id);
       if (idx !== -1) {
         allRows[idx].status = data.status;
@@ -365,7 +365,7 @@ const ReviewPage = (() => {
     // Bulk approve
     document.getElementById('bulk-approve-selected')?.addEventListener('click', async () => {
       const ids = [...selected];
-      await Promise.all(ids.map(id => SentinelAPI.review.approve(id, 'Bulk approval').catch(() => {})));
+      await Promise.all(ids.map(id => THRESHOLDAPI.review.approve(id, 'Bulk approval').catch(() => {})));
       ids.forEach(id => { allRows = allRows.filter(r => r.id !== id); selected.delete(id); });
       _applyFilters(); _updateStats(); _updateBulkBar();
       if (typeof Toast !== 'undefined') Toast.success(`${ids.length} items approved`);

@@ -8,7 +8,7 @@ const SettingsPage = (() => {
   /* ── Load ────────────────────────────────────────────────── */
   async function load() {
     try {
-      const data = await SentinelAPI.settings.get();
+      const data = await THRESHOLDAPI.settings.get();
       _populate(data);
     } catch (e) {
       console.warn('[Settings] Using defaults:', e.message);
@@ -103,7 +103,7 @@ const SettingsPage = (() => {
     if (btn) { btn.disabled = true; btn.innerHTML = '<span class="spinner spinner-sm"></span> Saving…'; }
     try {
       const payload = _collect();
-      await SentinelAPI.settings.save(payload);
+      await THRESHOLDAPI.settings.save(payload);
       // Apply immediately
       if (typeof ThemeManager !== 'undefined') ThemeManager.apply(payload.theme);
       if (typeof I18n !== 'undefined') await I18n.load(payload.language);

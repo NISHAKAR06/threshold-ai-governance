@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Sentinel AI",
+    "name": "THRESHOLD AI",
     "tagline": "AI शासन प्लेटफ़ॉर्म",
     "version": "v2.0"
   },
@@ -62,7 +62,7 @@
     "subtitle": "नियंत्रित AI क्रियाओं के साथ इंटरैक्ट करें",
     "placeholder": "उस क्रिया का वर्णन करें जो आप AI से करवाना चाहते हैं...",
     "send": "भेजें",
-    "thinking": "Sentinel आपके अनुरोध का विश्लेषण कर रहा है...",
+    "thinking": "THRESHOLD आपके अनुरोध का विश्लेषण कर रहा है...",
     "typing": "टाइप कर रहा है...",
     "suggested_prompts": "सुझाए गए संकेत",
     "clear_conversation": "बातचीत साफ़ करें",
@@ -80,9 +80,9 @@
     "conversation_history": "बातचीत इतिहास",
     "new_conversation": "नई बातचीत",
     "you": "आप",
-    "assistant_label": "Sentinel AI",
+    "assistant_label": "THRESHOLD AI",
     "empty_state": "शुरू करने के लिए बातचीत प्रारंभ करें",
-    "empty_hint": "अपने इन्फ्रास्ट्रक्चर पर नियंत्रित ऑपरेशन करने के लिए Sentinel AI से पूछें",
+    "empty_hint": "अपने इन्फ्रास्ट्रक्चर पर नियंत्रित ऑपरेशन करने के लिए THRESHOLD AI से पूछें",
     "copy": "कॉपी करें",
     "copied": "कॉपी हो गया!"
   },
@@ -311,7 +311,7 @@
     "select": "चुनें"
   },
   "login": {
-    "title": "Sentinel AI में साइन इन करें",
+    "title": "THRESHOLD AI में साइन इन करें",
     "subtitle": "एंटरप्राइज AI शासन प्लेटफ़ॉर्म",
     "username": "उपयोगकर्ता नाम",
     "password": "पासवर्ड",

@@ -174,3 +174,74 @@ async def get_policies():
             for r in rules
         ]
     }
+
+
+@router.get("/latest", summary="Get governance assessment for the most recent action")
+async def assess_latest(
+    db: AsyncSession = Depends(get_db),
+    current_user: Optional[dict] = Depends(get_optional_user),
+):
+    """Returns the governance assessment for the most recently submitted action."""
+    repo = ActionRepository(db)
+    actions = await repo.recent(limit=1)
+    if not actions:
+        return {"action_id": None, "empty": True}
+    action = actions[0]
+
+    raw_breakdown = action.risk_breakdown or {}
+    breakdown_items = raw_breakdown.get("breakdown", [])
+    risk_factors = [
+        RiskBreakdownItem(
+            factor=item.get("factor", "Unknown"),
+            score=float(item.get("score", 0)),
+            weight=float(item.get("weight", 0)),
+            contribution=float(item.get("contribution", 0)),
+            icon=item.get("icon", "fa-circle"),
+        )
+        for item in breakdown_items
+    ]
+
+    violations = action.policy_violations or []
+    policy_rules = [
+        PolicyRuleResult(
+            rule_id=f"P-0{i+1}",
+            name=v,
+            description=v,
+            status=PolicyResult.WARN,
+            icon="fa-triangle-exclamation",
+        )
+        for i, v in enumerate(violations)
+    ]
+    if not policy_rules:
+        policy_rules = [
+            PolicyRuleResult(
+                rule_id="P-00",
+                name="All Policy Rules Passed",
+                description="No policy violations detected",
+                status=PolicyResult.PASS,
+                icon="fa-shield-check",
+            )
+        ]
+
+    timeline = [
+        {"label": "Request received",     "icon": "fa-inbox",              "type": "primary",  "timestamp": action.created_at.isoformat(), "detail": action.intent},
+        {"label": "Risk assessed",         "icon": "fa-triangle-exclamation","type": "warning", "timestamp": action.created_at.isoformat(), "detail": f"Risk score: {action.risk_score}"},
+        {"label": "Policy evaluated",      "icon": "fa-shield-halved",      "type": "info",     "timestamp": action.created_at.isoformat(), "detail": f"Policy result: {action.policy_result}"},
+        {"label": f"Decision: {action.decision.upper()}", "icon": "fa-scale-balanced", "type": "primary", "timestamp": action.updated_at.isoformat(), "detail": ""},
+    ]
+
+    return GovernanceAssessmentResponse(
+        action_id=action.id,
+        current_stage=action.workflow_stage,
+        risk_score=action.risk_score,
+        risk_level=action.risk_level,
+        risk_factors=risk_factors,
+        policy_rules=policy_rules,
+        decision=action.decision,
+        confidence=action.confidence,
+        reversible=(action.reversibility == "reversible"),
+        reversibility=action.reversibility,
+        data_scope=action.data_scope,
+        regulations=[action.regulatory_category] if action.regulatory_category != "none" else [],
+        timeline=timeline,
+    )

@@ -1,5 +1,5 @@
 /**
- * app.js — Sentinel AI Governance Platform
+ * app.js — THRESHOLD AI Governance Platform
  * Core application bootstrap: Theme · i18n · Sidebar · Navbar ·
  * Toast · Modal · Dropdown · Notification Panel · Keyboard nav
  */
@@ -8,7 +8,7 @@
    1. THEME MANAGER
 ═══════════════════════════════════════════════════════════ */
 const ThemeManager = (() => {
-  const KEY = 'sentinel_theme';
+  const KEY = 'THRESHOLD_theme';
   const DARK = 'dark';
   const LIGHT = 'light';
 
@@ -55,7 +55,7 @@ const ThemeManager = (() => {
    2. I18N MANAGER
 ═══════════════════════════════════════════════════════════ */
 const I18n = (() => {
-  const KEY = 'sentinel_lang';
+  const KEY = 'THRESHOLD_lang';
   let translations = {};
   let currentLang  = 'en';
 
@@ -129,7 +129,7 @@ const I18n = (() => {
    3. SIDEBAR MANAGER
 ═══════════════════════════════════════════════════════════ */
 const SidebarManager = (() => {
-  const KEY     = 'sentinel_sidebar';
+  const KEY     = 'THRESHOLD_sidebar';
   let sidebar   = null;
   let overlay   = null;
   let collapsed = false;
@@ -650,7 +650,7 @@ const TimeFormatter = (() => {
    13. WEBSOCKET LISTENERS (app-level)
 ═══════════════════════════════════════════════════════════ */
 function _initWSListeners() {
-  SentinelWS.on('notification', data => {
+  THRESHOLDWS.on('notification', data => {
     NotificationPanel.addNotification({
       title: data.message ?? data.title,
       time: TimeFormatter.relative(data.timestamp ?? new Date()),
@@ -660,7 +660,7 @@ function _initWSListeners() {
     Toast.info(data.title ?? I18n.t('notifications.system_alert'), data.message);
   });
 
-  SentinelWS.on('review_assigned', data => {
+  THRESHOLDWS.on('review_assigned', data => {
     const badge = document.querySelector('.nav-item[href="/review"] .nav-item-badge');
     if (badge) badge.textContent = parseInt(badge.textContent || '0') + 1;
     Toast.warning(I18n.t('notifications.review_assigned'), data?.action ?? '');

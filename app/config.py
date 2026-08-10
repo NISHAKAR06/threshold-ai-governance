@@ -1,5 +1,5 @@
 """
-config.py — Sentinel AI Governance Platform
+config.py — THRESHOLD AI Governance Platform
 Centralised application configuration via environment variables.
 """
 import os
@@ -10,10 +10,10 @@ from typing import List
 
 class Settings:
     # ── App ──────────────────────────────────────────────────
-    APP_NAME: str         = "Sentinel AI Governance"
+    APP_NAME: str         = "THRESHOLD AI Governance"
     APP_VERSION: str      = "2.0.0"
     DEBUG: bool           = os.getenv("DEBUG", "false").lower() == "true"
-    SECRET_KEY: str       = os.getenv("SECRET_KEY", "sentinel-secret-change-in-production-x9k2p")
+    SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
 
     # ── Server ───────────────────────────────────────────────
     HOST: str             = os.getenv("HOST", "0.0.0.0")
@@ -26,7 +26,7 @@ class Settings:
 
     # ── Database ──────────────────────────────────────────────
     # Defaults to SQLite for local dev; set DATABASE_URL in .env for PostgreSQL
-    _default_db_path: Path = BASE_DIR.parent / "sentinel.db"
+    _default_db_path: Path = BASE_DIR.parent / "THRESHOLD.db"
     DATABASE_URL: str     = os.getenv(
         "DATABASE_URL",
         f"sqlite+aiosqlite:///{_default_db_path}"

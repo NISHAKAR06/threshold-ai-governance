@@ -1,5 +1,5 @@
 """
-logger.py — Structured JSON logging for Sentinel AI.
+logger.py — Structured JSON logging for THRESHOLD AI.
 """
 import logging
 import json
@@ -52,14 +52,14 @@ def get_logger(name: str, level: str = "INFO") -> logging.Logger:
 
 
 # ── Module-level convenience loggers ─────────────────────────
-app_logger      = get_logger("sentinel.app")
-api_logger      = get_logger("sentinel.api")
-agent_logger    = get_logger("sentinel.agent")
-engine_logger   = get_logger("sentinel.engine")
-service_logger  = get_logger("sentinel.service")
-repo_logger     = get_logger("sentinel.repo")
-ws_logger       = get_logger("sentinel.ws")
-audit_logger    = get_logger("sentinel.audit")
+app_logger      = get_logger("THRESHOLD.app")
+api_logger      = get_logger("THRESHOLD.api")
+agent_logger    = get_logger("THRESHOLD.agent")
+engine_logger   = get_logger("THRESHOLD.engine")
+service_logger  = get_logger("THRESHOLD.service")
+repo_logger     = get_logger("THRESHOLD.repo")
+ws_logger       = get_logger("THRESHOLD.ws")
+audit_logger    = get_logger("THRESHOLD.audit")
 
 
 # ── Request/Response helpers ──────────────────────────────────

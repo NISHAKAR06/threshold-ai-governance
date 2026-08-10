@@ -180,8 +180,8 @@ const DashboardPage = (() => {
   async function loadAll() {
     try {
       const [stats, health] = await Promise.all([
-        SentinelAPI.dashboard.stats(),
-        SentinelAPI.dashboard.health(),
+        THRESHOLDAPI.dashboard.stats(),
+        THRESHOLDAPI.dashboard.health(),
       ]);
       _renderStats(stats);
       _renderMiniBar(stats.hourly_activity || Array(24).fill(0));
@@ -203,7 +203,7 @@ const DashboardPage = (() => {
 
   /* ── WebSocket live updates ──────────────────────────────── */
   function _initWS() {
-    SentinelWS.on('dashboard_update', data => {
+    THRESHOLDWS.on('dashboard_update', data => {
       if (data?.stats)       _renderStats(data.stats);
       if (data?.risk)        _renderRiskChart(data.risk);
       if (data?.approval)    _renderApprovalChart(data.approval);
@@ -212,7 +212,7 @@ const DashboardPage = (() => {
       _updateLastUpdated();
     });
 
-    SentinelWS.on('review_new', () => {
+    THRESHOLDWS.on('review_new', () => {
       const badge = document.querySelector('.nav-item[href="/review"] .nav-item-badge');
       if (badge) badge.textContent = parseInt(badge.textContent || '0') + 1;
     });

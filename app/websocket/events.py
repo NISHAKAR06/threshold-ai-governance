@@ -1,5 +1,5 @@
 """
-events.py — WebSocket endpoint handlers for Sentinel AI.
+events.py — WebSocket endpoint handlers for THRESHOLD AI.
 
 Channels
 --------

@@ -1,5 +1,5 @@
 <!-- ============================================================
-     SENTINEL AI — NAVBAR COMPONENT
+     THRESHOLD AI — NAVBAR COMPONENT
      ============================================================ -->
 <header class="app-navbar" role="banner">
 
@@ -121,7 +121,7 @@
   /* Populate nav user info from profile API on load */
   document.addEventListener('DOMContentLoaded', async () => {
     try {
-      const profile = await SentinelAPI.auth.profile();
+      const profile = await THRESHOLDAPI.auth.profile();
       const name  = profile.name  ?? 'Admin User';
       const role  = profile.role  ?? 'Administrator';
       const el    = document.getElementById('nav-user-name');

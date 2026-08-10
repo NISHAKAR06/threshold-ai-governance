@@ -1,5 +1,5 @@
-﻿"""
-seed.py — Robust seeder: 100+ records across all 6 tables.
+"""
+seed.py � Robust seeder: 100+ records across all 6 tables.
 Run: python -m app.database.init_db --seed
 """
 from __future__ import annotations
@@ -17,9 +17,9 @@ from app.models.knowledge import KnowledgeBase
 from app.models.document import Document
 from app.models.settings import PlatformSettings
 
-logger = get_logger("sentinel.seed")
+logger = get_logger("THRESHOLD.seed")
 
-# ─── Mock Data ─────────────────────────────────────────
+# --- Mock Data -----------------------------------------
 FIRST_NAMES = ["Alice", "Bob", "Carol", "David", "Emma", "Frank", "Grace", "Henry", "Iris", "Jack",
                "Karen", "Leo", "Maya", "Nathan", "Olivia", "Peter", "Quinn", "Rachel", "Sam", "Tina"]
 LAST_NAMES = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez",
@@ -54,7 +54,7 @@ REASONS = [
 ]
 
 MITIGATIONS = [
-    "Limit batch size to ≤1,000 records",
+    "Limit batch size to =1,000 records",
     "Request additional sign-off from data owner",
     "Schedule during low-traffic window",
     "Create snapshot backup before execution",
@@ -128,11 +128,11 @@ KB_CONTENT = {
 
 DOC_TYPES = ["Policy", "Procedure", "Guideline", "Regulation", "Audit Report", "Risk Assessment", "Security Plan", "Training Manual"]
 
-# ─── Seeder Functions ─────────────────────────────────────────
+# --- Seeder Functions -----------------------------------------
 
 async def seed_employees(session):
     """Create 50+ realistic employees."""
-    logger.info("Seeding employees…")
+    logger.info("Seeding employees�")
     employees = []
     
     # Shuffle to get unique combinations
@@ -173,13 +173,13 @@ async def seed_employees(session):
     
     session.add_all(employees)
     await session.commit()
-    logger.info(f"✓ Created {len(employees)} employees")
+    logger.info(f"? Created {len(employees)} employees")
     return employees
 
 
 async def seed_actions(session):
     """Create 100+ realistic actions."""
-    logger.info("Seeding actions…")
+    logger.info("Seeding actions�")
     actions = []
     
     # Create 120 actions with varied statuses and risk scores
@@ -257,13 +257,13 @@ async def seed_actions(session):
     
     session.add_all(actions)
     await session.commit()
-    logger.info(f"✓ Created {len(actions)} actions")
+    logger.info(f"? Created {len(actions)} actions")
     return actions
 
 
 async def seed_audit_logs(session, actions):
     """Create 100+ audit log entries linked to actions."""
-    logger.info("Seeding audit logs…")
+    logger.info("Seeding audit logs�")
     audit_logs = []
     
     outcomes = ["approved", "rejected", "executed", "pending", "rolled_back", "escalated"]
@@ -307,13 +307,13 @@ async def seed_audit_logs(session, actions):
     
     session.add_all(audit_logs)
     await session.commit()
-    logger.info(f"✓ Created {len(audit_logs)} audit logs")
+    logger.info(f"? Created {len(audit_logs)} audit logs")
     return audit_logs
 
 
 async def seed_review_queue(session, actions):
     """Create 30+ review queue items."""
-    logger.info("Seeding review queue…")
+    logger.info("Seeding review queue�")
     review_items = []
     
     priorities = ["low", "medium", "high", "critical"]
@@ -353,13 +353,13 @@ async def seed_review_queue(session, actions):
     
     session.add_all(review_items)
     await session.commit()
-    logger.info(f"✓ Created {len(review_items)} review queue items")
+    logger.info(f"? Created {len(review_items)} review queue items")
     return review_items
 
 
 async def seed_knowledge_base(session):
     """Create 80+ knowledge base entries."""
-    logger.info("Seeding knowledge base…")
+    logger.info("Seeding knowledge base�")
     kb_entries = []
     
     for category in KB_CATEGORIES:
@@ -383,12 +383,12 @@ async def seed_knowledge_base(session):
     
     session.add_all(kb_entries)
     await session.commit()
-    logger.info(f"✓ Created {len(kb_entries)} knowledge base entries")
+    logger.info(f"? Created {len(kb_entries)} knowledge base entries")
 
 
 async def seed_documents(session):
     """Create 50+ documents."""
-    logger.info("Seeding documents…")
+    logger.info("Seeding documents�")
     documents = []
     
     for i in range(50):
@@ -416,12 +416,12 @@ async def seed_documents(session):
     
     session.add_all(documents)
     await session.commit()
-    logger.info(f"✓ Created {len(documents)} documents")
+    logger.info(f"? Created {len(documents)} documents")
 
 
 async def seed_settings(session):
     """Create platform-wide settings."""
-    logger.info("Seeding settings…")
+    logger.info("Seeding settings�")
     
     settings_data = [
         {
@@ -501,7 +501,7 @@ async def seed_settings(session):
     
     session.add_all(settings_objs)
     await session.commit()
-    logger.info(f"✓ Created {len(settings_objs)} settings")
+    logger.info(f"? Created {len(settings_objs)} settings")
 
 
 async def run_seed():
@@ -509,7 +509,7 @@ async def run_seed():
     async with AsyncSessionLocal() as session:
         try:
             logger.info("=" * 60)
-            logger.info("Starting comprehensive database seeding…")
+            logger.info("Starting comprehensive database seeding�")
             logger.info("=" * 60)
             
             # Create all records
@@ -522,11 +522,11 @@ async def run_seed():
             await seed_settings(session)
             
             logger.info("=" * 60)
-            logger.info("✓ Seeding completed successfully!")
+            logger.info("? Seeding completed successfully!")
             logger.info("=" * 60)
             
         except Exception as e:
-            logger.error(f"✗ Seeding failed: {e}", exc_info=True)
+            logger.error(f"? Seeding failed: {e}", exc_info=True)
             await session.rollback()
             raise
 

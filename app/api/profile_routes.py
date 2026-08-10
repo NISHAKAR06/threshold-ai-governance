@@ -25,7 +25,7 @@ async def get_profile(
     authorization: Optional[str] = Header(default=None),
 ):
     if not authorization:
-        return {"name": "Admin User", "role": "admin", "department": "IT", "email": "admin@sentinel.ai"}
+        return {"name": "Admin User", "role": "admin", "department": "IT", "email": "admin@THRESHOLD.ai"}
     try:
         token   = extract_token(authorization)
         payload = decode_access_token(token)

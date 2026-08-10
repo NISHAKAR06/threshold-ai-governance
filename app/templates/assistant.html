@@ -3,9 +3,15 @@
 
 {% block page_css %}
 <link rel="stylesheet" href="{{ url_for('static', path='css/assistant.css') }}">
+<style>
+  /* Lock the main scroll container on this page only */
+  .app-content { overflow: hidden !important; display: flex !important; flex-direction: column !important; padding-bottom: 0 !important; }
+  .app-main    { overflow: hidden !important; }
+</style>
 {% endblock %}
 
 {% block content %}
+<div class="assistant-page-wrapper">
 <div class="page-header" style="margin-bottom:var(--space-5)">
   <div class="page-header-row">
     <div>
@@ -31,10 +37,10 @@
 
     <div class="chat-panel-header">
       <div class="chat-panel-title">
-        <div class="chat-sentinel-avatar">AI</div>
+        <div class="chat-THRESHOLD-avatar">AI</div>
         <div>
-          <div class="chat-sentinel-name" data-i18n="assistant.assistant_label">Sentinel AI</div>
-          <div class="chat-sentinel-status">
+          <div class="chat-THRESHOLD-name" data-i18n="assistant.assistant_label">THRESHOLD AI</div>
+          <div class="chat-THRESHOLD-status">
             <span class="chat-status-dot"></span>
             <span class="text-xs" style="color:var(--color-success)">Online &amp; Governed</span>
           </div>
@@ -47,7 +53,7 @@
       <div class="chat-welcome" id="chat-welcome">
         <div class="chat-welcome-icon"><i class="fa-solid fa-robot"></i></div>
         <h2 class="chat-welcome-title" data-i18n="assistant.empty_state">Start a conversation to get started</h2>
-        <p class="chat-welcome-desc" data-i18n="assistant.empty_hint">Ask Sentinel AI to perform governed operations on your infrastructure</p>
+        <p class="chat-welcome-desc" data-i18n="assistant.empty_hint">Ask THRESHOLD AI to perform governed operations on your infrastructure</p>
         <div class="suggested-prompts-grid">
           <button class="suggested-prompt-btn" data-prompt="List all S3 buckets with public access in production">
             <i class="suggested-prompt-icon fa-solid fa-magnifying-glass"></i>List all S3 buckets with public access
@@ -124,6 +130,7 @@
 
   </div>
 
+</div>
 </div>
 {% endblock %}
 

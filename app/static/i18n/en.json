@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Sentinel AI",
+    "name": "THRESHOLD AI",
     "tagline": "AI Governance Platform",
     "version": "v2.0"
   },
@@ -62,7 +62,7 @@
     "subtitle": "Interact with governed AI actions",
     "placeholder": "Describe an action you want the AI to perform...",
     "send": "Send",
-    "thinking": "Sentinel is analyzing your request...",
+    "thinking": "THRESHOLD is analyzing your request...",
     "typing": "Typing...",
     "suggested_prompts": "Suggested Prompts",
     "clear_conversation": "Clear Conversation",
@@ -80,9 +80,9 @@
     "conversation_history": "Conversation History",
     "new_conversation": "New Conversation",
     "you": "You",
-    "assistant_label": "Sentinel AI",
+    "assistant_label": "THRESHOLD AI",
     "empty_state": "Start a conversation to get started",
-    "empty_hint": "Ask Sentinel AI to perform governed operations on your infrastructure",
+    "empty_hint": "Ask THRESHOLD AI to perform governed operations on your infrastructure",
     "copy": "Copy",
     "copied": "Copied!"
   },
@@ -311,7 +311,7 @@
     "select": "Select"
   },
   "login": {
-    "title": "Sign in to Sentinel AI",
+    "title": "Sign in to THRESHOLD AI",
     "subtitle": "Enterprise AI Governance Platform",
     "username": "Username",
     "password": "Password",

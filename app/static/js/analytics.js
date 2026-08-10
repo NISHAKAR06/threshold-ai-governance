@@ -128,11 +128,11 @@ const AnalyticsPage = (() => {
     period = p;
     try {
       const [summary, daily, riskDist, ops, trend] = await Promise.all([
-        SentinelAPI.analytics.summary(p),
-        SentinelAPI.analytics.daily(p),
-        SentinelAPI.analytics.risk(p),
-        SentinelAPI.analytics.operations(p),
-        SentinelAPI.analytics.trend(p),
+        THRESHOLDAPI.analytics.summary(p),
+        THRESHOLDAPI.analytics.daily(p),
+        THRESHOLDAPI.analytics.risk(p),
+        THRESHOLDAPI.analytics.operations(p),
+        THRESHOLDAPI.analytics.trend(p),
       ]);
       _kpis(summary);
       _daily(daily);
@@ -157,7 +157,7 @@ const AnalyticsPage = (() => {
       });
     });
     document.getElementById('export-report-btn')?.addEventListener('click', () => {
-      SentinelAPI.downloadFile(`/api/v1/analytics/export?period=${period}`, `analytics_report_${period}.csv`).catch(() => {});
+      THRESHOLDAPI.downloadFile(`/api/v1/analytics/export?period=${period}`, `analytics_report_${period}.csv`).catch(() => {});
     });
     document.getElementById('analytics-refresh')?.addEventListener('click', () => loadAll(period));
     loadAll();

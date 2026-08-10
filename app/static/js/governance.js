@@ -159,7 +159,7 @@ const GovernancePage = (() => {
   async function loadAssessment(actionId) {
     currentActionId = actionId;
     try {
-      const data = await SentinelAPI.governance.assess(actionId);
+      const data = await THRESHOLDAPI.governance.assess(actionId);
       _setStep(data.current_stage || 'intake');
       _drawGauge(data.risk_score || 0);
       _renderBreakdown(data.risk_factors || []);
@@ -187,7 +187,7 @@ const GovernancePage = (() => {
             type: decision === 'auto' ? 'success' : decision === 'confirm' ? 'warning' : 'danger',
             onConfirm: async () => {
               try {
-                await SentinelAPI.governance.decide({ action_id: currentActionId, decision });
+                await THRESHOLDAPI.governance.decide({ action_id: currentActionId, decision });
                 _renderDecision(decision);
                 if (typeof Toast !== 'undefined') Toast.success('Decision updated');
               } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); }
