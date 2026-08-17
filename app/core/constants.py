@@ -74,7 +74,7 @@ TOKEN_PREFIX = "Bearer"
 
 # ── App metadata ─────────────────────────────────────────────
 APP_NAME    = "THRESHOLD AI"
-APP_VERSION = "2.0.0"
+APP_VERSION = "1.0.0"
 
 # ── Risk level thresholds ─────────────────────────────────────
 RISK_LOW_MAX      = 30

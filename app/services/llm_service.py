@@ -148,42 +148,121 @@ class LLMService:
         }
         data.update({k: v for k, v in defaults.items() if k not in data or data[k] is None})
 
-    # ── Mock (dev without API key) ────────────────────────────
+    # ── Mock (dev without API key / fallback) ────────────────────
     @staticmethod
     def _mock_extraction(text: str) -> Dict[str, Any]:
-        """Returns a sensible mock action when Gemini is not available."""
+        """Dynamically parses natural language requests into structured Action contracts."""
+        t = text.lower()
+
+        # Determine operation type (must be valid OperationType enum)
+        if any(w in t for w in ["delete", "drop", "destroy", "purge", "remove", "truncate"]):
+            op = "BULK_DELETE" if "all" in t or "many" in t else "DELETE"
+            reversibility = "irreversible"
+            scope = "all_records" if op == "BULK_DELETE" else "medium_batch"
+            affected = 150
+            dept = "Database Admin"
+        elif any(w in t for w in ["scale", "shutdown", "terminate", "stop", "restart", "reboot", "down", "reduce"]):
+            op = "BULK_UPDATE"
+            reversibility = "reversible"
+            scope = "medium_batch"
+            affected = 12
+            dept = "Operations"
+        elif any(w in t for w in ["create", "add", "insert", "new"]):
+            op = "CREATE"
+            reversibility = "reversible"
+            scope = "single_record"
+            affected = 1
+            dept = "Engineering"
+        elif any(w in t for w in ["write", "update", "modify", "rotate", "change"]):
+            op = "UPDATE"
+            reversibility = "reversible"
+            scope = "small_batch"
+            affected = 25
+            dept = "Engineering"
+        elif any(w in t for w in ["export", "report", "download", "compliance", "gdpr"]):
+            op = "EXPORT"
+            reversibility = "reversible"
+            scope = "large_batch"
+            affected = 500
+            dept = "Compliance"
+        elif any(w in t for w in ["archive", "log", "backup"]):
+            op = "ARCHIVE"
+            reversibility = "reversible"
+            scope = "large_batch"
+            affected = 1000
+            dept = "Database Admin"
+        else:
+            op = "READ"
+            reversibility = "reversible"
+            scope = "single_record" if "single" in t else "small_batch"
+            affected = 10
+            dept = "Engineering"
+
+        # Determine target resource & table
+        if any(w in t for w in ["kubernetes", "k8s", "cluster", "node", "pod"]):
+            res = "staging-k8s-cluster"
+            tbl = "k8s_clusters"
+        elif any(w in t for w in ["s3", "bucket", "storage", "cloud"]):
+            res = "production-s3-buckets"
+            tbl = "s3_buckets"
+        elif any(w in t for w in ["key", "credential", "api key", "service account"]):
+            res = "iam_service_keys"
+            tbl = "service_accounts"
+        elif any(w in t for w in ["ssh", "firewall", "ip", "port"]):
+            res = "prod_firewall_rules"
+            tbl = "firewall_rules"
+        elif any(w in t for w in ["log", "archive", "audit"]):
+            res = "audit_logs_archive"
+            tbl = "audit_logs"
+        elif any(w in t for w in ["gdpr", "report", "compliance"]):
+            res = "gdpr_compliance_reports"
+            tbl = "compliance_logs"
+        elif any(w in t for w in ["employee", "user", "account", "profile"]):
+            res = "employees table"
+            tbl = "employees"
+        else:
+            res = "production_database"
+            tbl = "core_data"
+
+        intent = text.strip()
+        if len(intent) > 100:
+            intent = intent[:97] + "..."
+
         return {
-            "intent":              f"Process request: {text[:80]}",
-            "operation_type":      "READ",
-            "target_resource":     "employees table",
-            "target_table":        "employees",
-            "affected_records":    10,
-            "reversibility":       "reversible",
-            "data_scope":          "small_batch",
-            "regulatory_category": "none",
-            "confidence":          0.85,
-            "department":          "Engineering",
+            "intent":              intent,
+            "operation_type":      op,
+            "target_resource":     res,
+            "target_table":        tbl,
+            "affected_records":    affected,
+            "reversibility":       reversibility,
+            "data_scope":          scope,
+            "regulatory_category": "gdpr" if "gdpr" in t else ("soc2" if op in ["DELETE", "SCALE_DOWN"] else "none"),
+            "confidence":          0.88 if len(text) > 10 else 0.72,
+            "department":          dept,
             "action_json": {
-                "operation": "SELECT",
-                "table":     "employees",
-                "filters":   {},
-                "limit":     10,
+                "operation": op,
+                "target_resource": res,
+                "table": tbl,
+                "affected_records": affected,
                 "natural_language": text,
             },
-            "parameters": {},
+            "parameters": {"natural_language": text},
         }
 
     @staticmethod
     def _mock_chat_response(message: str, action: Optional[Dict[str, Any]]) -> str:
         if action:
+            op = action.get('operation_type', 'READ')
+            res = action.get('target_resource', 'target resource')
+            intent = action.get('intent', message)
             return (
-                f"I have analysed your request and generated a {action.get('operation_type', 'READ')} "
-                f"action targeting {action.get('target_resource', 'the requested resource')}. "
-                "The action will now proceed through the governance workflow for risk assessment."
+                f"I have analysed your request ('{intent}') and structured a {op} action "
+                f"targeting {res}. The action has been submitted to the THRESHOLD AI "
+                "governance pipeline for policy evaluation and risk assessment."
             )
         return (
             "I have received your request and am processing it through the THRESHOLD AI "
-            "governance pipeline. Please review the action details on the right."
+            "governance pipeline. Please review the action details in the Action Preview panel."
         )
 
 

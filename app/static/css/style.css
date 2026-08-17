@@ -178,7 +178,7 @@ h6{font-size:var(--font-size-base)}
 .navbar-search-input:focus{border-color:var(--color-primary);box-shadow:var(--shadow-focus);background:var(--bg-surface)}
 .navbar-icon-btn{width:36px;height:36px;border-radius:var(--border-radius);background:transparent;border:1px solid transparent;color:var(--text-secondary);display:flex;align-items:center;justify-content:center;font-size:16px;position:relative;transition:background var(--transition-fast),color var(--transition-fast)}
 .navbar-icon-btn:hover{background:var(--bg-surface-2);color:var(--text-primary);border-color:var(--border-color)}
-.navbar-icon-btn .badge{position:absolute;top:4px;right:4px;width:8px;height:8px;background:var(--color-danger);border-radius:50%;border:2px solid var(--navbar-bg)}
+.navbar-icon-btn .badge{position:absolute;top:2px;right:2px;min-width:18px;height:18px;padding:0 4px;background:var(--color-danger);color:#ffffff;font-size:10px;font-weight:700;border-radius:var(--border-radius-full);border:2px solid var(--bg-surface);display:none;align-items:center;justify-content:center;line-height:1;box-shadow:var(--shadow-xs)}
 .theme-toggle{display:flex;align-items:center;gap:var(--space-2);padding:0 var(--space-3);height:36px;border-radius:var(--border-radius);background:var(--bg-surface-2);border:1px solid var(--border-color);color:var(--text-secondary);font-size:var(--font-size-xs);font-weight:500;transition:all var(--transition-fast);cursor:pointer}
 .theme-toggle:hover{border-color:var(--border-color-strong);color:var(--text-primary)}
 .theme-toggle i{font-size:14px}

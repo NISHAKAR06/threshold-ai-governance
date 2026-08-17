@@ -4,15 +4,17 @@
 {% block page_css %}
 <link rel="stylesheet" href="{{ url_for('static', path='css/assistant.css') }}">
 <style>
-  /* Lock the main scroll container on this page only */
-  .app-content { overflow: hidden !important; display: flex !important; flex-direction: column !important; padding-bottom: 0 !important; }
-  .app-main    { overflow: hidden !important; }
+  /* Lock page-level scroll so the AI Assistant page fits 100% inside the viewport */
+  html, body { height: 100% !important; overflow: hidden !important; }
+  .app-shell { height: 100vh !important; max-height: 100vh !important; overflow: hidden !important; }
+  .app-main { height: 100vh !important; max-height: 100vh !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; }
+  .app-content { flex: 1 !important; height: calc(100vh - var(--navbar-height)) !important; max-height: calc(100vh - var(--navbar-height)) !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; padding: var(--space-3) var(--space-6) var(--space-4) !important; }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="assistant-page-wrapper">
-<div class="page-header" style="margin-bottom:var(--space-5)">
+<div class="page-header" style="margin-bottom:var(--space-3)">
   <div class="page-header-row">
     <div>
       <h1 class="page-title" data-i18n="assistant.title">AI Assistant</h1>

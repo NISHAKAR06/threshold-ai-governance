@@ -87,11 +87,19 @@ templates = Jinja2Templates(directory=str(settings.TEMPLATES_DIR))
 # ── HTML page routes ──────────────────────────────────────────
 @app.get("/",          response_class=HTMLResponse, include_in_schema=False)
 async def root(request: Request):
-    return RedirectResponse(url="/dashboard")
+    return templates.TemplateResponse("landing.html", {"request": request})
+
+@app.get("/landing",   response_class=HTMLResponse, include_in_schema=False)
+async def landing_page(request: Request):
+    return templates.TemplateResponse("landing.html", {"request": request})
 
 @app.get("/login",     response_class=HTMLResponse, include_in_schema=False)
 async def login_page(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
+
+@app.get("/signup",    response_class=HTMLResponse, include_in_schema=False)
+async def signup_page(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request, "mode": "signup"})
 
 @app.get("/dashboard", response_class=HTMLResponse, include_in_schema=False)
 async def dashboard_page(request: Request):
@@ -133,16 +141,25 @@ async def logout():
 
 # ── Auth routes ───────────────────────────────────────────────
 from typing import Optional
+import random
 from fastapi import Depends, Header
 from app.repositories.employee_repository import EmployeeRepository
-from app.core.security import verify_password, create_access_token
+from app.core.security import verify_password, hash_password, create_access_token
 from app.dependencies import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 class LoginRequest(BaseModel):
     username: str
     password: str
+
+class SignupRequest(BaseModel):
+    full_name: str
+    username: str
+    email: str
+    password: str
+    department: Optional[str] = "Engineering"
+    role: Optional[str] = "reviewer"
 
 @app.post("/api/v1/auth/login", tags=["Auth"], summary="Login with username + password")
 async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)):
@@ -158,6 +175,51 @@ async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)):
         extra={"role": employee.role, "dept": employee.department, "name": employee.full_name},
     )
     return {"access_token": token, "token_type": "bearer", "user": {"name": employee.full_name, "role": employee.role}}
+
+@app.post("/api/v1/auth/signup", tags=["Auth"], summary="Sign up a new employee user")
+async def signup(payload: SignupRequest, db: AsyncSession = Depends(get_db)):
+    repo = EmployeeRepository(db)
+
+    uname = payload.username.strip()
+    email_clean = payload.email.strip().lower()
+
+    if await repo.get_by_username(uname):
+        return JSONResponse(status_code=400, content={"detail": {"code": "DUPLICATE_USERNAME", "message": "Username is already taken"}})
+    if await repo.get_by_email(email_clean):
+        return JSONResponse(status_code=400, content={"detail": {"code": "DUPLICATE_EMAIL", "message": "Email address is already registered"}})
+
+    # Generate employee_id
+    emp_id = f"EMP-{random.randint(1000, 9999)}"
+    while await repo.get_by_employee_id(emp_id):
+        emp_id = f"EMP-{random.randint(1000, 9999)}"
+
+    hashed_pwd = hash_password(payload.password)
+    employee = await repo.create(
+        employee_id=emp_id,
+        username=uname,
+        email=email_clean,
+        full_name=payload.full_name.strip(),
+        hashed_password=hashed_pwd,
+        department=payload.department or "Engineering",
+        role=payload.role or "reviewer",
+        is_active=True,
+        is_admin=(payload.role == "admin"),
+    )
+
+    token = create_access_token(
+        subject=employee.username,
+        extra={"role": employee.role, "dept": employee.department, "name": employee.full_name},
+    )
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": {
+            "name": employee.full_name,
+            "role": employee.role,
+            "department": employee.department,
+            "username": employee.username,
+        }
+    }
 
 @app.get("/api/v1/auth/me", tags=["Auth"], summary="Get current user profile")
 async def get_me(

@@ -1,5 +1,5 @@
 """
-seed.py — Robust seeder: 100+ records across all 6 tables.
+seed.py â€” Robust seeder: 100+ records across all 6 tables.
 Run: python -m app.database.init_db --seed
 """
 from __future__ import annotations
@@ -132,7 +132,7 @@ DOC_TYPES = ["Policy", "Procedure", "Guideline", "Regulation", "Audit Report", "
 
 async def seed_employees(session):
     """Create 50+ realistic employees."""
-    logger.info("Seeding employees…")
+    logger.info("Seeding employeesâ€¦")
     employees = []
     
     # Shuffle to get unique combinations
@@ -179,7 +179,7 @@ async def seed_employees(session):
 
 async def seed_actions(session):
     """Create 100+ realistic actions."""
-    logger.info("Seeding actions…")
+    logger.info("Seeding actionsâ€¦")
     actions = []
     
     # Create 120 actions with varied statuses and risk scores
@@ -263,7 +263,7 @@ async def seed_actions(session):
 
 async def seed_audit_logs(session, actions):
     """Create 100+ audit log entries linked to actions."""
-    logger.info("Seeding audit logs…")
+    logger.info("Seeding audit logsâ€¦")
     audit_logs = []
     
     outcomes = ["approved", "rejected", "executed", "pending", "rolled_back", "escalated"]
@@ -313,7 +313,7 @@ async def seed_audit_logs(session, actions):
 
 async def seed_review_queue(session, actions):
     """Create 30+ review queue items."""
-    logger.info("Seeding review queue…")
+    logger.info("Seeding review queueâ€¦")
     review_items = []
     
     priorities = ["low", "medium", "high", "critical"]
@@ -359,7 +359,7 @@ async def seed_review_queue(session, actions):
 
 async def seed_knowledge_base(session):
     """Create 80+ knowledge base entries."""
-    logger.info("Seeding knowledge base…")
+    logger.info("Seeding knowledge baseâ€¦")
     kb_entries = []
     
     for category in KB_CATEGORIES:
@@ -388,7 +388,7 @@ async def seed_knowledge_base(session):
 
 async def seed_documents(session):
     """Create 50+ documents."""
-    logger.info("Seeding documents…")
+    logger.info("Seeding documentsâ€¦")
     documents = []
     
     for i in range(50):
@@ -421,7 +421,7 @@ async def seed_documents(session):
 
 async def seed_settings(session):
     """Create platform-wide settings."""
-    logger.info("Seeding settings…")
+    logger.info("Seeding settingsâ€¦")
     
     settings_data = [
         {
@@ -509,7 +509,7 @@ async def run_seed():
     async with AsyncSessionLocal() as session:
         try:
             logger.info("=" * 60)
-            logger.info("Starting comprehensive database seeding…")
+            logger.info("Starting comprehensive database seedingâ€¦")
             logger.info("=" * 60)
             
             # Create all records

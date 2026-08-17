@@ -11,7 +11,7 @@ from typing import List
 class Settings:
     # ── App ──────────────────────────────────────────────────
     APP_NAME: str         = "THRESHOLD AI Governance"
-    APP_VERSION: str      = "2.0.0"
+    APP_VERSION: str      = "1.0.0"
     DEBUG: bool           = os.getenv("DEBUG", "false").lower() == "true"
     SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
 

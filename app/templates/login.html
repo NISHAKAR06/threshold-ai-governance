@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="THRESHOLD AI Governance Platform — Enterprise Login">
-  <title>Sign In — THRESHOLD AI</title>
+  <meta name="description" content="THRESHOLD AI Governance Platform — Enterprise Authentication">
+  <title>{% if mode == 'signup' %}Sign Up{% else %}Sign In{% endif %} — THRESHOLD AI</title>
 
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
     .login-shell {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 520px;
+      grid-template-columns: 1fr 540px;
     }
 
     /* Left decorative panel */
@@ -59,6 +59,7 @@
       display: flex;
       align-items: center;
       gap: var(--space-3);
+      text-decoration: none;
     }
     .login-brand-icon {
       width: 44px; height: 44px;
@@ -140,15 +141,44 @@
       justify-content: center;
       padding: var(--space-8);
       border-left: 1px solid var(--border-color);
+      overflow-y: auto;
     }
 
     .login-form-container {
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
+    }
+
+    /* Auth Mode Tabs */
+    .auth-tab-pills {
+      display: flex;
+      background: var(--bg-surface-2);
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-full);
+      padding: 4px;
+      margin-bottom: var(--space-6);
+    }
+    .auth-tab-btn {
+      flex: 1;
+      height: 38px;
+      border-radius: var(--border-radius-full);
+      font-size: var(--font-size-sm);
+      font-weight: 600;
+      color: var(--text-secondary);
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      display: flex; align-items: center; justify-content: center; gap: var(--space-2);
+    }
+    .auth-tab-btn.active {
+      background: var(--bg-surface);
+      color: var(--color-primary);
+      box-shadow: var(--shadow-xs);
     }
 
     .login-form-header {
-      margin-bottom: var(--space-8);
+      margin-bottom: var(--space-6);
     }
     .login-form-title {
       font-size: var(--font-size-2xl);
@@ -162,7 +192,7 @@
       margin-top: var(--space-1);
     }
 
-    .login-form { display: flex; flex-direction: column; gap: var(--space-5); }
+    .login-form { display: flex; flex-direction: column; gap: var(--space-4); }
 
     .login-input-group {
       position: relative;
@@ -176,13 +206,13 @@
     }
     .login-input {
       width: 100%;
-      height: 46px;
+      height: 44px;
       padding: 0 var(--space-4) 0 42px;
       background: var(--bg-surface-2);
       border: 1px solid var(--border-color);
       border-radius: var(--border-radius);
       color: var(--text-primary);
-      font-size: var(--font-size-base);
+      font-size: var(--font-size-sm);
       font-family: inherit;
       outline: none;
       transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
@@ -203,6 +233,8 @@
       cursor: pointer;
       padding: 4px;
       border-radius: 4px;
+      background: transparent;
+      border: none;
       transition: color var(--transition-fast);
     }
     .login-password-toggle:hover { color: var(--text-secondary); }
@@ -234,7 +266,7 @@
     .login-forgot:hover { text-decoration: underline; }
 
     .login-btn {
-      height: 48px;
+      height: 46px;
       width: 100%;
       background: var(--color-primary);
       color: #fff;
@@ -249,6 +281,7 @@
       justify-content: center;
       gap: var(--space-2);
       transition: background var(--transition-fast), transform var(--transition-fast);
+      margin-top: var(--space-2);
     }
     .login-btn:hover { background: var(--color-primary-hover); }
     .login-btn:active { transform: scale(0.99); }
@@ -265,7 +298,22 @@
       color: var(--color-danger);
       font-size: var(--font-size-sm);
       display: none;
+      margin-bottom: var(--space-4);
     }
+
+    .auth-toggle-hint {
+      text-align: center;
+      font-size: var(--font-size-sm);
+      color: var(--text-secondary);
+      margin-top: var(--space-5);
+    }
+    .auth-toggle-link {
+      color: var(--color-primary);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .auth-toggle-link:hover { text-decoration: underline; }
 
     .login-secure-note {
       display: flex;
@@ -275,7 +323,7 @@
       font-size: var(--font-size-xs);
       color: var(--text-tertiary);
       margin-top: var(--space-6);
-      padding-top: var(--space-6);
+      padding-top: var(--space-5);
       border-top: 1px solid var(--border-color);
     }
 
@@ -293,7 +341,7 @@
 
   <!-- ── Left: Brand Panel ────────────────────────────────── -->
   <div class="login-brand-panel" aria-hidden="true">
-    <div class="login-brand-logo">
+    <a href="/landing" class="login-brand-logo">
       <div class="login-brand-icon">
         <i class="fa-solid fa-shield-halved"></i>
       </div>
@@ -301,7 +349,7 @@
         <div class="login-brand-name">THRESHOLD AI</div>
         <div class="login-brand-tag">AI Governance Platform</div>
       </div>
-    </div>
+    </a>
 
     <div class="login-hero">
       <h1 class="login-hero-title">Governed AI.<br>Trusted Decisions.</h1>
@@ -331,7 +379,7 @@
     </div>
 
     <div class="login-brand-footer">
-      &copy; 2026 THRESHOLD AI — Enterprise AI Governance · v2.0
+      &copy; 2026 THRESHOLD AI — Enterprise AI Governance · v1
     </div>
   </div>
 
@@ -340,7 +388,7 @@
     <div class="login-form-container">
 
       <!-- Mobile logo (visible only on small screens) -->
-      <div style="display:none;align-items:center;gap:10px;margin-bottom:var(--space-8)" id="mobile-logo">
+      <div style="display:none;align-items:center;gap:10px;margin-bottom:var(--space-6)" id="mobile-logo">
         <div style="width:36px;height:36px;border-radius:var(--border-radius);background:var(--color-primary);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
@@ -350,79 +398,146 @@
         </div>
       </div>
 
-      <div class="login-form-header">
-        <h2 class="login-form-title" data-i18n="login.welcome_back">Welcome back</h2>
-        <p class="login-form-subtitle" data-i18n="login.subtitle">Enterprise AI Governance Platform</p>
+      <!-- Mode Toggle Tabs -->
+      <div class="auth-tab-pills">
+        <button type="button" class="auth-tab-btn {% if mode != 'signup' %}active{% endif %}" id="tab-login">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In
+        </button>
+        <button type="button" class="auth-tab-btn {% if mode == 'signup' %}active{% endif %}" id="tab-signup">
+          <i class="fa-solid fa-user-plus"></i> Create Account
+        </button>
+      </div>
+
+      <!-- Success message -->
+      <div id="auth-success" class="login-error" style="display:none;background:var(--color-success-light);border-color:var(--color-success-muted);color:var(--color-success)" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        <span id="auth-success-text">Account created successfully! Please sign in below.</span>
       </div>
 
       <!-- Error message -->
-      <div id="login-error" class="login-error" role="alert" aria-live="polite">
+      <div id="auth-error" class="login-error" role="alert" aria-live="polite">
         <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
-        <span id="login-error-text" data-i18n="login.invalid_credentials">Invalid username or password</span>
+        <span id="auth-error-text">Invalid username or password</span>
       </div>
 
-      <form class="login-form" id="login-form" novalidate autocomplete="on">
+      <!-- ── LOGIN FORM ────────────────────────────────────── -->
+      <div id="form-login-wrap" style="{% if mode == 'signup' %}display:none{% endif %}">
+        <div class="login-form-header">
+          <h2 class="login-form-title">Welcome back</h2>
+          <p class="login-form-subtitle">Enter your credentials to access the governance platform</p>
+        </div>
 
-        <!-- Username -->
-        <div class="form-group">
-          <label class="form-label" for="username" data-i18n="login.username">Username</label>
-          <div class="login-input-group">
-            <i class="login-input-icon fa-solid fa-user" aria-hidden="true"></i>
-            <input id="username"
-                   type="text"
-                   class="login-input"
-                   name="username"
-                   data-i18n-placeholder="login.username_placeholder"
-                   placeholder="Enter your username"
-                   required
-                   autocomplete="username"
-                   aria-required="true"
-                   autofocus>
+        <form class="login-form" id="login-form" novalidate autocomplete="on">
+          <div class="form-group">
+            <label class="form-label" for="username">Username</label>
+            <div class="login-input-group">
+              <i class="login-input-icon fa-solid fa-user" aria-hidden="true"></i>
+              <input id="username" type="text" class="login-input" name="username" placeholder="Enter your username" required autocomplete="username" autofocus>
+            </div>
           </div>
-        </div>
 
-        <!-- Password -->
-        <div class="form-group">
-          <label class="form-label" for="password" data-i18n="login.password">Password</label>
-          <div class="login-input-group">
-            <i class="login-input-icon fa-solid fa-lock" aria-hidden="true"></i>
-            <input id="password"
-                   type="password"
-                   class="login-input"
-                   name="password"
-                   data-i18n-placeholder="login.password_placeholder"
-                   placeholder="Enter your password"
-                   required
-                   autocomplete="current-password"
-                   aria-required="true">
-            <button type="button" class="login-password-toggle" id="pwd-toggle"
-                    aria-label="Toggle password visibility">
-              <i class="fa-solid fa-eye" id="pwd-toggle-icon" aria-hidden="true"></i>
-            </button>
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="login-input-group">
+              <i class="login-input-icon fa-solid fa-lock" aria-hidden="true"></i>
+              <input id="password" type="password" class="login-input" name="password" placeholder="Enter your password" required autocomplete="current-password">
+              <button type="button" class="login-password-toggle" id="pwd-toggle" aria-label="Toggle password">
+                <i class="fa-solid fa-eye" id="pwd-toggle-icon"></i>
+              </button>
+            </div>
           </div>
+
+          <div class="login-options">
+            <label class="login-remember">
+              <input type="checkbox" id="remember-me" name="remember" value="1">
+              <span>Remember me</span>
+            </label>
+            <a href="#" onclick="alert('Demo account passwords can be reset via admin.');return false;" class="login-forgot">Forgot Password?</a>
+          </div>
+
+          <button type="submit" id="login-btn" class="login-btn">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span id="login-btn-text">Sign In</span>
+          </button>
+        </form>
+
+        <div class="auth-toggle-hint">
+          Don't have an account? <a href="#" class="auth-toggle-link" id="link-to-signup">Sign up now</a>
+        </div>
+      </div>
+
+      <!-- ── SIGNUP FORM ───────────────────────────────────── -->
+      <div id="form-signup-wrap" style="{% if mode != 'signup' %}display:none{% endif %}">
+        <div class="login-form-header">
+          <h2 class="login-form-title">Create an Account</h2>
+          <p class="login-form-subtitle">Register to join the THRESHOLD AI Governance platform</p>
         </div>
 
-        <!-- Options row -->
-        <div class="login-options">
-          <label class="login-remember">
-            <input type="checkbox" id="remember-me" name="remember" value="1">
-            <span data-i18n="login.remember_me">Remember me</span>
-          </label>
-          <a href="/forgot-password" class="login-forgot" data-i18n="login.forgot_password">Forgot Password?</a>
+        <form class="login-form" id="signup-form" novalidate autocomplete="on">
+          <div class="form-group">
+            <label class="form-label" for="su-fullname">Full Name</label>
+            <div class="login-input-group">
+              <i class="login-input-icon fa-solid fa-id-card" aria-hidden="true"></i>
+              <input id="su-fullname" type="text" class="login-input" placeholder="e.g. Alex Morgan" required autocomplete="name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="su-email">Email Address</label>
+            <div class="login-input-group">
+              <i class="login-input-icon fa-solid fa-envelope" aria-hidden="true"></i>
+              <input id="su-email" type="email" class="login-input" placeholder="alex.morgan@company.com" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="grid grid-2 gap-3">
+            <div class="form-group">
+              <label class="form-label" for="su-username">Username</label>
+              <div class="login-input-group">
+                <i class="login-input-icon fa-solid fa-user" aria-hidden="true"></i>
+                <input id="su-username" type="text" class="login-input" placeholder="alexmorgan" required autocomplete="username">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="su-department">Department</label>
+              <select id="su-department" class="form-select" style="height:44px;font-size:var(--font-size-sm)">
+                <option value="Engineering">Engineering</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Security">Security</option>
+                <option value="Operations">Operations</option>
+                <option value="Finance">Finance</option>
+                <option value="Legal">Legal</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="su-password">Password</label>
+            <div class="login-input-group">
+              <i class="login-input-icon fa-solid fa-lock" aria-hidden="true"></i>
+              <input id="su-password" type="password" class="login-input" placeholder="Create a secure password" required autocomplete="new-password">
+              <button type="button" class="login-password-toggle" id="su-pwd-toggle" aria-label="Toggle password">
+                <i class="fa-solid fa-eye" id="su-pwd-toggle-icon"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" id="signup-btn" class="login-btn">
+            <i class="fa-solid fa-user-plus"></i>
+            <span id="signup-btn-text">Create Account</span>
+          </button>
+        </form>
+
+        <div class="auth-toggle-hint">
+          Already have an account? <a href="#" class="auth-toggle-link" id="link-to-login">Sign in</a>
         </div>
-
-        <!-- Submit -->
-        <button type="submit" id="login-btn" class="login-btn">
-          <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
-          <span id="login-btn-text" data-i18n="login.sign_in">Sign In</span>
-        </button>
-
-      </form>
+      </div>
 
       <!-- Secure note -->
       <div class="login-secure-note">
-        <i class="fa-solid fa-lock" aria-hidden="true"></i>
-        <span data-i18n="login.secure_note">Protected by enterprise security</span>
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        <span>Protected by enterprise-grade security &amp; JWT authentication</span>
       </div>
 
     </div>
@@ -433,7 +548,7 @@
 <div id="loader-overlay" class="loader-overlay" role="status" aria-live="polite">
   <div style="display:flex;flex-direction:column;align-items:center;gap:16px">
     <div class="spinner spinner-lg"></div>
-    <span class="text-sm text-secondary" data-i18n="login.signing_in">Signing in…</span>
+    <span class="text-sm text-secondary" id="loader-text">Authenticating…</span>
   </div>
 </div>
 
@@ -442,10 +557,7 @@
 
 <!-- Scripts -->
 <script>
-  window.THRESHOLD_CONFIG = {
-    apiBase: '/api/v1',
-    wsAutoConnect: false
-  };
+  window.THRESHOLD_CONFIG = { apiBase: '/api/v1', wsAutoConnect: false };
 </script>
 <script src="{{ url_for('static', path='js/api.js') }}"></script>
 <script src="{{ url_for('static', path='js/websocket.js') }}"></script>
@@ -453,16 +565,44 @@
 <script>
   document.addEventListener('DOMContentLoaded', async () => {
     await I18n.init();
-
-    /* Apply saved theme */
     ThemeManager.init();
 
-    /* Show mobile logo on small screens */
     if (window.innerWidth <= 900) {
       document.getElementById('mobile-logo').style.display = 'flex';
     }
 
-    /* Password toggle */
+    const tabLogin  = document.getElementById('tab-login');
+    const tabSignup = document.getElementById('tab-signup');
+    const wrapLogin = document.getElementById('form-login-wrap');
+    const wrapSignup= document.getElementById('form-signup-wrap');
+    const errorEl   = document.getElementById('auth-error');
+    const errorText = document.getElementById('auth-error-text');
+
+    function showMode(mode) {
+      errorEl.style.display = 'none';
+      const successEl = document.getElementById('auth-success');
+      if (mode !== 'login' && successEl) successEl.style.display = 'none';
+      if (mode === 'signup') {
+        tabLogin.classList.remove('active');
+        tabSignup.classList.add('active');
+        wrapLogin.style.display = 'none';
+        wrapSignup.style.display = 'block';
+        document.getElementById('su-fullname')?.focus();
+      } else {
+        tabSignup.classList.remove('active');
+        tabLogin.classList.add('active');
+        wrapSignup.style.display = 'none';
+        wrapLogin.style.display = 'block';
+        document.getElementById('username')?.focus();
+      }
+    }
+
+    tabLogin.addEventListener('click', () => showMode('login'));
+    tabSignup.addEventListener('click', () => showMode('signup'));
+    document.getElementById('link-to-signup')?.addEventListener('click', e => { e.preventDefault(); showMode('signup'); });
+    document.getElementById('link-to-login')?.addEventListener('click', e => { e.preventDefault(); showMode('login'); });
+
+    /* Password toggles */
     document.getElementById('pwd-toggle')?.addEventListener('click', () => {
       const pwd  = document.getElementById('password');
       const icon = document.getElementById('pwd-toggle-icon');
@@ -470,24 +610,29 @@
       pwd.type   = show ? 'text' : 'password';
       icon.className = show ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
     });
+    document.getElementById('su-pwd-toggle')?.addEventListener('click', () => {
+      const pwd  = document.getElementById('su-password');
+      const icon = document.getElementById('su-pwd-toggle-icon');
+      const show = pwd.type === 'password';
+      pwd.type   = show ? 'text' : 'password';
+      icon.className = show ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
+    });
 
-    /* Login form */
+    /* Login Submit */
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
       const username = document.getElementById('username').value.trim();
       const password = document.getElementById('password').value;
       const remember = document.getElementById('remember-me').checked;
-      const errorEl  = document.getElementById('login-error');
       const btn      = document.getElementById('login-btn');
       const btnText  = document.getElementById('login-btn-text');
 
       if (!username || !password) return;
 
-      /* Loading state */
       btn.disabled  = true;
-      btnText.textContent = I18n.t('login.signing_in');
-      btn.innerHTML = `<span class="spinner spinner-sm" style="border-color:rgba(255,255,255,.3);border-top-color:#fff"></span> ${I18n.t('login.signing_in')}`;
+      btnText.textContent = 'Signing in…';
       errorEl.style.display = 'none';
+      document.getElementById('loader-text').textContent = 'Signing in…';
       document.getElementById('loader-overlay').classList.add('active');
 
       try {
@@ -497,22 +642,68 @@
       } catch (err) {
         document.getElementById('loader-overlay').classList.remove('active');
         errorEl.style.display = 'flex';
-        document.getElementById('login-error-text').textContent =
-          err.status === 401 ? I18n.t('login.invalid_credentials') : err.message;
-        document.getElementById('username').classList.add('error');
-        document.getElementById('password').classList.add('error');
+        errorText.textContent = err.status === 401 ? 'Invalid username or password' : (err.message || 'Login failed');
         btn.disabled = false;
-        btn.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> <span>${I18n.t('login.sign_in')}</span>`;
+        btnText.textContent = 'Sign In';
         document.getElementById('username').focus();
       }
     });
 
-    /* Clear error on input */
-    ['username','password'].forEach(id => {
-      document.getElementById(id)?.addEventListener('input', () => {
-        document.getElementById(id).classList.remove('error');
-        document.getElementById('login-error').style.display = 'none';
-      });
+    /* Signup Submit */
+    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const full_name = document.getElementById('su-fullname').value.trim();
+      const email     = document.getElementById('su-email').value.trim();
+      const username  = document.getElementById('su-username').value.trim();
+      const password  = document.getElementById('su-password').value;
+      const department= document.getElementById('su-department').value;
+      const btn       = document.getElementById('signup-btn');
+      const btnText   = document.getElementById('signup-btn-text');
+
+      if (!full_name || !email || !username || !password) {
+        errorEl.style.display = 'flex';
+        errorText.textContent = 'Please fill in all required fields';
+        return;
+      }
+
+      btn.disabled  = true;
+      btnText.textContent = 'Creating account…';
+      errorEl.style.display = 'none';
+      document.getElementById('loader-text').textContent = 'Creating your account…';
+      document.getElementById('loader-overlay').classList.add('active');
+
+      try {
+        await THRESHOLDAPI.auth.signup({
+          full_name, email, username, password, department, role: 'reviewer'
+        });
+        document.getElementById('loader-overlay').classList.remove('active');
+        btn.disabled = false;
+        btnText.textContent = 'Create Account';
+
+        // Clear signup fields
+        document.getElementById('signup-form').reset();
+
+        // Switch to Login tab & prefill username
+        showMode('login');
+        document.getElementById('username').value = username;
+        
+        // Show success alert
+        const successEl = document.getElementById('auth-success');
+        if (successEl) {
+          successEl.style.display = 'flex';
+          document.getElementById('auth-success-text').textContent = `Account for '${username}' created successfully! Please enter your password to sign in.`;
+        }
+
+        Toast.success('Account Created', 'Please sign in with your credentials.');
+        document.getElementById('password').focus();
+
+      } catch (err) {
+        document.getElementById('loader-overlay').classList.remove('active');
+        errorEl.style.display = 'flex';
+        errorText.textContent = err.message || 'Registration failed';
+        btn.disabled = false;
+        btnText.textContent = 'Create Account';
+      }
     });
   });
 </script>

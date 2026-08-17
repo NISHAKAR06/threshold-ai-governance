@@ -36,6 +36,7 @@ const ReviewPage = (() => {
       const el = document.getElementById(`stat-${k}`);
       if (el) el.textContent = v;
     });
+    if (typeof ReviewBadge !== 'undefined') ReviewBadge.updateCount(counts.pending);
   }
 
   /* ── Filter & sort ───────────────────────────────────────── */
@@ -206,7 +207,6 @@ const ReviewPage = (() => {
       allRows = allRows.filter(r => r.id !== id);
       selected.delete(id);
       _applyFilters(); _updateStats(); _updateBulkBar();
-      if (typeof Toast !== 'undefined') Toast.success('Action approved');
     } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); }
   }
 
@@ -224,7 +224,6 @@ const ReviewPage = (() => {
         .then(() => {
           allRows = allRows.filter(r => r.id !== id);
           _applyFilters(); _updateStats();
-          if (typeof Toast !== 'undefined') Toast.danger('Action rejected');
         })
         .catch(e => { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); });
     }
@@ -251,7 +250,6 @@ const ReviewPage = (() => {
         if (typeof Modal !== 'undefined') Modal.close('reject-modal');
         allRows = allRows.filter(r => r.id !== id);
         _applyFilters(); _updateStats();
-        if (typeof Toast !== 'undefined') Toast.danger('Action rejected');
         document.getElementById('reject-reason').value = '';
       } catch (err) { if (typeof Toast !== 'undefined') Toast.danger('Error', err.message); }
     });

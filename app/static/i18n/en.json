@@ -2,7 +2,7 @@
   "app": {
     "name": "THRESHOLD AI",
     "tagline": "AI Governance Platform",
-    "version": "v2.0"
+    "version": "v1"
   },
   "nav": {
     "dashboard": "Dashboard",

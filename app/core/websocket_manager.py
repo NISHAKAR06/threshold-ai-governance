@@ -39,7 +39,6 @@ class ConnectionManager:
         await ws.accept()
         async with self._lock:
             self._channels[channel].add(ws)
-            self._channels["global"].add(ws)
             self._meta[ws] = {
                 "channel":    channel,
                 "user_id":    user_id,
@@ -54,7 +53,6 @@ class ConnectionManager:
             meta = self._meta.pop(ws, {})
             channel = meta.get("channel", "global")
             self._channels[channel].discard(ws)
-            self._channels["global"].discard(ws)
         ws_logger.info("WebSocket disconnected", extra={"channel": channel})
 
     # ── Send to one connection ────────────────────────────────
@@ -133,7 +131,7 @@ class ConnectionManager:
                 "data":    {"title": title, "message": message, "type": notif_type, "icon": icon},
                 "ts":      _now(),
             },
-            channel="global",
+            channel="notifications",
         )
 
     async def push_action_status(self, action_id: str, status: str, progress: int = 0) -> None:

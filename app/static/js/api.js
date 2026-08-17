@@ -98,6 +98,7 @@ const THRESHOLDAPI = (() => {
   /* ── Auth ────────────────────────────────────────────────── */
   const auth = {
     login:   (creds)  => post('/auth/login', creds, { silent: true, retry: 0 }),
+    signup:  (data)   => post('/auth/signup', data, { silent: true, retry: 0 }),
     me:      ()       => get('/auth/me'),
     logout:  ()       => { clearToken(); window.location.href = '/logout'; },
   };

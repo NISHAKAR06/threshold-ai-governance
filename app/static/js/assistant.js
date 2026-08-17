@@ -40,7 +40,9 @@ const AssistantPage = (() => {
         </div>
       </div>`;
     refs.msgs.appendChild(div);
-    refs.msgs.scrollTop = refs.msgs.scrollHeight;
+    setTimeout(() => {
+      if (refs.msgs) refs.msgs.scrollTop = refs.msgs.scrollHeight;
+    }, 30);
   }
 
   /* ── Thinking indicator ──────────────────────────────────── */
@@ -59,7 +61,9 @@ const AssistantPage = (() => {
         </div>
       </div>`;
     refs.msgs.appendChild(div);
-    refs.msgs.scrollTop = refs.msgs.scrollHeight;
+    setTimeout(() => {
+      if (refs.msgs) refs.msgs.scrollTop = refs.msgs.scrollHeight;
+    }, 30);
   }
 
   /* ── Action preview ──────────────────────────────────────── */

@@ -86,6 +86,15 @@ async def get_review(
     return ReviewItemResponse.model_validate(item)
 
 
+async def _get_review_by_id_or_action_id(review_repo: ReviewRepository, identifier: uuid.UUID):
+    review = await review_repo.get_by_id(identifier)
+    if not review:
+        review = await review_repo.get_by_action_id(identifier)
+        if not review:
+            raise RecordNotFoundError("ReviewQueue", str(identifier))
+    return review
+
+
 @router.post("/{review_id}/approve", response_model=ReviewActionResponse, summary="Approve a review item")
 async def approve_review(
     review_id: uuid.UUID,
@@ -96,7 +105,8 @@ async def approve_review(
     review_repo, action_repo, audit_repo = _repos(db)
     reviewer = payload.reviewed_by or (current_user.get("sub") if current_user else "system")
     try:
-        review = await review_repo.approve(review_id, reviewer, payload.reason)
+        review = await _get_review_by_id_or_action_id(review_repo, review_id)
+        review = await review_repo.approve(review.id, reviewer, payload.reason)
     except RecordNotFoundError as exc:
         raise to_http_exception(exc)
 
@@ -122,17 +132,17 @@ async def approve_review(
         department=review.department,
     )
 
-    await websocket_service.broadcast_review_update(review_id, "approved", reviewer)
+    await websocket_service.broadcast_review_update(review.id, "approved", reviewer)
     await websocket_service.notify(
         "Action approved",
-        f"Review {str(review_id)[:8]} approved by {reviewer}",
+        f"Review {str(review.id)[:8]} approved by {reviewer}",
         notif_type="success",
         icon="fa-check",
     )
 
-    api_logger.info("Review approved", extra={"review_id": str(review_id), "reviewer": reviewer})
+    api_logger.info("Review approved", extra={"review_id": str(review.id), "reviewer": reviewer})
     return ReviewActionResponse(
-        review_id=review_id,
+        review_id=review.id,
         action_id=review.action_id,
         status="approved",
         reviewed_by=reviewer,
@@ -151,7 +161,8 @@ async def reject_review(
     review_repo, action_repo, audit_repo = _repos(db)
     reviewer = payload.reviewed_by or (current_user.get("sub") if current_user else "system")
     try:
-        review = await review_repo.reject(review_id, reviewer, payload.reason)
+        review = await _get_review_by_id_or_action_id(review_repo, review_id)
+        review = await review_repo.reject(review.id, reviewer, payload.reason)
     except RecordNotFoundError as exc:
         raise to_http_exception(exc)
 
@@ -175,10 +186,10 @@ async def reject_review(
         department=review.department,
     )
 
-    await websocket_service.broadcast_review_update(review_id, "rejected", reviewer)
+    await websocket_service.broadcast_review_update(review.id, "rejected", reviewer)
     await websocket_service.notify("Action rejected", payload.reason[:80], notif_type="danger")
     return ReviewActionResponse(
-        review_id=review_id,
+        review_id=review.id,
         action_id=review.action_id,
         status="rejected",
         reviewed_by=reviewer,
@@ -197,7 +208,8 @@ async def modify_review(
     review_repo, action_repo, audit_repo = _repos(db)
     reviewer = payload.reviewed_by or (current_user.get("sub") if current_user else "system")
     try:
-        review = await review_repo.modify(review_id, reviewer, payload.modified_action_json, payload.reason)
+        review = await _get_review_by_id_or_action_id(review_repo, review_id)
+        review = await review_repo.modify(review.id, reviewer, payload.modified_action_json, payload.reason)
     except RecordNotFoundError as exc:
         raise to_http_exception(exc)
 
@@ -223,7 +235,7 @@ async def modify_review(
     )
 
     return ReviewActionResponse(
-        review_id=review_id,
+        review_id=review.id,
         action_id=review.action_id,
         status="modified",
         reviewed_by=reviewer,

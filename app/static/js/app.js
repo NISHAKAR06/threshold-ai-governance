@@ -441,12 +441,33 @@ const NotificationPanel = (() => {
     bell  = document.getElementById('notification-bell');
     if (!bell || !panel) return;
 
+    setCount(0);
     bell.addEventListener('click', e => { e.stopPropagation(); toggle(); });
     document.addEventListener('click', e => {
       if (open && !panel.contains(e.target) && e.target !== bell) close();
     });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) close(); });
     document.querySelector('[data-action="mark-all-read"]')?.addEventListener('click', markAllRead);
+
+    _loadRecent();
+  }
+
+  async function _loadRecent() {
+    try {
+      const data = await THRESHOLDAPI.dashboard.activity(5);
+      const items = data.items || data || [];
+      if (items.length) {
+        items.reverse().forEach(e => {
+          addNotification({
+            title: `${e.action || 'Event'}: ${e.resource || ''}`,
+            time: TimeFormatter.relative(e.timestamp),
+            icon: e.outcome === 'approved' || e.outcome === 'completed' ? 'fa-check' : e.outcome === 'rejected' || e.outcome === 'failed' ? 'fa-xmark' : 'fa-bell',
+            iconClass: `notif-${e.outcome === 'approved' || e.outcome === 'completed' ? 'success' : e.outcome === 'rejected' || e.outcome === 'failed' ? 'danger' : 'info'}`,
+            unread: false,
+          });
+        });
+      }
+    } catch {}
   }
 
   function toggle() { open ? close() : _open(); }
@@ -464,10 +485,16 @@ const NotificationPanel = (() => {
   }
 
   function setCount(n) {
-    count = n;
+    count = Math.max(0, n);
     const badge = document.querySelector('#notification-bell .badge');
     if (!badge) return;
-    badge.style.display = n > 0 ? '' : 'none';
+    if (count > 0) {
+      badge.textContent = count > 99 ? '99+' : String(count);
+      badge.style.display = 'inline-flex';
+    } else {
+      badge.textContent = '';
+      badge.style.display = 'none';
+    }
   }
 
   function markAllRead() {
@@ -478,6 +505,7 @@ const NotificationPanel = (() => {
   function addNotification({ title, time, icon = 'fa-bell', iconClass = 'notif-info', unread = true }) {
     const list = panel?.querySelector('.notification-list');
     if (!list) return;
+    list.querySelector('.empty-state')?.remove();
     const item = document.createElement('div');
     item.className = `notification-item${unread ? ' unread' : ''}`;
     item.innerHTML = `
@@ -490,7 +518,7 @@ const NotificationPanel = (() => {
     if (unread) setCount(count + 1);
   }
 
-  function _esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+  function _esc(s) { const d = document.createElement('div'); d.textContent = String(s||''); return d.innerHTML; }
 
   return { init, toggle, close, setCount, markAllRead, addNotification };
 })();
@@ -657,7 +685,8 @@ function _initWSListeners() {
       icon: data.icon ?? 'fa-bell',
       iconClass: `notif-${data.type ?? 'info'}`,
     });
-    Toast.info(data.title ?? I18n.t('notifications.system_alert'), data.message);
+    const toastType = (data.type && typeof Toast[data.type] === 'function') ? data.type : 'info';
+    Toast[toastType](data.title ?? I18n.t('notifications.system_alert'), data.message);
   });
 
   THRESHOLDWS.on('review_assigned', data => {
@@ -707,9 +736,46 @@ const Loader = (() => {
 
 
 /* ═══════════════════════════════════════════════════════════
+   15. REVIEW BADGE MANAGER
+═══════════════════════════════════════════════════════════ */
+const ReviewBadge = (() => {
+  function updateCount(count) {
+    const badge = document.getElementById('review-badge');
+    if (!badge) return;
+    const num = Math.max(0, parseInt(count) || 0);
+    badge.textContent = num;
+    badge.style.display = num > 0 ? 'inline-flex' : 'none';
+  }
+
+  async function refresh() {
+    try {
+      const data = await THRESHOLDAPI.dashboard.stats();
+      updateCount(data.pending_reviews ?? 0);
+    } catch {}
+  }
+
+  function init() {
+    refresh();
+    THRESHOLDWS.on('review_new', () => refresh());
+    THRESHOLDWS.on('review_update', () => refresh());
+  }
+
+  return { updateCount, refresh, init };
+})();
+
+
+/* ═══════════════════════════════════════════════════════════
    16. GLOBAL INIT
 ═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
+  /* Auth Guard for protected routes */
+  const publicPaths = ['/', '/landing', '/login', '/signup'];
+  const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';
+  if (!publicPaths.includes(currentPath) && !THRESHOLDAPI.getToken()) {
+    window.location.href = '/login';
+    return;
+  }
+
   /* Boot order matters */
   await I18n.init();
   ThemeManager.init();
@@ -722,6 +788,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   TimeFormatter.applyAll();
   initCopyButtons();
   _initWSListeners();
+  ReviewBadge.init();
 
   /* Page transition */
   document.querySelector('.app-content')?.classList.add('page-transition-enter');

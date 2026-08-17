@@ -2,7 +2,7 @@
   "app": {
     "name": "THRESHOLD AI",
     "tagline": "AI शासन प्लेटफ़ॉर्म",
-    "version": "v2.0"
+    "version": "v1"
   },
   "nav": {
     "dashboard": "डैशबोर्ड",
