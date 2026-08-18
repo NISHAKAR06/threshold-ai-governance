@@ -20,8 +20,8 @@ const ProfilePage = (() => {
     setText('display-role',   data.role || 'User');
     setText('display-dept',   data.department || '');
     // Avatar initials
-    const av = document.getElementById('profile-avatar');
-    if (av && data.name) av.textContent = data.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
+    _updateAvatarInitials('profile-avatar', data.name);
+
     // Stats
     setText('stat-total-actions',  data.total_actions ?? '—');
     setText('stat-reviews-done',   data.reviews_completed ?? '—');
@@ -31,9 +31,26 @@ const ProfilePage = (() => {
     if (data.recent_activity?.length) _renderActivity(data.recent_activity);
     // Sync navbar
     const navName = document.getElementById('nav-user-name');
-    const navAv   = document.getElementById('nav-user-avatar');
-    if (navName && data.name) navName.textContent = data.name.split(' ')[0];
-    if (navAv   && data.name) navAv.textContent   = data.name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
+    if (navName && data.name) navName.textContent = data.name;
+    _updateAvatarInitials('nav-user-avatar', data.name);
+  }
+
+  function _updateAvatarInitials(id, name) {
+    const el = document.getElementById(id);
+    if (!el || !name) return;
+    const initials = typeof window.getInitials === 'function'
+      ? window.getInitials(name)
+      : name.trim().slice(0, 2).toUpperCase();
+    let textUpdated = false;
+    el.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+        node.textContent = initials;
+        textUpdated = true;
+      }
+    });
+    if (!textUpdated) {
+      el.insertBefore(document.createTextNode(initials), el.firstChild);
+    }
   }
 
   function _renderActivity(items) {
@@ -72,6 +89,10 @@ const ProfilePage = (() => {
       const dDept = document.getElementById('display-dept');
       if (dName && payload.name) dName.textContent = payload.name;
       if (dDept && payload.department) dDept.textContent = payload.department;
+      _updateAvatarInitials('profile-avatar', payload.name);
+      _updateAvatarInitials('nav-user-avatar', payload.name);
+      const navName = document.getElementById('nav-user-name');
+      if (navName && payload.name) navName.textContent = payload.name;
       if (typeof Toast !== 'undefined') Toast.success('Profile saved');
     } catch (e) {
       if (typeof Toast !== 'undefined') Toast.danger('Save failed', e.message);
@@ -85,8 +106,15 @@ const ProfilePage = (() => {
     document.getElementById('save-profile-btn')?.addEventListener('click', save);
     // Live name sync
     document.getElementById('profile-name')?.addEventListener('input', e => {
+      const val = e.target.value.trim();
       const d = document.getElementById('display-name');
-      if (d) d.textContent = e.target.value || 'Admin User';
+      if (d) d.textContent = val || 'Admin User';
+      if (val) {
+        _updateAvatarInitials('profile-avatar', val);
+        _updateAvatarInitials('nav-user-avatar', val);
+        const navName = document.getElementById('nav-user-name');
+        if (navName) navName.textContent = val;
+      }
     });
     document.getElementById('profile-department')?.addEventListener('input', e => {
       const d = document.getElementById('display-dept');

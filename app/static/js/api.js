@@ -14,10 +14,23 @@ const THRESHOLDAPI = (() => {
   const MAX_RETRY = 2;
   const RETRY_DELAY_MS = 500;
 
-  /* ── Token helpers ───────────────────────────────────────── */
+  /* ── Token & User helpers ───────────────────────────────── */
   const getToken  = () => localStorage.getItem('THRESHOLD_token') || sessionStorage.getItem('THRESHOLD_token');
-  const setToken  = (t, remember = false) => (remember ? localStorage : sessionStorage).setItem('THRESHOLD_token', t);
-  const clearToken = () => { localStorage.removeItem('THRESHOLD_token'); sessionStorage.removeItem('THRESHOLD_token'); };
+  const getUser   = () => {
+    try {
+      const raw = localStorage.getItem('THRESHOLD_user') || sessionStorage.getItem('THRESHOLD_user');
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  };
+  const setToken  = (t, remember = false, user = null) => {
+    const store = remember ? localStorage : sessionStorage;
+    store.setItem('THRESHOLD_token', t);
+    if (user) store.setItem('THRESHOLD_user', JSON.stringify(user));
+  };
+  const clearToken = () => {
+    localStorage.removeItem('THRESHOLD_token'); sessionStorage.removeItem('THRESHOLD_token');
+    localStorage.removeItem('THRESHOLD_user');  sessionStorage.removeItem('THRESHOLD_user');
+  };
 
   /* ── Loading state ───────────────────────────────────────── */
   let _pending = 0;
@@ -99,7 +112,8 @@ const THRESHOLDAPI = (() => {
   const auth = {
     login:   (creds)  => post('/auth/login', creds, { silent: true, retry: 0 }),
     signup:  (data)   => post('/auth/signup', data, { silent: true, retry: 0 }),
-    me:      ()       => get('/auth/me'),
+    me:      ()       => get('/auth/me', { silent: true }),
+    profile: ()       => get('/auth/me', { silent: true }),
     logout:  ()       => { clearToken(); window.location.href = '/logout'; },
   };
 
@@ -195,7 +209,7 @@ const THRESHOLDAPI = (() => {
 
   return {
     get, post, put, patch, del,
-    getToken, setToken, clearToken,
+    getToken, getUser, setToken, clearToken,
     auth, dashboard, chat, governance,
     review, execution, audit, analytics,
     settings, profile,

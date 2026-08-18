@@ -768,6 +768,19 @@ const ReviewBadge = (() => {
    16. GLOBAL INIT
 ═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
+  /* Global Logout click listener */
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('a[href="/logout"], [data-action="logout"]');
+    if (btn) {
+      e.preventDefault();
+      try {
+        localStorage.removeItem('THRESHOLD_token');
+        sessionStorage.removeItem('THRESHOLD_token');
+      } catch (err) {}
+      window.location.href = '/logout';
+    }
+  });
+
   /* Auth Guard for protected routes */
   const publicPaths = ['/', '/landing', '/login', '/signup'];
   const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';

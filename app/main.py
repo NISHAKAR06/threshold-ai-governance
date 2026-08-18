@@ -162,9 +162,25 @@ async def settings_page(request: Request):
 async def profile_page(request: Request):
     return templates.TemplateResponse("profile.html", {"request": request})
 
-@app.get("/logout",    include_in_schema=False)
+@app.get("/logout", include_in_schema=False)
 async def logout():
-    response = RedirectResponse(url="/login")
+    response = HTMLResponse(content="""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logging Out — THRESHOLD AI</title>
+  <script>
+    try {
+      localStorage.removeItem('THRESHOLD_token');
+      sessionStorage.removeItem('THRESHOLD_token');
+    } catch (e) {}
+    window.location.replace('/');
+  </script>
+</head>
+<body style="background:#0F172A;color:#fff;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+  <p>Logging out…</p>
+</body>
+</html>""")
     response.delete_cookie("THRESHOLD_token")
     return response
 

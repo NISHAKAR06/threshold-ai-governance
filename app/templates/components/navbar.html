@@ -118,19 +118,58 @@
 </header>
 
 <script>
+  /* Helper to format initials */
+  window.getInitials = function(name) {
+    if (!name) return 'U';
+    const parts = String(name).trim().split(/\s+/).filter(Boolean);
+    if (parts.length === 0) return 'U';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+  };
+
+  /* Instant local render to prevent default 'SA' flicker */
+  (function initNavUserFromStorage() {
+    try {
+      const raw = localStorage.getItem('THRESHOLD_user') || sessionStorage.getItem('THRESHOLD_user');
+      if (raw) {
+        const u = JSON.parse(raw);
+        const name = u.name || u.full_name || u.username;
+        if (name) {
+          const el = document.getElementById('nav-user-name');
+          const relEl = document.getElementById('nav-user-role');
+          const avEl = document.getElementById('nav-user-avatar');
+          if (el) el.textContent = name;
+          if (relEl) relEl.textContent = u.role || 'User';
+          if (avEl) avEl.textContent = window.getInitials(name);
+          document.getElementById('nav-user-info')?.removeAttribute('style');
+        }
+      }
+    } catch (e) {}
+  })();
+
   /* Populate nav user info from profile API on load */
   document.addEventListener('DOMContentLoaded', async () => {
     try {
-      const profile = await THRESHOLDAPI.auth.profile();
-      const name  = profile.name  ?? 'Admin User';
-      const role  = profile.role  ?? 'Administrator';
-      const el    = document.getElementById('nav-user-name');
-      const relEl = document.getElementById('nav-user-role');
-      const avEl  = document.getElementById('nav-user-avatar');
-      if (el)    el.textContent  = name;
-      if (relEl) relEl.textContent = role;
-      if (avEl)  avEl.textContent  = name.trim().split(/\s+/).map(w=>w[0]).slice(0,2).join('').toUpperCase();
-      document.getElementById('nav-user-info')?.removeAttribute('style');
-    } catch {}
+      if (typeof THRESHOLDAPI !== 'undefined' && THRESHOLDAPI.auth?.profile) {
+        const profile = await THRESHOLDAPI.auth.profile();
+        if (profile && (profile.name || profile.username)) {
+          const name = profile.name || profile.username;
+          const role = profile.role || 'User';
+          const el = document.getElementById('nav-user-name');
+          const relEl = document.getElementById('nav-user-role');
+          const avEl = document.getElementById('nav-user-avatar');
+          if (el) el.textContent = name;
+          if (relEl) relEl.textContent = role;
+          if (avEl) avEl.textContent = window.getInitials(name);
+          document.getElementById('nav-user-info')?.removeAttribute('style');
+          try {
+            const store = localStorage.getItem('THRESHOLD_token') ? localStorage : sessionStorage;
+            store.setItem('THRESHOLD_user', JSON.stringify(profile));
+          } catch (err) {}
+        }
+      }
+    } catch (e) {
+      console.warn('Could not load user profile in navbar:', e);
+    }
   });
 </script>
