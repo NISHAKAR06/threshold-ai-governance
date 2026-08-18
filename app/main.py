@@ -43,6 +43,7 @@ app = FastAPI(
     description="Enterprise AI Governance Platform — PS-9.1 Graduated Autonomy Engine",
     docs_url="/api/docs" if settings.DEBUG else None,
     redoc_url="/api/redoc" if settings.DEBUG else None,
+    openapi_url="/api/openapi.json" if settings.DEBUG else None,
     lifespan=lifespan,
 )
 
@@ -85,6 +86,10 @@ app.mount(
 templates = Jinja2Templates(directory=str(settings.TEMPLATES_DIR))
 
 # ── HTML page routes ──────────────────────────────────────────
+@app.get("/docs", include_in_schema=False)
+async def docs_redirect():
+    return RedirectResponse(url="/api/docs")
+
 @app.get("/",          response_class=HTMLResponse, include_in_schema=False)
 async def root(request: Request):
     return templates.TemplateResponse("landing.html", {"request": request})

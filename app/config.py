@@ -6,13 +6,17 @@ import os
 from pathlib import Path
 from functools import lru_cache
 from typing import List
+from dotenv import load_dotenv
+
+_BASE_DIR = Path(__file__).parent
+load_dotenv(dotenv_path=_BASE_DIR.parent / ".env")
 
 
 class Settings:
     # ── App ──────────────────────────────────────────────────
     APP_NAME: str         = "THRESHOLD AI Governance"
     APP_VERSION: str      = "1.0.0"
-    DEBUG: bool           = os.getenv("DEBUG", "false").lower() == "true"
+    DEBUG: bool           = os.getenv("DEBUG", "true").lower() == "true"
     SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
 
     # ── Server ───────────────────────────────────────────────
