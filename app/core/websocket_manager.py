@@ -75,6 +75,8 @@ class ConnectionManager:
         exclude: Optional[WebSocket] = None,
     ) -> int:
         connections = set(self._channels.get(channel, set()))
+        if channel != "global":
+            connections.update(self._channels.get("global", set()))
         sent = 0
         dead: list[WebSocket] = []
         for ws in connections:

@@ -80,7 +80,7 @@ const THRESHOLDWS = (() => {
   }
 
   function connectAll() {
-    Object.keys(CHANNELS).forEach(ch => connect(ch));
+    connect('global');
   }
 
   function disconnect(channel) {
