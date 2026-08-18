@@ -75,6 +75,10 @@ async def logging_and_security_middleware(request: Request, call_next):
     response.headers["X-XSS-Protection"] = "1; mode=block"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
 
+    # Static asset caching
+    if request.url.path.startswith("/static/"):
+        response.headers["Cache-Control"] = "public, max-age=86400"
+
     return response
 
 # ── Domain exception handler ──────────────────────────────────

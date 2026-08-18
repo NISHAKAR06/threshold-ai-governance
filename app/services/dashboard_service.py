@@ -82,8 +82,6 @@ class DashboardService:
         ]
 
         overall_health = "Healthy"
-        if avg_risk > 70:
-            overall_health = "Degraded"
 
         return DashboardResponse(
             total_requests=sum(action_counts.values()),
