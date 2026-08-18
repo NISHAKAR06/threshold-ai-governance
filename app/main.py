@@ -8,6 +8,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
@@ -41,11 +42,14 @@ app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
     description="Enterprise AI Governance Platform — PS-9.1 Graduated Autonomy Engine",
-    docs_url="/api/docs" if settings.DEBUG else None,
-    redoc_url="/api/redoc" if settings.DEBUG else None,
-    openapi_url="/api/openapi.json" if settings.DEBUG else None,
+    docs_url="/api/docs" if settings.ENABLE_DOCS else None,
+    redoc_url="/api/redoc" if settings.ENABLE_DOCS else None,
+    openapi_url="/api/openapi.json" if settings.ENABLE_DOCS else None,
     lifespan=lifespan,
 )
+
+# ── Production Middlewares ─────────────────────────────────────
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 # ── CORS ──────────────────────────────────────────────────────
 app.add_middleware(
@@ -56,14 +60,21 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── Request logging middleware ────────────────────────────────
+# ── Request logging & Security Headers middleware ──────────────
 @app.middleware("http")
-async def logging_middleware(request: Request, call_next):
+async def logging_and_security_middleware(request: Request, call_next):
     start    = time.monotonic()
     log_request(request.method, str(request.url.path))
     response = await call_next(request)
     duration = (time.monotonic() - start) * 1000
     log_response(request.method, str(request.url.path), response.status_code, duration)
+
+    # Security Headers
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+
     return response
 
 # ── Domain exception handler ──────────────────────────────────
@@ -73,6 +84,15 @@ async def THRESHOLD_exception_handler(request: Request, exc: THRESHOLDBaseExcept
     return JSONResponse(
         status_code=http_exc.status_code,
         content={"detail": http_exc.detail},
+    )
+
+# ── Global unhandled exception handler ────────────────────────
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    app_logger.error(f"Unhandled exception on {request.url.path}: {str(exc)}", exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={"detail": {"code": "INTERNAL_SERVER_ERROR", "message": "An internal error occurred."}},
     )
 
 # ── Static files ──────────────────────────────────────────────
@@ -262,11 +282,19 @@ app.include_router(ws_router)
 
 # ── System health ─────────────────────────────────────────────
 @app.get("/health", tags=["System"], summary="Health check")
-async def health():
+async def health(db: AsyncSession = Depends(get_db)):
+    db_status = "healthy"
+    try:
+        from sqlalchemy import text
+        await db.execute(text("SELECT 1"))
+    except Exception as exc:
+        db_status = f"unhealthy: {str(exc)}"
+
     return {
-        "status":  "ok",
+        "status":  "ok" if db_status == "healthy" else "degraded",
         "app":     settings.APP_NAME,
         "version": settings.APP_VERSION,
+        "database": db_status,
     }
 
 # ── Dev runner ────────────────────────────────────────────────

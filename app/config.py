@@ -17,6 +17,7 @@ class Settings:
     APP_NAME: str         = "THRESHOLD AI Governance"
     APP_VERSION: str      = "1.0.0"
     DEBUG: bool           = os.getenv("DEBUG", "true").lower() == "true"
+    ENABLE_DOCS: bool     = os.getenv("ENABLE_DOCS", "true").lower() == "true"
     SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
 
     # ── Server ───────────────────────────────────────────────
