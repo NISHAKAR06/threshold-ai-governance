@@ -243,8 +243,6 @@ const DashboardPage = (() => {
     _initWS();
     loadAll();
     document.getElementById('dashboard-refresh')?.addEventListener('click', loadAll);
-    // Auto-refresh every 60s
-    refreshTimer = setInterval(loadAll, 60000);
     // Set today's date
     const dateEl = document.getElementById('activity-date');
     if (dateEl) dateEl.textContent = new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric' });

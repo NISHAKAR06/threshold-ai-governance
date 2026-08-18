@@ -765,6 +765,111 @@ const ReviewBadge = (() => {
 
 
 /* ═══════════════════════════════════════════════════════════
+   15. INSTANT SPA ROUTER (No full page reloads)
+═══════════════════════════════════════════════════════════ */
+const SPARouter = (() => {
+  const pageInitializers = {
+    '/dashboard':  () => typeof DashboardPage  !== 'undefined' && DashboardPage.init?.(),
+    '/assistant':  () => typeof AssistantPage  !== 'undefined' && AssistantPage.init?.(),
+    '/governance': () => typeof GovernancePage !== 'undefined' && GovernancePage.init?.(),
+    '/review':     () => typeof ReviewPage     !== 'undefined' && ReviewPage.init?.(),
+    '/audit':      () => typeof AuditPage      !== 'undefined' && AuditPage.init?.(),
+    '/analytics':  () => typeof AnalyticsPage  !== 'undefined' && AnalyticsPage.init?.(),
+    '/settings':   () => typeof SettingsPage   !== 'undefined' && SettingsPage.init?.(),
+    '/profile':    () => typeof ProfilePage    !== 'undefined' && ProfilePage.init?.(),
+  };
+
+  async function navigate(url, push = true) {
+    const targetUrl = new URL(url, window.location.origin);
+    const path = targetUrl.pathname.toLowerCase().replace(/\/$/, '') || '/';
+    const appPaths = ['/dashboard', '/assistant', '/governance', '/review', '/audit', '/analytics', '/settings', '/profile'];
+
+    if (!appPaths.includes(path)) {
+      window.location.href = url;
+      return;
+    }
+
+    const mainContent = document.getElementById('main-content');
+    if (!mainContent) { window.location.href = url; return; }
+
+    try {
+      mainContent.style.opacity = '0.6';
+      mainContent.style.transition = 'opacity 0.15s ease';
+
+      const res = await fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } });
+      if (!res.ok) { window.location.href = url; return; }
+
+      const html = await res.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const newContent = doc.getElementById('main-content');
+
+      if (!newContent) { window.location.href = url; return; }
+
+      mainContent.innerHTML = newContent.innerHTML;
+      document.title = doc.title;
+
+      if (push) history.pushState({}, '', url);
+
+      _updateActiveNav(path);
+
+      if (pageInitializers[path]) {
+        try { pageInitializers[path](); } catch (e) { console.warn('Page init error:', e); }
+      }
+
+      if (typeof I18n !== 'undefined' && I18n.applyToDOM) I18n.applyToDOM();
+      if (typeof TimeFormatter !== 'undefined' && TimeFormatter.applyAll) TimeFormatter.applyAll();
+
+      window.scrollTo(0, 0);
+    } catch (e) {
+      window.location.href = url;
+    } finally {
+      mainContent.style.opacity = '1';
+    }
+  }
+
+  function _updateActiveNav(currentPath) {
+    document.querySelectorAll('.sidebar-nav .nav-item').forEach(link => {
+      const href = link.getAttribute('href')?.toLowerCase().replace(/\/$/, '') || '/';
+      if (href === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  function init() {
+    document.addEventListener('click', e => {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('javascript:') || href === '/logout') return;
+
+      const targetUrl = new URL(href, window.location.origin);
+      if (targetUrl.origin !== window.location.origin) return;
+
+      const path = targetUrl.pathname.toLowerCase().replace(/\/$/, '') || '/';
+      const appPaths = ['/dashboard', '/assistant', '/governance', '/review', '/audit', '/analytics', '/settings', '/profile'];
+      if (appPaths.includes(path)) {
+        e.preventDefault();
+        navigate(href);
+      }
+    });
+
+    window.addEventListener('popstate', () => {
+      navigate(window.location.href, false);
+    });
+
+    _updateActiveNav(window.location.pathname.toLowerCase().replace(/\/$/, '') || '/');
+  }
+
+  return { init, navigate };
+})();
+
+
+/* ═══════════════════════════════════════════════════════════
    16. GLOBAL INIT
 ═══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', async () => {
@@ -802,6 +907,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCopyButtons();
   _initWSListeners();
   ReviewBadge.init();
+  SPARouter.init();
 
   /* Page transition */
   document.querySelector('.app-content')?.classList.add('page-transition-enter');
