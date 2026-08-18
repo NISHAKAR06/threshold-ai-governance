@@ -223,11 +223,14 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-4);
+      text-decoration: none;
+      color: inherit;
     }
     .feature-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-lg);
       border-color: var(--color-primary-muted);
+      text-decoration: none;
     }
     .feature-card-icon {
       width: 48px; height: 48px;
@@ -236,6 +239,15 @@
       font-size: 20px;
       background: var(--color-primary-light);
       color: var(--color-primary);
+    }
+    .feature-card-link {
+      margin-top: auto;
+      font-size: var(--font-size-xs);
+      font-weight: 600;
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
     }
 
     /* Architecture Flow */
@@ -264,6 +276,15 @@
       min-width: 160px;
       text-align: center;
       box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      color: inherit;
+      transition: all var(--transition-base);
+    }
+    .arch-node:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+      text-decoration: none;
     }
     .arch-node-icon {
       font-size: 22px;
@@ -378,7 +399,9 @@
     <nav class="landing-nav-links">
       <a href="#features" class="landing-nav-link">Features</a>
       <a href="#architecture" class="landing-nav-link">Architecture</a>
-      <a href="#autonomy" class="landing-nav-link">Graduated Autonomy</a>
+      <a href="/dashboard" class="landing-nav-link">Dashboard</a>
+      <a href="/governance" class="landing-nav-link">Governance</a>
+      <a href="/review" class="landing-nav-link">Review Queue</a>
       <a href="/api/docs" class="landing-nav-link" target="_blank">API Docs</a>
     </nav>
 
@@ -498,41 +521,47 @@
     </div>
 
     <div class="features-grid">
-      <div class="feature-card">
+      <a href="/dashboard" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-scale-balanced"></i></div>
         <h3 class="text-lg font-bold">Graduated Autonomy Engine</h3>
         <p class="text-sm text-secondary">Dynamically evaluates risk scores to route actions to Auto Approve, Require Confirmation, or Human Review.</p>
-      </div>
+        <span class="feature-card-link">Explore Dashboard <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-      <div class="feature-card">
+      <a href="/assistant" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-file-contract"></i></div>
         <h3 class="text-lg font-bold">Structured Action Contracts</h3>
         <p class="text-sm text-secondary">Converts unstructured AI intents into strict, schema-validated JSON action objects before execution.</p>
-      </div>
+        <span class="feature-card-link">Try AI Assistant <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-      <div class="feature-card">
+      <a href="/governance" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
         <h3 class="text-lg font-bold">Policy Enforcement Engine</h3>
         <p class="text-sm text-secondary">Evaluates corporate regulatory frameworks (GDPR, SOC2, HIPAA) to prevent unauthorized mutations.</p>
-      </div>
+        <span class="feature-card-link">View Policies <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-      <div class="feature-card">
+      <a href="/review" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-users-gear"></i></div>
         <h3 class="text-lg font-bold">Human-in-the-Loop Queue</h3>
         <p class="text-sm text-secondary">Empowers security officers to review, approve, reject, or modify high-risk AI requests with full context.</p>
-      </div>
+        <span class="feature-card-link">Open Review Queue <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-      <div class="feature-card">
+      <a href="/audit" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-receipt"></i></div>
         <h3 class="text-lg font-bold">Immutable Audit Trail</h3>
         <p class="text-sm text-secondary">Logs every AI interaction, decision rationale, risk factor, and execution result for complete compliance reporting.</p>
-      </div>
+        <span class="feature-card-link">View Audit Logs <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
 
-      <div class="feature-card">
+      <a href="/analytics" class="feature-card">
         <div class="feature-card-icon"><i class="fa-solid fa-signal"></i></div>
         <h3 class="text-lg font-bold">WebSocket Real-Time Broadcast</h3>
         <p class="text-sm text-secondary">Instant telemetry streaming updates dashboards, review counts, and risk notifications with zero latency.</p>
-      </div>
+        <span class="feature-card-link">View Analytics <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
     </div>
   </section>
 
@@ -545,45 +574,45 @@
     </div>
 
     <div class="arch-pipeline">
-      <div class="arch-node">
+      <a href="/assistant" class="arch-node">
         <div class="arch-node-icon"><i class="fa-solid fa-comment"></i></div>
         <div class="arch-node-title">1. NL Request</div>
-      </div>
+      </a>
 
       <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div class="arch-node">
+      <a href="/assistant" class="arch-node">
         <div class="arch-node-icon"><i class="fa-solid fa-robot"></i></div>
         <div class="arch-node-title">2. AI Agent</div>
-      </div>
+      </a>
 
       <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div class="arch-node">
+      <a href="/assistant" class="arch-node">
         <div class="arch-node-icon"><i class="fa-solid fa-sliders"></i></div>
         <div class="arch-node-title">3. Planner Agent</div>
-      </div>
+      </a>
 
       <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div class="arch-node" style="border-color:var(--color-primary);background:var(--color-primary-light)">
+      <a href="/governance" class="arch-node" style="border-color:var(--color-primary);background:var(--color-primary-light)">
         <div class="arch-node-icon" style="color:var(--color-primary)"><i class="fa-solid fa-shield-halved"></i></div>
         <div class="arch-node-title text-primary font-bold">4. Governance</div>
-      </div>
+      </a>
 
       <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div class="arch-node">
+      <a href="/review" class="arch-node">
         <div class="arch-node-icon"><i class="fa-solid fa-user-check"></i></div>
         <div class="arch-node-title">5. Review / Execute</div>
-      </div>
+      </a>
 
       <div class="arch-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div class="arch-node">
+      <a href="/audit" class="arch-node">
         <div class="arch-node-icon"><i class="fa-solid fa-box-archive"></i></div>
         <div class="arch-node-title">6. Audit Log</div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -632,9 +661,14 @@
       <span>&nbsp;·&nbsp; Enterprise AI Governance Platform v1</span>
     </div>
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="/dashboard" class="text-tertiary hover:text-primary">Dashboard</a>
+      <a href="/governance" class="text-tertiary hover:text-primary">Governance</a>
+      <a href="/review" class="text-tertiary hover:text-primary">Review Queue</a>
+      <a href="/audit" class="text-tertiary hover:text-primary">Audit Logs</a>
+      <a href="/analytics" class="text-tertiary hover:text-primary">Analytics</a>
       <a href="/health" class="text-tertiary hover:text-primary">System Health</a>
-      <a href="/api/docs" class="text-tertiary hover:text-primary">API Documentation</a>
+      <a href="/api/docs" class="text-tertiary hover:text-primary" target="_blank">API Docs</a>
       <span>&copy; 2026 THRESHOLD AI. All rights reserved.</span>
     </div>
   </div>

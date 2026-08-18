@@ -17,6 +17,15 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
 
+  <script>
+    (function() {
+      const token = localStorage.getItem('THRESHOLD_token') || sessionStorage.getItem('THRESHOLD_token');
+      if (token) {
+        window.location.replace('/dashboard');
+      }
+    })();
+  </script>
+
   <style>
     body { background: var(--bg-base); }
 

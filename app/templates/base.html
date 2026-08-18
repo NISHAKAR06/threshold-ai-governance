@@ -32,6 +32,14 @@
       wsAutoConnect: true,
       defaultLang: '{{ default_lang | default("en") }}'
     };
+
+    // Instant auth check before DOM renders to prevent flicker
+    (function() {
+      const token = localStorage.getItem('THRESHOLD_token') || sessionStorage.getItem('THRESHOLD_token');
+      if (!token) {
+        window.location.replace('/login');
+      }
+    })();
   </script>
 </head>
 <body>
