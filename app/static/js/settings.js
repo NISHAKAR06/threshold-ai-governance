@@ -183,6 +183,6 @@ const SettingsPage = (() => {
     });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, save, load };
 })();

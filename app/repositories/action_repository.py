@@ -48,8 +48,6 @@ class ActionRepository(BaseRepository[Action]):
 
     async def count_today(self) -> int:
         today = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-        return await self.count(filters={"created_at": None})  # override below
-        # proper implementation:
         stmt = select(func.count(Action.id)).where(Action.created_at >= today)
         result = await self.session.execute(stmt)
         return result.scalar_one()

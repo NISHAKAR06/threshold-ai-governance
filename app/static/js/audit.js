@@ -188,8 +188,25 @@ const AuditPage = (() => {
   const _riskBadge = l => { const m={low:'success',medium:'warning',high:'danger',critical:'danger'}; return `<span class="badge badge-${m[l]||'neutral'} badge-dot">${l||'—'}</span>`; };
   const _outcomeBadge = o => { const m={approved:'success',rejected:'danger',completed:'success',failed:'danger',pending:'warning'}; return `<span class="badge badge-${m[o]||'neutral'}">${o||'—'}</span>`; };
 
+  let _auditPollTimer = null;
+  function _startPolling() {
+    _stopPolling();
+    _auditPollTimer = setInterval(() => {
+      if (window.location.pathname.includes('/audit')) {
+        load();
+      }
+    }, 5000);
+  }
+  function _stopPolling() {
+    if (_auditPollTimer) { clearInterval(_auditPollTimer); _auditPollTimer = null; }
+  }
+
   function init() {
     _initWS(); load();
+    _startPolling();
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? _stopPolling() : _startPolling();
+    });
     document.getElementById('audit-search')?.addEventListener('input', e => { filters.search = e.target.value; _applyFilters(); });
     document.getElementById('filter-risk')?.addEventListener('change', e => { filters.risk = e.target.value; _applyFilters(); });
     document.getElementById('filter-status')?.addEventListener('change', e => { filters.status = e.target.value; _applyFilters(); });
@@ -201,6 +218,6 @@ const AuditPage = (() => {
     document.getElementById('audit-refresh')?.addEventListener('click', load);
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, load };
 })();

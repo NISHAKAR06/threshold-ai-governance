@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 from sqlalchemy import DateTime, Float, String, Integer
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database.database import Base, GUID, JSONType
+from app.database.database import Base, AwareDateTime, GUID, JSONType
 
 
 class ReviewQueue(Base):
@@ -30,7 +30,7 @@ class ReviewQueue(Base):
     confidence: Mapped[float] = mapped_column(Float, default=0.0)
     intent: Mapped[str]      = mapped_column(String(2000), nullable=True)
     risk_breakdown: Mapped[dict] = mapped_column(JSONType(), nullable=True, default=dict)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
-    reviewed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    due_at: Mapped[datetime | None]      = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    updated_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    reviewed_at: Mapped[datetime | None] = mapped_column(AwareDateTime(), nullable=True)
+    due_at: Mapped[datetime | None]      = mapped_column(AwareDateTime(), nullable=True)

@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 from sqlalchemy import DateTime, Float, String, Boolean
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database.database import Base, GUID, JSONType
+from app.database.database import Base, AwareDateTime, GUID, JSONType
 
 
 class AuditLog(Base):
@@ -34,7 +34,7 @@ class AuditLog(Base):
     metadata_: Mapped[dict]  = mapped_column("metadata", JSONType(), nullable=True, default=dict)
     ip_address: Mapped[str | None]  = mapped_column(String(45), nullable=True)
     user_agent: Mapped[str | None]  = mapped_column(String(500), nullable=True)
-    timestamp: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    timestamp: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
 
     def __repr__(self) -> str:
         return f"<AuditLog {self.event_type} outcome={self.outcome}>"

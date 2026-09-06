@@ -5,7 +5,7 @@ Centralised application configuration via environment variables.
 import os
 from pathlib import Path
 from functools import lru_cache
-from typing import List
+from typing import List, Optional
 from dotenv import load_dotenv
 
 _BASE_DIR = Path(__file__).parent
@@ -15,7 +15,7 @@ load_dotenv(dotenv_path=_BASE_DIR.parent / ".env")
 class Settings:
     # ── App ──────────────────────────────────────────────────
     APP_NAME: str         = "THRESHOLD AI Governance"
-    APP_VERSION: str      = "1.0.0"
+    APP_VERSION: str      = os.getenv("APP_VERSION", "2.0.0")
     DEBUG: bool           = os.getenv("DEBUG", "true").lower() == "true"
     ENABLE_DOCS: bool     = os.getenv("ENABLE_DOCS", "true").lower() == "true"
     SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
@@ -52,11 +52,11 @@ class Settings:
     JWT_EXPIRE_MINUTES: int = int(os.getenv("JWT_EXPIRE_MINUTES", "480"))
 
     # ── Gemini LLM ────────────────────────────────────────────
-    GEMINI_API_KEY: str   = os.getenv("GEMINI_API_KEY", "")
-    GEMINI_MODEL: str     = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+    GEMINI_API_KEY: Optional[str] = os.getenv("GEMINI_API_KEY")
+    GEMINI_MODEL: str     = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
     LLM_TEMPERATURE: float = float(os.getenv("LLM_TEMPERATURE", "0.2"))
     LLM_MAX_TOKENS: int   = int(os.getenv("LLM_MAX_TOKENS", "2048"))
-    LLM_TIMEOUT: int      = int(os.getenv("LLM_TIMEOUT", "30"))
+    LLM_TIMEOUT: int      = int(os.getenv("LLM_TIMEOUT", "120"))
 
     # ── Risk Thresholds ───────────────────────────────────────
     AUTO_APPROVE_THRESHOLD: int   = int(os.getenv("AUTO_APPROVE_THRESHOLD", "30"))

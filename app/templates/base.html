@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
+  <!-- Theme is set immediately (before CSS parses) to prevent FOUC -->
   <script>
     (function() {
       try {
         var t = localStorage.getItem('THRESHOLD_theme');
-        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.dataset.theme = 'dark';
-        } else {
+        if (t === 'light') {
           document.documentElement.dataset.theme = 'light';
+        } else {
+          // Default to dark; respect OS preference only when no saved pref
+          var prefersDark = !t || window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
         }
       } catch (e) {}
     })();
@@ -16,7 +19,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="THRESHOLD AI Governance Platform">
-  <title>{% block title %}THRESHOLD AI{% endblock %} — THRESHOLD AI</title>
+  <title>{% block title %}THRESHOLD AI{% endblock %} - THRESHOLD AI</title>
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,11 +30,16 @@
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <!-- Core CSS (always loaded) -->
-  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+  <!-- Global & Page Component CSS — All loaded up-front to prevent FOUC / missing styles -->
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/dashboard.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/assistant.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/governance.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/review.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/analytics.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/settings.css') }}?v={{ asset_version }}">
 
   <!-- Per-page CSS -->
   {% block page_css %}{% endblock %}
@@ -45,7 +53,7 @@
       defaultLang: '{{ default_lang | default("en") }}'
     };
 
-    // Instant auth check before DOM renders to prevent flicker
+    // Instant auth check before DOM renders to prevent redirect flicker
     (function() {
       const token = localStorage.getItem('THRESHOLD_token') || sessionStorage.getItem('THRESHOLD_token');
       if (!token) {
@@ -59,16 +67,16 @@
 {% block body %}
 <div class="app-shell">
 
-  {# ── Sidebar ─────────────────────────────────────────── #}
+  {# -- Sidebar -- #}
   {% include 'components/sidebar.html' %}
 
-  {# ── Main Column ─────────────────────────────────────── #}
+  {# -- Main Column -- #}
   <div class="app-main">
 
-    {# ── Navbar ──────────────────────────────────────────── #}
+    {# -- Navbar -- #}
     {% include 'components/navbar.html' %}
 
-    {# ── Page Content ─────────────────────────────────────── #}
+    {# -- Page Content -- #}
     <main class="app-content" id="main-content" role="main">
       {% block content %}{% endblock %}
     </main>
@@ -78,20 +86,27 @@
 </div>{# /app-shell #}
 {% endblock %}
 
-{# ── Shared Overlays ──────────────────────────────────────── #}
+{# -- Shared Overlays -- #}
 {% include 'components/modal.html' %}
 {% include 'components/loader.html' %}
 {% include 'components/toast.html' %}
 
-{# ── Core JS (load order: api → ws → app) ────────────────── #}
-<script src="{{ url_for('static', path='js/api.js') }}"></script>
-<script src="{{ url_for('static', path='js/websocket.js') }}"></script>
-<script src="{{ url_for('static', path='js/app.js') }}"></script>
+{# -- Core & Page JS (loaded globally for instant SPA navigation & background data sync) -- #}
+<script src="{{ url_for('static', path='js/api.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/websocket.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/app.js') }}?v={{ asset_version }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', path='js/dashboard.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/assistant.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/governance.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/review.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/audit.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/analytics.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/settings.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/profile.js') }}?v={{ asset_version }}"></script>
 
-{# ── Per-page JS ──────────────────────────────────────────── #}
-{% block page_js %}{% endblock %}
-
-{# ── Inline page init ─────────────────────────────────────── #}
+{# -- Per-page JS -- #}
+{# -- Inline page init -- #}
 {% block page_init %}{% endblock %}
 
 </body>

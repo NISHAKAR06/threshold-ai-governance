@@ -4,7 +4,33 @@
  */
 const AssistantPage = (() => {
   let convId = null, isThinking = false;
-  const messages = [];
+  let messages = [];
+  let sidebarHistory = [];
+
+  /* ── State Persistence ────────────────────────────────────── */
+  function _saveState() {
+    localStorage.setItem('THRESHOLD_chat_state', JSON.stringify({ convId, messages, sidebarHistory }));
+  }
+  function _loadState() {
+    try {
+      const state = JSON.parse(localStorage.getItem('THRESHOLD_chat_state'));
+      if (state) {
+        if (state.convId) convId = state.convId;
+        if (state.messages && Array.isArray(state.messages)) {
+          messages = state.messages;
+          const refs = r();
+          if (refs.msgs && messages.length > 0) {
+            refs.msgs.querySelector('.chat-welcome')?.remove();
+            messages.forEach(m => _appendMsg(m.role, m.content, m.ts || new Date(), true));
+          }
+        }
+        if (state.sidebarHistory && Array.isArray(state.sidebarHistory)) {
+          sidebarHistory = state.sidebarHistory;
+          sidebarHistory.forEach(h => _addHistoryDOM(h.id, h.text, h.ts));
+        }
+      }
+    } catch (e) {}
+  }
 
   /* ── DOM refs ────────────────────────────────────────────── */
   const $ = id => document.getElementById(id);
@@ -23,7 +49,7 @@ const AssistantPage = (() => {
   });
 
   /* ── Append bubble ───────────────────────────────────────── */
-  function _appendMsg(role, content, ts) {
+  function _appendMsg(role, content, ts, skipScroll=false) {
     const refs = r();
     if (!refs.msgs) return;
     refs.msgs.querySelector('.chat-welcome')?.remove();
@@ -40,9 +66,9 @@ const AssistantPage = (() => {
         </div>
       </div>`;
     refs.msgs.appendChild(div);
-    setTimeout(() => {
-      if (refs.msgs) refs.msgs.scrollTop = refs.msgs.scrollHeight;
-    }, 30);
+    if (!skipScroll) {
+      setTimeout(() => { if (refs.msgs) refs.msgs.scrollTop = refs.msgs.scrollHeight; }, 30);
+    }
   }
 
   /* ── Thinking indicator ──────────────────────────────────── */
@@ -151,8 +177,9 @@ const AssistantPage = (() => {
     _autoResize(refs.ta);
     if (refs.send) refs.send.disabled = true;
 
-    messages.push({ role: 'user', content: text });
+    messages.push({ role: 'user', content: text, ts: new Date() });
     _appendMsg('user', text);
+    _saveState();
     isThinking = true;
     _showThinking();
 
@@ -164,9 +191,10 @@ const AssistantPage = (() => {
       convId = res.conversation_id || convId;
       $('thinking-row')?.remove();
       _appendMsg('assistant', res.response || res.message || '…');
-      messages.push({ role: 'assistant', content: res.response || '' });
+      messages.push({ role: 'assistant', content: res.response || '', ts: new Date() });
       if (res.action_preview) _renderPreview(res.action_preview);
       _addHistory(convId, text);
+      _saveState();
     } catch (e) {
       $('thinking-row')?.remove();
       _appendMsg('assistant', `Error: ${e.message}`);
@@ -213,6 +241,13 @@ const AssistantPage = (() => {
 
   /* ── Conversation history list ───────────────────────────── */
   function _addHistory(id, text) {
+    if (!sidebarHistory.find(h => h.id === id)) {
+      sidebarHistory.unshift({ id, text, ts: new Date() });
+      _addHistoryDOM(id, text, new Date());
+      _saveState();
+    }
+  }
+  function _addHistoryDOM(id, text, ts) {
     const list = r().histList;
     if (!list) return;
     list.querySelector('.empty-state')?.remove();
@@ -223,7 +258,7 @@ const AssistantPage = (() => {
     item.dataset.convId = id;
     item.innerHTML = `
       <div class="history-item-title">${_esc(text.substring(0, 50))}${text.length > 50 ? '…' : ''}</div>
-      <div class="history-item-meta">${_rel(new Date())}</div>`;
+      <div class="history-item-meta">${_rel(ts)}</div>`;
     list.prepend(item);
   }
 
@@ -263,6 +298,7 @@ const AssistantPage = (() => {
 
   /* ── Init ────────────────────────────────────────────────── */
   function init() {
+    _loadState();
     const refs = r();
     refs.send?.addEventListener('click', send);
     refs.ta?.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
@@ -282,15 +318,17 @@ const AssistantPage = (() => {
           <p class="chat-welcome-desc">Ask THRESHOLD AI to perform governed operations on your infrastructure</p>
         </div>`;
       _clearPreview();
+      _saveState();
     });
     refs.newConv?.addEventListener('click', () => {
       convId = null; messages.length = 0;
       if (refs.msgs) refs.msgs.innerHTML = '';
       _clearPreview();
+      _saveState();
     });
     _initSuggested();
   }
 
-  document.addEventListener('DOMContentLoaded', init);
-  return { send, approveAction, rejectAction, viewGovernance };
+  
+  return { init, send, approveAction, rejectAction, viewGovernance };
 })();

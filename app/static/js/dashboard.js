@@ -54,7 +54,8 @@ const DashboardPage = (() => {
   function _renderRiskChart(dist) {
     const ctx = document.getElementById('risk-distribution-chart');
     if (!ctx) return;
-    riskChart?.destroy();
+    const existingChart = Chart.getChart(ctx);
+    if (existingChart) existingChart.destroy();
     const d = _cd();
     riskChart = new Chart(ctx, {
       type: 'doughnut',
@@ -80,7 +81,8 @@ const DashboardPage = (() => {
   function _renderApprovalChart(trends) {
     const ctx = document.getElementById('approval-trends-chart');
     if (!ctx) return;
-    approvalChart?.destroy();
+    const existingChart = Chart.getChart(ctx);
+    if (existingChart) existingChart.destroy();
     const d = _cd();
     approvalChart = new Chart(ctx, {
       type: 'bar',
@@ -248,6 +250,6 @@ const DashboardPage = (() => {
     if (dateEl) dateEl.textContent = new Date().toLocaleDateString(undefined, { weekday:'long', month:'long', day:'numeric' });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, loadAll };
 })();

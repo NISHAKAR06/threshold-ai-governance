@@ -129,6 +129,6 @@ const ProfilePage = (() => {
     });
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, load };
 })();

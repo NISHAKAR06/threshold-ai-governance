@@ -4,6 +4,7 @@ main.py — THRESHOLD AI Governance Platform — FastAPI application entry point
 from __future__ import annotations
 
 import time
+import hashlib
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -75,9 +76,11 @@ async def logging_and_security_middleware(request: Request, call_next):
     response.headers["X-XSS-Protection"] = "1; mode=block"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
 
-    # Static asset caching
+    # Static asset caching — use no-cache so the browser always revalidates.
+    # ETag/Last-Modified (served by StaticFiles) handles conditional GETs,
+    # so unchanged files are served from cache without re-downloading.
     if request.url.path.startswith("/static/"):
-        response.headers["Cache-Control"] = "public, max-age=86400"
+        response.headers["Cache-Control"] = "no-cache, must-revalidate"
 
     return response
 
@@ -108,6 +111,11 @@ app.mount(
 
 # ── Jinja2 templates ──────────────────────────────────────────
 templates = Jinja2Templates(directory=str(settings.TEMPLATES_DIR))
+
+# Inject a cache-bust version into every template so CSS/JS URLs stay fresh.
+# Change APP_VERSION in config.py after every deploy to force browser reload.
+_ASSET_VERSION = settings.APP_VERSION
+templates.env.globals["asset_version"] = _ASSET_VERSION
 
 # ── HTML page routes ──────────────────────────────────────────
 @app.get("/docs", include_in_schema=False)

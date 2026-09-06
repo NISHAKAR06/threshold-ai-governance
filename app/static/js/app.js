@@ -12,7 +12,7 @@ const ThemeManager = (() => {
   const DARK = 'dark';
   const LIGHT = 'light';
 
-  function get() { return localStorage.getItem(KEY) ?? LIGHT; }
+  function get() { return localStorage.getItem(KEY) ?? DARK; }
 
   function apply(theme) {
     document.documentElement.dataset.theme = theme;
@@ -793,6 +793,10 @@ const SPARouter = (() => {
     if (!mainContent) { window.location.href = url; return; }
 
     try {
+      if (typeof Modal !== 'undefined') Modal.close();
+      if (typeof SidebarManager !== 'undefined') SidebarManager.closeMobile();
+      document.body.style.overflow = '';
+
       mainContent.style.opacity = '0.6';
       mainContent.style.transition = 'opacity 0.15s ease';
 
@@ -862,7 +866,12 @@ const SPARouter = (() => {
       navigate(window.location.href, false);
     });
 
-    _updateActiveNav(window.location.pathname.toLowerCase().replace(/\/$/, '') || '/');
+    const currentPath = window.location.pathname.toLowerCase().replace(/\/$/, '') || '/';
+    _updateActiveNav(currentPath);
+
+    if (pageInitializers[currentPath]) {
+      try { pageInitializers[currentPath](); } catch (e) { console.warn('Page init error:', e); }
+    }
   }
 
   return { init, navigate };

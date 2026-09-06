@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 from sqlalchemy import DateTime, Float, Integer, String, Boolean
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database.database import Base, GUID, JSONType
+from app.database.database import Base, AwareDateTime, GUID, JSONType
 
 
 class Action(Base):
@@ -41,10 +41,10 @@ class Action(Base):
     rollback_status: Mapped[str | None]   = mapped_column(String(30), nullable=True)
     reviewed_by: Mapped[str | None]     = mapped_column(String(200), nullable=True)
     review_comment: Mapped[str | None]  = mapped_column(String(2000), nullable=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
-    executed_at: Mapped[datetime | None]  = mapped_column(DateTime(timezone=True), nullable=True)
-    completed_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), nullable=False, index=True)
+    updated_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    executed_at: Mapped[datetime | None]  = mapped_column(AwareDateTime(), nullable=True)
+    completed_at: Mapped[datetime | None] = mapped_column(AwareDateTime(), nullable=True)
 
     def __repr__(self) -> str:
         return f"<Action {self.id} op={self.operation_type} status={self.status}>"

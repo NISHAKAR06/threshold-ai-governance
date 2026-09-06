@@ -95,11 +95,12 @@ const ReviewPage = (() => {
         <td>${_statusBadge(r.status)}</td>
         <td class="text-xs text-tertiary">${_rel(r.created_at)}</td>
         <td>
+          ${r.status === 'pending' ? `
           <div class="flex gap-2">
             <button class="btn btn-success btn-sm" data-action="approve" data-id="${r.id}" title="Approve"><i class="fa-solid fa-check"></i></button>
             <button class="btn btn-outline-danger btn-sm" data-action="reject" data-id="${r.id}" title="Reject"><i class="fa-solid fa-xmark"></i></button>
             <button class="btn btn-secondary btn-sm" data-action="modify" data-id="${r.id}" title="Modify"><i class="fa-solid fa-pen"></i></button>
-          </div>
+          </div>` : `<span class="text-tertiary text-xs">No actions</span>`}
         </td>
       </tr>
       <tr class="expanded-row hidden" id="expand-${r.id}">
@@ -148,6 +149,7 @@ const ReviewPage = (() => {
       </div>
       ${row.action_json ? `
         <pre class="expanded-json">${_esc(JSON.stringify(row.action_json, null, 2))}</pre>` : ''}
+      ${row.status === 'pending' ? `
       <div class="expanded-actions">
         <button class="btn btn-success" data-action="approve" data-id="${row.id}">
           <i class="fa-solid fa-check"></i> Approve
@@ -158,7 +160,7 @@ const ReviewPage = (() => {
         <button class="btn btn-secondary" data-action="modify" data-id="${row.id}">
           <i class="fa-solid fa-pen"></i> Modify
         </button>
-      </div>`;
+      </div>` : ''}`;
     // Re-bind buttons inside expanded row
     el.querySelectorAll('[data-action]').forEach(btn => {
       btn.addEventListener('click', () => _handleAction(btn.dataset.action, btn.dataset.id));
@@ -204,7 +206,8 @@ const ReviewPage = (() => {
   async function _approve(id) {
     try {
       await THRESHOLDAPI.review.approve(id, '');
-      allRows = allRows.filter(r => r.id !== id);
+      const idx = allRows.findIndex(r => r.id === id);
+      if (idx !== -1) allRows[idx].status = 'approved';
       selected.delete(id);
       _applyFilters(); _updateStats(); _updateBulkBar();
     } catch (e) { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); }
@@ -222,7 +225,8 @@ const ReviewPage = (() => {
       if (reason === null) return;
       THRESHOLDAPI.review.reject(id, reason || 'Rejected')
         .then(() => {
-          allRows = allRows.filter(r => r.id !== id);
+          const idx = allRows.findIndex(r => r.id === id);
+          if (idx !== -1) allRows[idx].status = 'rejected';
           _applyFilters(); _updateStats();
         })
         .catch(e => { if (typeof Toast !== 'undefined') Toast.danger('Error', e.message); });
@@ -248,7 +252,8 @@ const ReviewPage = (() => {
       try {
         await THRESHOLDAPI.review.reject(id, reason);
         if (typeof Modal !== 'undefined') Modal.close('reject-modal');
-        allRows = allRows.filter(r => r.id !== id);
+        const idx = allRows.findIndex(r => r.id === id);
+        if (idx !== -1) allRows[idx].status = 'rejected';
         _applyFilters(); _updateStats();
         document.getElementById('reject-reason').value = '';
       } catch (err) { if (typeof Toast !== 'undefined') Toast.danger('Error', err.message); }
@@ -364,7 +369,11 @@ const ReviewPage = (() => {
     document.getElementById('bulk-approve-selected')?.addEventListener('click', async () => {
       const ids = [...selected];
       await Promise.all(ids.map(id => THRESHOLDAPI.review.approve(id, 'Bulk approval').catch(() => {})));
-      ids.forEach(id => { allRows = allRows.filter(r => r.id !== id); selected.delete(id); });
+      ids.forEach(id => { 
+        const idx = allRows.findIndex(r => r.id === id);
+        if (idx !== -1) allRows[idx].status = 'approved';
+        selected.delete(id); 
+      });
       _applyFilters(); _updateStats(); _updateBulkBar();
       if (typeof Toast !== 'undefined') Toast.success(`${ids.length} items approved`);
     });
@@ -374,6 +383,6 @@ const ReviewPage = (() => {
     document.getElementById('review-refresh')?.addEventListener('click', load);
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, load };
 })();

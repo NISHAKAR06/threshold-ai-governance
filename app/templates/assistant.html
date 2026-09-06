@@ -2,7 +2,7 @@
 {% block title %}AI Assistant{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/assistant.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='css/assistant.css') }}?v={{ asset_version }}">
 <style>
   /* Lock page-level scroll so the AI Assistant page fits 100% inside the viewport */
   html, body { height: 100% !important; overflow: hidden !important; }
@@ -134,10 +134,6 @@
 
 </div>
 </div>
-{% endblock %}
-
-{% block page_js %}
-<script src="{{ url_for('static', path='js/assistant.js') }}"></script>
 {% endblock %}
 
 {% block page_init %}

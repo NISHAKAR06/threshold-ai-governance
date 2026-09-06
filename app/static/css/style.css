@@ -1,3 +1,9 @@
+@import url('dashboard.css');
+@import url('assistant.css');
+@import url('governance.css');
+@import url('review.css');
+@import url('analytics.css');
+@import url('settings.css');
 /* ============================================================
    THRESHOLD AI GOVERNANCE PLATFORM — CORE STYLES
    style.css — Variables · Reset · Typography · Layout · Components
@@ -135,13 +141,13 @@ h6{font-size:var(--font-size-base)}
 .truncate{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 
 /* ── 5. APP SHELL ──────────────────────────────────────────── */
-.app-shell{display:flex;min-height:100vh;overflow:hidden}
+.app-shell{display:flex;height:100vh;overflow:hidden}
 .app-sidebar{width:var(--sidebar-width);min-height:100vh;background:var(--sidebar-bg);border-right:1px solid var(--sidebar-border);display:flex;flex-direction:column;position:fixed;left:0;top:0;bottom:0;z-index:var(--z-sidebar);transition:width var(--transition-sidebar);overflow:hidden}
 .app-sidebar.collapsed{width:var(--sidebar-collapsed)}
-.app-main{flex:1;margin-left:var(--sidebar-width);display:flex;flex-direction:column;min-height:100vh;transition:margin-left var(--transition-sidebar)}
+.app-main{flex:1;margin-left:var(--sidebar-width);display:flex;flex-direction:column;height:100vh;transition:margin-left var(--transition-sidebar)}
 .app-sidebar.collapsed~.app-main{margin-left:var(--sidebar-collapsed)}
 .app-navbar{height:var(--navbar-height);background:var(--navbar-bg);border-bottom:1px solid var(--navbar-border);position:sticky;top:0;z-index:var(--z-navbar);display:flex;align-items:center;padding:0 var(--space-6);gap:var(--space-4);box-shadow:var(--shadow-xs)}
-.app-content{flex:1;padding:var(--space-8);overflow-y:auto}
+.app-content{flex:1;padding:var(--space-8);overflow-y:auto;min-height:0}
 
 /* ── 6. SIDEBAR ────────────────────────────────────────────── */
 .sidebar-header{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-5) var(--space-4);border-bottom:1px solid var(--sidebar-border);min-height:var(--navbar-height);overflow:hidden}

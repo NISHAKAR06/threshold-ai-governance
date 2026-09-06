@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime, timezone
 from sqlalchemy import Boolean, DateTime, String
 from sqlalchemy.orm import Mapped, mapped_column
-from app.database.database import Base, GUID
+from app.database.database import Base, AwareDateTime, GUID
 
 
 class Employee(Base):
@@ -25,9 +25,9 @@ class Employee(Base):
     is_admin: Mapped[bool]   = mapped_column(Boolean, default=False, nullable=False)
     language: Mapped[str]    = mapped_column(String(5),  default="en", nullable=False)
     timezone: Mapped[str]    = mapped_column(String(60), default="UTC", nullable=False)
-    last_login: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
-    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
+    last_login: Mapped[datetime | None] = mapped_column(AwareDateTime(), nullable=True)
+    created_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), nullable=False)
+    updated_at: Mapped[datetime] = mapped_column(AwareDateTime(), default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
 
     def __repr__(self) -> str:
         return f"<Employee {self.username} ({self.role})>"

@@ -35,7 +35,7 @@ const AnalyticsPage = (() => {
   /* ── Daily requests chart ────────────────────────────────── */
   function _daily(data) {
     const ctx = document.getElementById('daily-requests-chart'); if (!ctx) return;
-    charts.daily?.destroy();
+    const existing = Chart.getChart(ctx); if (existing) existing.destroy();
     const d = _d();
     charts.daily = new Chart(ctx, {
       type: 'line',
@@ -54,7 +54,7 @@ const AnalyticsPage = (() => {
   /* ── Risk donut ──────────────────────────────────────────── */
   function _risk(data) {
     const ctx = document.getElementById('risk-distribution-chart'); if (!ctx) return;
-    charts.risk?.destroy();
+    const existing = Chart.getChart(ctx); if (existing) existing.destroy();
     const total = (data.low||0)+(data.medium||0)+(data.high||0)+(data.critical||0);
     const d = _d();
     charts.risk = new Chart(ctx, {
@@ -73,7 +73,7 @@ const AnalyticsPage = (() => {
   /* ── Approval stacked bar ────────────────────────────────── */
   function _approval(data) {
     const ctx = document.getElementById('approval-rate-chart'); if (!ctx) return;
-    charts.approval?.destroy();
+    const existing = Chart.getChart(ctx); if (existing) existing.destroy();
     const d = _d();
     charts.approval = new Chart(ctx, {
       type:'bar',
@@ -92,7 +92,7 @@ const AnalyticsPage = (() => {
   /* ── Top operations bar ──────────────────────────────────── */
   function _ops(data) {
     const ctx = document.getElementById('operations-chart'); if (!ctx) return;
-    charts.ops?.destroy();
+    const existing = Chart.getChart(ctx); if (existing) existing.destroy();
     const d = _d();
     charts.ops = new Chart(ctx, {
       type:'bar',
@@ -107,7 +107,7 @@ const AnalyticsPage = (() => {
   /* ── Adaptive learning trend ─────────────────────────────── */
   function _trend(data) {
     const ctx = document.getElementById('learning-trend-chart'); if (!ctx) return;
-    charts.learning?.destroy();
+    const existing = Chart.getChart(ctx); if (existing) existing.destroy();
     const d = _d();
     charts.learning = new Chart(ctx, {
       type:'line',
@@ -163,6 +163,6 @@ const AnalyticsPage = (() => {
     loadAll();
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  
   return { init, loadAll };
 })();

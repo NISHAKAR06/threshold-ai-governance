@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
   <script>
     (function() {
       try {
         var t = localStorage.getItem('THRESHOLD_theme');
-        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.documentElement.dataset.theme = 'dark';
-        } else {
+        if (t === 'light') {
           document.documentElement.dataset.theme = 'light';
+        } else {
+          document.documentElement.dataset.theme = 'dark';
         }
       } catch (e) {}
     })();
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Core CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}?v={{ asset_version }}">
 
   <script>
     (function() {
@@ -580,9 +580,9 @@
 <script>
   window.THRESHOLD_CONFIG = { apiBase: '/api/v1', wsAutoConnect: false };
 </script>
-<script src="{{ url_for('static', path='js/api.js') }}"></script>
-<script src="{{ url_for('static', path='js/websocket.js') }}"></script>
-<script src="{{ url_for('static', path='js/app.js') }}"></script>
+<script src="{{ url_for('static', path='js/api.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/websocket.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/app.js') }}?v={{ asset_version }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', async () => {
     await I18n.init();

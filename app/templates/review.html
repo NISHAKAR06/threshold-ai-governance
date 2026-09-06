@@ -2,7 +2,7 @@
 {% block title %}Review Queue{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/review.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='css/review.css') }}?v={{ asset_version }}">
 {% endblock %}
 
 {% block content %}
@@ -112,6 +112,3 @@
 </div>
 {% endblock %}
 
-{% block page_js %}
-<script src="{{ url_for('static', path='js/review.js') }}"></script>
-{% endblock %}

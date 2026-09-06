@@ -126,7 +126,7 @@ const THRESHOLDAPI = (() => {
 
   /* ── Chat / AI Assistant ─────────────────────────────────── */
   const chat = {
-    send:    (payload)       => post('/chat/send', payload, { retry: 0, timeout: 60000 }),
+    send:    (payload)       => post('/chat/send', payload, { retry: 0, timeout: 120000 }),
     history: (limit = 20)   => get(`/chat/history?limit=${limit}`, { silent: true }),
     clear:   ()              => del('/chat/history', { silent: true }),
   };

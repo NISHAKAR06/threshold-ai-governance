@@ -2,7 +2,7 @@
 {% block title %}Analytics{% endblock %}
 
 {% block page_css %}
-<link rel="stylesheet" href="{{ url_for('static', path='css/analytics.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', path='css/analytics.css') }}?v={{ asset_version }}">
 {% endblock %}
 
 {% block content %}
@@ -150,7 +150,3 @@
 </div>
 {% endblock %}
 
-{% block page_js %}
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="{{ url_for('static', path='js/analytics.js') }}"></script>
-{% endblock %}

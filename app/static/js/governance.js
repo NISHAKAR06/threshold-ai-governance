@@ -1,10 +1,12 @@
 /**
  * governance.js — GET /api/v1/governance/assess/{id}  POST /decide
- * Reads action_id from URL param ?action_id=...
+ * Falls back to /governance/latest when no action_id in URL.
+ * Auto-polls every 5 seconds to keep engine state live.
  */
 const GovernancePage = (() => {
   const STAGES = ['intake','risk','policy','decision','execution','audit'];
   let currentActionId = null;
+  let _pollTimer = null;
 
   /* ── Stepper ─────────────────────────────────────────────── */
   function _setStep(active) {
@@ -31,15 +33,14 @@ const GovernancePage = (() => {
     const valEl = document.getElementById('gauge-score-value');
     if (valEl) valEl.textContent = Math.round(score);
     const fill  = document.querySelector('#risk-gauge-svg .gauge-fill');
-    const track = document.querySelector('#risk-gauge-svg .gauge-track');
-    if (!fill || !track) return;
+    if (!fill) return;
     const color = score >= 80 ? '#7C3AED' : score >= 60 ? '#DC2626' : score >= 30 ? '#F59E0B' : '#16A34A';
     const circumference = Math.PI * 64;
     const offset = circumference * (1 - score / 100);
     fill.setAttribute('stroke', color);
     fill.setAttribute('stroke-dasharray', String(circumference));
     fill.setAttribute('stroke-dashoffset', String(offset));
-
+    fill.style.transition = 'stroke-dashoffset 0.6s cubic-bezier(0.4,0,0.2,1), stroke 0.4s';
     const badge = document.getElementById('risk-level-badge');
     if (badge) {
       const labels = { low:'Low Risk', medium:'Medium Risk', high:'High Risk', critical:'Critical' };
@@ -66,7 +67,7 @@ const GovernancePage = (() => {
           <span class="risk-factor-score font-mono" style="color:${color(f.score)}">${Math.round(f.score)}</span>
         </div>
         <div class="progress-bar-wrap mt-1">
-          <div class="progress-bar-fill" style="width:${f.score}%;background:${color(f.score)}"></div>
+          <div class="progress-bar-fill" style="width:${f.score}%;background:${color(f.score)};transition:width 0.6s ease"></div>
         </div>
       </div>`).join('');
   }
@@ -89,7 +90,7 @@ const GovernancePage = (() => {
     set('meta-confidence', `
       <div class="confidence-bar-wrap">
         <div class="progress-bar-wrap flex-1">
-          <div class="progress-bar-fill success" style="width:${confPct}%"></div>
+          <div class="progress-bar-fill success" style="width:${confPct}%;transition:width 0.6s ease"></div>
         </div>
         <span class="confidence-value">${confPct}%</span>
       </div>`);
@@ -101,10 +102,10 @@ const GovernancePage = (() => {
     if (!list) return;
     const count = document.getElementById('policy-count');
     if (count) count.textContent = rules.length;
-    list.innerHTML = rules.map(r => {
+    list.innerHTML = rules.map((r, i) => {
       const passed = r.status === 'pass';
       return `
-        <div class="policy-rule-item">
+        <div class="policy-rule-item" style="animation:fadeSlideIn 0.25s ease ${i*60}ms both">
           <div class="policy-rule-icon text-${passed ? 'success' : r.status === 'block' ? 'danger' : 'warning'}">
             <i class="fa-solid ${r.icon || (passed ? 'fa-shield-check' : 'fa-shield-exclamation')}"></i>
           </div>
@@ -126,7 +127,7 @@ const GovernancePage = (() => {
       const chk = opt.querySelector('.decision-option-check');
       if (chk) chk.innerHTML = '';
     });
-    const map = { auto: 'auto', confirm: 'confirm', review: 'review', require_confirmation: 'confirm', human_review: 'review' };
+    const map = { auto:'auto', confirm:'confirm', review:'review', require_confirmation:'confirm', human_review:'review' };
     const key = map[decision] || 'review';
     const opt = document.querySelector(`.decision-option[data-decision="${key}"]`);
     if (opt) {
@@ -140,11 +141,12 @@ const GovernancePage = (() => {
   function _renderTimeline(events = []) {
     const list = document.getElementById('workflow-timeline');
     if (!list) return;
-    list.innerHTML = events.map(e => {
+    if (!events.length) return;
+    list.innerHTML = events.map((e, i) => {
       const typeMap = { primary:'primary', success:'success', warning:'warning', danger:'danger', info:'info' };
       const cls = typeMap[e.type] || 'primary';
       return `
-        <div class="timeline-item">
+        <div class="timeline-item" style="animation:fadeSlideIn 0.25s ease ${i*60}ms both">
           <div class="timeline-dot ${cls}"><i class="fa-solid ${e.icon || 'fa-circle'}"></i></div>
           <div class="timeline-content">
             <div class="timeline-content-title">${_esc(e.label)}</div>
@@ -155,23 +157,61 @@ const GovernancePage = (() => {
     }).join('');
   }
 
-  /* ── Load assessment ─────────────────────────────────────── */
+  /* ── Live dot ────────────────────────────────────────────── */
+  function _setLive(on) {
+    const dot = document.getElementById('gov-live-dot');
+    if (dot) dot.style.background = on ? '#16A34A' : '#DC2626';
+  }
+
+  /* ── Apply all data ──────────────────────────────────────── */
+  function _applyData(data) {
+    _setStep(data.current_stage || 'intake');
+    _drawGauge(data.risk_score || 0);
+    _renderBreakdown(data.risk_factors || []);
+    _renderMeta(data);
+    _renderPolicies(data.policy_rules || []);
+    _renderDecision(data.decision);
+    _renderTimeline(data.timeline || []);
+  }
+
+  /* ── Load by ID ──────────────────────────────────────────── */
   async function loadAssessment(actionId) {
     currentActionId = actionId;
     try {
       const data = await THRESHOLDAPI.governance.assess(actionId);
-      _setStep(data.current_stage || 'intake');
-      _drawGauge(data.risk_score || 0);
-      _renderBreakdown(data.risk_factors || []);
-      _renderMeta(data);
-      _renderPolicies(data.policy_rules || []);
-      _renderDecision(data.decision);
-      _renderTimeline(data.timeline || []);
+      _applyData(data);
+      _setLive(true);
     } catch (e) {
+      _setLive(false);
       console.error('[Governance]', e.message);
       if (typeof Toast !== 'undefined') Toast.danger('Failed to load governance data', e.message);
     }
   }
+
+  /* ── Load latest ─────────────────────────────────────────── */
+  async function loadLatest() {
+    try {
+      const data = await THRESHOLDAPI.governance.latest();
+      if (data && !data.empty) {
+        if (data.action_id) currentActionId = data.action_id;
+        _applyData(data);
+      }
+      _setLive(true);
+    } catch (e) {
+      _setLive(false);
+      console.error('[Governance:latest]', e.message);
+    }
+  }
+
+  /* ── Polling ─────────────────────────────────────────────── */
+  function _startPoll() {
+    _stopPoll();
+    _pollTimer = setInterval(() => {
+      if (currentActionId) loadAssessment(currentActionId);
+      else loadLatest();
+    }, 5000);
+  }
+  function _stopPoll() { if (_pollTimer) { clearInterval(_pollTimer); _pollTimer = null; } }
 
   /* ── Decision override ───────────────────────────────────── */
   function _initDecisionOptions() {
@@ -212,13 +252,59 @@ const GovernancePage = (() => {
   /* ── Init ────────────────────────────────────────────────── */
   function init() {
     _initDecisionOptions();
-    // Read action_id from URL
+
+    // Inject shared animation CSS
+    if (!document.getElementById('gov-anim-css')) {
+      const s = document.createElement('style');
+      s.id = 'gov-anim-css';
+      s.textContent = `
+        @keyframes fadeSlideIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes govPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+        #gov-live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;
+                      background:#F59E0B;margin-left:10px;vertical-align:middle;
+                      animation:govPulse 2s ease-in-out infinite;transition:background 0.4s}`;
+      document.head.appendChild(s);
+    }
+
+    // Inject live dot next to current-stage-text
+    const stageText = document.getElementById('current-stage-text');
+    if (stageText && !document.getElementById('gov-live-dot')) {
+      const dot = document.createElement('span');
+      dot.id = 'gov-live-dot';
+      stageText.parentNode.appendChild(dot);
+    }
+
+    // Determine initial load source
     const params = new URLSearchParams(location.search);
     const actionId = params.get('action_id');
     if (actionId) loadAssessment(actionId);
-    else _setStep('intake');
+    else loadLatest();
+
+    // Start live polling
+    _startPoll();
+
+    // Pause polling when tab is hidden
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? _stopPoll() : _startPoll();
+    });
+
+    // WebSocket: react to new governance events pushed from server
+    if (typeof THRESHOLDWS !== 'undefined') {
+      THRESHOLDWS.on('governance:updated', (p) => {
+        if (!p?.action_id) return;
+        if (!currentActionId || currentActionId === p.action_id) {
+          currentActionId = p.action_id;
+          loadAssessment(currentActionId);
+        }
+      });
+      THRESHOLDWS.on('action:submitted', (p) => {
+        if (!p?.action_id) return;
+        currentActionId = p.action_id;
+        loadAssessment(currentActionId);
+      });
+    }
   }
 
-  document.addEventListener('DOMContentLoaded', init);
-  return { init, loadAssessment };
+  
+  return { init, loadAssessment, loadLatest };
 })();
