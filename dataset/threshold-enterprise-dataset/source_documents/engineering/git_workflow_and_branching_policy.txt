@@ -1,0 +1,200 @@
+================================================================================
+THRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION
+GIT WORKFLOW AND BRANCHING POLICY
+================================================================================
+
+--- DOCUMENT METADATA ---
+Document Id: ENG-003
+Title: Git Workflow and Branching Policy
+Department: Engineering
+Classification: INTERNAL
+Version: 1.0
+Status: ACTIVE
+Effective Date: 2026-01-15
+Document Type: STANDARD
+Allowed Roles: ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN
+-------------------------
+
+
+################################################################################
+1. STANDARD PURPOSE AND ENGINEERING CONTEXT
+################################################################################
+
+This Git Workflow and Branching Policy defines the enterprise version control standards, branch lifecycle management, commit conventions, and repository security protocols for Threshold Enterprise Systems ('Threshold').
+
+As an enterprise developing distributed cloud applications, real-time data pipelines, and AI governance engines across multiple global engineering centers (India, United States, United Kingdom, and Singapore), maintaining a disciplined, predictable, and clean version control workflow is vital. Inconsistent branching models, disorganized commit histories, and unmanaged merge practices introduce release instability, complicate code auditing, and hinder automated continuous integration.
+
+The purpose of this standard is to establish a unified Trunk-Based Development workflow with short-lived feature branches, ensuring high deployment velocity, seamless collaboration, rapid defect isolation, and rigorous auditability across all software assets.
+
+
+################################################################################
+2. SCOPE AND REPOSITORY GOVERNANCE
+################################################################################
+
+This standard applies to all software repositories hosted within the enterprise version control platform (GitHub Enterprise / GitLab Enterprise) across all engineering disciplines: backend engineering, frontend development, AI and machine learning engineering, data engineering, and infrastructure platforms.
+
+Every official enterprise repository must maintain:
+
+1. A comprehensive README.md detailing project architecture, local setup, testing commands, and maintainers.
+
+2. Standardized configuration files: .gitignore, .editorconfig, and automated pre-commit hook manifests.
+
+3. Enforced branch protection rules on main, release/*, and staging branches.
+
+4. A CODEOWNERS file designating required reviewers for security, architectural, and database components.
+
+
+################################################################################
+3. THE ENTERPRISE BRANCHING MODEL
+################################################################################
+
+Threshold Enterprise Systems enforces a modified Trunk-Based Development model centered on a single authoritative production branch (main) supported by short-lived ephemeral branches:
+
+- The 'main' Branch: Represents the perpetually stable, deployable state of the software. Direct pushes, force pushes, and branch deletions are permanently disabled. All modifications must arrive via approved Pull Requests that pass 100% of automated CI checks.
+
+- Feature Branches (feature/*): Created from main for developing new functional capabilities, API endpoints, or architectural components. Feature branches must be short-lived, ideally lasting no longer than two (2) to three (3) business days before merging.
+
+- Bug Fix Branches (fix/*): Created from main to resolve non-critical defects, broken unit tests, or cosmetic UI/UX flaws identified during development or testing cycles.
+
+- Release Branches (release/*): Created from main to stabilize candidate versions prior to major commercial releases. Only bug fixes may be backported to release branches; new feature commits are strictly prohibited.
+
+- Hotfix Branches (hotfix/*): Created directly from production release tags to remediate urgent Severity 1 or Severity 2 production incidents under ENG-006.
+
+
+################################################################################
+4. STANDARDIZED BRANCH NAMING CONVENTIONS
+################################################################################
+
+Branch names must follow a strict, lowercase, hyphen-delimited format incorporating the associated Jira issue key and a brief description:
+
+Syntax: <category>/<jira-ticket-id>-<brief-description>
+
+Approved Examples:
+
+- feature/eng-1042-user-authentication-oauth2
+
+- feature/eng-1088-rag-vector-metadata-filtering
+
+- fix/eng-1120-api-query-pagination-offset
+
+- fix/eng-1155-database-connection-pool-leak
+
+- hotfix/eng-1201-critical-auth-token-validation-error
+
+- release/v2.4.0-stabilization
+
+Branches failing to adhere to this naming taxonomy are automatically rejected by server-side git pre-receive hooks.
+
+
+################################################################################
+5. COMMIT MESSAGE STANDARDS AND SEMANTIC VERSIONING
+################################################################################
+
+Commit messages provide the historical record of software evolution and drive automated changelog generation. Threshold enforces the Conventional Commits 1.0.0 specification:
+
+Syntax: <type>(<optional scope>): <imperative description>
+
+Approved Commit Types:
+
+- feat: A new user-facing feature or API capability.
+
+- fix: A defect fix in production or staging code.
+
+- docs: Documentation-only modifications (e.g., README, API docs).
+
+- style: Code formatting, whitespace, or linting adjustments that do not affect code execution.
+
+- refactor: Code refactoring that neither fixes a bug nor adds a feature.
+
+- perf: Performance improvements optimizing CPU, memory, or network usage.
+
+- test: Adding missing unit tests or refactoring test suites.
+
+- chore: Maintenance tasks, dependency bumps, or build script updates.
+
+Commit Message Formatting Rules: The subject line must not exceed 72 characters, must use the imperative mood ('add feature' not 'added feature'), and must reference the Jira ticket ID in the commit body.
+
+
+################################################################################
+6. REBASE STRATEGIES, MERGE CONFLICTS, AND HISTORY SANITIZATION
+################################################################################
+
+Engineers must keep feature branches synchronized with main to avoid large, painful merge conflicts at the end of feature development:
+
+- Daily Rebasing Mandate: Developers must rebase their active working branches against origin/main daily (git pull --rebase origin main) to detect and resolve integration conflicts incrementally. Merging main into feature branches creates reverse merge commits ('bubble merges') that pollute the git commit graph, obscure semantic history, and disrupt automated code review tools.
+
+- Resolving Merge Conflicts: When conflicts arise during rebasing, engineers must resolve conflicts thoughtfully, re-running automated unit tests locally before pushing updated branches to origin. Authors must never force-push with destructive flags without lease verification; always use git push --force-with-lease to protect unpulled upstream commits.
+
+- Clean Commit Hygiene: Prior to marking a PR as ready for review, authors must clean up redundant 'checkpoint' or 'wip' commits using interactive git rebase (git rebase -i), producing a clean, understandable sequence of atomic commits where each commit compiles cleanly and passes automated tests independently.
+
+
+################################################################################
+7. PULL REQUEST AND MERGE STRATEGIES
+################################################################################
+
+Repositories must enforce standardized merge strategies to preserve a clean, linear, and bisectable git history:
+
+- Squash and Merge (Default): For all standard feature and bug fix branches. The author squashes multiple work-in-progress commits into a single cohesive commit referencing the PR number and Jira ID.
+
+- Rebase and Merge: Permitted for large, complex architectural refactors where preserving distinct, highly structured historical commits is critical for auditability.
+
+- Merge Commits Prohibited: Creating non-linear merge commits (git merge --no-ff) on main is strictly prohibited to prevent tangled commit graphs that hinder automated git bisect debugging.
+
+- Post-Merge Deletion: Feature and bug fix branches must be automatically deleted immediately following a successful merge to prevent stale branch clutter.
+
+
+################################################################################
+8. TAGGING, SEMANTIC RELEASE AUTOMATION, AND CRYPTOGRAPHIC SIGNATURES
+################################################################################
+
+Official production releases must be cataloged and certified via immutable version control tags:
+
+- Semantic Versioning 2.0.0 (SemVer): All release tags must adhere to SemVer format (vMAJOR.MINOR.PATCH). Breaking changes increment MAJOR; backwards-compatible features increment MINOR; backwards-compatible fixes increment PATCH.
+
+- Cryptographic GPG Commit and Tag Signing: Production deployment tags and master branch merges must be cryptographically signed using enterprise-managed GPG keys associated with the engineer's corporate identity. Unsigned release tags are rejected by automated deployment pipelines (ENG-004). This cryptographic provenance guarantees that release binaries trace directly back to verified, authorized engineering personnel.
+
+- Automated Changelog Generation: Continuous release automation tools parse Conventional Commit logs to compile release notes and changelog documents published with each tagged release, categorizing updates into Features, Fixes, Breaking Changes, and Performance Optimizations for enterprise stakeholders.
+
+
+################################################################################
+9. REPOSITORY SECURITY AND SECRET LEAKAGE PREVENTION
+################################################################################
+
+Protecting enterprise code repositories from credential leakage is a critical information security imperative:
+
+- Pre-Commit Secret Scanning: All developer workstations must install enterprise pre-commit hooks running automated secret scanning (e.g., detect-secrets, gitleaks). Commits containing API keys, private certificates, database passwords, or auth tokens are blocked locally.
+
+- Server-Side Push Protection: Enterprise git servers enforce automated server-side push protection. Any push attempt containing high-entropy strings matching enterprise secret signatures is rejected at the network layer.
+
+- Accidental Leakage Protocol: If a credential or secret is committed to any branch, the credential must be treated as fully compromised. The engineer must immediately rotate the credential in production, notify the SOC under SEC-004, and rewrite git history using git-filter-repo under Security guidance.
+
+
+################################################################################
+10. PROHIBITED GIT PRACTICES AND CROSS-DOCUMENT GOVERNANCE
+################################################################################
+
+The following version control practices are strictly forbidden and constitute serious engineering violations:
+
+1. Force pushing (git push --force) to main, staging, or release/* branches.
+
+2. Committing sensitive enterprise data, customer PII (SEC-005), or production credentials.
+
+3. Checking in compiled binaries, heavy model weights (>50MB), or node_modules/venv dependencies directly into git repositories (use Git LFS or artifact registries).
+
+4. Bypassing pull request reviews via administrative overrides outside of authorized emergency incident procedures.
+
+5. Rewriting public branch histories after commits have been shared across squad members.
+
+Cross-Document Governance Interconnections:
+
+- ENG-002: Code Review Policy (Defines review rules and approval requirements prior to merge).
+
+- ENG-004: Production Deployment Guide (Governs release tagging and deployment from main).
+
+- ENG-006: Engineering Incident Management Runbook (Governs emergency hotfix branching workflows).
+
+- SEC-001: Information Security Policy (Establishes secure development lifecycle requirements).
+
+================================================================================
+END OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS
+================================================================================

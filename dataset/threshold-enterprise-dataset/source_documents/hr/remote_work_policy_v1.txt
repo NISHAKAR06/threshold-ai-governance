@@ -1,0 +1,153 @@
+================================================================================
+THRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION
+REMOTE WORK POLICY VERSION 1.0 (ARCHIVED)
+================================================================================
+
+--- DOCUMENT METADATA ---
+Document Id: HR-003
+Title: Remote Work Policy Version 1.0 (Archived)
+Department: Human Resources
+Classification: INTERNAL
+Version: 1.0
+Status: ARCHIVED
+Effective Date: 2023-06-01
+Document Type: POLICY
+Allowed Roles: EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, OPERATIONS_MANAGER, HR_MANAGER, ADMIN
+-------------------------
+
+
+################################################################################
+1. ARCHIVED STATUS AND HISTORICAL CONTEXT
+################################################################################
+
+*** IMPORTANT NOTICE: THIS DOCUMENT IS ARCHIVED, HISTORICAL, AND NO LONGER AUTHORITATIVE ***
+
+This document represents Version 1.0 of the Threshold Enterprise Systems Remote Work Policy, originally enacted on June 1, 2023, and officially retired from active status on December 31, 2024.
+
+THIS POLICY HAS BEEN FORMALLY SUPERSEDED BY REMOTE WORK POLICY VERSION 2.0 (DOCUMENT ID: HR-004). EMPLOYEES AND MANAGERS MUST NOT USE THIS DOCUMENT FOR CURRENT OPERATIONAL DECISIONS, RETRIEVAL GROUNDING, OR HYBRID WORK COMPLIANCE. REFER TO HR-004 FOR THE ACTIVE AUTHORITATIVE RULES.
+
+This historical document is preserved strictly for corporate audit trails, regulatory record keeping, and institutional version comparisons.
+
+
+################################################################################
+2. PURPOSE AND HISTORICAL SCOPE
+################################################################################
+
+The original purpose of Remote Work Policy Version 1.0 was to define an initial structured hybrid working arrangement following our pilot post-pandemic return-to-office initiatives. It established baseline eligibility, technological criteria, and working parameters for personnel seeking partial telecommuting privileges.
+
+This policy covered all regular full-time and part-time employees of Threshold Enterprise Systems located within standard daily commuting distance (defined as within a 50-mile or 80-kilometer radius) of our regional offices in India, the United States, the United Kingdom, and Singapore.
+
+All hybrid arrangements established under this policy were considered discretionary corporate arrangements subject to ongoing managerial review, quarterly attendance verification, and operational feasibility assessments.
+
+
+################################################################################
+3. HISTORICAL REMOTE WORK LIMITATION: MAXIMUM 2 DAYS PER WEEK
+################################################################################
+
+UNDER THIS ARCHIVED VERSION 1.0 POLICY, ELIGIBLE EMPLOYEES MAY WORK REMOTELY FOR A MAXIMUM OF TWO (2) DAYS PER WEEK (40% REMOTE ALLOCATION).
+
+Employees were required to spend the remaining three (3) business days per week physically present in their designated corporate office facility. Hybrid work schedules were strictly fixed on a calendar basis and required explicit manager agreement.
+
+To maintain predictable physical staffing and collaborative availability, remote days could only be scheduled on non-consecutive or pre-assigned days (typically Monday/Wednesday or Tuesday/Thursday). Full-time remote arrangements and telecommuting exceeding two days per week were strictly prohibited under this policy version, except under formal ADA or medical accommodation agreements executed with Corporate HR.
+
+
+################################################################################
+4. ELIGIBILITY CRITERIA AND PROBATIONARY RESTRICTIONS
+################################################################################
+
+To be eligible for the 2-day remote work option under Version 1.0, employees were required to satisfy all of the following conditions without exception:
+
+1. Successful completion of the initial six-month employment probationary period with positive managerial endorsement.
+
+2. A current performance rating of 'Meets Expectations' or higher on the most recent formal evaluation cycle.
+
+3. Continuous residence within daily commuting radius of the designated corporate facility.
+
+4. A role classified as capable of partial asynchronous execution without daily physical equipment handling or on-site security clearances.
+
+5. Formal written approval from the departmental manager, department director, and the local Human Resources representative.
+
+
+################################################################################
+5. MANAGER APPROVAL PROCESS AND SCHEDULE COORDINATION
+################################################################################
+
+Eligible employees were required to submit an initial Remote Work Request Form via the legacy corporate intranet portal at least thirty days prior to the proposed start date. The request specified the two proposed remote days.
+
+Managers evaluated requests based on team coverage, customer meeting schedules, and core operational demands. Approved schedules were fixed on a quarterly basis. Switching remote days on an ad-hoc basis required forty-eight hours advance written approval from the department manager.
+
+Managers held the absolute right to revoke or suspend remote work permissions with seven business days of advance notice if operational demands required sustained on-site presence or if performance declined.
+
+
+################################################################################
+6. INFORMATION SECURITY AND REMOTE DATA HANDLING UNDER VERSION 1.0
+################################################################################
+
+Personnel working remotely were required to maintain strict adherence to basic information security standards established in 2023:
+
+1. Remote connectivity was restricted exclusively to company-issued laptops equipped with our legacy corporate Virtual Private Network (VPN) client. Connection via split-tunneling was prohibited.
+
+2. Connection to public, unencrypted Wi-Fi networks in coffee shops, airports, or hotels was strictly forbidden unless authenticated through the full-tunnel enterprise VPN.
+
+3. Screens had to be locked whenever unattended, and family members or third parties were strictly forbidden from viewing or utilizing company hardware.
+
+4. Printing company documents at home or saving corporate data to local personal drives or external USB flash media was strictly prohibited.
+
+5. Any lost, stolen, or malfunctioning hardware had to be reported to the IT Helpdesk and local Information Security team within four hours of discovery.
+
+
+################################################################################
+7. COMMUNICATION AND AVAILABILITY EXPECTATIONS
+################################################################################
+
+Remote employees were expected to maintain core working hours and remain accessible on corporate instant messaging (Slack) and email between 10:00 AM and 4:00 PM local time.
+
+All team members were expected to keep their calendar schedules visible and join scheduled video conferences with audio and video enabled when requested by meeting leaders. Unresponsive periods exceeding sixty minutes during core hours without calendar explanation were flagged for manager counseling.
+
+Daily project status updates were required to be submitted via asynchronous team standup channels at the beginning and conclusion of each remote work day.
+
+
+################################################################################
+8. EQUIPMENT, ERGONOMICS, AND HOUSEHOLD WORKSPACE RESPONSIBILITIES
+################################################################################
+
+Threshold Enterprise Systems supplied eligible remote employees with a standard corporate laptop, charging adapter, and software suite. All secondary peripherals, external monitors, home office furniture, ergonomic chairs, broadband internet connectivity, and home utility expenses were the sole financial responsibility of the employee under this version.
+
+Employees were required to maintain a secure, private, dedicated, and ergonomically sound home workspace free from intrusive domestic noise and ambient background disruptions during client interactions.
+
+Employees were required to certify via self-inspection that their home workspace met basic fire, electrical, and ergonomic safety standards. The company disclaimed liability for home workspace injuries occurring outside core working hours.
+
+
+################################################################################
+9. PERFORMANCE TRACKING AND QUARTERLY RE-CERTIFICATION
+################################################################################
+
+Under Version 1.0, continued participation in the 2-day hybrid model required active quarterly re-certification. Managers reviewed deliverable completion, code commit cadence, meeting attendance, and peer collaboration metrics every ninety days.
+
+If an employee failed to achieve expected sprint velocities or received a 'Needs Development' rating on any periodic review, the hybrid agreement was automatically terminated, and the employee was required to return to five days of physical on-site work.
+
+Attendance logs were audited periodically against office electronic turnstile badge swipe data to verify compliance with the mandatory three on-site days.
+
+
+################################################################################
+10. REGIONAL TAX, RELOCATION, AND JURISDICTIONAL CONSTRAINTS
+################################################################################
+
+Working remotely across state, provincial, or international borders was strictly prohibited under Version 1.0 due to corporate tax nexus risks, statutory labor registration mandates, and payroll withholding liabilities.
+
+Employees were legally required to work exclusively from their registered residential address. Any change in residential address, even within the same city, required formal HR notification and re-verification of the 50-mile commuting radius.
+
+Temporary 'work-from-hotel' or vacation-adjacent telecommuting was prohibited without special executive exception from the VP of Human Resources.
+
+
+################################################################################
+11. SUPERSESSION AND HISTORICAL ARCHIVAL NOTE
+################################################################################
+
+This policy was comprehensively reviewed in Q4 2024 to address employee sentiment surveys, expanded global infrastructure, modern zero-trust security controls, and asynchronous engineering workflows.
+
+Effective January 1, 2025, Remote Work Policy Version 1.0 was officially ARCHIVED and SUPERSEDED by Remote Work Policy Version 2.0 (HR-004), which expanded the remote work allowance to three (3) days per week. This document is no longer active and must not be referenced for active enterprise decisions.
+
+================================================================================
+END OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS
+================================================================================

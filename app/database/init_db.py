@@ -24,15 +24,11 @@ logger = get_logger("THRESHOLD.init_db")
 
 
 async def init_db(seed: bool = False) -> None:
-    """Create all tables. Optionally run seeder."""
+    """Create all database tables."""
     async with engine.begin() as conn:
         logger.info("Creating database tables…")
         await conn.run_sync(Base.metadata.create_all)
         logger.info("Database tables created.")
-
-    if seed:
-        from app.database.seed import run_seed
-        await run_seed()
 
 
 async def drop_db() -> None:
@@ -44,5 +40,5 @@ async def drop_db() -> None:
 
 
 if __name__ == "__main__":
-    seed_flag = "--seed" in sys.argv
-    asyncio.run(init_db(seed=seed_flag))
+    asyncio.run(init_db())
+

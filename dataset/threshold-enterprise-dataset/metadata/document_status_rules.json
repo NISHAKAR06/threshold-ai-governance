@@ -1,0 +1,55 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "document_statuses": [
+    {
+      "status": "DRAFT",
+      "description": "Document is under preparation, pending review or stakeholder approval, and is not considered authoritative.",
+      "is_authoritative": false,
+      "lifecycle_stage": "creation",
+      "rag_retrieval_rules": {
+        "retrieval_priority": "excluded_by_default",
+        "priority_rank": 0,
+        "search_behavior": "Excluded from default production RAG queries. Only retrievable when explicitly queried with include_drafts=true by document authors or administrators.",
+        "warning_flag": "DRAFT_NON_AUTHORITATIVE"
+      }
+    },
+    {
+      "status": "ACTIVE",
+      "description": "Current authoritative document officially approved and enforced across Threshold Enterprise Systems.",
+      "is_authoritative": true,
+      "lifecycle_stage": "production",
+      "rag_retrieval_rules": {
+        "retrieval_priority": "primary",
+        "priority_rank": 1,
+        "search_behavior": "Highest retrieval priority for all production semantic search, hybrid retrieval, and knowledge grounding pipelines.",
+        "warning_flag": null
+      }
+    },
+    {
+      "status": "ARCHIVED",
+      "description": "Historical document retained for compliance, audit trails, and institutional memory, but no longer actively enforced or authoritative.",
+      "is_authoritative": false,
+      "lifecycle_stage": "retention",
+      "rag_retrieval_rules": {
+        "retrieval_priority": "secondary",
+        "priority_rank": 2,
+        "search_behavior": "Deprioritized relative to ACTIVE documents. Filtered or down-weighted in standard retrieval, retrievable during historical audit or compliance searches.",
+        "warning_flag": "HISTORICAL_REFERENCE_ONLY"
+      }
+    },
+    {
+      "status": "SUPERSEDED",
+      "description": "Document replaced by a newer version or newer policy. Retained for version diffing, audit history, and provenance tracing.",
+      "is_authoritative": false,
+      "lifecycle_stage": "obsolete",
+      "rag_retrieval_rules": {
+        "retrieval_priority": "deprioritized",
+        "priority_rank": 3,
+        "search_behavior": "Lowest retrieval weight. Whenever matching queries occur, retrieval systems must link to or prefer the superseding ACTIVE document version.",
+        "warning_flag": "SUPERSEDED_BY_NEWER_VERSION"
+      }
+    }
+  ]
+}

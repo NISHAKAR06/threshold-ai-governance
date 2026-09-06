@@ -1,0 +1,125 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "departments": [
+    {
+      "department_id": "DEPT-HR",
+      "department_name": "Human Resources",
+      "description": "Oversees global talent acquisition, people operations, employee relations, workplace culture, compensation and benefits administration, and workforce compliance across all Threshold Enterprise Systems offices.",
+      "primary_responsibilities": [
+        "Global talent acquisition, onboarding, and offboarding workflows",
+        "Employee relations, grievance resolution, and workplace culture programs",
+        "Compensation benchmarking, payroll administration, and benefits management",
+        "Performance management frameworks and professional development programs",
+        "Workforce regulatory compliance, equal opportunity, and workplace safety"
+      ],
+      "related_roles": [
+        "HR_MANAGER",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-ENG",
+      "department_name": "Engineering",
+      "description": "Responsible for core software engineering, distributed systems architecture, cloud infrastructure, platform scalability, DevOps, API development, and enterprise software products.",
+      "primary_responsibilities": [
+        "Designing and maintaining distributed software architecture and microservices",
+        "Continuous integration, automated deployment pipelines, and release engineering",
+        "Cloud infrastructure provisioning, cost governance, and multi-region resilience",
+        "Software quality assurance, automated testing, and developer tooling",
+        "Technical debt management and engineering standard operating procedures"
+      ],
+      "related_roles": [
+        "ENGINEER",
+        "MANAGER",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-AI-DATA",
+      "department_name": "AI & Data",
+      "description": "Drives machine learning research, data platform engineering, large language model integration, predictive analytics, enterprise data pipelines, and intelligent retrieval system development.",
+      "primary_responsibilities": [
+        "Developing and deploying enterprise machine learning and generative AI models",
+        "Designing data lakes, streaming pipelines, and distributed data warehouse architectures",
+        "Establishing data lineage, cataloging, hygiene, and feature store standards",
+        "Researching model safety, hallucination mitigation, and retrieval augmentation strategies",
+        "Collaborating on AI model evaluation, benchmarking, and observability"
+      ],
+      "related_roles": [
+        "AI_ENGINEER",
+        "ENGINEER",
+        "MANAGER",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-INFOSEC",
+      "department_name": "Information Security",
+      "description": "Protects enterprise digital assets, customer data, and AI systems through threat intelligence, zero-trust architecture, vulnerability management, security operations, and incident response.",
+      "primary_responsibilities": [
+        "Implementing zero-trust access control, identity federation, and credential security",
+        "Threat modeling, penetration testing, and continuous vulnerability scanning",
+        "Security incident response orchestration, digital forensics, and threat containment",
+        "Security compliance auditing against ISO 27001, SOC 2, and regional mandates",
+        "AI system security, adversarial prompt defense, and data exfiltration prevention"
+      ],
+      "related_roles": [
+        "SECURITY_ENGINEER",
+        "ADMIN",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-OPS",
+      "department_name": "Operations",
+      "description": "Manages global business operations, IT service management (ITSM), cloud infrastructure reliability, vendor procurement, facilities, and business continuity planning.",
+      "primary_responsibilities": [
+        "Overseeing 24/7 global service availability, uptime monitoring, and SLA compliance",
+        "Incident management, root cause analysis, and post-mortem review coordination",
+        "IT service desk workflows, asset management, and end-user hardware provisioning",
+        "Vendor relationship management, procurement processes, and contract renewals",
+        "Disaster recovery planning, business continuity drills, and physical facility operations"
+      ],
+      "related_roles": [
+        "OPERATIONS_MANAGER",
+        "MANAGER",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-FIN",
+      "department_name": "Finance",
+      "description": "Manages corporate financial planning and analysis (FP&A), global tax compliance, corporate accounting, treasury operations, enterprise budgeting, and cloud unit economics.",
+      "primary_responsibilities": [
+        "Corporate financial planning, budgeting forecasts, and departmental allocation",
+        "Statutory accounting, financial reporting, and external audit coordination",
+        "Enterprise cloud FinOps, cost attribution, and capital expenditure governance",
+        "Global payroll financing, tax compliance, and currency risk management",
+        "Procurement financial approval gates and enterprise vendor contract review"
+      ],
+      "related_roles": [
+        "MANAGER",
+        "EMPLOYEE"
+      ]
+    },
+    {
+      "department_id": "DEPT-GOV",
+      "department_name": "Enterprise Governance",
+      "description": "Establishes enterprise-wide corporate governance, AI ethics frameworks, regulatory compliance oversight, enterprise risk management, and legal policy adherence across all operating regions.",
+      "primary_responsibilities": [
+        "Defining enterprise AI ethics, algorithmic transparency, and responsible AI policies",
+        "Regulatory compliance monitoring across India, US, UK, and Singapore jurisdictions",
+        "Enterprise risk register maintenance, audit trail oversight, and board reporting",
+        "Corporate data privacy governance aligning with GDPR, CCPA, and DPDP frameworks",
+        "Cross-departmental policy ratification, lifecycle management, and enforcement"
+      ],
+      "related_roles": [
+        "ADMIN",
+        "MANAGER",
+        "EMPLOYEE"
+      ]
+    }
+  ]
+}

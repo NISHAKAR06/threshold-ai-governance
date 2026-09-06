@@ -1,0 +1,1413 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "schema": {
+    "description": "Enterprise document registry schema for Phase 2 document population and RAG ingestion.",
+    "supported_fields": [
+      "document_id",
+      "title",
+      "department",
+      "classification",
+      "version",
+      "status",
+      "effective_date",
+      "allowed_roles",
+      "document_type",
+      "summary",
+      "keywords",
+      "file_path",
+      "file_format"
+    ],
+    "field_specifications": {
+      "document_id": {
+        "type": "string",
+        "example": "HR-001",
+        "description": "Unique enterprise document identifier following <DEPT_CODE>-<NUMBER> format."
+      },
+      "title": {
+        "type": "string",
+        "example": "Employee Handbook",
+        "description": "Official title of the document."
+      },
+      "department": {
+        "type": "string",
+        "example": "Human Resources",
+        "description": "Owner department name as defined in department_definitions.json."
+      },
+      "classification": {
+        "type": "string",
+        "enum": [
+          "PUBLIC",
+          "INTERNAL",
+          "CONFIDENTIAL",
+          "RESTRICTED"
+        ],
+        "example": "INTERNAL",
+        "description": "Sensitivity classification level determining access controls."
+      },
+      "version": {
+        "type": "string",
+        "example": "1.0",
+        "description": "Semantic version identifier."
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "DRAFT",
+          "ACTIVE",
+          "ARCHIVED",
+          "SUPERSEDED"
+        ],
+        "example": "ACTIVE",
+        "description": "Lifecycle status governing retrieval prioritization."
+      },
+      "effective_date": {
+        "type": "string",
+        "format": "date (YYYY-MM-DD)",
+        "example": "2026-01-15",
+        "description": "Official date when the document became effective."
+      },
+      "allowed_roles": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "EMPLOYEE",
+            "MANAGER",
+            "ENGINEER",
+            "AI_ENGINEER",
+            "SECURITY_ENGINEER",
+            "OPERATIONS_MANAGER",
+            "HR_MANAGER",
+            "ADMIN"
+          ]
+        },
+        "description": "List of user roles authorized to view or retrieve the document."
+      },
+      "document_type": {
+        "type": "string",
+        "enum": [
+          "POLICY",
+          "STANDARD",
+          "GUIDELINE",
+          "PROCEDURE",
+          "RUNBOOK",
+          "HANDBOOK",
+          "FRAMEWORK",
+          "PLAYBOOK"
+        ],
+        "example": "HANDBOOK",
+        "description": "Standardized document type defining its structure and purpose."
+      },
+      "summary": {
+        "type": "string",
+        "example": "Comprehensive organizational handbook...",
+        "description": "Concise summary used for metadata indexing and semantic search pre-filtering."
+      },
+      "keywords": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "example": [
+          "employee handbook",
+          "workplace culture"
+        ],
+        "description": "High-signal search keywords for hybrid BM25 and lexical retrieval."
+      },
+      "file_path": {
+        "type": "string",
+        "example": "source_documents/hr/employee_handbook.docx",
+        "description": "Relative path to source document file from dataset root."
+      },
+      "file_format": {
+        "type": "string",
+        "example": "docx",
+        "description": "File format identifier (docx, pdf, txt)."
+      }
+    }
+  },
+  "documents": [
+    {
+      "document_id": "HR-001",
+      "title": "Employee Handbook",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "HANDBOOK",
+      "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+      "keywords": [
+        "employee handbook",
+        "company values",
+        "workplace culture",
+        "working hours",
+        "core hours",
+        "code of conduct",
+        "asset care",
+        "escalation channels"
+      ],
+      "file_path": "source_documents/hr/employee_handbook.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "HR-002",
+      "title": "Leave and Time-Off Policy",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Authoritative policy governing paid time off, including 25 days annual leave, 12 paid sick days, 16 weeks parental leave, bereavement leave, Workday submission workflows, and manager approval SLAs.",
+      "keywords": [
+        "annual leave",
+        "sick leave",
+        "parental leave",
+        "bereavement leave",
+        "floating culture days",
+        "leave approval workflow",
+        "unplanned absence",
+        "workday"
+      ],
+      "file_path": "source_documents/hr/leave_and_time_off_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "HR-003",
+      "title": "Remote Work Policy Version 1.0 (Archived)",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ARCHIVED",
+      "effective_date": "2023-06-01",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Archived historical policy specifying a maximum of 2 remote work days per week under legacy VPN rules. Retained strictly for audit records and superseded by Version 2.0 (HR-004).",
+      "keywords": [
+        "remote work",
+        "telecommuting",
+        "hybrid work",
+        "2 days remote",
+        "archived policy",
+        "historical policy",
+        "legacy vpn",
+        "non-authoritative"
+      ],
+      "file_path": "source_documents/hr/remote_work_policy_v1.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "HR-004",
+      "title": "Remote Work Policy Version 2.0",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "2.0",
+      "status": "ACTIVE",
+      "effective_date": "2025-01-01",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+      "keywords": [
+        "remote work",
+        "hybrid working",
+        "3 days remote",
+        "active policy",
+        "authoritative",
+        "supersedes hr-003",
+        "zero-trust",
+        "home office stipend",
+        "in-office anchor days"
+      ],
+      "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "HR-005",
+      "title": "Employee Code of Conduct",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+      "keywords": [
+        "code of conduct",
+        "business ethics",
+        "anti-harassment",
+        "conflicts of interest",
+        "intellectual property",
+        "anti-bribery",
+        "whistleblower",
+        "investigation process"
+      ],
+      "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "HR-006",
+      "title": "Performance Management Policy",
+      "department": "Human Resources",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+      "keywords": [
+        "performance management",
+        "okrs",
+        "bi-annual reviews",
+        "performance calibration",
+        "5-tier ratings",
+        "pip",
+        "confidential",
+        "merit compensation",
+        "rating grievance"
+      ],
+      "file_path": "source_documents/hr/performance_management_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "HR-007",
+      "title": "Employee Data Privacy Policy",
+      "department": "Human Resources",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+      "keywords": [
+        "data privacy",
+        "employee data",
+        "personnel records",
+        "gdpr",
+        "cpra",
+        "dpdp act",
+        "pdpa",
+        "retention schedules",
+        "dsar",
+        "confidential",
+        "breach notification"
+      ],
+      "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "HR-008",
+      "title": "Workplace Incident Reporting Policy and Procedure",
+      "department": "Human Resources",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "PROCEDURE",
+      "summary": "Standard operating procedure governing physical safety, behavioral harassment, and facility emergency incident reporting, triage SLAs, investigation workflows, and non-retaliation protections. Explicitly distinguished from cybersecurity incidents.",
+      "keywords": [
+        "workplace incident",
+        "incident reporting",
+        "workplace safety",
+        "harassment investigation",
+        "emergency triage",
+        "non-retaliation",
+        "ehs",
+        "distinguished from cybersecurity"
+      ],
+      "file_path": "source_documents/hr/workplace_incident_reporting_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "SEC-001",
+      "title": "Information Security Policy",
+      "department": "Information Security",
+      "classification": "INTERNAL",
+      "version": "2.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "High-level enterprise information security charter establishing the CIA triad, three lines of defense, employee hygiene responsibilities, security awareness training, and policy compliance enforcement.",
+      "keywords": [
+        "information security",
+        "cia triad",
+        "three lines of defense",
+        "clean desk",
+        "security awareness",
+        "phishing training",
+        "isoc reporting",
+        "security governance"
+      ],
+      "file_path": "source_documents/security/information_security_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "SEC-002",
+      "title": "Access Control Policy",
+      "department": "Information Security",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+      "keywords": [
+        "access control",
+        "least privilege",
+        "need to know",
+        "rbac",
+        "abac",
+        "pam",
+        "just-in-time elevation",
+        "user access reviews",
+        "confidential"
+      ],
+      "file_path": "source_documents/security/access_control_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "SEC-003",
+      "title": "Password and Authentication Policy",
+      "department": "Information Security",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "STANDARD",
+      "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+      "keywords": [
+        "password policy",
+        "authentication standard",
+        "mfa",
+        "fido2",
+        "hardware keys",
+        "passphrase",
+        "credential sharing prohibited",
+        "password manager",
+        "account recovery"
+      ],
+      "file_path": "source_documents/security/password_and_authentication_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "SEC-004",
+      "title": "Security Incident Response Policy",
+      "department": "Information Security",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "SECURITY_ENGINEER",
+        "MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "PROCEDURE",
+      "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+      "keywords": [
+        "incident response",
+        "cybersecurity incident",
+        "csirt",
+        "p1 critical",
+        "containment",
+        "digital forensics",
+        "evidence preservation",
+        "regulatory disclosure",
+        "confidential",
+        "distinguished from workplace incidents"
+      ],
+      "file_path": "source_documents/security/security_incident_response_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "SEC-005",
+      "title": "Data Classification and Handling Policy",
+      "department": "Information Security",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "HR_MANAGER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+      "keywords": [
+        "data classification",
+        "public",
+        "internal",
+        "confidential",
+        "restricted",
+        "data handling",
+        "data ownership",
+        "encryption at rest",
+        "data retention",
+        "cryptographic disposal"
+      ],
+      "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "SEC-006",
+      "title": "Acceptable Use Policy",
+      "department": "Information Security",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Defines acceptable workforce conduct regarding company hardware, internet browsing, email etiquette, approved software catalog, shadow IT prohibition, high-level generative AI usage awareness, and strictly prohibited activities.",
+      "keywords": [
+        "acceptable use",
+        "aup",
+        "endpoint security",
+        "shadow it",
+        "software restrictions",
+        "byod",
+        "generative ai awareness",
+        "prohibited activities",
+        "system monitoring"
+      ],
+      "file_path": "source_documents/security/acceptable_use_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "SEC-007",
+      "title": "Production Access Policy",
+      "department": "Information Security",
+      "classification": "RESTRICTED",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Restricted zero-trust policy strictly governing access to live production cloud infrastructure, foundation model weights, and customer databases. Enforces zero standing privileges, just-in-time ephemeral elevation, bastion session recording, emergency break-glass dual custody, and immediate revocation.",
+      "keywords": [
+        "production access",
+        "restricted",
+        "zero standing privileges",
+        "just-in-time",
+        "bastion session recording",
+        "break-glass",
+        "dual custody",
+        "ephemeral certificates",
+        "security oversight"
+      ],
+      "file_path": "source_documents/security/production_access_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "AIG-001",
+      "title": "Responsible AI Policy",
+      "department": "Enterprise Governance",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+      "keywords": [
+        "responsible ai",
+        "ethical ai",
+        "accountability",
+        "transparency",
+        "algorithmic fairness",
+        "human oversight",
+        "explainability",
+        "risk management",
+        "generative ai",
+        "monitoring"
+      ],
+      "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "AIG-002",
+      "title": "AI Risk Classification Framework",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "FRAMEWORK",
+      "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+      "keywords": [
+        "ai risk",
+        "risk classification",
+        "risk levels",
+        "low risk",
+        "medium risk",
+        "high risk",
+        "critical risk",
+        "risk assessment",
+        "data sensitivity",
+        "decision autonomy"
+      ],
+      "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "AIG-003",
+      "title": "AI Model Approval Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Defines the end-to-end lifecycle and gate review process for new AI models, generative AI applications, RAG systems, fine-tuned models, and third-party AI services based on certified risk tier assignments under AIG-002.",
+      "keywords": [
+        "model approval",
+        "approval lifecycle",
+        "technical review",
+        "privacy review",
+        "security review",
+        "model card",
+        "gate authorities",
+        "conditional approval",
+        "re-approval",
+        "decommissioning"
+      ],
+      "file_path": "source_documents/ai_governance/ai_model_approval_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "AIG-004",
+      "title": "Generative AI Usage Policy",
+      "department": "Enterprise Governance",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Establishes acceptable enterprise use of Large Language Models, AI code assistants, conversational agents, and generative AI tools. Details approved vs. unapproved tools, prohibited data in prompts, human accountability for output, and verification requirements.",
+      "keywords": [
+        "generative ai",
+        "llm",
+        "ai assistants",
+        "prompt guidelines",
+        "human accountability",
+        "output verification",
+        "code generation",
+        "hallucination",
+        "shadow ai",
+        "acceptable use"
+      ],
+      "file_path": "source_documents/ai_governance/generative_ai_usage_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "AIG-005",
+      "title": "Human-in-the-Loop Review Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+      "keywords": [
+        "human-in-the-loop",
+        "hitl",
+        "human oversight",
+        "human-on-the-loop",
+        "override procedures",
+        "automation bias",
+        "reviewer qualifications",
+        "audit logging",
+        "two-person rule",
+        "accountability"
+      ],
+      "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "AIG-006",
+      "title": "AI Data Privacy Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "HR_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Establishes data privacy standards across the AI lifecycle, aligning with SEC-005 classifications. Details data minimization, purpose limitation, PII token masking, vector store isolation, differential privacy, cross-border transfers, DSAR erasure, and third-party DPA requirements.",
+      "keywords": [
+        "data privacy",
+        "pii masking",
+        "data minimization",
+        "vector store isolation",
+        "differential privacy",
+        "dsar",
+        "right to be forgotten",
+        "rag privacy",
+        "gdpr",
+        "dpdp act"
+      ],
+      "file_path": "source_documents/ai_governance/ai_data_privacy_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "AIG-007",
+      "title": "Prompt Security Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential technical defense-in-depth policy protecting generative AI and RAG interfaces against prompt injection, jailbreaks, instruction overrides, indirect injection, and data exfiltration. Defines five-stage response flow, dual-LLM guardrails, tripwire canaries, and penetration testing.",
+      "keywords": [
+        "prompt security",
+        "prompt injection",
+        "jailbreak",
+        "instruction override",
+        "indirect prompt injection",
+        "context isolation",
+        "canary tokens",
+        "guardrails",
+        "adversarial fuzzing",
+        "rate limiting"
+      ],
+      "file_path": "source_documents/ai_governance/prompt_security_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "AIG-008",
+      "title": "AI Model Monitoring Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+      "keywords": [
+        "model monitoring",
+        "drift detection",
+        "population stability index",
+        "kolmogorov-smirnov",
+        "rag telemetry",
+        "answer grounding",
+        "hallucination tracking",
+        "circuit breakers",
+        "automated alerting",
+        "pagerduty"
+      ],
+      "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "AIG-009",
+      "title": "AI Incident Management Policy",
+      "department": "Enterprise Governance",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "PROCEDURE",
+      "summary": "Operational procedure establishing seven-phase response lifecycle for AI-specific incidents. Distinguishes AI incidents from cybersecurity (SEC-004) and HR (HR-008) events. Defines four-tier severity matrix, containment playbooks (kill-switch, parameter clamping), forensics, and recovery.",
+      "keywords": [
+        "ai incident",
+        "incident management",
+        "containment playbook",
+        "kill-switch",
+        "hallucination incident",
+        "prompt injection incident",
+        "severity matrix",
+        "forensic analysis",
+        "post-incident review",
+        "statutory reporting"
+      ],
+      "file_path": "source_documents/ai_governance/ai_incident_management_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "AIG-010",
+      "title": "AI Model Deployment Policy",
+      "department": "Enterprise Governance",
+      "classification": "RESTRICTED",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Restricted governance policy mandating seven pre-flight technical verification gates before AI deployment. Enforces AIG-002 risk tier and AIG-003 approval prerequisites, progressive canary soak schedule (5% to 100%), automated rollback tripwires, blue/green clusters, and dual-custody authorization.",
+      "keywords": [
+        "model deployment",
+        "restricted",
+        "pre-flight gates",
+        "canary deployment",
+        "soak schedule",
+        "automated rollback",
+        "blue green deployment",
+        "dual custody",
+        "two-person rule",
+        "hypercare"
+      ],
+      "file_path": "source_documents/ai_governance/ai_model_deployment_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "ENG-001",
+      "title": "API Development Guidelines",
+      "department": "Engineering",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "GUIDELINE",
+      "summary": "Mandatory engineering guidelines establishing RESTful API design principles, URI conventions, HTTP verb semantics, Pydantic input validation, standardized JSON envelopes, pagination, RFC 7807 error handling, rate limiting, and OpenAPI 3.1 documentation.",
+      "keywords": [
+        "api development",
+        "rest guidelines",
+        "http semantics",
+        "request validation",
+        "pydantic",
+        "pagination",
+        "error handling",
+        "problem details",
+        "openapi",
+        "backward compatibility"
+      ],
+      "file_path": "source_documents/engineering/api_development_guidelines.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "ENG-002",
+      "title": "Code Review Policy",
+      "department": "Engineering",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "MANAGER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+      "keywords": [
+        "code review",
+        "peer review",
+        "pull request",
+        "code owners",
+        "pr size limit",
+        "automated ci",
+        "security review",
+        "constructive feedback",
+        "clean code"
+      ],
+      "file_path": "source_documents/engineering/code_review_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "ENG-003",
+      "title": "Git Workflow and Branching Policy",
+      "department": "Engineering",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "STANDARD",
+      "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+      "keywords": [
+        "git workflow",
+        "branching policy",
+        "trunk-based development",
+        "conventional commits",
+        "daily rebase",
+        "squash and merge",
+        "gpg signing",
+        "semantic versioning",
+        "secret scanning",
+        "branch protection"
+      ],
+      "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "ENG-004",
+      "title": "Production Deployment Guide",
+      "department": "Engineering",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "RUNBOOK",
+      "summary": "Confidential production release runbook establishing seven pre-deployment verification gates, zero-downtime expand-and-contract database migrations, blue/green and canary rollouts (5% to 100%), automated rollback tripwires, deployment windows, CAB reviews, and hypercare monitoring.",
+      "keywords": [
+        "production deployment",
+        "confidential",
+        "deployment guide",
+        "verification gates",
+        "blue green deployment",
+        "canary release",
+        "automated rollback",
+        "expand and contract",
+        "hypercare",
+        "change advisory board"
+      ],
+      "file_path": "source_documents/engineering/production_deployment_guide.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "ENG-005",
+      "title": "Database Access Policy",
+      "department": "Engineering",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+      "keywords": [
+        "database access",
+        "confidential",
+        "least privilege",
+        "environment segregation",
+        "service accounts",
+        "connection pooling",
+        "pgbouncer",
+        "vector database governance",
+        "metadata pre-filtering",
+        "break-glass access",
+        "audit logging"
+      ],
+      "file_path": "source_documents/engineering/database_access_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "ENG-006",
+      "title": "Engineering Incident Management Runbook",
+      "department": "Engineering",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "RUNBOOK",
+      "summary": "Confidential operational runbook establishing seven-phase engineering incident lifecycle. Explicitly delineates engineering operational outages from cybersecurity (SEC-004), AI governance (AIG-009), and HR (HR-008) incidents. Defines four-tier severity matrix, emergency stabilization playbooks, on-call hygiene, and blameless post-mortems.",
+      "keywords": [
+        "engineering incident",
+        "confidential",
+        "runbook",
+        "severity matrix",
+        "stabilization playbooks",
+        "traffic shedding",
+        "circuit breaker",
+        "on-call rotation",
+        "blameless post-mortem",
+        "root cause analysis"
+      ],
+      "file_path": "source_documents/engineering/engineering_incident_management_runbook.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "ENG-007",
+      "title": "System Architecture Guidelines",
+      "department": "Engineering",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "ENGINEER",
+        "AI_ENGINEER",
+        "MANAGER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "GUIDELINE",
+      "summary": "Comprehensive architectural guidelines establishing domain-driven microservices design, asynchronous event-driven messaging (Kafka/RabbitMQ), resilient database partitioning, multi-tenant data isolation, observability standards (logs, metrics, distributed traces), and RAG enterprise architecture integration.",
+      "keywords": [
+        "system architecture",
+        "microservices",
+        "domain-driven design",
+        "event-driven architecture",
+        "multi-tenancy",
+        "rag architecture",
+        "observability",
+        "opentelemetry",
+        "fault tolerance",
+        "distributed systems"
+      ],
+      "file_path": "source_documents/engineering/system_architecture_guidelines.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "OPS-001",
+      "title": "Service Management Policy",
+      "department": "Operations",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Authoritative operations policy establishing the enterprise IT Service Management (ITSM) charter. Defines five-stage service lifecycle, explicit service ownership and RACI matrices, availability tiers (Tier 1: 99.9%), service desk workflows, and Continual Service Improvement (CSI) register governance.",
+      "keywords": [
+        "service management",
+        "itsm",
+        "itil",
+        "service lifecycle",
+        "service owner",
+        "raci matrix",
+        "availability tiers",
+        "service desk",
+        "continual service improvement",
+        "csi register"
+      ],
+      "file_path": "source_documents/operations/service_management_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "OPS-002",
+      "title": "Change Management Policy",
+      "department": "Operations",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+      "keywords": [
+        "change management",
+        "confidential",
+        "cab",
+        "change advisory board",
+        "ecab",
+        "request for change",
+        "rfc",
+        "standard change",
+        "emergency change",
+        "rollback plan",
+        "deployment freezes"
+      ],
+      "file_path": "source_documents/operations/change_management_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "OPS-003",
+      "title": "Standard Operating Procedures Policy",
+      "department": "Operations",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "STANDARD",
+      "summary": "Operational standard defining the mandatory nine-element structural schema for creating and maintaining Standard Operating Procedures (SOPs). Enforces procedural ownership, sandboxed dry-run testing, semi-annual recertification, semantic versioning in Git, and execution logging.",
+      "keywords": [
+        "standard operating procedures",
+        "sop",
+        "procedural standard",
+        "runbook template",
+        "operational runbook",
+        "semi-annual recertification",
+        "dry-run validation",
+        "execution logging",
+        "version control"
+      ],
+      "file_path": "source_documents/operations/standard_operating_procedures_policy.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "OPS-004",
+      "title": "Business Continuity Policy",
+      "department": "Operations",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "OPERATIONS_MANAGER",
+        "SECURITY_ENGINEER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+      "keywords": [
+        "business continuity",
+        "confidential",
+        "disaster recovery",
+        "business impact analysis",
+        "bia",
+        "rto",
+        "rpo",
+        "crisis management team",
+        "cmt",
+        "failover drill",
+        "regional redundancy"
+      ],
+      "file_path": "source_documents/operations/business_continuity_policy.pdf",
+      "file_format": "pdf"
+    },
+    {
+      "document_id": "OPS-005",
+      "title": "Service Level Management Policy",
+      "department": "Operations",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "POLICY",
+      "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+      "keywords": [
+        "service level management",
+        "sli",
+        "slo",
+        "sla",
+        "service level objectives",
+        "error budget",
+        "burn rate",
+        "availability tiers",
+        "service credits",
+        "sre"
+      ],
+      "file_path": "source_documents/operations/service_level_management_policy.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "OPS-006",
+      "title": "Operational Incident Escalation Procedure",
+      "department": "Operations",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "PROCEDURE",
+      "summary": "Confidential operational procedure establishing the Global Operations Center incident triage and escalation model. Enforces clear penta-partite incident domain distinctions across Operational (OPS-006), Engineering (ENG-006), Cybersecurity (SEC-004), AI Governance (AIG-009), and Workplace (HR-008) incidents. Details four-tier severity matrix and war room protocols.",
+      "keywords": [
+        "operational incident",
+        "incident escalation",
+        "confidential",
+        "global operations center",
+        "severity matrix",
+        "war room",
+        "incident dispatch",
+        "co-command",
+        "post-incident review",
+        "blameless rca"
+      ],
+      "file_path": "source_documents/operations/operational_incident_escalation_procedure.txt",
+      "file_format": "txt"
+    },
+    {
+      "document_id": "OPS-007",
+      "title": "Operational Data Retention Guidelines",
+      "department": "Operations",
+      "classification": "CONFIDENTIAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "GUIDELINE",
+      "summary": "Confidential operational guideline defining lifecycle retention schedules, storage tiering (Hot, Warm, Cold, Deep Archive), PII ingestion masking (SEC-005), AI inference log retention (AIG-006), WORM immutability, cryptographic shredding, and legal hold override mechanisms.",
+      "keywords": [
+        "data retention",
+        "operational logs",
+        "confidential",
+        "log retention",
+        "telemetry retention",
+        "storage tiering",
+        "pii masking",
+        "cryptographic shredding",
+        "worm storage",
+        "legal hold"
+      ],
+      "file_path": "source_documents/operations/operational_data_retention_guidelines.docx",
+      "file_format": "docx"
+    },
+    {
+      "document_id": "OPS-008",
+      "title": "Service Performance Monitoring Guidelines",
+      "department": "Operations",
+      "classification": "INTERNAL",
+      "version": "1.0",
+      "status": "ACTIVE",
+      "effective_date": "2026-01-15",
+      "allowed_roles": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ENGINEER",
+        "AI_ENGINEER",
+        "SECURITY_ENGINEER",
+        "OPERATIONS_MANAGER",
+        "ADMIN"
+      ],
+      "document_type": "GUIDELINE",
+      "summary": "Authoritative monitoring guideline establishing the Four Golden Signals (Latency, Traffic, Errors, Saturation), multi-region synthetic endpoint probes, intelligent alert thresholding, deadman heartbeats, specialized AI/RAG vector search latency monitoring (AIG-008), and 3-row dashboard layouts.",
+      "keywords": [
+        "service monitoring",
+        "observability",
+        "four golden signals",
+        "synthetic probes",
+        "alert fatigue",
+        "ai model monitoring",
+        "rag latency",
+        "dashboard standards",
+        "canary rollback trigger"
+      ],
+      "file_path": "source_documents/operations/service_performance_monitoring_guidelines.pdf",
+      "file_format": "pdf"
+    }
+  ]
+}

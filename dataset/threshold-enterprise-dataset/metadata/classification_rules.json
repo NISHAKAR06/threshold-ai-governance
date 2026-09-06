@@ -1,0 +1,79 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "classifications": [
+    {
+      "classification": "PUBLIC",
+      "description": "Information that can be accessed by everyone, including external parties, customers, partners, and the public.",
+      "access_requirement": "No authentication or special authorization required. Freely distributable externally.",
+      "example_document_types": [
+        "Public product documentation",
+        "Open-source software guidelines",
+        "Public press releases and corporate announcements",
+        "Published privacy statements and external compliance certifications",
+        "Customer-facing API reference manuals"
+      ],
+      "handling_requirements": {
+        "storage": "May reside on public CDNs, marketing web servers, or unauthenticated documentation repositories.",
+        "transmission": "Plaintext transfer acceptable, though HTTPS/TLS standard is recommended.",
+        "labeling": "Must be tagged with 'PUBLIC' in document headers or metadata registries.",
+        "encryption_at_rest": "Optional; standard enterprise storage encryption applies by default."
+      }
+    },
+    {
+      "classification": "INTERNAL",
+      "description": "Information intended for authenticated employees and authorized contractors of Threshold Enterprise Systems. Not intended for public dissemination.",
+      "access_requirement": "Valid enterprise authentication (SSO / corporate identity credentials). Granted to all active enterprise roles.",
+      "example_document_types": [
+        "General employee handbooks",
+        "Standard operating guidelines and workplace policies",
+        "Company-wide town hall presentations and strategic overviews",
+        "Internal architectural overviews and standard software practices",
+        "IT helpdesk self-service guides and onboarding checklists"
+      ],
+      "handling_requirements": {
+        "storage": "Internal corporate document management systems, intranet repositories, and secure wiki spaces.",
+        "transmission": "Mandatory encryption in transit via TLS 1.3. External sharing prohibited without management approval.",
+        "labeling": "Header banner: 'INTERNAL - FOR THRESHOLD ENTERPRISE SYSTEMS USE ONLY'.",
+        "encryption_at_rest": "AES-256 encryption required on all enterprise storage backends."
+      }
+    },
+    {
+      "classification": "CONFIDENTIAL",
+      "description": "Information accessible only to authorized departments, management roles, or explicitly permitted users due to operational or proprietary business sensitivity.",
+      "access_requirement": "Department-scoped role membership (e.g. DEPT-ENG for engineering confidential documents, DEPT-HR for HR confidential documents) or management-tier clearance.",
+      "example_document_types": [
+        "Proprietary AI model training recipes and algorithmic weights documentation",
+        "Unreleased product architecture specifications and engineering runbooks",
+        "Departmental operational budgets and financial forecasts",
+        "Employee compensation bands and departmental performance reviews",
+        "Enterprise AI governance audit logs and risk assessment scorecards"
+      ],
+      "handling_requirements": {
+        "storage": "Restricted departmental storage partitions with role-based access control (RBAC) enforcement.",
+        "transmission": "End-to-end encrypted transit with strict DLP (Data Loss Prevention) monitoring.",
+        "labeling": "Header banner: 'CONFIDENTIAL - STRICT DEPARTMENTAL ACCESS RESTRICTIONS APPLY'.",
+        "encryption_at_rest": "AES-256 encryption with compartmentalized key management per department."
+      }
+    },
+    {
+      "classification": "RESTRICTED",
+      "description": "Highly sensitive information accessible only to explicitly authorized roles and designated individuals under strict need-to-know controls.",
+      "access_requirement": "Explicit role authorization (e.g. ADMIN or SECURITY_ENGINEER with explicit security scope entitlement). No implicit or default access.",
+      "example_document_types": [
+        "Active cybersecurity incident response forensics and exploit vectors",
+        "Enterprise cryptographic root keys and infrastructure zero-day runbooks",
+        "Executive M&A strategy documents and material non-public financial records",
+        "Red team penetration testing vulnerability playbooks and threat actor dossiers",
+        "Regulatory enforcement inquiry briefings and legal privilege disclosures"
+      ],
+      "handling_requirements": {
+        "storage": "Dedicated air-gapped or high-security vaults with immutable audit logging and zero-standing privileges.",
+        "transmission": "Encrypted with dedicated envelope encryption keys; copy/paste and export capabilities disabled.",
+        "labeling": "Header banner: 'RESTRICTED - STRICT NEED-TO-KNOW CLEARANCE REQUIRED - AUDITED ACCESS'.",
+        "encryption_at_rest": "Hardware Security Module (HSM) backed customer-managed keys with dual-custody authorization."
+      }
+    }
+  ]
+}

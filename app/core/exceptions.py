@@ -131,23 +131,58 @@ class WebSocketError(THRESHOLDBaseException):
         super().__init__(message, "WS_ERROR")
 
 
+# ── Ingestion Pipeline ─────────────────────────────────────────
+class RegistryValidationError(THRESHOLDBaseException):
+    def __init__(self, message: str):
+        super().__init__(message, "REGISTRY_VALIDATION_ERROR")
+
+
+class DocumentIngestionError(THRESHOLDBaseException):
+    def __init__(self, message: str, document_id: str = None):
+        self.document_id = document_id
+        super().__init__(message, "DOCUMENT_INGESTION_ERROR")
+
+
+class DocumentValidationError(THRESHOLDBaseException):
+    def __init__(self, message: str, document_id: str = None):
+        self.document_id = document_id
+        super().__init__(message, "DOCUMENT_VALIDATION_ERROR")
+
+
+class LoaderError(THRESHOLDBaseException):
+    def __init__(self, message: str, file_path: str = None):
+        self.file_path = file_path
+        super().__init__(message, "LOADER_ERROR")
+
+
+class UnsupportedFormatError(THRESHOLDBaseException):
+    def __init__(self, format_name: str):
+        super().__init__(f"Unsupported document format: '{format_name}'", "UNSUPPORTED_FORMAT")
+
+
 # ── HTTP exception factory ────────────────────────────────────
 def to_http_exception(exc: THRESHOLDBaseException) -> HTTPException:
     """Convert a domain exception to an HTTPException."""
     status_map = {
-        "AUTH_ERROR":        status.HTTP_401_UNAUTHORIZED,
-        "AUTHZ_ERROR":       status.HTTP_403_FORBIDDEN,
-        "TOKEN_EXPIRED":     status.HTTP_401_UNAUTHORIZED,
-        "NOT_FOUND":         status.HTTP_404_NOT_FOUND,
-        "DUPLICATE":         status.HTTP_409_CONFLICT,
-        "VALIDATION_ERROR":  status.HTTP_422_UNPROCESSABLE_ENTITY,
-        "POLICY_BLOCKED":    status.HTTP_403_FORBIDDEN,
-        "NOT_APPROVED":      status.HTTP_409_CONFLICT,
-        "ALREADY_EXECUTED":  status.HTTP_409_CONFLICT,
-        "LLM_TIMEOUT":       status.HTTP_504_GATEWAY_TIMEOUT,
+        "AUTH_ERROR":                status.HTTP_401_UNAUTHORIZED,
+        "AUTHZ_ERROR":               status.HTTP_403_FORBIDDEN,
+        "TOKEN_EXPIRED":             status.HTTP_401_UNAUTHORIZED,
+        "NOT_FOUND":                 status.HTTP_404_NOT_FOUND,
+        "DUPLICATE":                 status.HTTP_409_CONFLICT,
+        "VALIDATION_ERROR":          status.HTTP_422_UNPROCESSABLE_ENTITY,
+        "POLICY_BLOCKED":            status.HTTP_403_FORBIDDEN,
+        "NOT_APPROVED":              status.HTTP_409_CONFLICT,
+        "ALREADY_EXECUTED":          status.HTTP_409_CONFLICT,
+        "LLM_TIMEOUT":               status.HTTP_504_GATEWAY_TIMEOUT,
+        "REGISTRY_VALIDATION_ERROR": status.HTTP_422_UNPROCESSABLE_ENTITY,
+        "DOCUMENT_INGESTION_ERROR":  status.HTTP_500_INTERNAL_SERVER_ERROR,
+        "DOCUMENT_VALIDATION_ERROR": status.HTTP_422_UNPROCESSABLE_ENTITY,
+        "LOADER_ERROR":              status.HTTP_500_INTERNAL_SERVER_ERROR,
+        "UNSUPPORTED_FORMAT":        status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
     }
     http_status = status_map.get(exc.code, status.HTTP_500_INTERNAL_SERVER_ERROR)
     return HTTPException(
         status_code=http_status,
         detail={"code": exc.code, "message": exc.message},
     )
+

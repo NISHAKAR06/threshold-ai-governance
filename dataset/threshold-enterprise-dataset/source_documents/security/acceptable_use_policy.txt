@@ -1,0 +1,152 @@
+================================================================================
+THRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION
+ACCEPTABLE USE POLICY
+================================================================================
+
+--- DOCUMENT METADATA ---
+Document Id: SEC-006
+Title: Acceptable Use Policy
+Department: Information Security
+Classification: INTERNAL
+Version: 1.0
+Status: ACTIVE
+Effective Date: 2026-01-15
+Document Type: POLICY
+Allowed Roles: EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, HR_MANAGER, ADMIN
+-------------------------
+
+
+################################################################################
+1. PURPOSE, SCOPE, AND GUIDING PRINCIPLES
+################################################################################
+
+Threshold Enterprise Systems provides its workforce with computing hardware, mobile devices, communication networks, enterprise software, cloud subscriptions, and internet access to support our corporate mission of engineering cutting-edge enterprise AI, cloud, and data solutions.
+
+This Acceptable Use Policy (AUP) outlines the mandatory rules, behavioral standards, and personal responsibilities governing the ethical, lawful, and secure use of all enterprise information technology systems across all operating locations in India, the United States, the United Kingdom, and Singapore.
+
+This policy applies universally to all employees, managers, contractors, temporary workers, consultants, and interns who interact with corporate hardware, cloud infrastructure, electronic mail, collaboration tools, or proprietary network connections.
+
+Use of enterprise systems constitutes consent to comply with this policy and acknowledgment that computing resources are provided primarily for legitimate corporate business activities.
+
+
+################################################################################
+2. USE AND CUSTODY OF COMPANY-ISSUED ENDPOINT HARDWARE
+################################################################################
+
+Threshold Enterprise Systems provisions employees with standardized laptop computers, charging accessories, and optional mobile devices to enable effective in-office and hybrid remote work:
+
+- Dedicated Business Tool: Company-issued endpoints are corporate property provided for official work assignments. Incidental, minimal personal use (such as checking personal webmail or reading news during lunch breaks) is permissible only if it is lawful, does not degrade system performance, and violates no corporate security policies.
+
+- Physical Safeguards: Employees must maintain personal physical custody of company hardware. Laptops must never be left unattended in public vehicles, airport concourses, coffee shops, or unmonitored office spaces. In hotel rooms, equipment must be secured within hotel safes or locked luggage.
+
+- Hardware Modification Prohibition: Employees are strictly forbidden from opening device chassis, modifying internal hardware components, disabling corporate BIOS/UEFI passwords, or removing corporate asset asset tracking tags.
+
+- Endpoint Management Integrity: Enterprise devices are enrolled in automated Endpoint Management (MDM) with active endpoint detection and response (EDR) agents. Employees must never attempt to disable, tamper with, uninstall, or circumvent security telemetry agents.
+
+
+################################################################################
+3. INTERNET USAGE, WEB BROWSING, AND CONTENT FILTERING
+################################################################################
+
+Enterprise internet access is provided to facilitate technical research, customer interaction, collaborative communication, and professional development:
+
+- Content Filtering Standards: Corporate network gateways and endpoint web protection agents enforce automated domain filtering to block malicious, compromised, or legally prohibited web domains. Categories blocked include: known malware/phishing sites, illegal file-sharing/torrenting hubs, gambling portals, adult/pornographic material, hate speech forums, and unvetted proxy/anonymizer services.
+
+- Circumvention Prohibited: Workforce members are strictly prohibited from utilizing external proxy servers, unapproved third-party VPNs, onion routers (Tor), or DNS tunneling techniques to bypass corporate web security filters.
+
+- Download Vigilance: Downloading software, executables, scripts, or system libraries from unverified internet sources is forbidden. All software components must be acquired through official package managers vetted by Information Security.
+
+
+################################################################################
+4. ELECTRONIC MAIL, INSTANT MESSAGING, AND COMMUNICATION SYSTEMS
+################################################################################
+
+Corporate electronic mail (Google Workspace / Microsoft 365) and collaboration channels (Slack, Microsoft Teams) represent official corporate communication channels:
+
+- Professional Decorum: Communications must reflect professional civility, respect, and inclusion as mandated by the Employee Code of Conduct (HR-005). Using corporate messaging to transmit abusive, harassing, discriminatory, sexually suggestive, or defamatory content is strictly grounds for disciplinary dismissal.
+
+- Commercial and Political Solicitations: Enterprise messaging channels and distribution lists must not be utilized for unauthorized commercial solicitations, chain letters, religious proselytizing, political campaigning, or personal fundraising.
+
+- Auto-Forwarding Restrictions: Automated forwarding of corporate email to external personal email addresses (e.g., personal Gmail, Yahoo, Outlook accounts) is technologically blocked and strictly forbidden to prevent confidential data leakage.
+
+
+################################################################################
+5. SOFTWARE INSTALLATION, SHADOW IT, AND APPLICATION WHITELISTING
+################################################################################
+
+To prevent malware infiltration, software license liabilities, and system instability, software installation on company devices is strictly regulated:
+
+- Enterprise Self-Service Portal: Employees may install productivity and engineering software directly from the curated Enterprise Application Catalog without administrative elevation.
+
+- Shadow IT Prohibition: Utilizing unapproved third-party cloud services, SaaS tools, file-sharing repositories (e.g., personal Dropbox, WeTransfer), or task boards for corporate projects is strictly prohibited.
+
+- Software Request Process: If an engineer or manager requires software not currently available in the catalog, a formal Software Evaluation Request must be submitted to the IT Architecture and Security GRC team. Software undergoes license compliance, security vulnerability scanning, and privacy vetting prior to deployment approval.
+
+
+################################################################################
+6. ARTIFICIAL INTELLIGENCE AND GENERATIVE AI USAGE AWARENESS
+################################################################################
+
+As an enterprise at the forefront of AI innovation, Threshold Enterprise Systems encourages responsible experimentation with artificial intelligence while safeguarding intellectual property and data sovereignty:
+
+- High-Level Corporate Principle: Employees must exercise caution when utilizing external, public artificial intelligence tools, chatbots, or code completion extensions.
+
+- Confidentiality Prohibition: Workforce members are strictly prohibited from inputting, pasting, uploading, or prompting external, public AI platforms with proprietary source code, internal architectural specifications, unreleased product roadmaps, client datasets, or employee personal data (CONFIDENTIAL or RESTRICTED classifications).
+
+- Detailed Governance Framework: Comprehensive criteria governing foundation model fine-tuning, internal model registries, approved enterprise LLM tenants, algorithmic bias auditing, and prompt engineering security are governed separately in the Enterprise AI Governance documentation series. Workforce members must consult official AI Governance documents for specific procedural requirements.
+
+
+################################################################################
+7. BRING YOUR OWN DEVICE (BYOD) LIMITATIONS
+################################################################################
+
+Accessing enterprise resources from personal smartphones, tablets, or home computers is restricted strictly to lightweight communication tools (Slack and email) and requires explicit corporate enrollment:
+
+- Mobile Device Management (MDM): Personal mobile devices must enroll in our enterprise mobile management platform, which enforces secure containerization, mandatory biometric screen locks, OS update baselines, and remote wiping of corporate data upon separation.
+
+- Personal Computer Restrictions: Downloading corporate source code, engineering repositories, or confidential customer databases onto personal home desktop or laptop computers is strictly prohibited under all circumstances.
+
+- Physical Removable Media: The connection of unencrypted personal USB flash drives, external hard drives, or personal mobile storage devices to corporate laptops is blocked by endpoint DLP policies to prevent data exfiltration and USB malware vectors.
+
+
+################################################################################
+8. STRICTLY PROHIBITED OPERATIONAL ACTIVITIES
+################################################################################
+
+Engaging in any of the following activities utilizing Threshold Enterprise Systems resources or networks is considered gross misconduct resulting in immediate suspension, termination, and potential legal prosecution:
+
+1. Conducting unauthorized vulnerability scanning, penetration testing, packet sniffing, or exploit execution against internal networks or external third-party systems without written authorization from the CISO.
+
+2. Engaging in cryptocurrency mining, distributed computing projects (e.g., SETI@home), or running peer-to-peer (P2P) file sharing nodes on corporate infrastructure.
+
+3. Intercepting, monitoring, or tampering with network communications or data belonging to another employee without authorization.
+
+4. Introducing malicious software, Trojan horses, worms, logic bombs, or automated credential stuffing tools onto enterprise systems.
+
+5. Establishing unauthorized network backdoors, rogue Wi-Fi access points, or unapproved IoT hardware on corporate premises.
+
+
+################################################################################
+9. PRIVACY EXPECTATIONS AND ADMINISTRATIVE MONITORING
+################################################################################
+
+Workforce members should have no expectation of personal privacy when utilizing Threshold Enterprise Systems computing devices, network infrastructure, electronic messaging, or cloud accounts.
+
+Threshold Enterprise Systems routinely logs, monitors, audits, and inspects network traffic, email communications, system event telemetry, and software executions to ensure system reliability, prevent malware, enforce compliance, and protect intellectual property, in full compliance with local regional labor and privacy laws.
+
+Monitoring data is treated with strict confidentiality and accessed exclusively by authorized Information Security and Employee Relations investigators under formal authorization.
+
+
+################################################################################
+10. REPORTING SECURITY VULNERABILITIES AND POLICY VIOLATIONS
+################################################################################
+
+Every workforce member has a professional responsibility to report any observed or suspected violation of this policy, software vulnerability, or security anomaly immediately.
+
+Reports should be submitted to the Information Security Operations Center (ISOC) via security-incident@threshold-systems.internal or via the anonymous Threshold Enterprise Ethics Hotline.
+
+Failure to report a known active policy violation or attempting to conceal a security incident constitutes a serious violation of this policy.
+
+================================================================================
+END OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS
+================================================================================

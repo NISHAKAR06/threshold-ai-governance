@@ -1,0 +1,208 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "permission_model": {
+    "supported_classifications": [
+      "PUBLIC",
+      "INTERNAL",
+      "CONFIDENTIAL",
+      "RESTRICTED"
+    ],
+    "access_principles": {
+      "confidential_access": "Department-aware restrictions govern CONFIDENTIAL documents. Users may access CONFIDENTIAL materials belonging to their designated or authorized departments.",
+      "restricted_access": "Explicit individual authorization or administrator elevation is strictly required for RESTRICTED documents. Implicit access is not granted."
+    }
+  },
+  "roles": [
+    {
+      "role": "EMPLOYEE",
+      "description": "Standard workforce member across any business unit.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL"
+      ],
+      "confidential_access": {
+        "allowed": false,
+        "department_scope": []
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Access limited to public documents and internal enterprise-wide general communications."
+    },
+    {
+      "role": "MANAGER",
+      "description": "People or functional manager leading teams within an operational unit.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-HR",
+          "DEPT-FIN",
+          "DEPT-OPS",
+          "DEPT-GOV"
+        ],
+        "scope_condition": "Access to relevant CONFIDENTIAL documents pertaining to team management, budgeting, and assigned operational departments."
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Permitted access to management-tier internal and department-relevant confidential records."
+    },
+    {
+      "role": "ENGINEER",
+      "description": "Software, platform, or infrastructure development professional.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-ENG"
+        ],
+        "scope_condition": "Access restricted specifically to Engineering CONFIDENTIAL technical specifications, architecture blueprints, and development runbooks."
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Department-scoped confidential access restricted to technical and engineering systems."
+    },
+    {
+      "role": "AI_ENGINEER",
+      "description": "Machine learning, LLM systems, and data platform specialist.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-AI-DATA",
+          "DEPT-ENG",
+          "DEPT-GOV"
+        ],
+        "scope_condition": "Access to relevant AI & Data CONFIDENTIAL documents and relevant AI Governance CONFIDENTIAL documents (e.g. model cards, risk evaluations, and data pipelines)."
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Cross-departmental access for technical AI data and governance oversight."
+    },
+    {
+      "role": "SECURITY_ENGINEER",
+      "description": "Cybersecurity, risk assessment, and infrastructure protection engineer.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL",
+        "RESTRICTED"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-INFOSEC",
+          "DEPT-ENG",
+          "DEPT-OPS"
+        ],
+        "scope_condition": "Access to relevant Information Security CONFIDENTIAL documents, vulnerability assessments, and infrastructure security controls."
+      },
+      "restricted_access": {
+        "allowed": true,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": [
+          "security_incident_response",
+          "cryptographic_key_management",
+          "threat_intelligence",
+          "vulnerability_exploit_reports"
+        ]
+      },
+      "notes": "Authorized for Information Security confidential materials and explicitly authorized restricted security documentation."
+    },
+    {
+      "role": "OPERATIONS_MANAGER",
+      "description": "Operational leader managing business continuity, cloud reliability, and facilities.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-OPS",
+          "DEPT-FIN"
+        ],
+        "scope_condition": "Access to relevant Operations CONFIDENTIAL runbooks, vendor contracts, disaster recovery protocols, and operational budget allocations."
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Department-scoped confidential access focusing on business and IT operations."
+    },
+    {
+      "role": "HR_MANAGER",
+      "description": "People operations leader directing talent, compensation, and employee relations.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "DEPT-HR"
+        ],
+        "scope_condition": "Access to relevant Human Resources CONFIDENTIAL documents including compensation scales, disciplinary records, and talent reviews."
+      },
+      "restricted_access": {
+        "allowed": false,
+        "requires_explicit_authorization": true,
+        "authorized_scopes": []
+      },
+      "notes": "Strictly scoped confidential access to human resources and personnel documents."
+    },
+    {
+      "role": "ADMIN",
+      "description": "Enterprise administrator holding root administrative authority and compliance oversight.",
+      "allowed_classifications": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL",
+        "RESTRICTED"
+      ],
+      "confidential_access": {
+        "allowed": true,
+        "department_scope": [
+          "*"
+        ],
+        "scope_condition": "Universal access across all departments."
+      },
+      "restricted_access": {
+        "allowed": true,
+        "requires_explicit_authorization": false,
+        "authorized_scopes": [
+          "*"
+        ]
+      },
+      "notes": "Full administrative read capability across all enterprise classifications and departments."
+    }
+  ]
+}

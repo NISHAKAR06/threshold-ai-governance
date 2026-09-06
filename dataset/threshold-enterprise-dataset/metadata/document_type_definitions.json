@@ -1,0 +1,47 @@
+{
+  "dataset_name": "Threshold Enterprise Knowledge Base",
+  "company": "Threshold Enterprise Systems",
+  "version": "1.0",
+  "document_types": [
+    {
+      "document_type": "POLICY",
+      "description": "High-level, mandatory enterprise rule established by executive leadership or governance bodies to define required behaviors, boundaries, and organizational commitments.",
+      "intended_use": "Sets enterprise compliance expectations, legal baselines, security mandates, and high-level corporate guardrails."
+    },
+    {
+      "document_type": "STANDARD",
+      "description": "Mandatory technical, architectural, or procedural specification specifying exact requirements, configurations, protocols, and criteria that must be satisfied.",
+      "intended_use": "Ensures consistency, interoperability, and security across software engineering, AI model deployments, and infrastructure systems."
+    },
+    {
+      "document_type": "GUIDELINE",
+      "description": "Recommended best practices, advisory patterns, and operational suggestions that guide decision-making without being strictly mandatory.",
+      "intended_use": "Aids engineers, managers, and teams in selecting optimal approaches, tools, and workflows within approved corporate standards."
+    },
+    {
+      "document_type": "PROCEDURE",
+      "description": "Step-by-step sequential instructions established to perform a routine business, security, or administrative process with repeatable outcomes.",
+      "intended_use": "Guides employees through structured operational sequences such as onboarding, expense reporting, or access request approvals."
+    },
+    {
+      "document_type": "RUNBOOK",
+      "description": "Detailed, highly technical procedural guide designed for engineers and operators to execute specific maintenance, infrastructure operations, or incident remediation steps.",
+      "intended_use": "Enables rapid, error-free execution during system maintenance, failover events, service restarts, and site reliability tasks."
+    },
+    {
+      "document_type": "HANDBOOK",
+      "description": "Comprehensive reference document compiling policies, organizational norms, benefits, cultural values, and working practices for a broad audience.",
+      "intended_use": "Serves as the central orientation and general reference guide for employees, managers, and cross-functional teams."
+    },
+    {
+      "document_type": "FRAMEWORK",
+      "description": "Broad conceptual and architectural structure providing principles, lifecycle models, maturity levels, and governance criteria for a complex domain.",
+      "intended_use": "Structures major enterprise disciplines such as AI Governance, Enterprise Risk Management, and Zero-Trust Security."
+    },
+    {
+      "document_type": "PLAYBOOK",
+      "description": "Strategic, scenario-based operational response guide detailing pre-planned workflows, communication trees, and escalation pathways for specific events.",
+      "intended_use": "Coordinates rapid cross-functional response during cybersecurity breaches, major service outages, PR crises, or regulatory audits."
+    }
+  ]
+}

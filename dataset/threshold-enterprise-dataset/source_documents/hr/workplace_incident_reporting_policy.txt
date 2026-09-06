@@ -1,0 +1,154 @@
+================================================================================
+THRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION
+WORKPLACE INCIDENT REPORTING POLICY AND PROCEDURE
+================================================================================
+
+--- DOCUMENT METADATA ---
+Document Id: HR-008
+Title: Workplace Incident Reporting Policy and Procedure
+Department: Human Resources
+Classification: INTERNAL
+Version: 1.0
+Status: ACTIVE
+Effective Date: 2026-01-15
+Document Type: PROCEDURE
+Allowed Roles: EMPLOYEE, MANAGER, HR_MANAGER, ADMIN
+-------------------------
+
+
+################################################################################
+1. PURPOSE AND OPERATIONAL OBJECTIVES
+################################################################################
+
+Threshold Enterprise Systems is committed to maintaining a safe, healthy, respectful, and secure workplace across all corporate facilities, client environments, and remote working arrangements. Prompt reporting and systematic resolution of workplace incidents are essential to prevent recurrence, protect workforce well-being, and maintain legal compliance.
+
+This policy and standard operating procedure outlines the mandatory steps for reporting, triaging, investigating, resolving, and documenting all workplace incidents across our operations in India, the United States, the United Kingdom, and Singapore.
+
+The primary objectives are: to ensure immediate care and safety for affected individuals; to conduct objective, fact-based root cause analyses; to implement corrective and preventative actions; and to protect reporting individuals from any form of retaliation.
+
+
+################################################################################
+2. CRITICAL SCOPE DISTINCTION: WORKPLACE INCIDENTS VS. CYBERSECURITY INCIDENTS
+################################################################################
+
+*** IMPORTANT SCOPE CLARIFICATION: WORKPLACE SAFETY VS. INFORMATION SECURITY ***
+
+This procedure strictly governs PHYSICAL, BEHAVIORAL, ENVIRONMENTAL, AND INTERPERSONAL WORKPLACE INCIDENTS. These include:
+
+- Physical workplace injuries, slips, trips, falls, and occupational medical emergencies.
+
+- Workplace violence, verbal intimidation, physical threats, stalking, or harassment.
+
+- Environmental hazards, chemical spills, air quality anomalies, or electrical faults in office premises.
+
+- Property damage, structural facility failures, or physical theft of personal belongings on company premises.
+
+- Severe violations of interpersonal conduct, bullying, or workplace discrimination.
+
+THIS PROCEDURE DOES NOT GOVERN CYBERSECURITY OR IT INCIDENTS. All digital events—such as malware infections, phishing campaigns, unauthorized network access, data exfiltration, lost laptops, API compromise, or credential theft—must be reported directly to the Information Security Operations Center (ISOC) in accordance with future Information Security Incident Response Policies. Physical theft of corporate laptops must be reported to BOTH Facilities/HR and Information Security.
+
+
+################################################################################
+3. INCIDENT CLASSIFICATION AND SEVERITY TIERS
+################################################################################
+
+To ensure appropriate response velocity and resource allocation, workplace incidents are classified into three standardized severity tiers:
+
+Severity Level 1 (Critical Incident): Acute emergency situations presenting imminent danger to human life, severe physical injury requiring emergency medical hospitalization, active physical violence, fires, structural collapses, or severe facility-wide environmental contamination. Requires immediate emergency services dispatch and executive notification within one hour.
+
+Severity Level 2 (Major Incident): Non-life-threatening physical injuries requiring clinical attention, credible threats of violence, overt sexual harassment or physical intimidation, significant workplace property damage, or acute safety hazards. Requires management intervention and formal investigation initiated within twenty-four hours.
+
+Severity Level 3 (Standard Workplace Incident / Near Miss): Minor first-aid incidents, slip/trip near-misses without injury, interpersonal disputes, minor facility maintenance issues (e.g. broken chairs, lighting failures), or minor ergonomics complaints. Requires logging and standard remediation within three business days.
+
+
+################################################################################
+4. IMMEDIATE REPORTING PROTOCOL AND EMERGENCY ESCALATION
+################################################################################
+
+In the event of a Severity Level 1 (Critical) incident occurring on corporate premises:
+
+Step 1 - Prioritize Life Safety: Immediately call local emergency medical and civil rescue services (911 in the US, 999 in the UK, 112 in India, 995 in Singapore). Provide the exact facility address, floor, and description of the situation.
+
+Step 2 - Alert On-Site Facilities and First Aid: Contact the on-site Facility Response Desk and certified enterprise First Aid Wardens via emergency internal extension #5555.
+
+Step 3 - Incident Escalation: The facility lead notifies the Department Vice President, Head of Human Resources, and Workplace Safety Director within sixty (60) minutes of emergency stabilization.
+
+
+################################################################################
+5. NON-EMERGENCY INCIDENT REPORTING CHANNELS
+################################################################################
+
+For Severity Level 2 and Level 3 workplace incidents, employees must file an incident report through one of the following established corporate channels as soon as feasible, and no later than twenty-four (24) hours following the event:
+
+Channel 1 - Workday Safety Portal: Submit an electronic 'Workplace Incident Report' via the Workday HR portal. The form captures the date, time, location, involved parties, witnesses, and a factual narrative description of the event.
+
+Channel 2 - Direct People Manager Notification: Report the event directly to your direct people manager or skip-level manager, who is obligated to assist in submitting the formal Workday record within twenty-four hours.
+
+Channel 3 - HR Business Partner: Contact your designated departmental HR Business Partner or the Employee Relations desk directly via email or scheduled discussion.
+
+
+################################################################################
+6. CONFIDENTIAL AND ANONYMOUS REPORTING CHANNELS
+################################################################################
+
+When an incident involves interpersonal misconduct, harassment, bullying, or an immediate supervisor, employees may feel uncomfortable using standard management reporting channels.
+
+Threshold Enterprise Systems provides the 24/7 Threshold Enterprise Ethics & Safety Hotline, operated by an independent third-party provider. Reports may be filed via toll-free regional telephone numbers or a secure web intake form.
+
+Employees may submit reports completely anonymously where permitted by regional law. If the reporting individual chooses to provide their identity, information is shared on a strict need-to-know basis exclusively among assigned investigators.
+
+
+################################################################################
+7. INVESTIGATION WORKFLOW AND STANDARD SLAS
+################################################################################
+
+All formal workplace incident reports follow a structured, multi-stage investigation workflow:
+
+Stage 1 - Triage and Risk Assessment (Within 24 Hours): The Employee Relations and Workplace Safety team reviews the submission, verifies severity classification, assigns a lead investigator, and implements immediate interim protective measures if required (such as temporary schedule separation or administrative leave).
+
+Stage 2 - Evidence Collection and Fact-Finding (Days 2 to 7): The lead investigator collects physical evidence, reviews badge swipe logs, inspects physical premises, and conducts separate, confidential interviews with the reporting party, the respondent, and relevant witnesses.
+
+Stage 3 - Analysis and Report Compilation (Days 8 to 10): The investigator synthesizes findings into a formal Incident Investigation Report, establishing findings of fact based on a preponderance of evidence, identifying underlying safety or behavioral root causes, and recommending corrective actions.
+
+Stage 4 - Review, Adjudication, and Closure (Days 11 to 14): Departmental leadership and HR review the findings, approve corrective actions, communicate closure to the involved parties, and log completion in the central registry.
+
+
+################################################################################
+8. ROLES AND RESPONSIBILITIES
+################################################################################
+
+Employees are responsible for promptly reporting all observed incidents and near misses, participating truthfully in investigations, and adhering to workplace safety protocols.
+
+People Managers are responsible for maintaining a safety-conscious environment, assisting direct reports with report filings, escalating Level 1 and Level 2 incidents immediately, and supporting interim safety adjustments.
+
+Human Resources and Employee Relations are responsible for managing the intake portal, conducting impartial investigations, tracking investigation SLAs, ensuring non-retaliation, and recommending corrective outcomes.
+
+Facilities and Workplace Operations are responsible for maintaining physical infrastructure, conducting safety drills, remediating facility hazards, and coordinating with emergency services.
+
+The Legal and Enterprise Governance Department is responsible for advising on statutory reporting mandates (such as OSHA in the US, RIDDOR in the UK, or Ministry of Manpower reporting in Singapore) and managing regulatory filings.
+
+
+################################################################################
+9. RECORD KEEPING, AUDITING, AND RETENTION PROTOCOLS
+################################################################################
+
+All workplace incident reports, investigation notes, witness statements, and corrective action documentation are cataloged in our secure, centralized Environmental Health & Safety (EHS) module in Workday.
+
+Incident records are retained for a minimum of seven (7) years following case closure, or longer if required by national occupational safety statutes or pending litigation.
+
+The Enterprise Safety Committee reviews anonymized quarterly incident metrics to identify regional hazard patterns, evaluate ergonomic trends, and drive proactive safety engineering initiatives.
+
+
+################################################################################
+10. ABSOLUTE PROTECTION AGAINST RETALIATION
+################################################################################
+
+Threshold Enterprise Systems strictly forbids any form of retaliation against any employee who reports a workplace incident in good faith, assists another employee in reporting, or participates as a witness in an investigation.
+
+Any retaliatory behavior—including threats, hostile communications, adverse assignment shifts, negative performance reviews, or exclusion—will be treated as gross misconduct resulting in immediate disciplinary action up to and including termination of employment.
+
+Employees who believe they are experiencing retaliation must notify the Director of Employee Relations or file an immediate report via the Ethics Hotline.
+
+================================================================================
+END OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS
+================================================================================
