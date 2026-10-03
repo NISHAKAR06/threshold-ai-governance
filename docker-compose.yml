@@ -1,0 +1,66 @@
+services:
+  threshold-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: threshold-api
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT:-production}
+      - APP_NAME=THRESHOLD AI Governance
+      - APP_VERSION=${APP_VERSION:-2.0.0}
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DATABASE_URL=${DATABASE_URL:-sqlite+aiosqlite:///THRESHOLD.db}
+      - SECRET_KEY=${SECRET_KEY:-THRESHOLD-secret-change-in-production-x9k2p}
+      - JWT_SECRET=${JWT_SECRET:-THRESHOLD-secret-change-in-production-x9k2p}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-mock}
+      - VECTOR_STORE_PROVIDER=${VECTOR_STORE_PROVIDER:-chroma}
+      - VECTOR_STORE_PATH=/app/data/vector_store
+      - METRICS_ENABLED=true
+      - RAI_ENABLED=true
+      - RAI_INJECTION_DETECTION_ENABLED=true
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - threshold-network
+
+  # Optional production PostgreSQL service
+  threshold-db:
+    image: postgres:15-alpine
+    container_name: threshold-db
+    restart: unless-stopped
+    profiles:
+      - postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-threshold_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-threshold_secure_pw}
+      POSTGRES_DB: ${POSTGRES_DB:-threshold_governance}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-threshold_admin}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - threshold-network
+
+volumes:
+  pgdata:
+
+networks:
+  threshold-network:
+    driver: bridge

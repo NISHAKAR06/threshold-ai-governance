@@ -1,0 +1,753 @@
+{
+  "document_id": "SEC-003",
+  "chunks": [
+    {
+      "chunk_id": "SEC-003_CHUNK_0001",
+      "document_id": "SEC-003",
+      "chunk_index": 1,
+      "text": "================================================================================\nTHRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION\nPASSWORD AND AUTHENTICATION POLICY\n================================================================================\n\n--- DOCUMENT METADATA ---\nDocument Id: SEC-003\nTitle: Password and Authentication Policy\nDepartment: Information Security\nClassification: INTERNAL\nVersion: 1.0\nStatus: ACTIVE\nEffective Date: 2026-01-15\nDocument Type: STANDARD\nAllowed Roles: EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, HR_MANAGER, ADMIN\n-------------------------\n\n################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "28d867dd7e80cf904850c35caf23bed321efd0ef6a35fce91e440dcd78e380e4",
+      "created_at": "2026-09-06T17:38:10.703102+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0002",
+      "document_id": "SEC-003",
+      "chunk_index": 2,
+      "text": "################################################################################ 1. PURPOSE, SCOPE, AND IDENTITY VERIFICATION STANDARDS ################################################################################ Authentication is the primary technical barrier safeguarding Threshold Enterprise Systems networks, applications, databases, and customer records from unauthorized infiltration. Robust authentication ensures that digital entities accessing our infrastructure are definitively who they claim to be. This Password and Authentication Policy establishes mandatory technical standards and behavioral guidelines governing password creation, multi-factor authentication (MFA), credential storage, account recovery, and authentication device management across all operating environments in India, the United States, the United Kingdom, and Singapore.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "b1aeea97f699e248f5c8d41c45818a7ab0fc03332cd18d190bb17a5cc1757ca9",
+      "created_at": "2026-09-06T17:38:10.703209+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0003",
+      "document_id": "SEC-003",
+      "chunk_index": 3,
+      "text": "This standard applies universally to all individual employee accounts, contractor profiles, administrator accounts, service credentials, and programmatic API identities connecting to Threshold Enterprise Systems systems. This document uses realistic, fictional enterprise parameters and standards. It deliberately excludes real credentials, private keys, live database connection strings, or sensitive infrastructure configurations. ################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "44dea7d4ef1d10c10cf43e98ebfd74d80ca06d77cf1b72b126d75179f4ce4cb8",
+      "created_at": "2026-09-06T17:38:10.703269+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0004",
+      "document_id": "SEC-003",
+      "chunk_index": 4,
+      "text": "################################################################################ 2. EMPLOYEE PASSWORD RESPONSIBILITIES AND PASSPHRASE PHILOSOPHY ################################################################################ Every workforce member is directly accountable for the custody, confidentiality, and integrity of their assigned enterprise credentials. Passwords function as personal identity signatures and must be treated with the utmost care. Threshold Enterprise Systems strongly advocates the 'Passphrase' methodology over complex, unmemorable strings. A passphrase composed of multiple unrelated, memorable words provides vastly superior mathematical entropy against modern cracking algorithms while remaining easy for employees to recall without writing down. Employees must never disclose their passwords to anyone—including supervisors, IT Helpdesk technicians, or executive leaders. Genuine IT support personnel will never request an employee's password under any circumstance.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "24727e1f4373c0425f55c9a23ca7941d004e22cb3a845424348822a29f0af31b",
+      "created_at": "2026-09-06T17:38:10.703325+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0005",
+      "document_id": "SEC-003",
+      "chunk_index": 5,
+      "text": "################################################################################ 3. PASSWORD CREATION STANDARDS AND COMPLEXITY CRITERIA ################################################################################ All user-created passwords across Threshold Enterprise Systems enterprise accounts must satisfy the following mandatory complexity specifications enforced by automated directory policies: - Minimum Length: Standard user accounts must contain a minimum of fourteen (14) characters. Administrative, privileged, and developer accounts must contain a minimum of sixteen (16) characters. - Character Variety: Passwords must incorporate characters from at least three of the following four categories: uppercase letters (A-Z), lowercase letters (a-z), numeric digits (0-9), and special characters/symbols (!@#$%^&*()-_+=<>?).",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "ed48bffee5937e6633ab5d1b63dc1b05bc19239faeb24146c3a1776c130e826b",
+      "created_at": "2026-09-06T17:38:10.703376+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0006",
+      "document_id": "SEC-003",
+      "chunk_index": 6,
+      "text": "- Dictionary and Predictability Restrictions: Passwords must not contain predictable sequences (e.g., '123456', 'qwerty'), common corporate terms (e.g., 'Threshold2026!', 'EnterprisePass'), personal biographical data (e.g., birth years, pet names, spouse names), or the user's username. - Breached Password Screening: The corporate Identity Provider automatically screens all newly chosen passwords against an updated threat-intelligence database of known exposed/breached credentials. Passwords identified in public breach corpora are rejected immediately. ################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "1fd7aa3aa55e7c992ce4b710be51ffe5a2632e9f61b55616651e60930a902f33",
+      "created_at": "2026-09-06T17:38:10.703426+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0007",
+      "document_id": "SEC-003",
+      "chunk_index": 7,
+      "text": "################################################################################ 4. PASSWORD REUSE RESTRICTIONS AND EXPIRATION STRATEGY ################################################################################ Threshold Enterprise Systems enforces strict password history depth to prevent cycling through minor variants of previously used credentials. - Password History Depth: Directory systems retain a history of the last twelve (12) passwords associated with an account. Users cannot select any password matching their prior 12 credentials. - Risk-Based Expiration Model: In alignment with modern NIST SP 800-63B guidelines, standard user accounts are not subject to arbitrary periodic expiration (such as mandatory 90-day resets), as forced rotations often lead to weaker, predictable password selections. Instead, password changes are enforced dynamically upon detection of anomalous authentication events, potential credential exposure, or role transfer.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "88103ef8b83929412a886c771142a6e016ed9158e529b1a56aedfa75ae92beb1",
+      "created_at": "2026-09-06T17:38:10.703476+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0008",
+      "document_id": "SEC-003",
+      "chunk_index": 8,
+      "text": "- Privileged Account Rotation: Accounts holding elevated production privileges (SECURITY_ENGINEER and ADMIN) must rotate master vault passphrases every ninety (90) days. ################################################################################ 5. MANDATORY MULTI-FACTOR AUTHENTICATION (MFA) IMPLEMENTATION ################################################################################ Passwords alone represent an insufficient defense against phishing and credential stuffing attacks. Multi-Factor Authentication (MFA) is mandatory for 100% of workforce accounts accessing Threshold Enterprise Systems resources. - Approved Primary Factor: Hardware Security Keys (FIDO2 / WebAuthn standard USB-C/NFC tokens such as YubiKeys) are the mandatory primary MFA mechanism for all technical and engineering staff.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "5cde1bb12f0b745f5eb7a0ef935287bcc5bda04e631bae219e30e14bd3df10bb",
+      "created_at": "2026-09-06T17:38:10.703524+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0009",
+      "document_id": "SEC-003",
+      "chunk_index": 9,
+      "text": "- Approved Secondary Factor: Time-based One-Time Password (TOTP) authenticator applications (such as Microsoft Authenticator, Google Authenticator, or 1Password) registered on managed corporate mobile devices. - Strictly Prohibited Factors: Short Message Service (SMS) text messages and unencrypted voice phone calls are strictly prohibited as MFA channels due to severe vulnerabilities to SIM-swapping and cellular network interception. - Continuous Challenge Context: MFA is required upon initial daily login, during sessions originating from new geographic regions, when accessing CONFIDENTIAL/RESTRICTED data partitions, and during sensitive administrative actions. ################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "f27df2dcd3c8a6d9093c1cef7b39da9338be2928f6ea667635e503ed2da53093",
+      "created_at": "2026-09-06T17:38:10.703569+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0010",
+      "document_id": "SEC-003",
+      "chunk_index": 10,
+      "text": "################################################################################ 6. ACCOUNT RECOVERY AND IDENTITY PROOFING WORKFLOW ################################################################################ When an employee forgets a password, misplaces an MFA security key, or experiences an account lockout following five consecutive failed attempts, account recovery must follow a secure, validated identity-proofing workflow: - Self-Service Recovery: Employees who possess their secondary registered MFA factor may initiate self-service password recovery via the secure corporate IdP portal. A cryptographically signed, single-use recovery link valid for fifteen minutes is delivered to the employee's secondary verified channel.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "14cd877831661fd1d455948c2996fe041c700467ee0499bd8e172c23bc182ffe",
+      "created_at": "2026-09-06T17:38:10.703616+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0011",
+      "document_id": "SEC-003",
+      "chunk_index": 11,
+      "text": "- Helpdesk-Assisted Recovery: If an employee loses access to all registered authentication factors, they must contact the IT Service Desk. Helpdesk technicians must verify identity via live video conference, confirming facial match against the employee's corporate badge record and verifying secondary HR biographical data. - Mandatory Notification: Whenever a password reset or MFA device change occurs, automated security alerts are immediately dispatched to the employee's registered corporate email and primary manager. ################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "a1c8f351f2137f6a3ef2da83f94e87ea1a964c84642b00d04f28025bbca225a7",
+      "created_at": "2026-09-06T17:38:10.703666+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0012",
+      "document_id": "SEC-003",
+      "chunk_index": 12,
+      "text": "################################################################################ 7. ABSOLUTE PROHIBITION OF CREDENTIAL SHARING AND SHADOW ACCOUNTS ################################################################################ Credential sharing fundamentally undermines accountability, compromises non-repudiation, and violates enterprise compliance mandates. The following practices are strictly prohibited: - Sharing passwords or MFA tokens with colleagues, assistants, managers, or contractors. - Creating generic, shared 'team accounts' (e.g., 'eng-team@threshold-systems.internal') for shared system access. All access must be individually attributed to specific named user identities. - Hardcoding passwords, API tokens, or private keys in source code files, configuration scripts, commit messages, or publicly accessible wiki pages. - Utilizing unapproved third-party online storage, plaintext notes, or desktop sticky notes to record passwords.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "7d8128febaf442238d4355f4ca84486c3adc2eb31d3662b674b30e8e08c7c44c",
+      "created_at": "2026-09-06T17:38:10.703722+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0013",
+      "document_id": "SEC-003",
+      "chunk_index": 13,
+      "text": "- Utilizing unapproved third-party online storage, plaintext notes, or desktop sticky notes to record passwords. ################################################################################ 8. AUTHENTICATION DEVICE PROTECTION AND HARDWARE KEY CUSTODY ################################################################################ Physical devices utilized for authentication—including company-issued laptops, managed smartphones, and FIDO2 hardware tokens—must be safeguarded with reasonable care: - Hardware security keys must remain in the physical custody of the assigned employee and must not be left plugged into unattended laptops in public spaces. - Mobile devices configured with enterprise authenticator applications must enforce biometric screen locks (fingerprint or facial recognition) or minimum 6-digit PINs.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "328574be9e49a139ec26f7da68028d2c08ebe2f9b731b7d9db5530845a0df077",
+      "created_at": "2026-09-06T17:38:10.703774+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0014",
+      "document_id": "SEC-003",
+      "chunk_index": 14,
+      "text": "- In the event of a lost, damaged, or stolen MFA token or mobile device, the employee must notify the IT Helpdesk and Information Security within one hour to facilitate immediate token revocation and session invalidation. ################################################################################ 9. REPORTING SUSPECTED CREDENTIAL COMPROMISE AND PHISHING ################################################################################ Workforce members must remain vigilant against credential harvesting, adversary-in-the-middle phishing, and unauthorized login attempts. If an employee suspects their password has been compromised, observes unexpected MFA push notifications ('MFA fatigue attack'), or mistakenly enters credentials on a suspicious website, they must report the incident immediately: Step 1 - Notify ISOC: Forward the suspicious email or submit an urgent report to security-incident@threshold-systems.internal or call the 24/7 security hotline.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "f46960c0b85c413d65ad62bf056c1b5ae11fff485c09e071dd78a1f42207b051",
+      "created_at": "2026-09-06T17:38:10.703823+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0015",
+      "document_id": "SEC-003",
+      "chunk_index": 15,
+      "text": "Step 2 - Immediate Password Reset: Navigate to the official IdP portal and initiate an immediate password change. Step 3 - Session Termination: Security Operations will execute an emergency session revocation across all active tokens and cloud identity sessions. ################################################################################ 10. ENTERPRISE PASSWORD MANAGER ADOPTION AND VAULT HYGIENE ################################################################################ Threshold Enterprise Systems provides all employees with licensed access to an approved Enterprise Password Manager (1Password Enterprise). Employees are expected to utilize this tool to generate, store, and manage unique credentials across corporate services.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "154d57d7f1111bd5d138160d4530c86e5f6e86cf2a1d21d61bca72bfa3080fc0",
+      "created_at": "2026-09-06T17:38:10.703870+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0016",
+      "document_id": "SEC-003",
+      "chunk_index": 16,
+      "text": "Password manager vaults are encrypted using AES-256 zero-knowledge encryption, unlocked via the employee's master passphrase and local biometrics. Employees must never store personal banking passwords or personal non-work credentials within their corporate password manager vault. Technical squads may utilize shared vaults within the enterprise password manager to store approved shared service credentials, provided vault access is restricted strictly to authorized team members and logged in audit trails. ################################################################################",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "ef6b68767c62ab2f926ca8f3c968707480c046f39a52d3af0b997b270834871b",
+      "created_at": "2026-09-06T17:38:10.703913+00:00"
+    },
+    {
+      "chunk_id": "SEC-003_CHUNK_0017",
+      "document_id": "SEC-003",
+      "chunk_index": 17,
+      "text": "################################################################################\n\n11. GOVERNANCE, STANDARDS REVIEW, AND ADMINISTRATION\n\n################################################################################\n\nThis standard is owned and administered by the Information Security Identity & Access Management (IAM) team. It is reviewed annually to ensure alignment with emerging cryptographic standards, international compliance requirements, and evolving threat intelligence.\n\nViolations of this standard undermine enterprise authentication integrity and are subject to disciplinary action in accordance with the Information Security Policy (SEC-001) and Employee Code of Conduct (HR-005).\n\n================================================================================\nEND OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS\n================================================================================",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Password and Authentication Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Enterprise technical standard establishing 14-character minimum passphrase criteria, mandatory FIDO2/TOTP multi-factor authentication, account recovery identity proofing, and prohibition of credential sharing.",
+        "keywords": [
+          "password policy",
+          "authentication standard",
+          "mfa",
+          "fido2",
+          "hardware keys",
+          "passphrase",
+          "credential sharing prohibited",
+          "password manager",
+          "account recovery"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/password_and_authentication_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "abbd51d9ab592506ff3c701597d1f665986a9a11fde3821c5d261e3ee3b36b80",
+      "chunk_content_hash": "c8f0aaec9c65062b0cf9c6ef19f6b3ac9dc5b4d94aea750ab68b0d297890667e",
+      "created_at": "2026-09-06T17:38:10.703962+00:00"
+    }
+  ]
+}

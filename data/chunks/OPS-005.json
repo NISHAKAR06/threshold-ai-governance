@@ -1,0 +1,621 @@
+{
+  "document_id": "OPS-005",
+  "chunks": [
+    {
+      "chunk_id": "OPS-005_CHUNK_0001",
+      "document_id": "OPS-005",
+      "chunk_index": 1,
+      "text": "Document Id | OPS-005\nTitle | Service Level Management Policy\nDepartment | Operations\nClassification | INTERNAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nService Level Management Policy\n\n1. Policy Purpose and Operational Context\n\nThis Service Level Management Policy defines the mandatory framework, mathematical principles, operational standards, and governance procedures governing Service Level Indicators (SLIs), Service Level Objectives (SLOs), and Service Level Agreements (SLAs) across Threshold Enterprise Systems ('Threshold').",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "627514b4a42d380e176ee7a2f50fa2ddeab30d44e83883482e2b32221b0dc526",
+      "created_at": "2026-09-06T17:38:10.663716+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0002",
+      "document_id": "OPS-005",
+      "chunk_index": 2,
+      "text": "As an enterprise technology provider delivering distributed cloud platforms, multi-tenant SaaS products, and mission-critical AI governance systems across India, the United States, the United Kingdom, and Singapore, quantifying service performance and maintaining predictable reliability are foundational to organizational success. Ambiguous performance expectations, unmeasured latency degradation, and misaligned reliability targets introduce customer dissatisfaction, contractual penalties, and internal engineering misalignment. The purpose of this policy is to establish an objective, data-driven Site Reliability Engineering (SRE) reliability framework that balances rapid product innovation against service stability, codifies error budget governance, and guarantees transparent accountability across all customer-facing and internal enterprise services.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "65500d67e1c7d9594258184f1f7a7f7b2cdc05444773699ece963f1c52130670",
+      "created_at": "2026-09-06T17:38:10.663811+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0003",
+      "document_id": "OPS-005",
+      "chunk_index": 3,
+      "text": "Through clear mathematical metrics and disciplined operational agreements, Threshold aligns technical engineering velocity with external customer satisfaction and contractual commitments. 2. Scope and Service Applicability This policy applies universally across all product engineering squads, platform teams, cloud operations specialists, and technical customer success managers at Threshold Enterprise Systems. The scope encompasses all production digital services: 1. Customer-Facing Commercial APIs: RESTful endpoints, streaming WebSocket connections, and RAG retrieval pipelines governed under ENG-001.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "7c466ade78ba16d4d990fc6805305cf039d1f7f6caf7e2356da5efc1755b0fc8",
+      "created_at": "2026-09-06T17:38:10.663873+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0004",
+      "document_id": "OPS-005",
+      "chunk_index": 4,
+      "text": "1. Customer-Facing Commercial APIs: RESTful endpoints, streaming WebSocket connections, and RAG retrieval pipelines governed under ENG-001. 2. Web and Enterprise User Interfaces: SaaS administrative dashboards, policy management portals, and AI model evaluation consoles. 3. Core Infrastructure Services: Enterprise identity federation gateways, service mesh routers, and distributed database clusters (ENG-005). 4. Asynchronous Processing Pipelines: Batch embedding workers, event streaming brokers (Kafka), and automated governance reporting engines. Internal developer testing environments and ephemeral staging clusters are excluded from external contractual SLAs, though they maintain internal operational SLOs to ensure engineering productivity.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "6a8101fab09e467ef5d4bb4aaa92ebb6b2bd51956b75dae7019720f9d2077d44",
+      "created_at": "2026-09-06T17:38:10.663927+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0005",
+      "document_id": "OPS-005",
+      "chunk_index": 5,
+      "text": "3. The Tri-Partite SRE Reliability Framework: SLIs, SLOs, and SLAs Threshold strictly enforces a clear technical and legal distinction among the three foundational tiers of service level management: - Service Level Indicators (SLIs): The quantifiable, real-time metrics tracking the health of a service from the perspective of an end-user. SLIs represent the ratio of successful events to total valid events, formulated mathematically as: SLI = (Successful Events / Valid Events) * 100%. Examples include: proportion of HTTP requests returning status codes under 500, or proportion of database queries completing in under 200 milliseconds.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "5c5f253729d9381b24ba7872de199e2d5b56b32d86d00b3af4fd5d00af9bf73f",
+      "created_at": "2026-09-06T17:38:10.663977+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0006",
+      "document_id": "OPS-005",
+      "chunk_index": 6,
+      "text": "- Service Level Objectives (SLOs): The internal target reliability boundaries established collaboratively by Product, Engineering, and Operations. SLOs define the acceptable standard of operational excellence (e.g., 99.9% of API requests succeed with latency < 300ms over a rolling 30-day window). SLOs are set tighter than external contractual SLAs to provide an operational safety margin. - Service Level Agreements (SLAs): The legally binding contractual commitments made to external enterprise customers defining remedies, service credits, or fee rebates if service performance fails to meet defined thresholds over a calendar month. SLAs are signed by commercial leadership and governed by Legal counsel.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "0d628e3189d7b6abe2a23da8d63fce5f1c7c60ebb662aa1503460f6a477ee8bc",
+      "created_at": "2026-09-06T17:38:10.664154+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0007",
+      "document_id": "OPS-005",
+      "chunk_index": 7,
+      "text": "4. Enterprise Service Availability Tiers and Performance Targets All enterprise services must be categorized into one of three standardized operational tiers: - Tier 1 - Mission-Critical Commercial Services: Public inference endpoints, enterprise identity gateways, and core customer RAG query APIs. Availability Target: 99.9% uptime (maximum 43.8 minutes of unplanned downtime per 30-day month). P95 Latency Target: < 250ms; P99 Latency Target: < 800ms. Error Rate Target: < 0.1% of valid requests. Response SLA for incidents: 15 minutes. - Tier 2 - Business-Operational Services: Internal administrative consoles, analytics query endpoints, and customer reporting tools. Availability Target: 99.5% uptime (maximum 3.65 hours of unplanned downtime per month). P95 Latency Target: < 750ms; P99 Latency Target: < 2,000ms. Error Rate Target: < 0.5%. Response SLA: 30 minutes.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "9b059384b115d70dd94195add15e551e218e7a64a6b6f56e8868a6425a308d9f",
+      "created_at": "2026-09-06T17:38:10.664241+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0008",
+      "document_id": "OPS-005",
+      "chunk_index": 8,
+      "text": "- Tier 3 - Non-Critical Support Services: Internal developer sandbox clusters and long-term historical archives. Availability Target: 99.0% uptime during regional business hours. Response SLA: 2 hours. Outage Budgeting: Outage minutes accumulate when synthetic probes or user traffic confirm that service availability drops below the defined threshold for three (3) consecutive minutes. 5. Error Budget Philosophy and Governance Policies Reliability is not absolute; 100% uptime is an economically unsound and engineering-prohibitive goal. Threshold embraces Error Budget governance: - Error Budget Definition: The allowable margin of failure calculated directly as (100% - SLO). For a 99.9% SLO over a 30-day window, the service possesses an error budget of 0.1% (43.8 minutes of allowable downtime or 1 failed request per 1,000 requests).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "c88cf93ffe4d66b26cb4edff5cf51c44cc288ee824408af85608d87e602b2a77",
+      "created_at": "2026-09-06T17:38:10.664296+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0009",
+      "document_id": "OPS-005",
+      "chunk_index": 9,
+      "text": "- Innovation Velocity vs. Reliability Investment: When an engineering squad maintains a healthy error budget (> 30% remaining), they are authorized to release new features, deploy schema alterations, and execute architectural refactors rapidly. - Multi-Burn-Rate Alerting: Operations daemons monitor the rate at which the error budget is consumed: - Rapid Burn Alert: Consuming 2% of budget in 1 hour triggers a high-severity on-call page to SRE under OPS-006. - Slow Burn Alert: Consuming 5% of budget in 6 hours triggers an urgent Jira ticket to squad leads. - Error Budget Depletion Policy: If a service consumes more than 80% of its monthly error budget, non-essential feature deployments are frozen. The squad must redirect 100% of engineering bandwidth toward reliability hardening, automated test coverage, and infrastructure resilience until the rolling 30-day budget recovers above 50%.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "775843db76e168583ac392f0e8a3344b769b9eb3a0f454ab72dfba642b1e9af4",
+      "created_at": "2026-09-06T17:38:10.664347+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0010",
+      "document_id": "OPS-005",
+      "chunk_index": 10,
+      "text": "6. Telemetry Measurement, Sampling, and Exclusion Principles SLI calculation must reflect authentic user experience while filtering out non-system anomalies: - Measurement Sources: Telemetry must be collected at external ingress gateways (Envoy, Istio) and verified via independent synthetic monitoring probes (OPS-008) distributed across our four global regions (India, US, UK, Singapore). - Exclusion Criteria: The following events are explicitly excluded from SLI failure calculations: client-side network drops, customer requests failing due to malformed payloads (HTTP 4xx client errors, invalid auth tokens), and pre-notified scheduled maintenance windows authorized under OPS-002. - Rolling 30-Day Window: SLO compliance is calculated dynamically across a rolling 720-hour window rather than resetting arbitrarily at the beginning of each calendar month, preventing end-of-month release rushes.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "d401db0a4dc8bf6b306ef7db2d3e63cb56d6e70d1dd630356e6fab87c54ac302",
+      "created_at": "2026-09-06T17:38:10.664394+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0011",
+      "document_id": "OPS-005",
+      "chunk_index": 11,
+      "text": "- High-Cardinality Sampling: Telemetry aggregators sample transaction traces at a baseline 10% rate, automatically increasing to 100% capture during detected latency spikes or error budget burn anomalies. 7. Breach Handling, Escalation, and Customer Remediation When service telemetry indicates an active or imminent SLO breach, immediate structured response protocols trigger: - Warning Threshold (50% Error Budget Consumed in < 7 Days): SRE on-call issues an automated warning ticket to the owning squad lead, initiating diagnostic review. - Critical Breach (100% Error Budget Depleted): Automatic escalation to the Director of Engineering and VP of Global Operations under OPS-006. An immediate reliability sprint is declared.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "a94fc93f715905ae03ba13262eaa9599008982498e0df9f8b99f9004c9d8e627",
+      "created_at": "2026-09-06T17:38:10.664438+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0012",
+      "document_id": "OPS-005",
+      "chunk_index": 12,
+      "text": "- Contractual SLA Breach Remediation: If customer contractual SLAs are breached, the Technical Account Manager and Legal Counsel compute service fee credits in accordance with enterprise commercial master agreements, notifying affected customers within fifteen (15) business days. - Fictional Service Credit Table: - Uptime 99.0% to 99.89%: 10% monthly service credit. - Uptime 95.0% to 98.99%: 25% monthly service credit. - Uptime < 95.0%: 50% monthly service credit. All credit disbursements are reviewed during monthly financial close by Finance and Operations leadership.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "674f067bf4da8b66f0229c0b2d099133cebe1e610d8024304614d9699bdc3748",
+      "created_at": "2026-09-06T17:38:10.664483+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0013",
+      "document_id": "OPS-005",
+      "chunk_index": 13,
+      "text": "All credit disbursements are reviewed during monthly financial close by Finance and Operations leadership. 8. Monthly Service Level Reviews and Continual Improvement Every month, the Service Level Management Committee convenes to evaluate enterprise reliability: 1. Reviewing rolling 30-day SLI trends across all Tier 1 and Tier 2 services. 2. Auditing correlation between engineering incidents (ENG-006) and error budget burn rates. 3. Adjusting unrealistic SLO targets based on historical telemetry and customer feedback.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "936eecb820b22f026047f9227db4e008e746b12b14b3612d6577b6ac4ece82db",
+      "created_at": "2026-09-06T17:38:10.664532+00:00"
+    },
+    {
+      "chunk_id": "OPS-005_CHUNK_0014",
+      "document_id": "OPS-005",
+      "chunk_index": 14,
+      "text": "3. Adjusting unrealistic SLO targets based on historical telemetry and customer feedback. 4. Allocating capital expenditure and cloud infrastructure investments toward chronic reliability bottlenecks. 5. Publishing an executive reliability scorecard distributed to corporate leadership and the Board of Directors. 9. Cross-Document Governance Interconnections This policy operates in direct synergy with foundational enterprise operational and engineering standards: - OPS-001: Service Management Policy (Establishes core service lifecycle and ownership models). - OPS-006: Operational Incident Escalation Procedure (Triggers operational escalation upon SLO breaches). - OPS-008: Service Performance Monitoring Guidelines (Supplies telemetry and alerting daemons tracking SLIs). - ENG-001: API Development Guidelines (Enforces latency and error-response standards). - ENG-004: Production Deployment Guide (Enforces deployment tripwires tied to error budget burn rates).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Service Level Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Reliability governance policy establishing the tri-partite Site Reliability Engineering framework: SLIs, SLOs, and contractual SLAs. Defines availability targets (Tier 1: 99.9%), error budget governance, multi-burn-rate alerting, rolling 30-day compliance measurement, and customer breach fee credits.",
+        "keywords": [
+          "service level management",
+          "sli",
+          "slo",
+          "sla",
+          "service level objectives",
+          "error budget",
+          "burn rate",
+          "availability tiers",
+          "service credits",
+          "sre"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/service_level_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "01dd4cd9858fcfafcdbfa96e5ff5d1edb3bdff6098a38f3ed9cca1156e822cc4",
+      "chunk_content_hash": "69e7c510729075f8d0c5703d42f85412cbeb249ea9f1b9e1d9de5822f2425d57",
+      "created_at": "2026-09-06T17:38:10.664582+00:00"
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "document_id": "HR-006",
+  "chunks": [
+    {
+      "chunk_id": "HR-006_CHUNK_0001",
+      "document_id": "HR-006",
+      "chunk_index": 1,
+      "text": "THRESHOLD ENTERPRISE SYSTEMS\nPerformance Management Policy\nDocument Id\nHR-006\nTitle\nPerformance Management Policy\nDepartment\nHuman Resources\nClassification\nCONFIDENTIAL\nVersion\n1.0\nStatus\nACTIVE\nEffective Date\n2026-01-15\nDocument Type\nPOLICY\nAllowed Roles\nMANAGER, HR_MANAGER, ADMIN\n\n1. CONFIDENTIAL CLASSIFICATION AND PURPOSE",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "71c2c6a4e5225ddb42c604377efa51eec104523fc17ad620cdd7b74468ff0a22",
+      "created_at": "2026-09-06T17:38:10.615523+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0002",
+      "document_id": "HR-006",
+      "chunk_index": 2,
+      "text": "1. CONFIDENTIAL CLASSIFICATION AND PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - STRICT DEPARTMENT AND ROLE-BASED ACCESS CONTROLS APPLY ***\nThis document contains proprietary human capital frameworks, compensation correlation methodologies, performance\ncalibration workflows, and employee assessment protocols for Threshold Enterprise Systems. It is classified as\nCONFIDENTIAL and access is strictly restricted to personnel holding authorized managerial and human resource titles\n(MANAGER, HR_MANAGER, ADMIN). Standard workforce members (EMPLOYEE role) are not permitted to access this\ndocument in the knowledge base.\nThe purpose of this Performance Management Policy is to establish a rigorous, objective, equitable, and transparent\nframework for evaluating employee contributions, aligning individual achievements with enterprise strategic goals, providing\nstructured coaching, and administering merit-based compensation and promotions.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "bf0b0e76143f3fdff940c65b891d07b5a7a5e2782567e0dc948decd4a4d86098",
+      "created_at": "2026-09-06T17:38:10.615608+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0003",
+      "document_id": "HR-006",
+      "chunk_index": 3,
+      "text": "2. Scope and Organizational Coverage\n\nThis policy governs all performance evaluation, feedback, calibration, and developmental improvement processes across all\nbusiness units and operational offices of Threshold Enterprise Systems in India, the United States, the United Kingdom, and\nSingapore.\nIt applies to all regular full-time and part-time personnel who have completed at least ninety (90) days of continuous\nemployment within the applicable review cycle. Interns, temporary contractors, and third-party vendors are evaluated\nthrough separate vendor milestone service agreements.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "1c1ee29c945b5e254f5861f4458abb5358bfac7620a9e08b1d88377393c2368d",
+      "created_at": "2026-09-06T17:38:10.615836+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0004",
+      "document_id": "HR-006",
+      "chunk_index": 4,
+      "text": "3. Performance Planning and Objective Alignment (OKRs)\n\nPerformance management begins with structured, forward-looking objective setting. Threshold Enterprise Systems utilizes\nthe Objectives and Key Results (OKR) framework to ensure organizational alignment from executive leadership down to\nindividual contributors.\nDuring Q1 of each calendar year (and within thirty days of joining for new hires), managers and employees collaboratively\nestablish three to five measurable OKRs. Objectives must be specific, ambitious, and clearly aligned with departmental\nbusiness deliverables, software architectural milestones, or corporate governance targets.\nOKRs are formally recorded in the Workday Performance Module and reviewed dynamically during bi-weekly 1-on-1\nmeetings. While objectives remain stable, key results may be adjusted mid-year if corporate strategy or project priorities\npivot significantly.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "f4f487061a5666ef2a4516463ddeaf412131ffddc722f71e6f61c477138940d3",
+      "created_at": "2026-09-06T17:38:10.616032+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0005",
+      "document_id": "HR-006",
+      "chunk_index": 5,
+      "text": "4. Bi-Annual Performance Review Cadence and Milestones\n\nThreshold Enterprise Systems operates a structured bi-annual performance review rhythm comprising two distinct phases:\n\n1. Mid-Year Progress Review (June): A lightweight, forward-focused evaluation designed to assess goal trajectory, discuss\n\nskill development, identify operational blockers, and recalibrate expectations. Formal ratings are not assigned, but written\nprogress summaries are submitted to Workday.\n\n2. Annual Performance Evaluation (November - December): A comprehensive, backward-looking and forward-planning\n\nreview that evaluates complete calendar year accomplishments, core competency demonstrations, peer feedback, and\nOKR completion rates. This evaluation results in a formal calibrated performance rating that directly influences annual merit\nincreases, bonuses, and promotion eligibility.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "a608338c41b2bc99b90b9f764e9ef0c199e31513a3fed541915e7e4307aed9f2",
+      "created_at": "2026-09-06T17:38:10.616122+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0006",
+      "document_id": "HR-006",
+      "chunk_index": 6,
+      "text": "5. Standardized 5-Tier Rating Scale and Calibration Framework\n\nTo ensure consistency across disparate technical departments and global regions, performance is evaluated using a\nstandardized 5-tier rating scale:\n- Tier 5: 'Exceptional Impact' (Consistently exceeds all OKRs, demonstrates transformative technical or operational\nleadership, serves as a role model across the enterprise; typically 5-10% of workforce).\n\n- Tier 4: 'Strong Contributor' (Consistently exceeds several goals, delivers superior quality with minimal oversight, mentors\ncolleagues and advances team capabilities; typically 20-25% of workforce).\n\n- Tier 3: 'Successful Delivery' (Consistently meets all core expectations and deliverables, demonstrates dependable\ncompetency, makes valuable contributions to team goals; typically 55-60% of workforce).\n\n- Tier 2: 'Needs Development' (Inconsistently achieves expectations, delivers uneven quality, requires excessive supervision\nor remediation; typically 5-8% of workforce).",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "dc2d3429a2982238de367ab8fd5fee826139d126e6db47c0c297ef0893247f82",
+      "created_at": "2026-09-06T17:38:10.616179+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0007",
+      "document_id": "HR-006",
+      "chunk_index": 7,
+      "text": "- Tier 1: 'Unsatisfactory' (Fails to meet minimum performance standards, demonstrates sustained inability or unwillingness\nto perform duties; typically 1-3% of workforce).\n\nDepartmental Calibration Sessions: Before ratings are finalized or shared with employees, departmental leadership, People\nManagers, and HR Business Partners convene in confidential calibration sessions.\n\nThese sessions audit proposed ratings\nagainst objective delivery metrics to eliminate managerial grade inflation, address unconscious bias, and ensure fairness\nacross teams.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "8f2cf04f84878708024e2622c4e5af3dc21fec0a33c061e2867ffddc7d75824b",
+      "created_at": "2026-09-06T17:38:10.616249+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0008",
+      "document_id": "HR-006",
+      "chunk_index": 8,
+      "text": "6. Manager Responsibilities and Continuous Feedback Culture\n\nPeople Managers bear primary responsibility for cultivating employee talent, clarifying expectations, and ensuring no\nemployee is ever surprised by their annual review rating. Ongoing, bi-directional communication is the cornerstone of this\npolicy.\nManagers are required to conduct bi-weekly 1-on-1 coaching sessions with each direct report, lasting a minimum of thirty\nminutes. These discussions must encompass active project progress, professional well-being, blocker removal, and\nconstructive feedback.\nManagers must document significant achievements and performance concerns contemporaneously in Workday Manager\nNotes to substantiate review assessments and provide evidence-based evaluations.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "75563dd6a31cd667c7c92dd51e87d74a1e6a531ce58130d16ec3f74bbdbe5c46",
+      "created_at": "2026-09-06T17:38:10.616301+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0009",
+      "document_id": "HR-006",
+      "chunk_index": 9,
+      "text": "7. Multi-Rater (360) Feedback and Employee Self-Assessments\n\nComprehensive evaluations require diverse operational perspectives. Ahead of the Annual Performance Review,\nemployees complete an electronic Self-Assessment reflecting on their accomplishments, key learnings, and areas for\ngrowth.\nSimultaneously, the Workday system solicits confidential Multi-Rater (360) Feedback from three to five cross-functional\npeers, technical collaborators, and project stakeholders chosen jointly by the employee and manager.\n\nPeer feedback focuses on teamwork, communication clarity, architectural collaboration, and cultural alignment. Peer\ncomments are aggregated and anonymized by HR to encourage candor and protect collegial relationships.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "26c40a73794ff1c28883151ba6fc3127c887df9bf6f3d86eeb35c9b0ccff03e6",
+      "created_at": "2026-09-06T17:38:10.616355+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0010",
+      "document_id": "HR-006",
+      "chunk_index": 10,
+      "text": "8. Performance Improvement Plans (PIP) Framework\n\nWhen an employee's performance falls to 'Needs Development' or 'Unsatisfactory' levels, informal coaching must\nimmediately transition into structured intervention via a formal Performance Improvement Plan (PIP).\n\nA PIP is a structured 30, 60, or 90-day developmental program developed collaboratively by the direct manager and the HR\nBusiness Partner.\n\nThe PIP document explicitly details: specific performance deficiencies; objective, measurable\ndeliverables required to reach acceptable standing; specific support, tooling, or coaching provided by the company; and a\nschedule of weekly checkpoint evaluations.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "bf6271ca083d75caf4e9cfeaa40f945f32d6320022b36c61548ed943648e8e98",
+      "created_at": "2026-09-06T17:38:10.616400+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0011",
+      "document_id": "HR-006",
+      "chunk_index": 11,
+      "text": "PIP Outcomes: At the conclusion of the PIP period, one of three formal determinations is reached: 1) Successful\nCompletion: Performance satisfies required standards, PIP concludes, employee returns to good standing; 2) PIP\nExtension: In exceptional circumstances where significant progress is shown, a single 30-day extension may be authorized\nby HR; 3) Unsuccessful Completion: The employee fails to satisfy objective criteria, resulting in immediate separation of\nemployment for cause.\n\n9. Confidential Handling and Storage of Performance Records",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "cb3e8a01b0180e3c27069b0ed41b6d19c9168518367ce4d7d7dd58cccf05a977",
+      "created_at": "2026-09-06T17:38:10.616432+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0012",
+      "document_id": "HR-006",
+      "chunk_index": 12,
+      "text": "9. Confidential Handling and Storage of Performance Records\n\nAll performance ratings, self-assessments, calibration notes, peer reviews, PIP documents, and manager notes are\nclassified as CONFIDENTIAL personnel records under the Threshold Enterprise Systems Information Security and Data\nPrivacy policies.\nPerformance files are stored exclusively within access-restricted tables in the Workday Human Capital Management\nrepository, protected by role-based access control (RBAC) and AES-256 database encryption. Only the employee's direct\nmanager, second-level skip-level manager, designated HR Business Partner, and system administrators hold authorization\nto view specific employee performance files.\nSharing, printing, screenshotting, or discussing performance evaluations with unauthorized team members constitutes a\nsevere breach of confidentiality and is grounds for disciplinary action.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "0e252c737899e0b51d7d241e04a83c955b2ae2dc131abadd77cdf90fdb2599a0",
+      "created_at": "2026-09-06T17:38:10.616463+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0013",
+      "document_id": "HR-006",
+      "chunk_index": 13,
+      "text": "10. Compensation Linkage and Promotion Eligibility\n\nAnnual performance ratings directly inform merit salary increases, annual incentive bonuses, equity refresh grants, and\npromotion progression. Rating correlations are calculated using executive-approved compensation matrices published to\nHR Managers annually in Q4.\nEmployees holding Tier 1 or Tier 2 ratings are ineligible for annual bonuses, merit pay increases, or internal promotions.\nEmployees holding Tier 4 or Tier 5 ratings are prioritized for leadership development cohorts, high-impact architecture\nassignments, and accelerated promotion pipelines.\nPromotions require sustained performance at the next career level for a minimum of two consecutive review cycles,\nendorsed by departmental leadership and validated by the Global Talent Review Board.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "ee1ea1fcebdeafb835f71efb4ef87767ecd1619935acd9b9631aa77149b19b39",
+      "created_at": "2026-09-06T17:38:10.616494+00:00"
+    },
+    {
+      "chunk_id": "HR-006_CHUNK_0014",
+      "document_id": "HR-006",
+      "chunk_index": 14,
+      "text": "11. HR Escalation, Dispute Resolution, and Rating Grievances\n\nIf an employee believes their final performance rating was assigned unfairly, influenced by bias, or calculated without\nconsideration of material evidence, they may file a formal Rating Grievance within ten (10) business days of receiving their\nevaluation.\nRating grievances are submitted in writing to the Director of Employee Relations. The grievance must substantiate the\ndispute with documented milestones, peer communications, or objective work deliverables.\nEmployee Relations conducts an independent review, interviewing the employee, manager, and calibration committee\nrepresentatives. A formal written determination is issued within fifteen business days. The determination of the Employee\nRelations Review Committee is final and binding.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Performance Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy establishing OKR goal setting, bi-annual review cycles, a standardized 5-tier calibration rating scale, Performance Improvement Plans (PIPs), and merit compensation correlation.",
+        "keywords": [
+          "performance management",
+          "okrs",
+          "bi-annual reviews",
+          "performance calibration",
+          "5-tier ratings",
+          "pip",
+          "confidential",
+          "merit compensation",
+          "rating grievance"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/performance_management_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c8f28adb1bbc370bce8a0565b511bb831da5d7570dfa559981a987024e9cb3d6",
+      "chunk_content_hash": "53772142c215434bea781493370f04ac6bf709762e448c99584c4bfd6253786c",
+      "created_at": "2026-09-06T17:38:10.616525+00:00"
+    }
+  ]
+}

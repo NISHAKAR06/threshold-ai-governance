@@ -1,0 +1,163 @@
+/* ============================================================
+   agent.css — Controlled AI Agent Workspace UI
+   ============================================================ */
+
+.agent-page-container {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-4);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .agent-page-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agent-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.agent-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.agent-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-xs);
+}
+
+/* Prompt suggestions */
+.agent-presets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.agent-preset-btn {
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transition: all var(--transition-fast);
+}
+
+.agent-preset-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* Pipeline Stepper */
+.pipeline-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: relative;
+  padding: var(--space-2) 0;
+}
+
+.pipeline-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  position: relative;
+}
+
+.pipeline-step-item::after {
+  content: '';
+  position: absolute;
+  left: 13px;
+  top: 28px;
+  bottom: -14px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.pipeline-step-item:last-child::after {
+  display: none;
+}
+
+.step-indicator {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface-2);
+  border: 2px solid var(--border-color);
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  z-index: 2;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.pipeline-step-item.active .step-indicator {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 0 0 4px var(--color-primary-light);
+}
+
+.pipeline-step-item.success .step-indicator {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: #fff;
+}
+
+.pipeline-step-item.denied .step-indicator {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #fff;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.step-meta {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+/* Result display */
+.agent-result-box {
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+}

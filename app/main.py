@@ -24,6 +24,14 @@ from app.core.exceptions import THRESHOLDBaseException, to_http_exception
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app_logger.info("THRESHOLD AI starting up…")
+    # ── Validate production configuration ─────────────────────
+    try:
+        settings.validate_production_config(settings)
+        app_logger.info("Configuration validated for environment: %s", settings.ENVIRONMENT)
+    except Exception as exc:
+        app_logger.error("Configuration validation failed", extra={"error": str(exc)})
+        raise
+
     # ── Init DB tables ────────────────────────────────────────
     try:
         from app.database.init_db import init_db
@@ -49,8 +57,15 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+from app.api.middleware.request_id import RequestIdMiddleware
+from app.api.middleware.request_metrics import RequestMetricsMiddleware
+from app.api.middleware.error_tracking import ErrorTrackingMiddleware
+
 # ── Production Middlewares ─────────────────────────────────────
 app.add_middleware(GZipMiddleware, minimum_size=1000)
+app.add_middleware(ErrorTrackingMiddleware)
+app.add_middleware(RequestMetricsMiddleware)
+app.add_middleware(RequestIdMiddleware, header_name=settings.TRACE_HEADER)
 
 # ── CORS ──────────────────────────────────────────────────────
 app.add_middleware(
@@ -162,6 +177,22 @@ async def audit_page(request: Request):
 async def analytics_page(request: Request):
     return templates.TemplateResponse("analytics.html", {"request": request})
 
+@app.get("/search",     response_class=HTMLResponse, include_in_schema=False)
+async def search_page(request: Request):
+    return templates.TemplateResponse("search.html", {"request": request})
+
+@app.get("/agent",      response_class=HTMLResponse, include_in_schema=False)
+async def agent_page(request: Request):
+    return templates.TemplateResponse("agent.html", {"request": request})
+
+@app.get("/evaluation", response_class=HTMLResponse, include_in_schema=False)
+async def evaluation_page(request: Request):
+    return templates.TemplateResponse("evaluation.html", {"request": request})
+
+@app.get("/monitoring", response_class=HTMLResponse, include_in_schema=False)
+async def monitoring_page(request: Request):
+    return templates.TemplateResponse("monitoring.html", {"request": request})
+
 @app.get("/settings",  response_class=HTMLResponse, include_in_schema=False)
 async def settings_page(request: Request):
     return templates.TemplateResponse("settings.html", {"request": request})
@@ -214,10 +245,14 @@ class SignupRequest(BaseModel):
     department: Optional[str] = "Engineering"
     role: Optional[str] = "reviewer"
 
-@app.post("/api/v1/auth/login", tags=["Auth"], summary="Login with username + password")
+class ResetPasswordRequest(BaseModel):
+    username_or_email: str
+    new_password: str
+
+@app.post("/api/v1/auth/login", tags=["Auth"], summary="Login with username or email + password")
 async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)):
     repo = EmployeeRepository(db)
-    employee = await repo.get_by_username(payload.username)
+    employee = await repo.get_by_username_or_email(payload.username)
     if employee is None or not verify_password(payload.password, employee.hashed_password):
         return JSONResponse(status_code=401, content={"detail": {"code": "AUTH_ERROR", "message": "Invalid credentials"}})
     if not employee.is_active:
@@ -227,7 +262,16 @@ async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)):
         subject=employee.username,
         extra={"role": employee.role, "dept": employee.department, "name": employee.full_name},
     )
-    return {"access_token": token, "token_type": "bearer", "user": {"name": employee.full_name, "role": employee.role}}
+    return {"access_token": token, "token_type": "bearer", "user": {"name": employee.full_name, "role": employee.role, "username": employee.username}}
+
+@app.post("/api/v1/auth/reset-password", tags=["Auth"], summary="Reset password by username or email")
+async def reset_password(payload: ResetPasswordRequest, db: AsyncSession = Depends(get_db)):
+    repo = EmployeeRepository(db)
+    new_hashed = hash_password(payload.new_password)
+    ok = await repo.update_password(payload.username_or_email, new_hashed)
+    if not ok:
+        return JSONResponse(status_code=404, content={"detail": {"code": "USER_NOT_FOUND", "message": "User not found with provided username or email."}})
+    return {"status": "success", "message": "Password has been successfully reset. You may now sign in."}
 
 @app.post("/api/v1/auth/signup", tags=["Auth"], summary="Sign up a new employee user")
 async def signup(payload: SignupRequest, db: AsyncSession = Depends(get_db)):
@@ -302,28 +346,22 @@ async def get_me(
 
 # ── API routers ───────────────────────────────────────────────
 from app.api.api import api_router
+from app.api.retrieval_routes import router as retrieval_router
+from app.api.rag_routes import router as rag_router
+from app.api.agent_routes import router as agent_router
 app.include_router(api_router, prefix="/api/v1")
+app.include_router(retrieval_router, prefix="/retrieval", tags=["Retrieval"])
+app.include_router(rag_router, prefix="/rag", tags=["RAG"])
+app.include_router(agent_router, prefix="/agent", tags=["Agent"])
 
 # ── WebSocket routers ─────────────────────────────────────────
 from app.websocket.events import router as ws_router
 app.include_router(ws_router)
 
-# ── System health ─────────────────────────────────────────────
-@app.get("/health", tags=["System"], summary="Health check")
-async def health(db: AsyncSession = Depends(get_db)):
-    db_status = "healthy"
-    try:
-        from sqlalchemy import text
-        await db.execute(text("SELECT 1"))
-    except Exception as exc:
-        db_status = f"unhealthy: {str(exc)}"
-
-    return {
-        "status":  "ok" if db_status == "healthy" else "degraded",
-        "app":     settings.APP_NAME,
-        "version": settings.APP_VERSION,
-        "database": db_status,
-    }
+# ── Observability: Health, Readiness & Metrics (Phase 15) ─────
+from app.observability.health import router as health_router
+app.include_router(health_router)
+app.include_router(health_router, prefix="/api/v1")
 
 # ── Dev runner ────────────────────────────────────────────────
 if __name__ == "__main__":

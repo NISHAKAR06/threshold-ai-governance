@@ -1,0 +1,635 @@
+{
+  "document_id": "HR-007",
+  "chunks": [
+    {
+      "chunk_id": "HR-007_CHUNK_0001",
+      "document_id": "HR-007",
+      "chunk_index": 1,
+      "text": "Document Id | HR-007\nTitle | Employee Data Privacy Policy\nDepartment | Human Resources\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | EMPLOYEE, MANAGER, HR_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nEmployee Data Privacy Policy\n\n1. Policy Purpose and Commitment to Personnel Privacy\n\nThreshold Enterprise Systems is deeply committed to protecting the privacy, confidentiality, and fundamental rights of our global workforce. In the routine course of managing human resources, payroll operations, enterprise benefits, and corporate security, our organization collects and processes personal information pertaining to job applicants, current employees, former personnel, and their dependents.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "a32fd33091e5e29daf99357c13014c523881d15ea119c086d39c396258cd69cf",
+      "created_at": "2026-09-06T17:38:10.622054+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0002",
+      "document_id": "HR-007",
+      "chunk_index": 2,
+      "text": "This Employee Data Privacy Policy outlines the standards, safeguards, and legal frameworks governing the collection, processing, storage, sharing, and disposal of employee personal data across all Threshold Enterprise Systems subsidiaries and regional operating hubs in India, the United States, the United Kingdom, and Singapore. This policy is classified as CONFIDENTIAL to ensure that detailed descriptions of our internal personnel data structures, HR processing workflows, and privacy controls are handled securely by authorized workforce members.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "d047bd1dec631c52939c6ce250086ffa98e86be381ecd396ee87297df85540d9",
+      "created_at": "2026-09-06T17:38:10.622144+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0003",
+      "document_id": "HR-007",
+      "chunk_index": 3,
+      "text": "2. Scope and Jurisdictional Alignment This policy applies to all personal information collected or processed by Threshold Enterprise Systems regarding regular full-time employees, part-time workers, contractors, interns, job applicants, and alumni across all global locations. Our privacy framework is harmonized with major international data protection regulations, including: the European Union General Data Protection Regulation (EU GDPR), the UK General Data Protection Regulation (UK GDPR), the California Consumer Privacy Act as amended by the California Privacy Rights Act (CCPA/CPRA), the Digital Personal Data Protection Act of India (DPDP Act 2023), and the Singapore Personal Data Protection Act (PDPA). Where local national statutes impose higher privacy protections or specialized reporting requirements, those regional mandates supersede or supplement this corporate baseline as documented in regional privacy notices.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "a5bc42860ad5277c8140afa3bdfafa8566e9c23745601f1d57003cf62f81c964",
+      "created_at": "2026-09-06T17:38:10.622226+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0004",
+      "document_id": "HR-007",
+      "chunk_index": 4,
+      "text": "3. Categories of Personnel Data Processed Threshold Enterprise Systems processes several discrete categories of employee personal data strictly for legitimate employment and business administration purposes: 1. Biographical and Identification Data: Full legal name, date of birth, government-issued identification numbers (e.g. SSN, PAN, National Insurance number, NRIC), passport details, nationality, and photographic identity images. 2. Contact and Family Data: Residential address, personal telephone numbers, personal email addresses, emergency contact designations, and beneficiary information.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "889ad9d3ad4cff420eae4b978c47d069b59cadf56ba2dc0cb0a857b33d10e050",
+      "created_at": "2026-09-06T17:38:10.622282+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0005",
+      "document_id": "HR-007",
+      "chunk_index": 5,
+      "text": "3. Compensation, Financial, and Benefits Data: Bank account details, salary history, tax withholding statuses, pension allocations, equity holdings, health insurance enrollment, and dependent coverage details. 4. Professional, Educational, and Recruitment Data: Resumes, academic transcripts, prior employment verifications, background screening reports, professional certifications, and reference feedback. 5. Performance and Operational Records: Objectives (OKRs), bi-annual reviews, 360-peer feedback, promotion histories, training certifications, disciplinary records, and attendance logs.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "4b03c3ad8305a1ee805732a44179a2741d86f74a8a84718bd6acaa39eb2000f0",
+      "created_at": "2026-09-06T17:38:10.622334+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0006",
+      "document_id": "HR-007",
+      "chunk_index": 6,
+      "text": "6. Digital Workplace Telemetry and Security Data: Corporate email communications, calendar availability, corporate system access logs, VPN connection records, endpoint security telemetry, and physical building badge access events. 4. Data Protection Principles and Legal Grounds for Processing All processing of employee personal information is conducted in accordance with core global data protection principles: First, Lawfulness, Fairness, and Transparency: Data is processed strictly upon valid legal grounds—primarily contractual necessity for employment execution, legal compliance (tax, labor, and immigration reporting), and legitimate enterprise business interests (protecting infrastructure, ensuring physical safety, preventing fraud). Second, Purpose Limitation: Personal data collected for employment purposes is never processed for unrelated commercial marketing, customer prospecting, or monetization.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "fb6825d96b52da9d03a6a35f7a7a59323d05b29f0605c375b0fbc69ed8c911aa",
+      "created_at": "2026-09-06T17:38:10.622394+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0007",
+      "document_id": "HR-007",
+      "chunk_index": 7,
+      "text": "Third, Data Minimization: We collect only the minimum amount of personal information necessary to fulfill specific operational, contractual, and legal obligations. Fourth, Accuracy: Human Resources maintains robust mechanisms allowing employees to review and update personal biographical, banking, and tax data via Workday self-service. Fifth, Storage Limitation: Data is retained only for as long as required by statutory regulations and corporate retention schedules, after which it is securely purged.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "fccb24e6e53d1aa73102e7d13eda15c5e953cfeb9c84748995d225db3c5118b5",
+      "created_at": "2026-09-06T17:38:10.622444+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0008",
+      "document_id": "HR-007",
+      "chunk_index": 8,
+      "text": "5. Access Controls and Need-to-Know Compartmentalization Access to employee personal data is strictly compartmentalized based on the principle of least privilege and role-based access control (RBAC): - Employees hold access to view and edit their personal self-service profile, emergency contacts, and banking details in Workday. - People Managers hold access only to basic administrative data for their direct reports (work contact details, job title, time-off requests, and performance reviews). Managers are prohibited from viewing direct reports' medical records, national tax IDs, or private banking details. - HR Specialists and HR Managers hold access to specialized personnel modules strictly aligned with their operational duties (e.g., benefits administrators access health plans; payroll specialists access banking records). - Administrators (ADMIN role) hold audited administrative oversight, with all administrative access and data queries logged in immutable audit trails.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "206b0e599ff83c08cd39ecc873cc43371af60b87f0e5e767f6fc706062516b6a",
+      "created_at": "2026-09-06T17:38:10.622493+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0009",
+      "document_id": "HR-007",
+      "chunk_index": 9,
+      "text": "- Administrators (ADMIN role) hold audited administrative oversight, with all administrative access and data queries logged in immutable audit trails. 6. Third-Party Service Providers and Cross-Border Data Transfers Threshold Enterprise Systems partners with vetted third-party vendors for specialized HR operations, including our Human Capital Management platform (Workday), global payroll providers, retirement administrators, health insurers, and corporate travel platforms. All third-party data processors are bound by comprehensive Data Processing Agreements (DPAs) requiring stringent technical and organizational security measures, strict confidentiality, and prohibition of secondary data usage. Vendors undergo rigorous annual SOC 2 Type II and ISO 27001 compliance reviews by our Information Security team.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "a61cfab8eafbbda23f34e06a67e49b94a17d1dcf485b873b9cfa8d2355bcf1a5",
+      "created_at": "2026-09-06T17:38:10.622538+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0010",
+      "document_id": "HR-007",
+      "chunk_index": 10,
+      "text": "Because Threshold Enterprise Systems operates across India, the US, the UK, and Singapore, personnel data may be transferred across international borders for centralized payroll, executive talent planning, and global IT administration. Cross-border transfers adhere to recognized international transfer mechanisms, including Standard Contractual Clauses (SCCs), UK International Data Transfer Agreements (IDTA), and regional cross-border adequacy frameworks. 7. Technical and Organizational Security Safeguards The organization implements enterprise-grade technical safeguards to protect employee data against unauthorized access, accidental loss, alteration, or destruction: - Encryption: All employee records are encrypted in transit using TLS 1.3 and encrypted at rest using AES-256 encryption across all databases, backups, and file repositories.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "0147484fbe59d91babbb4c99673f485caaae99b8494c17c0506f446c9ba0ca95",
+      "created_at": "2026-09-06T17:38:10.622586+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0011",
+      "document_id": "HR-007",
+      "chunk_index": 11,
+      "text": "- Authentication: Multi-Factor Authentication (MFA) is strictly enforced for all systems housing personnel data, with session timeouts and biometric device authentication. - Auditing and Monitoring: Automated Security Information and Event Management (SIEM) systems continuously monitor access patterns to personnel databases to detect anomalous queries, mass exports, or unauthorized access attempts. 8. Data Retention Schedules and Secure Disposal Personnel records are retained in accordance with the Threshold Enterprise Systems Data Retention Schedule, balancing business necessity with statutory labor and tax mandates: - Payroll, tax filings, and gross compensation records: Retained for seven (7) years following the close of the applicable tax year in compliance with statutory audit standards. - Core employment history, service letters, and pension allocations: Retained for ten (10) years following separation of employment to facilitate retirement verification.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "db1ff24606f891d4ebced2b77caa5b748e8c9b84f4d89d0e8349ac60f81a8484",
+      "created_at": "2026-09-06T17:38:10.622632+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0012",
+      "document_id": "HR-007",
+      "chunk_index": 12,
+      "text": "- General HR operational records, annual performance reviews, and training logs: Retained for three (3) years following separation of employment. - Job applicant resumes and interview records (unsuccessful candidates): Retained for twelve (12) months following recruitment completion, after which records are purged unless candidate consent is obtained. Upon reaching the retention horizon, records are permanently purged via cryptographic deletion algorithms for digital records and certified shredding for physical documents.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "6bb5396b085624a66f0014d00933004c2202a374c63b554b6e81016d031fb0cc",
+      "created_at": "2026-09-06T17:38:10.622681+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0013",
+      "document_id": "HR-007",
+      "chunk_index": 13,
+      "text": "9. Employee Privacy Rights and Request Workflow In alignment with global privacy regulations, employees hold specific rights regarding their personal data, subject to local statutory conditions: 1. Right to Access: Employees may request an export of their personal data maintained by the organization. 2. Right to Rectification: Employees may request correction of inaccurate, incomplete, or outdated information. 3. Right to Erasure: Employees may request deletion of personal information where processing is no longer legally required or justified.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "e06696ddb87868b168c0943a70d456b501263ee3898ebc08c38be0669f6e5052",
+      "created_at": "2026-09-06T17:38:10.622730+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0014",
+      "document_id": "HR-007",
+      "chunk_index": 14,
+      "text": "3. Right to Erasure: Employees may request deletion of personal information where processing is no longer legally required or justified. 4. Right to Restriction: Employees may request temporary suspension of data processing during formal disputes regarding accuracy or lawful grounds. To exercise these rights, employees submit a 'Data Subject Access Request (DSAR)' through the secure Privacy Portal or by emailing privacy@threshold-systems.internal. The Data Protection Officer (DPO) acknowledges requests within five business days and completes fulfillment within thirty calendar days.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "25d1c4198466909bcbab0e67edb385d474337ba8eb17ee1b99b3eb9d06a59425",
+      "created_at": "2026-09-06T17:38:10.622779+00:00"
+    },
+    {
+      "chunk_id": "HR-007_CHUNK_0015",
+      "document_id": "HR-007",
+      "chunk_index": 15,
+      "text": "10. Incident Notification and Personal Data Breach Management Any employee who identifies, suspects, or accidentally causes an unauthorized disclosure, loss, or alteration of employee personal data must immediately report the incident to the Information Security Incident Response Team (security-incident@threshold-systems.internal) and the HR Data Protection Lead. The incident is triaged within one hour under our Joint Security and HR Breach Protocol. If an assessment reveals a risk to employee rights or security, affected personnel and regulatory authorities (such as the UK Information Commissioner's Office, EU Data Protection Authorities, or the Singapore PDPC) will be notified within seventy-two (72) hours as mandated by law. This policy operates in full coordination with upcoming Information Security Policies and AI Governance Data Frameworks.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Data Privacy Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential human resources policy governing employee personal data collection, processing principles, multi-jurisdictional compliance (GDPR, CPRA, DPDP, PDPA), retention schedules, and breach notification protocols.",
+        "keywords": [
+          "data privacy",
+          "employee data",
+          "personnel records",
+          "gdpr",
+          "cpra",
+          "dpdp act",
+          "pdpa",
+          "retention schedules",
+          "dsar",
+          "confidential",
+          "breach notification"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_data_privacy_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "d1bac9db592261a0922f60712d752ec916202654c91e59b691076f488d2154c2",
+      "chunk_content_hash": "b7d1b92a5196abcac01d9a7fb2ea54c3972fc054a75c79ae09c1a6f8a3c0cecb",
+      "created_at": "2026-09-06T17:38:10.622830+00:00"
+    }
+  ]
+}

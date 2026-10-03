@@ -1,0 +1,650 @@
+{
+  "document_id": "HR-005",
+  "chunks": [
+    {
+      "chunk_id": "HR-005_CHUNK_0001",
+      "document_id": "HR-005",
+      "chunk_index": 1,
+      "text": "Document Id | HR-005\nTitle | Employee Code of Conduct\nDepartment | Human Resources\nClassification | INTERNAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, HR_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nEmployee Code of Conduct\n\n1. Purpose and Guiding Ethical Principles\n\nThreshold Enterprise Systems is committed to conducting global business with uncompromising integrity, ethical diligence, and respect for the rule of law. As an enterprise developing advanced artificial intelligence solutions, enterprise cloud infrastructure, and mission-critical software platforms, our reputation depends upon the trust placed in us by our clients, partners, employees, and the broader global community.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "69650860e8796dd1facad4ce64a1946ca92fc4b2c32838d14ceea8f4166efe1f",
+      "created_at": "2026-09-06T17:38:10.608450+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0002",
+      "document_id": "HR-005",
+      "chunk_index": 2,
+      "text": "This Employee Code of Conduct establishes the baseline standards of professional behavior, ethical decision-making, and personal accountability expected of everyone acting on behalf of Threshold Enterprise Systems. It serves as our common ethical compass, helping team members navigate complex operational decisions while upholding our corporate values. The standards detailed in this policy reflect our collective commitment to foster a workplace where people feel safe, respected, and empowered to do their finest work, while safeguarding enterprise assets and ethical reputation.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "fa808e57a48a7497b2998302365ed07afa3a87681d97dd4933b65e7d3e777b36",
+      "created_at": "2026-09-06T17:38:10.608539+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0003",
+      "document_id": "HR-005",
+      "chunk_index": 3,
+      "text": "2. Scope and Universal Applicability This Code of Conduct applies without exception to all officers, directors, regular full-time employees, part-time employees, temporary workers, and third-party contractors across all operating entities and geographic jurisdictions of Threshold Enterprise Systems, including India, the United States, the United Kingdom, and Singapore. These principles govern conduct during all business-related activities, whether taking place on corporate premises, during remote work, at client sites, at industry conferences, or in virtual collaboration environments. Compliance with this Code is a mandatory condition of ongoing association with Threshold Enterprise Systems.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "925ffc4ea3af8cb17892c5694485048792086e8f2247d55256c0592d98aea1bf",
+      "created_at": "2026-09-06T17:38:10.608593+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0004",
+      "document_id": "HR-005",
+      "chunk_index": 4,
+      "text": "3. Professional Behavior and Workplace Civility Threshold Enterprise Systems expects every individual to interact with colleagues, clients, vendors, and business partners with honesty, professionalism, empathy, and courtesy. We celebrate diverse backgrounds, perspectives, and skills as fundamental drivers of innovation. We expect team members to communicate constructively, acknowledge differing viewpoints, provide feedback thoughtfully, and maintain emotional composure during high-pressure project deadlines or operational incidents. Unprofessional conduct, including personal insults, profanity, shouting, demeaning humor, or dismissive attitudes, will not be tolerated in any professional context. Professional decorum extends to public appearances, social media engagements where corporate affiliation is identified, and industry technical forums. Team members must ensure that personal opinions expressed publicly are not represented as official corporate endorsements.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "e205e76ad8ef06b0a41275faf961709ea830d0b038ad5c3ff262c4a2a0e687cd",
+      "created_at": "2026-09-06T17:38:10.608638+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0005",
+      "document_id": "HR-005",
+      "chunk_index": 5,
+      "text": "4. Anti-Harassment, Dignity, and Equal Opportunity Every worker has an inherent right to perform their duties in an environment free from discrimination, intimidation, harassment, and bullying. Threshold Enterprise Systems enforces strict equal opportunity in all employment practices, including hiring, compensation, promotion, training, and termination. Discrimination or harassment based on race, color, religion, gender, sexual orientation, gender identity, national origin, age, disability, genetic information, veteran status, or any other protected characteristic is strictly prohibited by enterprise policy and regional law. Harassment includes unwelcome physical contact, suggestive comments or gestures, derogatory slurs, circulating offensive memes or electronic materials, and creating an intimidating, hostile, or offensive working environment. Conduct of this nature constitutes severe misconduct that leads to immediate disciplinary intervention.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "46254e33ac8f52bbd3f231ed24b1d4f2b1736965ee4c9ef6f184d18b00e25e6f",
+      "created_at": "2026-09-06T17:38:10.608681+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0006",
+      "document_id": "HR-005",
+      "chunk_index": 6,
+      "text": "5. Conflicts of Interest and External Business Activities Employees owe a primary duty of loyalty to Threshold Enterprise Systems and must avoid situations where personal interests, financial investments, outside business activities, or personal relationships conflict—or appear to conflict—with the best interests of the company. Actual or potential conflicts include: engaging in secondary employment (moonlighting) or consulting for a direct competitor, client, or supplier; investing significantly in a competitor or vendor where the employee exercises corporate procurement influence; or employing or managing immediate family members or romantic partners without disclosure.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "583d1a927643f9ae52ea94b44a3771395813863b0611ba7313f2ef5a40d2ed89",
+      "created_at": "2026-09-06T17:38:10.608733+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0007",
+      "document_id": "HR-005",
+      "chunk_index": 7,
+      "text": "Gifts, hospitality, and entertainment provided by vendors, clients, or partners must be modest and customary. Employees may not accept cash, gift cards, lavish entertainment, or gifts valued at over $50 USD (or local currency equivalent) without prior written disclosure to and approval from the Enterprise Governance Committee. All outside commercial activities, advisory board seats, and secondary employment must be formally disclosed and pre-approved via the Annual Conflict of Interest Disclosure Portal in Workday.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "d3b29dbb2682288e153edf352cd00e02450162021020bada54c87707e696366c",
+      "created_at": "2026-09-06T17:38:10.608778+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0008",
+      "document_id": "HR-005",
+      "chunk_index": 8,
+      "text": "6. Protection of Proprietary Information and Intellectual Property Proprietary information, technical inventions, algorithm architectures, client lists, business strategies, and trade secrets created during employment represent foundational enterprise assets. All intellectual property conceived or developed within the scope of employment belongs exclusively to Threshold Enterprise Systems. Employees are required to maintain strict confidentiality regarding all proprietary information both during their tenure and following their separation from the company. Unauthorized dissemination, disclosure to personal email accounts, or leaking confidential data to public forums or unapproved AI platforms is strictly forbidden.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "a1ffd9b019fc27717a00adcecd90a0c6a74cf2976582718dd2b34337fcbed021",
+      "created_at": "2026-09-06T17:38:10.608827+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0009",
+      "document_id": "HR-005",
+      "chunk_index": 9,
+      "text": "Employees must also respect the intellectual property rights of third parties. Utilizing unlicensed third-party software, incorporating unauthorized open-source components with restrictive copyleft licenses, or bringing proprietary information from previous employers into Threshold Enterprise Systems is strictly prohibited. 7. Appropriate Use of Company Resources and Computing Systems Threshold Enterprise Systems provides employees with computing hardware, cloud resources, software licenses, network bandwidth, and office facilities to accomplish business objectives. Incidental, occasional personal use of corporate devices is permitted provided it is lawful, does not interfere with productivity, and complies with all security policies.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "8eebe6c88b98bfc5ef0b839b87b3cc878dfcd5ade6f6c1a24874ca4f834dfc11",
+      "created_at": "2026-09-06T17:38:10.608879+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0010",
+      "document_id": "HR-005",
+      "chunk_index": 10,
+      "text": "Company systems must never be used for unlawful purposes, commercial solicitation, cryptocurrency mining, gambling, viewing explicit materials, or launching unauthorized cyber testing tools. Employees must not install unapproved software or third-party browser extensions that bypass enterprise security configurations. All communications, files, and transaction telemetry generated on or transmitted across corporate systems are the property of Threshold Enterprise Systems and are subject to monitoring, auditing, and compliance inspection as permitted by applicable regional laws.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "c5aecd388b664944a702f81e1f19c334763ea583f5866730f9bb6962c912a03a",
+      "created_at": "2026-09-06T17:38:10.608931+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0011",
+      "document_id": "HR-005",
+      "chunk_index": 11,
+      "text": "8. Fair Dealing, Anti-Bribery, and Ethical Commerce Threshold Enterprise Systems competes aggressively in the marketplace, but always fairly and ethically. We succeed based on technical excellence, superior service, and dependable delivery—never through bribery, kickbacks, or deceptive business practices. Employees are strictly prohibited from offering, promising, authorizing, or accepting bribes, kickbacks, or facilitation payments to or from government officials, commercial clients, or partners. Compliance with the US Foreign Corrupt Practices Act (FCPA), the UK Bribery Act, the Prevention of Corruption Act in India, and the Prevention of Corruption Act in Singapore is mandatory. Accurate financial and operational reporting is essential. All business records, customer agreements, expense reimbursements, and operational metrics must be recorded honestly, completely, and accurately in our corporate accounting systems without fraudulent alteration.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "645496ab52b0d1393ac81762dbff4447f577b3f2e773049929b945bb6ce256b1",
+      "created_at": "2026-09-06T17:38:10.608987+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0012",
+      "document_id": "HR-005",
+      "chunk_index": 12,
+      "text": "9. Reporting Ethical Concerns, Whistleblower Protections, and Non-Retaliation Every employee has an affirmative duty to speak up when they observe, suspect, or become aware of conduct that violates this Code of Conduct, enterprise policies, or applicable laws. Remaining silent in the face of known misconduct harms the entire organization. Reporting channels include: speaking with your direct manager or department leadership, contacting your designated HR Business Partner, reaching out to the Enterprise Governance Office, or filing a report through the Threshold Enterprise Ethics Hotline. The hotline is operated by an independent third party, available 24/7/365, and allows reports to be filed anonymously where permitted by law.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "feb8b92a310c8c6f69dbfc3f3ee7e407f98c9cd99ea91b57d870aaf65d34a7e5",
+      "created_at": "2026-09-06T17:38:10.609035+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0013",
+      "document_id": "HR-005",
+      "chunk_index": 13,
+      "text": "Threshold Enterprise Systems strictly prohibits retaliation against any individual who raises a good-faith concern or participates in an investigation. Retaliation of any kind—whether overt (such as demotion or dismissal) or subtle (such as exclusion or hostile assignments)—is a catastrophic violation of our corporate ethos and will result in immediate termination of the retaliator's employment. 10. Investigation Workflow and Fair Adjudication All reports of misconduct submitted through official channels are triaged promptly by the Employee Relations team in coordination with Legal and Enterprise Governance. Initial assessments determine the appropriate investigatory scope within twenty-four to forty-eight hours. Investigations are conducted objectively, impartially, and thoroughly by trained professionals. The process includes reviewing documentary and digital evidence, interviewing witnesses, and providing the accused party a fair opportunity to respond to specific allegations.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "bb401a198737a18c5674e95def344a2396b23eb79fab0a0264ecb050f10c35ad",
+      "created_at": "2026-09-06T17:38:10.609092+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0014",
+      "document_id": "HR-005",
+      "chunk_index": 14,
+      "text": "Confidentiality is maintained throughout the process to the greatest extent possible, sharing information only on a strict need-to-know basis. Findings are documented in a formal Investigative Closure Report with recommended remedial actions. 11. Consequences for Policy Violations and Corrective Action Violations of this Code of Conduct undermine corporate integrity and are addressed through proportional, fair, and decisive corrective action. The specific consequence depends on the severity of the violation, intentionality, repeat offenses, and business impact. Disciplinary outcomes include, in ascending order of severity: documented coaching and verbal counseling; formal written reprimand placed in the permanent personnel record; mandatory remedial training; suspension of hybrid remote privileges; temporary suspension of employment with or without pay; demotion and loss of managerial responsibilities; and immediate termination of employment for cause.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "04e4711a68e21b9755e145120876487c95649ec9a396f021153f50ce8291b98b",
+      "created_at": "2026-09-06T17:38:10.609142+00:00"
+    },
+    {
+      "chunk_id": "HR-005_CHUNK_0015",
+      "document_id": "HR-005",
+      "chunk_index": 15,
+      "text": "Where conduct involves illegal activity, financial theft, or intentional data sabotage, Threshold Enterprise Systems reserves the right to pursue civil litigation and refer the matter to regional law enforcement authorities. 12. Governance, Annual Certification, and Administration The Employee Code of Conduct is maintained by Human Resources and overseen by the Enterprise Governance Committee. It is reviewed annually to ensure alignment with global legal standards and corporate risk profiles. All employees are required to complete an annual interactive training course and electronically sign an acknowledgment certifying compliance with this Code during our Q1 enterprise compliance certification window. For guidance regarding the interpretation of any section of this Code, employees should contact their HR Business Partner or the Enterprise Ethics and Governance Office.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Employee Code of Conduct",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines foundational ethical baselines, anti-harassment standards, conflicts of interest disclosures, intellectual property protection, fair dealing, anti-bribery mandates, and confidential whistleblower protections.",
+        "keywords": [
+          "code of conduct",
+          "business ethics",
+          "anti-harassment",
+          "conflicts of interest",
+          "intellectual property",
+          "anti-bribery",
+          "whistleblower",
+          "investigation process"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_code_of_conduct.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "86a8c4613edb826f8bf9b76c76d3aabb1a792ef47ce804d977ce0e7437460bc6",
+      "chunk_content_hash": "3d43d09405d35769b3e630eeda4051741102b9719eac9d52aa7971a0099f7595",
+      "created_at": "2026-09-06T17:38:10.609193+00:00"
+    }
+  ]
+}

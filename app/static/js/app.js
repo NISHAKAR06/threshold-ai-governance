@@ -771,9 +771,13 @@ const SPARouter = (() => {
   const pageInitializers = {
     '/dashboard':  () => typeof DashboardPage  !== 'undefined' && DashboardPage.init?.(),
     '/assistant':  () => typeof AssistantPage  !== 'undefined' && AssistantPage.init?.(),
+    '/search':     () => typeof SearchPage     !== 'undefined' && SearchPage.init?.(),
+    '/agent':      () => typeof AgentPage      !== 'undefined' && AgentPage.init?.(),
     '/governance': () => typeof GovernancePage !== 'undefined' && GovernancePage.init?.(),
     '/review':     () => typeof ReviewPage     !== 'undefined' && ReviewPage.init?.(),
     '/audit':      () => typeof AuditPage      !== 'undefined' && AuditPage.init?.(),
+    '/evaluation': () => typeof EvaluationPage !== 'undefined' && EvaluationPage.init?.(),
+    '/monitoring': () => typeof MonitoringPage !== 'undefined' && MonitoringPage.init?.(),
     '/analytics':  () => typeof AnalyticsPage  !== 'undefined' && AnalyticsPage.init?.(),
     '/settings':   () => typeof SettingsPage   !== 'undefined' && SettingsPage.init?.(),
     '/profile':    () => typeof ProfilePage    !== 'undefined' && ProfilePage.init?.(),
@@ -782,7 +786,11 @@ const SPARouter = (() => {
   async function navigate(url, push = true) {
     const targetUrl = new URL(url, window.location.origin);
     const path = targetUrl.pathname.toLowerCase().replace(/\/$/, '') || '/';
-    const appPaths = ['/dashboard', '/assistant', '/governance', '/review', '/audit', '/analytics', '/settings', '/profile'];
+    const appPaths = [
+      '/dashboard', '/assistant', '/search', '/agent', '/governance',
+      '/review', '/audit', '/evaluation', '/monitoring', '/analytics',
+      '/settings', '/profile'
+    ];
 
     if (!appPaths.includes(path)) {
       window.location.href = url;
@@ -855,7 +863,11 @@ const SPARouter = (() => {
       if (targetUrl.origin !== window.location.origin) return;
 
       const path = targetUrl.pathname.toLowerCase().replace(/\/$/, '') || '/';
-      const appPaths = ['/dashboard', '/assistant', '/governance', '/review', '/audit', '/analytics', '/settings', '/profile'];
+      const appPaths = [
+        '/dashboard', '/assistant', '/search', '/agent', '/governance',
+        '/review', '/audit', '/evaluation', '/monitoring', '/analytics',
+        '/settings', '/profile'
+      ];
       if (appPaths.includes(path)) {
         e.preventDefault();
         navigate(href);

@@ -1,0 +1,378 @@
+{
+  "chunking_run_id": "chunk_run_5ac9e573",
+  "started_at": "2026-09-06T17:38:10.461647+00:00",
+  "completed_at": "2026-09-06T17:38:10.726538+00:00",
+  "pipeline_version": "1.0.0",
+  "total_documents": 40,
+  "successful_documents": 40,
+  "failed_documents": 0,
+  "total_chunks": 631,
+  "configuration": {
+    "chunk_size": 1000,
+    "chunk_overlap": 150,
+    "input_dir": "C:\\Users\\NISHAKART\\Documents\\GitHub\\threshold-ai-governance\\dataset\\threshold-enterprise-dataset\\data\\normalized_documents",
+    "output_dir": "data\\chunks"
+  },
+  "results": [
+    {
+      "document_id": "AIG-001",
+      "status": "SUCCESS",
+      "chunks_created": 19,
+      "output_file": "data\\chunks\\AIG-001.json",
+      "execution_time_ms": 2.07,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-002",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\AIG-002.json",
+      "execution_time_ms": 2.31,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-003",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\AIG-003.json",
+      "execution_time_ms": 2.33,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-004",
+      "status": "SUCCESS",
+      "chunks_created": 20,
+      "output_file": "data\\chunks\\AIG-004.json",
+      "execution_time_ms": 1.83,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-005",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\AIG-005.json",
+      "execution_time_ms": 2.51,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-006",
+      "status": "SUCCESS",
+      "chunks_created": 20,
+      "output_file": "data\\chunks\\AIG-006.json",
+      "execution_time_ms": 2.23,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-007",
+      "status": "SUCCESS",
+      "chunks_created": 19,
+      "output_file": "data\\chunks\\AIG-007.json",
+      "execution_time_ms": 2.83,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-008",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\AIG-008.json",
+      "execution_time_ms": 2.29,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-009",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\AIG-009.json",
+      "execution_time_ms": 2.21,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "AIG-010",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\AIG-010.json",
+      "execution_time_ms": 2.23,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-001",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\ENG-001.json",
+      "execution_time_ms": 2.47,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-002",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\ENG-002.json",
+      "execution_time_ms": 1.98,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-003",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\ENG-003.json",
+      "execution_time_ms": 2.1,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-004",
+      "status": "SUCCESS",
+      "chunks_created": 14,
+      "output_file": "data\\chunks\\ENG-004.json",
+      "execution_time_ms": 2.1,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-005",
+      "status": "SUCCESS",
+      "chunks_created": 16,
+      "output_file": "data\\chunks\\ENG-005.json",
+      "execution_time_ms": 2.25,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-006",
+      "status": "SUCCESS",
+      "chunks_created": 16,
+      "output_file": "data\\chunks\\ENG-006.json",
+      "execution_time_ms": 2.75,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "ENG-007",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\ENG-007.json",
+      "execution_time_ms": 2.31,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-001",
+      "status": "SUCCESS",
+      "chunks_created": 18,
+      "output_file": "data\\chunks\\HR-001.json",
+      "execution_time_ms": 2.4,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-002",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\HR-002.json",
+      "execution_time_ms": 2.18,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-003",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\HR-003.json",
+      "execution_time_ms": 2.31,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-004",
+      "status": "SUCCESS",
+      "chunks_created": 13,
+      "output_file": "data\\chunks\\HR-004.json",
+      "execution_time_ms": 2.74,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-005",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\HR-005.json",
+      "execution_time_ms": 2.19,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-006",
+      "status": "SUCCESS",
+      "chunks_created": 14,
+      "output_file": "data\\chunks\\HR-006.json",
+      "execution_time_ms": 2.36,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-007",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\HR-007.json",
+      "execution_time_ms": 2.13,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "HR-008",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\HR-008.json",
+      "execution_time_ms": 2.23,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-001",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\OPS-001.json",
+      "execution_time_ms": 2.79,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-002",
+      "status": "SUCCESS",
+      "chunks_created": 14,
+      "output_file": "data\\chunks\\OPS-002.json",
+      "execution_time_ms": 2.71,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-003",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\OPS-003.json",
+      "execution_time_ms": 3.3,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-004",
+      "status": "SUCCESS",
+      "chunks_created": 16,
+      "output_file": "data\\chunks\\OPS-004.json",
+      "execution_time_ms": 2.32,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-005",
+      "status": "SUCCESS",
+      "chunks_created": 14,
+      "output_file": "data\\chunks\\OPS-005.json",
+      "execution_time_ms": 2.48,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-006",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\OPS-006.json",
+      "execution_time_ms": 2.18,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-007",
+      "status": "SUCCESS",
+      "chunks_created": 13,
+      "output_file": "data\\chunks\\OPS-007.json",
+      "execution_time_ms": 1.84,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "OPS-008",
+      "status": "SUCCESS",
+      "chunks_created": 14,
+      "output_file": "data\\chunks\\OPS-008.json",
+      "execution_time_ms": 2.25,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-001",
+      "status": "SUCCESS",
+      "chunks_created": 18,
+      "output_file": "data\\chunks\\SEC-001.json",
+      "execution_time_ms": 2.83,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-002",
+      "status": "SUCCESS",
+      "chunks_created": 13,
+      "output_file": "data\\chunks\\SEC-002.json",
+      "execution_time_ms": 2.18,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-003",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\SEC-003.json",
+      "execution_time_ms": 2.5,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-004",
+      "status": "SUCCESS",
+      "chunks_created": 15,
+      "output_file": "data\\chunks\\SEC-004.json",
+      "execution_time_ms": 2.31,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-005",
+      "status": "SUCCESS",
+      "chunks_created": 16,
+      "output_file": "data\\chunks\\SEC-005.json",
+      "execution_time_ms": 1.36,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-006",
+      "status": "SUCCESS",
+      "chunks_created": 17,
+      "output_file": "data\\chunks\\SEC-006.json",
+      "execution_time_ms": 1.47,
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "document_id": "SEC-007",
+      "status": "SUCCESS",
+      "chunks_created": 13,
+      "output_file": "data\\chunks\\SEC-007.json",
+      "execution_time_ms": 2.01,
+      "error_message": null,
+      "validation_errors": []
+    }
+  ]
+}

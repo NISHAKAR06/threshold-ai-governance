@@ -1,0 +1,709 @@
+{
+  "document_id": "SEC-005",
+  "chunks": [
+    {
+      "chunk_id": "SEC-005_CHUNK_0001",
+      "document_id": "SEC-005",
+      "chunk_index": 1,
+      "text": "Document Id | SEC-005\nTitle | Data Classification and Handling Policy\nDepartment | Information Security\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, HR_MANAGER, OPERATIONS_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nData Classification and Handling Policy\n\n1. Purpose, Governance Objectives, and Corporate Scope\n\nInformation is one of the most critical and strategic enterprise assets owned and stewarded by Threshold Enterprise Systems. As a global technology enterprise building foundation artificial intelligence models, cloud data platforms, and mission-critical software, our organization generates, processes, and maintains diverse datasets ranging from publicly accessible technical whitepapers to highly confidential algorithmic weights and restricted security forensics.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "038dd2aa21867a443fd07cc86a82518f24068dfcae2d666bef4ddee38dbc8176",
+      "created_at": "2026-09-06T17:38:10.714119+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0002",
+      "document_id": "SEC-005",
+      "chunk_index": 2,
+      "text": "The purpose of this Data Classification and Handling Policy is to establish a standardized, consistent, and organization-wide data classification scheme and operational handling rules across all corporate operating environments in India, the United States, the United Kingdom, and Singapore. This policy ensures that information assets receive protection commensurate with their sensitivity, business impact, and legal criticality. This policy applies universally to all electronic and physical information created, received, maintained, transmitted, or disposed of by Threshold Enterprise Systems. It binds all business units, functional departments, automated software pipelines, third-party contractors, and technological platforms.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "9184ddb84cdb0b07ac767bfe237caa5a815b1b0ed37de4ce3af80861a8a4862c",
+      "created_at": "2026-09-06T17:38:10.714180+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0003",
+      "document_id": "SEC-005",
+      "chunk_index": 3,
+      "text": "2. Data Roles and Custodianship Model To ensure clear accountability throughout the information lifecycle, Threshold Enterprise Systems defines three distinct governance roles: 1. Data Owners: Senior department leaders or functional managers who hold primary business authority over specific categories of enterprise data (e.g., the VP of Human Resources owns employee records; the Head of AI Engineering owns foundation model weights; the VP of Finance owns fiscal ledgers). Data Owners are responsible for assigning classification levels, approving access entitlements, and authorizing data sharing.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "8f184236aef33add5296aa0f4f1822b9e8cce09c097ec6853e3ee0837de1ef2b",
+      "created_at": "2026-09-06T17:38:10.714218+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0004",
+      "document_id": "SEC-005",
+      "chunk_index": 4,
+      "text": "2. Data Custodians: Technical teams, database administrators, cloud infrastructure architects, and system administrators who maintain the technological systems, storage repositories, and transmission networks where data resides. Data Custodians are responsible for implementing the technical controls mandated by Data Owners, including encryption, backup scheduling, access logging, and secure destruction. 3. Data Users: All employees, contractors, and authorized systems that access, read, or process enterprise data to perform their legitimate professional duties. Data Users are accountable for handling data strictly in compliance with its designated classification tier.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "2e9b6aa5e4929eaed17515cea3edbb8e4890455db220cef2f1d513f76ad61929",
+      "created_at": "2026-09-06T17:38:10.714253+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0005",
+      "document_id": "SEC-005",
+      "chunk_index": 5,
+      "text": "3. The Four Enterprise Data Classifications Threshold Enterprise Systems enforces exactly four standardized data classifications across all physical and digital records, identical to our enterprise metadata schema: 1. PUBLIC 2. INTERNAL 3. CONFIDENTIAL 4. RESTRICTED All data created or ingested within the enterprise must be explicitly categorized under one of these four tiers. In the absence of an explicit classification label, data must be treated as INTERNAL by default until formal classification is established.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "9d8b2640db00eaece381106364e0233a81706d7ba3db658fde3f27d03a4616f0",
+      "created_at": "2026-09-06T17:38:10.714284+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0006",
+      "document_id": "SEC-005",
+      "chunk_index": 6,
+      "text": "4. Classification Tier 1: PUBLIC Data - Description: Information that has been formally approved for unrestricted public distribution, external release, and general dissemination. Unauthorized disclosure causes zero harm to enterprise operations, client trust, or corporate reputation. - Examples: Published marketing collateral, press releases, corporate blog posts, public customer-facing API documentation, open-source software releases licensed under approved licenses, and publicly posted career opportunities. - Storage Expectations: May reside on public content delivery networks (CDNs), publicly accessible website servers, external marketing document libraries, or internal repositories. - Sharing Restrictions: Unrestricted. May be shared freely with external parties, customers, partners, and the media without non-disclosure agreements (NDAs). - Access Requirements: No authentication or authorization controls required.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "c6955f798baea68abd6d220f1deee105b1f8b84909186a04f8fc048fe868c47f",
+      "created_at": "2026-09-06T17:38:10.714316+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0007",
+      "document_id": "SEC-005",
+      "chunk_index": 7,
+      "text": "- Access Requirements: No authentication or authorization controls required. - Handling Responsibilities: Must not be altered without formal review by Corporate Communications or Legal. Must still be protected against unauthorized website defacement or integrity tampering. 5. Classification Tier 2: INTERNAL Data - Description: Information intended exclusively for the internal use of authenticated employees, contractors, and authorized personnel of Threshold Enterprise Systems. Unauthorized disclosure could cause minor operational friction, localized embarrassment, or administrative inconvenience, but does not threaten competitive standing or client confidentiality. - Examples: General employee handbooks (HR-001), standard operating procedures, non-sensitive internal wiki pages, organizational charts, company-wide town hall slides, internal architectural standards, and team meeting summaries.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "369f8cc8d37e014259128515704841aee4d84c250cdc11904d1bed130a3b7d78",
+      "created_at": "2026-09-06T17:38:10.714347+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0008",
+      "document_id": "SEC-005",
+      "chunk_index": 8,
+      "text": "- Storage Expectations: Enterprise intranet portals, internal Microsoft 365 / Google Workspace tenants, secured Confluence spaces, and corporate cloud document management systems. - Sharing Restrictions: Restricted strictly to authenticated corporate personnel. External sharing is prohibited unless authorized by a People Manager and protected by a signed corporate non-disclosure agreement (NDA). - Access Requirements: Valid corporate enterprise single sign-on (SSO) credentials and active employee status. Granted broadly across standard enterprise roles. - Handling Responsibilities: Transmission over public networks must be encrypted via TLS 1.3. Must bear internal visual markers ('INTERNAL USE ONLY'). May not be copied to personal unmanaged devices.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "1e7e66ad2c2eb5664535891bde29a37a3711142bf6cb541841d67c3717a78b4e",
+      "created_at": "2026-09-06T17:38:10.714379+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0009",
+      "document_id": "SEC-005",
+      "chunk_index": 9,
+      "text": "6. Classification Tier 3: CONFIDENTIAL Data - Description: Highly sensitive business, technical, financial, or personnel information whose unauthorized disclosure, modification, or destruction could cause significant financial loss, legal liability, competitive disadvantage, regulatory penalties, or damage to client trust. - Examples: Proprietary AI model training recipes, algorithmic weights architectures, unreleased software source code, departmental operational budgets, customer contract terms and negotiated pricing, employee compensation data, performance reviews (HR-006), employee personal data (HR-007), and enterprise AI risk scorecards. - Storage Expectations: Restricted departmental partitions in cloud storage, encrypted databases, access-controlled code repositories (GitLab/GitHub Enterprise with branch protections), and compartmentalized Workday human capital records.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "5ec33b13a4ff96cb9d8bc7203f85b760cd45ad08fd52214f264ccade4e1ac482",
+      "created_at": "2026-09-06T17:38:10.714412+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0010",
+      "document_id": "SEC-005",
+      "chunk_index": 10,
+      "text": "- Sharing Restrictions: Strictly restricted to authorized departments, specific management tiers, or explicitly permitted technical personnel holding an active need-to-know. External sharing requires executive approval, strict NDA, and legal review. - Access Requirements: Department-aware role-based access control (RBAC). Workforce members holding the general EMPLOYEE role are prohibited from retrieving or viewing departmental CONFIDENTIAL records outside their assigned operational domain. - Handling Responsibilities: Mandatory AES-256 encryption at rest. Mandatory TLS 1.3 encryption in transit. Data Loss Prevention (DLP) monitoring enabled across email, web gateways, and cloud endpoints. Watermarking enforced on downloaded documents.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "e896190cbd259fb53a09b1bcfdf3422ac22759d8208fbf748c06de84d5ffe785",
+      "created_at": "2026-09-06T17:38:10.714444+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0011",
+      "document_id": "SEC-005",
+      "chunk_index": 11,
+      "text": "7. Classification Tier 4: RESTRICTED Data - Description: The highest sensitivity tier within Threshold Enterprise Systems. Information of extreme criticality whose unauthorized disclosure or compromise would cause catastrophic, irreparable damage to the enterprise, including severe regulatory sanctions, criminal liability, total loss of customer trust, or severe breach of foundation security. - Examples: Active cybersecurity incident response forensics and threat intelligence dossiers (SEC-004), enterprise master cryptographic root keys and HSM credentials, hardware token seeds, production administrative credentials and break-glass procedures (SEC-007), material non-public financial information (MNPI) prior to public earnings release, executive merger and acquisition (M&A) target evaluations, and privileged legal defense communications.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "c1be5e7f31cbe98cf610bd6acfd9854e53057982466a11e5f7e53f77e0840e21",
+      "created_at": "2026-09-06T17:38:10.714475+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0012",
+      "document_id": "SEC-005",
+      "chunk_index": 12,
+      "text": "- Storage Expectations: Dedicated air-gapped partitions, Hardware Security Modules (HSMs), or high-security encrypted vaults with zero standing privileges, multi-factor hardware authorization, and continuous session auditing. - Sharing Restrictions: Absolutely prohibited from external sharing, public disclosure, or broad internal dissemination. Access is restricted strictly to explicitly named individuals holding vetted security clearance (SECURITY_ENGINEER, ADMIN) under strict dual-custody authorization. - Access Requirements: Explicit role authorization, step-up hardware authentication (FIDO2), and just-in-time elevation. Implicit, default, or inherited access is strictly blocked. - Handling Responsibilities: Envelope encryption using customer-managed keys (CMK) in dedicated HSMs. Copying, printing, screen capturing, and downloading are disabled by policy. All access attempts, reads, and modifications generate immutable, real-time SIEM alerts.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "bc9a285b6bc5cff6a804b1fec7e0891c56a93e01e61faab68289079a3e97df5e",
+      "created_at": "2026-09-06T17:38:10.714508+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0013",
+      "document_id": "SEC-005",
+      "chunk_index": 13,
+      "text": "8. Mandatory Data Labeling and Metadata Tagging Standards All digital documents, electronic spreadsheets, presentations, database tables, and code repositories must be labeled with their appropriate classification tier: - Visual Document Markings: Digital files must incorporate a visible classification header and footer banner in bold uppercase text: e.g., 'CLASSIFICATION: CONFIDENTIAL - DEPARTMENTAL ACCESS RESTRICTIONS APPLY'. - Automated Metadata Tagging: Enterprise productivity tools automatically inject classification metadata attributes into document headers and file schemas upon creation. These metadata tags are evaluated by automated DLP engines and downstream AI retrieval systems to enforce access filtering at search time. - Code Repositories: Software repositories must specify classification levels within their repository configuration metadata files and README headers.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "bac76ca78a75b83585cf2ed920540e1377c785d7f1e3c43dad34ff0510787223",
+      "created_at": "2026-09-06T17:38:10.714540+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0014",
+      "document_id": "SEC-005",
+      "chunk_index": 14,
+      "text": "- Code Repositories: Software repositories must specify classification levels within their repository configuration metadata files and README headers. 9. Data Retention Schedules, Archiving, and Cryptographic Disposal Data must be retained only for as long as necessary to satisfy legitimate business, contractual, or statutory requirements, after which it must be disposed of securely: - Retention Baselines: General operational records: 3 years post-obsolescence. Financial, tax, and contractual records: 7 years in compliance with statutory audit standards. Critical security logs: minimum 12 months in active indexing, 3 years in cold archival storage.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "d91ecdca187200262f8183805021a376fd38339366ed23e58f4aad94b431d534",
+      "created_at": "2026-09-06T17:38:10.714577+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0015",
+      "document_id": "SEC-005",
+      "chunk_index": 15,
+      "text": "- Secure Cryptographic Disposal: Digital media and records must be destroyed in accordance with NIST SP 800-88 Guidelines for Media Sanitization. Media sanitization requires cryptographic erase (instant erasure of decryption keys) for cloud volumes and multi-pass magnetic overwrite or physical degaussing/shredding for retired physical hardware. - Certificate of Destruction: High-security storage media housing CONFIDENTIAL or RESTRICTED records must receive a formal Certificate of Destruction issued by certified disposal vendors and logged by Information Security.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "a9a03190918019ae82a2969677547086a979acd48d1d17ecbb18681a119c157c",
+      "created_at": "2026-09-06T17:38:10.714608+00:00"
+    },
+    {
+      "chunk_id": "SEC-005_CHUNK_0016",
+      "document_id": "SEC-005",
+      "chunk_index": 16,
+      "text": "10. Data Spill Incident Reporting and Containment A 'Data Spill' occurs whenever classified data is placed onto an unapproved system, transmitted across an unencrypted channel, or accessed by unauthorized individuals (e.g., transmitting CONFIDENTIAL data over unencrypted email or placing RESTRICTED data on a general internal wiki). Any workforce member who discovers or suspects a data spill must report the event immediately to the Information Security Operations Center (ISOC) via security-incident@threshold-systems.internal. The ISOC initiates immediate containment within one hour, purging unauthorized files, revoking cached sessions, sanitizing search indexes, and executing forensic validation in accordance with the Security Incident Response Policy (SEC-004).",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "HR_MANAGER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Data Classification and Handling Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Core enterprise policy defining the four data classifications (PUBLIC, INTERNAL, CONFIDENTIAL, RESTRICTED), data ownership roles, mandatory labeling banners, encryption mandates, retention schedules, and cryptographic disposal standards.",
+        "keywords": [
+          "data classification",
+          "public",
+          "internal",
+          "confidential",
+          "restricted",
+          "data handling",
+          "data ownership",
+          "encryption at rest",
+          "data retention",
+          "cryptographic disposal"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/data_classification_and_handling_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "2fcd2ab528012d5da74209424c5387430a4eb69e572486b490d08c78b37dddb1",
+      "chunk_content_hash": "31235149b9aa050832c592134d2900ddd9298708b1e207374851778b3993d5c8",
+      "created_at": "2026-09-06T17:38:10.714639+00:00"
+    }
+  ]
+}

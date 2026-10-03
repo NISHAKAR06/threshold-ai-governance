@@ -1,0 +1,860 @@
+{
+  "document_id": "AIG-001",
+  "chunks": [
+    {
+      "chunk_id": "AIG-001_CHUNK_0001",
+      "document_id": "AIG-001",
+      "chunk_index": 1,
+      "text": "THRESHOLD ENTERPRISE SYSTEMS\nResponsible AI Policy\nDocument Id\nAIG-001\nTitle\nResponsible AI Policy\nDepartment\nEnterprise Governance\nClassification\nINTERNAL\nVersion\n1.0\nStatus\nACTIVE\nEffective Date\n2026-01-15\nDocument Type\nPOLICY\nAllowed Roles\nEMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER,\nOPERATIONS_MANAGER, HR_MANAGER, ADMIN\n\n1. Executive Summary and Enterprise Purpose\n\nThreshold Enterprise Systems ('Threshold' or 'the Company') is committed to pioneering advanced, secure, and\ntransformative artificial intelligence technologies while maintaining uncompromising standards of corporate ethics,\nregulatory compliance, and societal trust.\n\nThis Responsible AI Policy serves as the foundational umbrella governance document for all artificial intelligence, machine\nlearning, predictive analytics, and generative AI initiatives undertaken across the enterprise.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "f3e48c351cb7095d0f253b224011d869551a2406257a0762b5cb8f5fb7a53a8b",
+      "created_at": "2026-09-06T17:38:10.469552+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0002",
+      "document_id": "AIG-001",
+      "chunk_index": 2,
+      "text": "It articulates the core ethical\nprinciples, operational mandates, and technical guardrails that govern every stage of the artificial intelligence lifecycle—from\nexploratory research and conceptual design, through dataset curation and model training, to production deployment,\ncontinuous monitoring, and eventual retirement.\n\nAs modern enterprises increasingly embed automated intelligence into core workflows, the potential for systemic risk,\nalgorithmic bias, privacy erosion, and security compromise accelerates.\n\nThis policy establishes an enterprise-wide operating\nsystem for ethical AI, ensuring that every algorithmic decision, automated recommendation, and generated response\nadheres strictly to our values of human dignity, transparency, equity, and accountability.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "357c609e85b55e97f8c5e23cd2d24ac6e533b45de8c81dc81ca28eb875e8ddc3",
+      "created_at": "2026-09-06T17:38:10.469643+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0003",
+      "document_id": "AIG-001",
+      "chunk_index": 3,
+      "text": "2. Scope and Jurisdictional Applicability\n\nThis policy applies universally to all employees, contractors, consultants, temporary personnel, vendors, and business\npartners operating on behalf of Threshold Enterprise Systems across all global entities, including our corporate\nheadquarters and regional delivery hubs in India, the United States, the United Kingdom, and Singapore.\nThe scope encompasses:\n\n1. Internally Engineered Models: All predictive, diagnostic, prescriptive, and generative models designed, trained,\n\nfine-tuned, or evaluated by Threshold engineering squads.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "c07657e76dc3b6d95ac0f6b854ba5f3b900d19288d0f838a47a4f904c106196b",
+      "created_at": "2026-09-06T17:38:10.469695+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0004",
+      "document_id": "AIG-001",
+      "chunk_index": 4,
+      "text": "fine-tuned, or evaluated by Threshold engineering squads.\n\n2. Third-Party and Commercial AI Services: Commercial off-the-shelf (COTS) AI tools, cloud-hosted foundation model APIs\n\n(e.g., Anthropic, OpenAI, Google Cloud Vertex), and software-as-a-service (SaaS) platforms featuring embedded AI\ncapabilities.\n\n3. Customer-Facing AI Capabilities: Algorithmic features, automated customer support agents, and predictive engines\n\nintegrated into commercial products delivered to external clients.\n\n4. Internal Operational AI: Automated tools used to optimize internal workflows, including IT service management, talent\n\nacquisition, financial modeling, and software development assistants.\n\nNo AI system may be engineered or operated within Threshold without explicit certification of compliance with this policy\nand its subordinate governance frameworks.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "7eea96de72244eac18c68a8a770e91497db23b6492215eaeb4af8e9787a13dec",
+      "created_at": "2026-09-06T17:38:10.469733+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0005",
+      "document_id": "AIG-001",
+      "chunk_index": 5,
+      "text": "3. The Eleven Core Principles of Responsible AI\n\nEvery artificial intelligence system conceived, built, or deployed at Threshold must strictly embody eleven foundational\nprinciples:\nPrinciple 1 - Accountability and Human Responsibility: Artificial intelligence systems are technical instruments, not\nautonomous legal persons.\n\nClear human accountability must be established for every algorithmic output, decision, and\nrecommendation.\n\nFor every deployed AI application, an identified Executive Sponsor and Lead AI Engineer bear ultimate\nresponsibility for its operational integrity and business impact.\n\nPrinciple 2 - Transparency and Open Governance: Stakeholders, users, and affected parties possess a fundamental right to\nunderstand when they are interacting with an AI system, how the system operates, and what data underpins its outputs.\n\nHidden, deceptive, or masqueraded AI systems are categorically prohibited.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "a3118866ad7c53c4972886b3ae1dac2cc546556843df132381b8ccf0d30e8832",
+      "created_at": "2026-09-06T17:38:10.469788+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0006",
+      "document_id": "AIG-001",
+      "chunk_index": 6,
+      "text": "Hidden, deceptive, or masqueraded AI systems are categorically prohibited.\n\nPrinciple 3 - Algorithmic Fairness and Non-Discrimination: AI systems must be designed and audited to prevent unjust bias,\ndisparate impact, or discriminatory outcomes based on protected characteristics, including race, gender, age, religion,\ndisability, sexual orientation, caste, or socioeconomic background.\n\nContinuous statistical auditing for demographic parity\nand equalized odds is mandatory.\n\nPrinciple 4 - Data Privacy and Governance: AI systems must respect individual data privacy rights in strict alignment with\nglobal legal frameworks and our internal AI Data Privacy Policy (AIG-006).\n\nSystems must enforce data minimization,\npurpose limitation, sensitive data scrubbing, and robust de-identification across training and inference corpora.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "d6ab2d3fc1bbb2d2bfddb5646fa3c1a3b95206ac66450a98afcf15137ef90fa8",
+      "created_at": "2026-09-06T17:38:10.469831+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0007",
+      "document_id": "AIG-001",
+      "chunk_index": 7,
+      "text": "Principle 5 - Cybersecurity and System Robustness: AI models must be fortified against adversarial manipulation, including\nprompt injection, model inversion, data poisoning, evasion attacks, and unauthorized weight extraction.\n\nDefensive\narchitecture must adhere to our Prompt Security Policy (AIG-007) and Information Security Architecture Policy (SEC-002).\n\nPrinciple 6 - Human Oversight and Agency: Automated systems must preserve human autonomy.\n\nConsequential,\nhigh-impact decisions affecting employee careers, legal standing, physical safety, or financial well-being must never be fully\nautomated without qualified, mandatory human review in accordance with our Human-in-the-Loop Review Policy (AIG-005).\n\nPrinciple 7 - Technical Reliability, Safety, and Reproducibility: AI models must demonstrate consistent, dependable, and\nstatistically sound performance across varying operational conditions.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "6e5c8f8da457f8447a750556ecea8e41b7130bbd1dfde13b221ee7432c3919e7",
+      "created_at": "2026-09-06T17:38:10.469866+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0008",
+      "document_id": "AIG-001",
+      "chunk_index": 8,
+      "text": "Rigorous pre-deployment validation, stress testing,\ndeterministic seed tracking, and failure mode analysis are required.\n\nPrinciple 8 - Explainability, Interpretability, and Contestability: Where an AI system generates recommendations that\ninfluence individuals, the system must provide clear, intelligible rationale explaining how the output was derived.\n\nAffected\nindividuals must be provided a practical mechanism to challenge or contest algorithmic decisions.\n\nPrinciple 9 - Proactive Risk Management: AI development must follow a risk-based posture aligned with the AI Risk\nClassification Framework (AIG-002).\n\nGovernance controls, testing rigor, and executive oversight scale directly with the\npotential severity of harm.\n\nPrinciple 10 - Continuous Telemetry and Monitoring: Deployed AI models are subject to continuous operational telemetry,\nconcept drift detection, and safety monitoring in accordance with the AI Model Monitoring Policy (AIG-008).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "fc6a7655e242142402f0aa45f3eb591e4d43aaadd2e8193b7d51672597807b6a",
+      "created_at": "2026-09-06T17:38:10.469898+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0009",
+      "document_id": "AIG-001",
+      "chunk_index": 9,
+      "text": "Systems that\ndegrade beyond predefined safety thresholds must be automatically throttled or disabled.\n\nPrinciple 11 - Responsible and Verifiable Generative AI: Generative models, Large Language Models (LLMs), and\nretrieval-augmented generation (RAG) systems must enforce grounding, citation provenance, factual verification, and\nguardrails to prevent hallucinations and misinformation, complying with AIG-004.\n\n4. Enterprise Governance Roles and Responsibilities\n\nResponsible AI governance is a shared organizational responsibility requiring active collaboration across engineering,\nmanagement, security, and executive leadership:\n\n- General Employees: Must use approved AI tools responsibly and ethically, verify AI-generated outputs prior to work\nintegration, never input CONFIDENTIAL or RESTRICTED data into unapproved tools, and report anomalous AI behaviors\nimmediately.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "e674d94a6c2207f6f872bbb35235a4dfdb83ecd49086a5ec7bb5bb0d833f5025",
+      "created_at": "2026-09-06T17:38:10.469933+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0010",
+      "document_id": "AIG-001",
+      "chunk_index": 10,
+      "text": "- AI Engineers and Data Scientists: Responsible for incorporating ethics and privacy by design into data collection, feature\nengineering, model architecture, and training routines.\n\nMust maintain comprehensive Model Cards, evaluate disparate\nimpact, conduct adversarial robustness testing, and integrate automated monitoring telemetry.\n\n- Engineering and Product Managers: Ensure that all AI initiatives within their domain are formally registered in the\nEnterprise AI Registry, properly risk-classified under AIG-002, and granted formal approval under AIG-003 prior to\ndeployment.\n\nMust allocate sufficient project time and resources for responsible AI validation.\n\n- Security Engineers: Conduct adversarial red-teaming, prompt injection resilience assessments, infrastructure threat\nmodeling, and code security scans for all AI deployment pipelines.\n\nPartner with AI squads to remediate vulnerabilities under\nAIG-007.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "34c69fa610022ec070a4acef52072d9418b21d0ed49bc9347989e3335de38fc3",
+      "created_at": "2026-09-06T17:38:10.469966+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0011",
+      "document_id": "AIG-001",
+      "chunk_index": 11,
+      "text": "Partner with AI squads to remediate vulnerabilities under\nAIG-007.\n\n- Enterprise AI Ethics and Governance Board (AIEGB): A cross-functional executive body comprising representatives from\nAI Engineering, Information Security, Legal Counsel, Human Resources, and Corporate Operations.\n\nThe AIEGB reviews\nHIGH and CRITICAL risk AI proposals, establishes enterprise ethical standards, evaluates exception requests, and\narbitrates complex ethical dilemmas.\n\n- System Administrators: Configure, maintain, and monitor secure AI runtime environments, vector database clusters, model\nserving endpoints, and role-based access control filters.\n\nEnsure audit logs are captured and preserved in compliance with\ncorporate data retention schedules.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "214a07fa4f0365dddbe23305b5c08c4b492e8d26aea99eb1089f9d498e7e7bdf",
+      "created_at": "2026-09-06T17:38:10.469997+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0012",
+      "document_id": "AIG-001",
+      "chunk_index": 12,
+      "text": "Ensure audit logs are captured and preserved in compliance with\ncorporate data retention schedules.\n\n5. Mandatory Technical and Procedural Controls\n\nAll enterprise AI initiatives must implement the following mandatory controls across their operational lifecycle:\n\n1. AI Use Case Registration: Every project utilizing machine learning or generative AI must be registered in the centralized\n\nEnterprise AI Registry prior to architectural development.\n\n2. Standardized Model Cards and Datasheets: Every model promoted to staging must be accompanied by an approved\n\nModel Card detailing intended use cases, training dataset provenance, performance metrics, known failure modes, and\ndemographic fairness evaluation.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "6efd50f896bb59602a7df25a8556d58447f1e44db182775e58ff9959d84dc0a8",
+      "created_at": "2026-09-06T17:38:10.470028+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0013",
+      "document_id": "AIG-001",
+      "chunk_index": 13,
+      "text": "Model Card detailing intended use cases, training dataset provenance, performance metrics, known failure modes, and\ndemographic fairness evaluation.\n\n3. Secure Model Repository: All production model weights, container images, and deployment manifests must be stored in\n\nthe enterprise secure model registry with cryptographic signature verification and vulnerability scanning.\n\n4. Role-Based Access Controls: Access to model training environments, vector stores, inference APIs, and administrative\n\nconsoles must strictly adhere to the Principle of Least Privilege and Role-Based Access Control (RBAC) definitions.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "4abb3546d664e5a1af573a4d517b959f4c047edf38c7b9f9018b137b9ec551f6",
+      "created_at": "2026-09-06T17:38:10.470061+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0014",
+      "document_id": "AIG-001",
+      "chunk_index": 14,
+      "text": "consoles must strictly adhere to the Principle of Least Privilege and Role-Based Access Control (RBAC) definitions. 5. Immutable Audit Logging: All inference queries, model outputs, human reviewer interventions, and monitoring alerts must generate immutable audit logs stored in centralized SIEM repositories for a minimum of seven (7) years. 6. Prohibited AI Systems and Unacceptable Risk Categories",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "99285f0a7cb61fc1ce4e43fc21728bde198e51a7f35805a9772baa96021ec9f6",
+      "created_at": "2026-09-06T17:38:10.470091+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0015",
+      "document_id": "AIG-001",
+      "chunk_index": 15,
+      "text": "6. Prohibited AI Systems and Unacceptable Risk Categories\n\nThreshold Enterprise Systems strictly forbids the research, development, procurement, integration, or deployment of AI\nsystems falling into unacceptable risk categories:\n- Real-Time Biometric Surveillance: Automated facial recognition or biometric tracking in public spaces or general corporate\nfacilities without explicit legal mandate.\n- Social Scoring and Mass Behavioral Profiling: Systems designed to score general social trustworthiness, moral conduct, or\npersonal character.\n- Subliminal and Deceptive Manipulation: Systems designed to subconsciously alter human behavior to subvert free will or\ninduce harmful actions.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "582b601deb2a5c6b9e30629a5713687fdb2f9136f60b6634e4ef684fb8500930",
+      "created_at": "2026-09-06T17:38:10.470122+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0016",
+      "document_id": "AIG-001",
+      "chunk_index": 16,
+      "text": "- Exploitative Systems: Systems engineered to identify and exploit vulnerabilities of specific populations (e.g., age, physical\ndisability, economic distress).\n- Fully Autonomous Lethal or Critical Safety Systems: AI applications capable of executing kinetic, physical, or catastrophic\nactions without deterministic human control.\n\n7. Exception Handling and Emergency Escalation",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "e97fb22d32ab822fb9b349394c002d6d21d40e1547f832384bfc73a605a90000",
+      "created_at": "2026-09-06T17:38:10.470153+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0017",
+      "document_id": "AIG-001",
+      "chunk_index": 17,
+      "text": "7. Exception Handling and Emergency Escalation\n\nExceptions to any provision of this Responsible AI Policy are strictly extraordinary and must be granted only with written,\nunanimous concurrence from the Enterprise AI Ethics and Governance Board, Chief Information Security Officer (CISO),\nand Chief Legal Officer.\nException requests must detail the technical justification, compensating safety controls, time-bounded duration (not to\nexceed 90 days), and continuous monitoring mechanisms. Granted exceptions are cataloged in the Enterprise Governance\nRegistry and reviewed monthly.\nAny workforce member who identifies an immediate safety vulnerability, ethical failure, or regulatory breach involving an\nenterprise AI system must immediately notify the AI Incident Response Desk at ai-incident@threshold-systems.internal in\naccordance with the AI Incident Management Policy (AIG-009).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "41d61eea76af0c61e22e4c3718f895413bdb3a12d3e34e2c0d9cb4d3230c5eff",
+      "created_at": "2026-09-06T17:38:10.470183+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0018",
+      "document_id": "AIG-001",
+      "chunk_index": 18,
+      "text": "8. Cross-Document Governance Framework References\n\nThis policy operates as the sovereign governing authority over the following interconnected AI governance documents:\n- AIG-002: AI Risk Classification Framework (Defines risk tiers, impact criteria, and required controls).\n- AIG-003: AI Model Approval Policy (Establishes the technical and governance approval gates).\n- AIG-005: Human-in-the-Loop Review Policy (Specifies mandatory human oversight requirements).\n- AIG-008: AI Model Monitoring Policy (Establishes continuous telemetry and drift detection mandates).\n- AIG-009: AI Incident Management Policy (Governs detection, containment, and recovery for AI failures).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "dbd0f505f60d33729a3199b071a6e00fe0474215ab8f9e813b175cf2b35b41cd",
+      "created_at": "2026-09-06T17:38:10.470214+00:00"
+    },
+    {
+      "chunk_id": "AIG-001_CHUNK_0019",
+      "document_id": "AIG-001",
+      "chunk_index": 19,
+      "text": "9. Compliance, Enforcement, and Document Administration\n\nAdherence to this Responsible AI Policy is mandatory for all personnel. Non-compliance, including deploying unapproved\nshadow AI models, bypassing risk reviews, or suppressing algorithmic safety failures, constitutes a severe security and\ngovernance violation subject to disciplinary action up to and including immediate termination of employment, revocation of\ntechnical privileges, and potential civil or criminal legal liability under applicable statutes.\nThis policy is owned by the Enterprise AI Ethics and Governance Board and administered by the Information Security GRC\nteam. It is reviewed annually, or immediately upon the enactment of material AI regulatory legislation (e.g., EU AI Act, NIST\nAI RMF updates, or national AI safety guidelines).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Responsible AI Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Top-level enterprise AI policy defining core principles for responsible AI including accountability, transparency, fairness, privacy, security, human oversight, reliability, explainability, risk management, monitoring, and generative AI governance.",
+        "keywords": [
+          "responsible ai",
+          "ethical ai",
+          "accountability",
+          "transparency",
+          "algorithmic fairness",
+          "human oversight",
+          "explainability",
+          "risk management",
+          "generative ai",
+          "monitoring"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/responsible_ai_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "7d6aebc0c617e3802440f0a55e682644e7a1db8e9e17b57a3fe7b5dac81fde7e",
+      "chunk_content_hash": "4495e549a56a1d5cd1d67fff8e2f72b8d8f910b36dbe0827f50d70aa8e28aa17",
+      "created_at": "2026-09-06T17:38:10.470245+00:00"
+    }
+  ]
+}

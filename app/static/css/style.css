@@ -4,6 +4,10 @@
 @import url('review.css');
 @import url('analytics.css');
 @import url('settings.css');
+@import url('search.css');
+@import url('agent.css');
+@import url('evaluation.css');
+@import url('monitoring.css');
 /* ============================================================
    THRESHOLD AI GOVERNANCE PLATFORM — CORE STYLES
    style.css — Variables · Reset · Typography · Layout · Components

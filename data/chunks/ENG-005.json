@@ -1,0 +1,677 @@
+{
+  "document_id": "ENG-005",
+  "chunks": [
+    {
+      "chunk_id": "ENG-005_CHUNK_0001",
+      "document_id": "ENG-005",
+      "chunk_index": 1,
+      "text": "Document Id | ENG-005\nTitle | Database Access Policy\nDepartment | Engineering\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nDatabase Access Policy\n\n1. CONFIDENTIAL CLASSIFICATION AND PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED TO TECHNICAL ENGINEERING AND SECURITY ROLES ***\n\nThis document establishes the proprietary governance framework, connection standards, least-privilege role definitions, and administrative access controls governing all relational databases, distributed document stores, vector databases, and analytical data warehouses at Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is restricted to authorized technical roles (ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN). Workforce members holding the general EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "ee6c51fdb7bd26d3fb5d8765cd3bf458b8bd585980d85f0273263c4c7723784f",
+      "created_at": "2026-09-06T17:38:10.561337+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0002",
+      "document_id": "ENG-005",
+      "chunk_index": 2,
+      "text": "The purpose of this Database Access Policy is to safeguard corporate data assets, preserve database availability and transactional performance, protect customer and employee privacy in alignment with SEC-005 (Data Classification and Handling Policy), and enforce strict zero-trust operational boundaries across development, staging, and production database environments. In accordance with enterprise security mandates, this document explicitly omits live database hostnames, IP addresses, connection strings, administrative passwords, or production credentials, focusing entirely on governance models, permission workflows, and architectural controls.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "7495fabc597c357ea3816abd2e16f2989650bb7874f961dd20b6b510c2a9a49e",
+      "created_at": "2026-09-06T17:38:10.561425+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0003",
+      "document_id": "ENG-005",
+      "chunk_index": 3,
+      "text": "2. Scope and Database Technologies Governed This policy governs all persistent and semi-persistent storage systems deployed across on-premise enclaves and cloud environments in India, the United States, the United Kingdom, and Singapore: 1. Relational Database Management Systems (RDBMS): PostgreSQL, MySQL, and cloud-managed relational databases storing transactional enterprise records. 2. NoSQL and Document Databases: MongoDB, DynamoDB, and Redis clusters storing semi-structured application state, session tokens, and distributed caches.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "d2d5a09a99a3f54858eca7ece526b2ee5f45509c50c5e8a98649ce00636fd238",
+      "created_at": "2026-09-06T17:38:10.561484+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0004",
+      "document_id": "ENG-005",
+      "chunk_index": 4,
+      "text": "3. Specialized Vector Databases: Milvus, Qdrant, Pinecone, and pgvector instances storing high-dimensional semantic embeddings, document chunk vectors, and similarity indexes supporting enterprise RAG pipelines. 4. Analytical Data Warehouses and Lakes: Snowflake, BigQuery, and Parquet data lakes utilized for business intelligence, longitudinal reporting, and model training datasets. 3. Foundational Database Governance Principles All database engineering and administrative activities must strictly embody five core principles: Principle 1 - Principle of Least Privilege: Users, application microservices, and automated daemons must be granted only the minimum necessary permissions required to execute their legitimate business functions.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "eb3df4746f88cfa0f96667bfb835c29da674451dc25eb19eef58fd3821d37842",
+      "created_at": "2026-09-06T17:38:10.561547+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0005",
+      "document_id": "ENG-005",
+      "chunk_index": 5,
+      "text": "Principle 2 - Environment Segregation: Complete physical, network, and credential isolation must separate Development (Dev), Testing/Staging (Stage), and Production (Prod) database environments. Production credentials must never exist in non-production environments. Principle 3 - Zero Standing Production Access for Humans: Human engineers must not maintain permanent, static write or direct administrative credentials to production database instances. Direct production access must be ephemeral and just-in-time. Principle 4 - Defense-in-Depth and Encryption: All databases must enforce cryptographic encryption in transit (TLS 1.3 with mandatory certificate verification) and encryption at rest (AES-256 with KMS-managed keys). Principle 5 - Comprehensive Audit Logging: Every administrative query, schema alteration, privileged credential assumption, and high-volume data export must generate immutable audit logs preserved in enterprise SIEM systems.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "c15b57ae3ceb7e73eba2401805061d8c0be9f0b0ef88835b48ab3f0e265659f2",
+      "created_at": "2026-09-06T17:38:10.561594+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0006",
+      "document_id": "ENG-005",
+      "chunk_index": 6,
+      "text": "4. Environment-Specific Access Governance: Dev, Staging, and Production Database access models vary strictly by environment: - Development Environments (Dev): Engineers and AI engineers are granted localized administrative and read/write privileges over isolated development database containers. Dev databases must utilize synthetic test datasets or anonymized sample data. Ingesting unmasked production data into Dev is strictly prohibited. - Staging and Testing Environments (Stage): Staging databases mirror production schema, indexing, and resource configurations to facilitate performance benchmarking, load testing, and migration verification. Read/write access is restricted to automated CI/CD service accounts. Engineers maintain read-only access for debugging.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "daefc9feaf82a5313bbe3f8f68b71bbef31fbaa1f08b52f4f99a07f9d0d25e58",
+      "created_at": "2026-09-06T17:38:10.561636+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0007",
+      "document_id": "ENG-005",
+      "chunk_index": 7,
+      "text": "- Production Environments (Prod): Direct access is exclusively reserved for authenticated microservice application identities. Human access is strictly blocked by default. Temporary access is permitted solely through ephemeral break-glass workflows under SEC-007. 5. Application Service Accounts vs. Human Access Controls Threshold enforces a strict distinction between automated application service accounts and human user interactions: - Microservice Service Accounts: Backend APIs (ENG-001) communicate with databases using dedicated, role-scoped service accounts (e.g., svc-auth-api, svc-rag-retriever). Microservices are granted granular Data Manipulation Language (DML) privileges (SELECT, INSERT, UPDATE, DELETE) restricted to their assigned schemas. Data Definition Language (DDL) permissions (CREATE, ALTER, DROP) are strictly forbidden for application service accounts.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "205aa4cd5590a662043ece0ab288196ab225b74a9f9ed60941eed86e15508d14",
+      "created_at": "2026-09-06T17:38:10.561683+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0008",
+      "document_id": "ENG-005",
+      "chunk_index": 8,
+      "text": "- Ephemeral Human Read-Only Access: When senior engineers require production database inspection for complex diagnostic triage, they must request time-bounded (maximum 2 hours) read-only access through the Privileged Access Management (PAM) portal. Queries must be executed through audited bastion hosts with automated query logging and PII masking. - Production Write and Schema Migration Execution: DDL schema migrations (Alembic) must be executed exclusively through automated CI/CD deployment pipelines following formal approval under ENG-004.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "420072147df2036c00d6e3da7a761b70f11833445eb0967af395a8e5fa0af877",
+      "created_at": "2026-09-06T17:38:10.561723+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0009",
+      "document_id": "ENG-005",
+      "chunk_index": 9,
+      "text": "6. Connection Pooling, Client Concurrency, and Resource Protection To protect production database instances from connection storms, resource starvation, and thread exhaustion, engineering squads must adhere to strict connection pooling rules: - Managed Connection Poolers: All application connections to relational databases must route through enterprise connection poolers (e.g., PgBouncer) operating in transaction pooling mode. - Application-Side Pool Budgets: Python backend services utilizing SQLAlchemy or asyncpg must configure connection pools with explicit constraints: pool_size <= 20 connections per container pod, max_overflow <= 10, and pool_timeout <= 30 seconds. Unbounded connection pools are strictly prohibited. - Query Execution Timeouts: Every application database transaction must enforce strict statement timeouts (maximum 3,000 milliseconds for OLTP queries; maximum 30,000 milliseconds for analytical read queries), automatically terminating rogue long-running queries.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "1e21d6aaa326faf908204bf2de254defbad8ea5a24d9b859259b9f88b4b422ca",
+      "created_at": "2026-09-06T17:38:10.561766+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0010",
+      "document_id": "ENG-005",
+      "chunk_index": 10,
+      "text": "- Database Client Idle Connection Reaping: Idle connections exceeding five (5) minutes must be automatically terminated by server-side poolers to reclaim memory and thread slots. 7. Specialized Database Governance for Vector Stores and RAG Systems Vector databases backing enterprise AI and RAG architectures introduce unique security and access governance requirements: - Metadata Attribute Integrity: Vector embeddings stored in Milvus, Qdrant, or pgvector must retain immutable metadata headers: document_id, classification, department, allowed_roles, and tenant_id, as mandated by AIG-006.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "1e65172387a2c458be6284468b47a8da017857104f9c4b0bfb6f29757c783abd",
+      "created_at": "2026-09-06T17:38:10.561914+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0011",
+      "document_id": "ENG-005",
+      "chunk_index": 11,
+      "text": "- Pre-Filtering Access Enforcement: Application query logic must enforce metadata pre-filtering at the database query layer, ensuring nearest-neighbor similarity calculations are restricted exclusively to chunks matching the user's authenticated roles. Performing post-filtering after vector distance retrieval is strictly prohibited as it risks leaking existence of confidential embeddings through vector index traversal. - Vector Index Quarantine: In the event of a suspected prompt injection poisoning or data leak incident (AIG-009), database administrators must possess pre-scripted automation to instantly isolate or drop specific vector collection partitions without affecting broader platform availability.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "d63e5b709817a47d542a3e8c56743277be693fbd785add3e66973020df2d0927",
+      "created_at": "2026-09-06T17:38:10.562005+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0012",
+      "document_id": "ENG-005",
+      "chunk_index": 12,
+      "text": "- Backup and Snapshot Hygiene: Vector index snapshots and relational database state must be synchronized atomically during scheduled enterprise backup cycles, ensuring disaster recovery restores preserve point-in-time consistency across both vector indexes and relational source registries. 8. Emergency Access and Break-Glass Procedures (SEC-007 Integration) In extraordinary situations where live production database intervention is necessary to resolve a catastrophic Severity 1 system outage under ENG-006, emergency break-glass protocols may be initiated: - Dual-Custody Approval Gate: Break-glass elevation requires concurrent cryptographic authorization from the Incident Commander and an Information Security Lead in compliance with SEC-007.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "29502ce3f86f48b5d47a7307cbe19c67af257c7897ceee655f810cf616728e1e",
+      "created_at": "2026-09-06T17:38:10.562063+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0013",
+      "document_id": "ENG-005",
+      "chunk_index": 13,
+      "text": "- Time-Bounded Ephemeral Credentials: Vault issues dynamically generated, ephemeral credentials that automatically expire and terminate database connections after sixty (60) minutes. All standing access tokens are invalidated immediately upon incident closure. - Full Session Recording: All terminal keystrokes, SQL commands, and database output during break-glass sessions are recorded immutably and reviewed by the Security Operations Center within twenty-four (24) hours. - Automated Data Redaction in Logs: Break-glass bastion proxies automatically mask customer identifiers, payment data, and sensitive employee PII in real-time session audit recordings to maintain SEC-005 data privacy compliance even during emergency operational triage.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "78b134b449890da21467cfe065e1062006104486b88e40710f1f580e21f96402",
+      "created_at": "2026-09-06T17:38:10.562115+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0014",
+      "document_id": "ENG-005",
+      "chunk_index": 14,
+      "text": "9. Periodic Access Certification, Automated Deprovisioning, and Audits Access governance must be continuously validated to prevent permission creep across engineering teams: - Automated Inactivity Deprovisioning: Any human database read credential or PAM role that remains unused for thirty (30) consecutive days is automatically revoked by identity synchronization daemons. - 90-Day Access Certification Audits: Departmental engineering directors must conduct formal quarterly reviews of all database user roles, application service accounts, and PAM entitlements, explicitly re-certifying business justification. - Employee Status Change Synchronization: Upon notification of employee role change or termination from HR (HR-007), all database entitlements and SSH keys are permanently purged within sixty (60) minutes.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "73a9481c06350547aeff0915ec92f94fd1cc5f942811df32f24da840daa7d5bd",
+      "created_at": "2026-09-06T17:38:10.562165+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0015",
+      "document_id": "ENG-005",
+      "chunk_index": 15,
+      "text": "- Continuous Database Activity Monitoring (DAM): Enterprise security daemons monitor all database query patterns continuously, triggering automated high-priority alerts to the SOC when abnormal query volumes, bulk table scans, or unindexed multi-join queries are detected. 10. Compliance References and Inter-Policy Administration Violations of database access rules—including unauthorized query execution, sharing database credentials, or exfiltrating unmasked records—constitute severe security violations subject to immediate revocation and disciplinary action under HR-008. Cross-Document Governance Interconnections: - SEC-002: Access Control Policy (Establishes identity, authentication, and RBAC baselines). - SEC-005: Data Classification and Handling Policy (Governs sensitive data field masking). - SEC-007: Production Access Policy (Regulates break-glass dual-custody elevation). - ENG-001: API Development Guidelines (Enforces connection pooling and query standards).",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "c3ec53f4623a67640002cc76b44483a305274beba07865d59f8254816c69e828",
+      "created_at": "2026-09-06T17:38:10.562224+00:00"
+    },
+    {
+      "chunk_id": "ENG-005_CHUNK_0016",
+      "document_id": "ENG-005",
+      "chunk_index": 16,
+      "text": "- ENG-001: API Development Guidelines (Enforces connection pooling and query standards). - ENG-004: Production Deployment Guide (Governs production database migration approvals).",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Database Access Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential governance policy regulating database access across relational, NoSQL, and vector databases. Enforces environment segregation (Dev, Stage, Prod), least privilege, application service account boundaries (DML only), PgBouncer connection pooling, vector store metadata pre-filtering, and break-glass procedures.",
+        "keywords": [
+          "database access",
+          "confidential",
+          "least privilege",
+          "environment segregation",
+          "service accounts",
+          "connection pooling",
+          "pgbouncer",
+          "vector database governance",
+          "metadata pre-filtering",
+          "break-glass access",
+          "audit logging"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/database_access_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "ed6291d45e51082fa3fde194234ad8adb6e5b7b9a13b66f21d2f95a3ddb30f8d",
+      "chunk_content_hash": "57614b2c8d072cf5f2cb63cd923bdc5d84c536831c311a740e09310ebc0f3b84",
+      "created_at": "2026-09-06T17:38:10.562270+00:00"
+    }
+  ]
+}

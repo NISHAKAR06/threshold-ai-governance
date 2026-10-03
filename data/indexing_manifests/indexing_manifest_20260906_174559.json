@@ -1,0 +1,417 @@
+{
+  "indexing_run_id": "idx_run_cffe6d31",
+  "started_at": "2026-09-06T17:45:55.298405+00:00",
+  "completed_at": "2026-09-06T17:45:59.271044+00:00",
+  "embedding_provider": "mock",
+  "embedding_model": "text-embedding-004",
+  "vector_store_provider": "threshold_enterprise_chunks",
+  "collection_name": "threshold_enterprise_chunks",
+  "total_documents": 40,
+  "total_chunks": 631,
+  "successful_chunks": 631,
+  "failed_chunks": 0,
+  "vectors_upserted": 631,
+  "pipeline_version": "1.0.0",
+  "results": [
+    {
+      "document_id": "AIG-001",
+      "chunks_processed": 19,
+      "chunks_indexed": 19,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 97.35
+    },
+    {
+      "document_id": "AIG-002",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 65.04
+    },
+    {
+      "document_id": "AIG-003",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 63.9
+    },
+    {
+      "document_id": "AIG-004",
+      "chunks_processed": 20,
+      "chunks_indexed": 20,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 73.26
+    },
+    {
+      "document_id": "AIG-005",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 98.15
+    },
+    {
+      "document_id": "AIG-006",
+      "chunks_processed": 20,
+      "chunks_indexed": 20,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 79.33
+    },
+    {
+      "document_id": "AIG-007",
+      "chunks_processed": 19,
+      "chunks_indexed": 19,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 78.99
+    },
+    {
+      "document_id": "AIG-008",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 71.39
+    },
+    {
+      "document_id": "AIG-009",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 85.24
+    },
+    {
+      "document_id": "AIG-010",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 77.44
+    },
+    {
+      "document_id": "ENG-001",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 77.72
+    },
+    {
+      "document_id": "ENG-002",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 81.56
+    },
+    {
+      "document_id": "ENG-003",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 87.52
+    },
+    {
+      "document_id": "ENG-004",
+      "chunks_processed": 14,
+      "chunks_indexed": 14,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 81.96
+    },
+    {
+      "document_id": "ENG-005",
+      "chunks_processed": 16,
+      "chunks_indexed": 16,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 82.64
+    },
+    {
+      "document_id": "ENG-006",
+      "chunks_processed": 16,
+      "chunks_indexed": 16,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 84.76
+    },
+    {
+      "document_id": "ENG-007",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 88.37
+    },
+    {
+      "document_id": "HR-001",
+      "chunks_processed": 18,
+      "chunks_indexed": 18,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 116.05
+    },
+    {
+      "document_id": "HR-002",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 86.59
+    },
+    {
+      "document_id": "HR-003",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 93.04
+    },
+    {
+      "document_id": "HR-004",
+      "chunks_processed": 13,
+      "chunks_indexed": 13,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 89.87
+    },
+    {
+      "document_id": "HR-005",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 92.45
+    },
+    {
+      "document_id": "HR-006",
+      "chunks_processed": 14,
+      "chunks_indexed": 14,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 95.31
+    },
+    {
+      "document_id": "HR-007",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 105.88
+    },
+    {
+      "document_id": "HR-008",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 99.12
+    },
+    {
+      "document_id": "OPS-001",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 109.97
+    },
+    {
+      "document_id": "OPS-002",
+      "chunks_processed": 14,
+      "chunks_indexed": 14,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 109.82
+    },
+    {
+      "document_id": "OPS-003",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 125.79
+    },
+    {
+      "document_id": "OPS-004",
+      "chunks_processed": 16,
+      "chunks_indexed": 16,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 105.54
+    },
+    {
+      "document_id": "OPS-005",
+      "chunks_processed": 14,
+      "chunks_indexed": 14,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 109.95
+    },
+    {
+      "document_id": "OPS-006",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 114.51
+    },
+    {
+      "document_id": "OPS-007",
+      "chunks_processed": 13,
+      "chunks_indexed": 13,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 105.28
+    },
+    {
+      "document_id": "OPS-008",
+      "chunks_processed": 14,
+      "chunks_indexed": 14,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 108.31
+    },
+    {
+      "document_id": "SEC-001",
+      "chunks_processed": 18,
+      "chunks_indexed": 18,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 135.94
+    },
+    {
+      "document_id": "SEC-002",
+      "chunks_processed": 13,
+      "chunks_indexed": 13,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 133.33
+    },
+    {
+      "document_id": "SEC-003",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 115.28
+    },
+    {
+      "document_id": "SEC-004",
+      "chunks_processed": 15,
+      "chunks_indexed": 15,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 117.56
+    },
+    {
+      "document_id": "SEC-005",
+      "chunks_processed": 16,
+      "chunks_indexed": 16,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 131.18
+    },
+    {
+      "document_id": "SEC-006",
+      "chunks_processed": 17,
+      "chunks_indexed": 17,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 117.0
+    },
+    {
+      "document_id": "SEC-007",
+      "chunks_processed": 13,
+      "chunks_indexed": 13,
+      "chunks_failed": 0,
+      "status": "SUCCESS",
+      "error_message": null,
+      "validation_errors": [],
+      "execution_time_ms": 158.03
+    }
+  ]
+}

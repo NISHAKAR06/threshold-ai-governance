@@ -1,0 +1,564 @@
+{
+  "document_id": "HR-004",
+  "chunks": [
+    {
+      "chunk_id": "HR-004_CHUNK_0001",
+      "document_id": "HR-004",
+      "chunk_index": 1,
+      "text": "THRESHOLD ENTERPRISE SYSTEMS\nRemote Work Policy Version 2.0\nDocument Id\nHR-004\nTitle\nRemote Work Policy Version 2.0\nDepartment\nHuman Resources\nClassification\nINTERNAL\nVersion\n2.0\nStatus\nACTIVE\nEffective Date\n2025-01-01\nDocument Type\nPOLICY\nAllowed Roles\nEMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, OPERATIONS_MANAGER,\nHR_MANAGER, ADMIN\n\n1. Policy Statement, Authority, and Supersession Notice",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "77453d43512aa021b3b8e9170e4ef03ccf169d12cd904c89b2119a49d8685383",
+      "created_at": "2026-09-06T17:38:10.602778+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0002",
+      "document_id": "HR-004",
+      "chunk_index": 2,
+      "text": "1. Policy Statement, Authority, and Supersession Notice\n\n*** AUTHORITATIVE NOTICE: THIS IS THE CURRENT, AUTHORITATIVE REMOTE WORK POLICY ***\nThis document establishes the official and active Remote Work Policy Version 2.0 for Threshold Enterprise Systems,\neffective January 1, 2025. THIS DOCUMENT FORMALLY SUPERSEDES REMOTE WORK POLICY VERSION 1.0\n(DOCUMENT ID: HR-003) IN ITS ENTIRETY. All prior guidelines, remote day quotas, and legacy telecommuting\nprocedures under HR-003 are null and void.\nThreshold Enterprise Systems embraces a modern, flexible hybrid work philosophy that combines the creative synergy of\nin-person collaboration with the focused productivity of remote working. This policy outlines the operating rules, eligibility\nstandards, technological requirements, and behavioral expectations governing hybrid and remote arrangements across all\nglobal business units.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "8bef0723e8e33b838711c04d501dac2bb462f8451e60cba8694b7e3b2548080c",
+      "created_at": "2026-09-06T17:38:10.602873+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0003",
+      "document_id": "HR-004",
+      "chunk_index": 3,
+      "text": "2. Scope and Organizational Applicability\n\nThis policy applies to all full-time regular employees and eligible long-term contractors across all operating entities of\nThreshold Enterprise Systems in India, the United States, the United Kingdom, and Singapore.\nHybrid remote arrangements are available to employees whose job functions can be effectively executed via modern\nenterprise cloud tools, collaborative software repositories, and digital communication platforms without continuous on-site\npresence.\nCertain operational roles requiring physical presence (such as data center hardware technicians, physical security\npersonnel, and executive workplace hospitality teams) may be subject to localized on-site scheduling requirements as\ndesignated by departmental leadership.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "2966edeec4e044b17d9690126409e5da9854a4b99a10ad2394c951bad27e319d",
+      "created_at": "2026-09-06T17:38:10.602931+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0004",
+      "document_id": "HR-004",
+      "chunk_index": 4,
+      "text": "3. AUTHORITATIVE REMOTE WORK ALLOCATION: MAXIMUM 3 DAYS PER WEEK\n\nUNDER THIS AUTHORITATIVE VERSION 2.0 POLICY, ELIGIBLE EMPLOYEES MAY WORK REMOTELY FOR A\nMAXIMUM OF THREE (3) DAYS PER WEEK (60% REMOTE ALLOCATION).\nEmployees are required to work on-site at a designated corporate facility for a minimum of two (2) days per week. This\n3-day remote / 2-day on-site balance represents our corporate standard designed to maintain strong cultural cohesion,\ncross-functional collaboration, and high-performance delivery.\n\nTeams are encouraged to coordinate designated 'In-Office Anchor Days' (e.g., Tuesdays and Thursdays) to maximize the\ncollaborative benefits of shared physical presence during design reviews, architectural planning, and team retrospectives.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "93dc2f7beddb1db5aa213667bb1d3bb17d36d0fd9819ec5771d50c0e12e38135",
+      "created_at": "2026-09-06T17:38:10.602983+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0005",
+      "document_id": "HR-004",
+      "chunk_index": 5,
+      "text": "4. Eligibility and Onboarding Period Requirements\n\nAll full-time employees who have completed an initial thirty (30) days of service and maintain a performance standing of\n'Meets Expectations' or above are eligible to participate in the hybrid remote model.\nDuring the initial thirty-day onboarding window, new hires are encouraged to spend three to four days per week in the office\nto accelerate mentorship, team integration, and cultural orientation. Following this orientation period, the full 3-day remote\nallowance becomes accessible upon manager confirmation in Workday.\nParticipation in remote work is a workplace privilege linked to demonstrated autonomy, dependable communication, and\nconsistent deliverable achievement. If an employee is placed on a formal Performance Improvement Plan (PIP under\nHR-006), their manager, in consultation with HR, may temporarily adjust their on-site requirements to provide direct\ncoaching.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "a93d2f34ab92bb39e340e60f90e446babdc22af4dc969e1adb357b10f2398e7c",
+      "created_at": "2026-09-06T17:38:10.603150+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0006",
+      "document_id": "HR-004",
+      "chunk_index": 6,
+      "text": "5. Remote Work Request and Approval Process\n\nEmployees request their weekly hybrid schedule by submitting the 'Hybrid Working Agreement' in the Workday portal. The\nsubmission identifies the employee's preferred remote days and in-office anchor days.\nPeople Managers review and approve schedule submissions within five (5) business days. Approvals consider team\nworkload distribution, customer coverage across time zones, and project release milestones. Once approved, the schedule\nis recorded in corporate team calendars.\nAd-hoc schedule modifications (such as swapping a remote day due to personal appointments or urgent on-site client visits)\nmay be coordinated directly with the manager via Slack or email without resubmitting the formal Workday agreement,\nprovided reasonable notice is given.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "0ee01de4e087b6d2e7b3661dffbf35236bf524480d9c842ed7a3d6720211dd54",
+      "created_at": "2026-09-06T17:38:10.603212+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0007",
+      "document_id": "HR-004",
+      "chunk_index": 7,
+      "text": "6. Information Security, Zero-Trust Architecture, and Data Handling\n\nRemote work security operates under our enterprise Zero-Trust Security Framework. Employees are custodians of\nproprietary data and must adhere strictly to information security mandates:\n\n1. All corporate tasks must be executed exclusively on company-issued laptops enrolled in Enterprise Endpoint\n\nManagement with active endpoint detection and response (EDR).\n\n2. Multi-Factor Authentication (MFA) via company-approved hardware security keys or authenticator apps is mandatory for\n\nall resource access.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "9f301843632b01d6b015061c0685b17c3ed19fa31c6ab424d2605918f104fe4b",
+      "created_at": "2026-09-06T17:38:10.603280+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0008",
+      "document_id": "HR-004",
+      "chunk_index": 8,
+      "text": "2. Multi-Factor Authentication (MFA) via company-approved hardware security keys or authenticator apps is mandatory for all resource access. 3. Secure remote connectivity utilizes our software-defined perimeter (SDP) and cloud access security broker (CASB). Employees must not disable security agents, VPN tunnels, or firewall rules. 4. Employees must never process, store, or transmit Threshold Enterprise Systems confidential data or customer information on personal laptops, tablets, or mobile devices.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "16f814c232c5e010ca1821a0a51fb7692d355d3d775a4337c1abb5a5b0a2eda3",
+      "created_at": "2026-09-06T17:38:10.603334+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0009",
+      "document_id": "HR-004",
+      "chunk_index": 9,
+      "text": "information on personal laptops, tablets, or mobile devices.\n\n5. When working in public spaces or transit, privacy screens must be used, and voice discussions of proprietary algorithms,\n\nfinancial figures, or confidential client projects are strictly prohibited.\n\n7. Communication Expectations and Core Collaboration Hours\n\nMaintaining effective asynchronous communication and rapid alignment across distributed teams is vital. Remote team\nmembers are expected to observe Core Collaboration Hours from 10:00 AM to 4:00 PM in their local office time zone.\nEmployees must maintain active status on enterprise messaging (Slack) during working hours, respond to direct inquiries in\na timely manner, and keep their Google/Outlook calendar current to reflect meeting availability, focus blocks, and lunch\nperiods.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "78b12061caec2d0262dc9190b9f1eda5944257645b10c16f9f9217bf8d8d82c6",
+      "created_at": "2026-09-06T17:38:10.603387+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0010",
+      "document_id": "HR-004",
+      "chunk_index": 10,
+      "text": "Video presence is encouraged during interactive team rituals, client discussions, and 1-on-1 coaching meetings to foster\ninterpersonal connection, while respecting focus time and digital meeting fatigue.\n\n8. Remote Workspace and Ergonomic Requirements\n\nEmployees are responsible for establishing a designated home working environment that supports productive, focused work\nand professional confidentiality. The workspace should be quiet, well-lit, and ergonomically sound.\nThreshold Enterprise Systems provides each eligible hybrid employee with an annual Home Office Stipend of $750 USD (or\nlocal currency equivalent in INR, GBP, or SGD) to assist with ergonomic chairs, external monitors, keyboards, or\nhigh-speed internet subsidies. Stipend claims are submitted through Concur with accompanying receipts.\nThe company does not assume liability for home utilities, homeowner insurance, or general household operating expenses\nbeyond the designated stipend.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "006ce6eea502d74ec0e73d8c96d7e655db0c2e439cdba8330e38ee00b7dc643e",
+      "created_at": "2026-09-06T17:38:10.603567+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0011",
+      "document_id": "HR-004",
+      "chunk_index": 11,
+      "text": "9. Performance Expectations, Accountability, and Deliverables\n\nPerformance evaluation at Threshold Enterprise Systems is based strictly on measurable business outcomes, code quality,\ncustomer satisfaction, project delivery, and adherence to company values—not physical seat time.\nRemote team members are held to identical quality, velocity, and delivery standards as colleagues working on-site. Regular\nbi-weekly 1-on-1 check-ins with people managers ensure clear alignment on OKRs, active sprint tasks, and long-term\ncareer goals.\nFailure to meet agreed deliverables or maintain professional responsiveness may result in a review of hybrid working\nprivileges in coordination with Human Resources.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "e4af0c72446400645d34127727d036a4aeb0e25a0db0ac027596a4a0bf92577f",
+      "created_at": "2026-09-06T17:38:10.603686+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0012",
+      "document_id": "HR-004",
+      "chunk_index": 12,
+      "text": "10. Full-Time Remote Exceptions and Hardship Accommodations\n\nRequests for full-time remote status (100% remote without on-site anchor days) or working remotely from a foreign\njurisdiction are exceptional and require formal review due to tax nexus, payroll compliance, and legal considerations.\nAn employee seeking a full-time remote exception or temporary medical accommodation must submit a formal application\nthrough the HR Accommodation Portal. Endorsements are required from the Department Vice President, the Head of\nHuman Resources, and the Global Tax/Legal Director.\nTemporary 'Work from Anywhere' provisions allow employees to work from an approved domestic or international location\nfor up to twenty (20) business days per calendar year, subject to manager pre-approval and compliance validation.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "92c7c8d7818ce9d156653ea1936dd83c3afa5356aafc6bebb755e1388dc137de",
+      "created_at": "2026-09-06T17:38:10.603744+00:00"
+    },
+    {
+      "chunk_id": "HR-004_CHUNK_0013",
+      "document_id": "HR-004",
+      "chunk_index": 13,
+      "text": "11. Policy Review, Administration, and Governance\n\nThis policy is owned and administered by the Human Resources Department in consultation with the Enterprise\nGovernance Committee and Information Security leadership. It is subject to bi-annual reviews to evaluate operational\nefficacy, employee sentiment, and emerging collaborative technologies.\nAny questions regarding the interpretation or practical application of Remote Work Policy Version 2.0 should be directed to\nyour departmental HR Business Partner or the HR Operations Helpdesk.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Remote Work Policy Version 2.0",
+        "version": "2.0",
+        "effective_date": "2025-01-01",
+        "summary": "Current authoritative hybrid working policy establishing a maximum of 3 remote work days per week. Supersedes HR-003 and defines zero-trust security requirements, home office stipends, and anchor days.",
+        "keywords": [
+          "remote work",
+          "hybrid working",
+          "3 days remote",
+          "active policy",
+          "authoritative",
+          "supersedes hr-003",
+          "zero-trust",
+          "home office stipend",
+          "in-office anchor days"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/remote_work_policy_v2.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "c6afdda790367ffb865fa32caf27496380450dc26005afcab2433338a3c299d3",
+      "chunk_content_hash": "d03ba53adfbd8b45050efb84de2b2030cb9b6e5c8213c7530200cb4e59c677a6",
+      "created_at": "2026-09-06T17:38:10.603790+00:00"
+    }
+  ]
+}

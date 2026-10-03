@@ -1,0 +1,10 @@
+{
+  "request": "Evaluate whether an intern can export customer transaction datasets",
+  "access_context": {
+    "user_id": "EMP-1102",
+    "role": "SECURITY_OFFICER",
+    "department": "SECURITY",
+    "clearance_level": "CONFIDENTIAL",
+    "is_admin": false
+  }
+}

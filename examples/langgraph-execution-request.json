@@ -1,0 +1,11 @@
+{
+  "request": "What are the data privacy protection requirements under our AI Governance Framework?",
+  "access_context": {
+    "user_id": "EMP-3049",
+    "role": "AUDITOR",
+    "department": "COMPLIANCE",
+    "clearance_level": "INTERNAL",
+    "is_admin": false
+  },
+  "request_id": "req-lg-demo-001"
+}

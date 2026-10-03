@@ -1,0 +1,702 @@
+{
+  "document_id": "AIG-002",
+  "chunks": [
+    {
+      "chunk_id": "AIG-002_CHUNK_0001",
+      "document_id": "AIG-002",
+      "chunk_index": 1,
+      "text": "Document Id | AIG-002\nTitle | AI Risk Classification Framework\nDepartment | Enterprise Governance\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | FRAMEWORK\nAllowed Roles | MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nAI Risk Classification Framework\n\n1. CONFIDENTIAL CLASSIFICATION AND PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED TO MANAGERIAL AND TECHNICAL GOVERNANCE ROLES ***\n\nThis document contains proprietary risk scoring models, threshold matrices, architectural classification formulas, and governance control specifications for Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is restricted to authorized roles (MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN). Workforce members holding the general EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "c237d81a110fad3f4f9ef33325c7f438d66273ed579ead7f92e95fd37fbc75d1",
+      "created_at": "2026-09-06T17:38:10.476898+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0002",
+      "document_id": "AIG-002",
+      "chunk_index": 2,
+      "text": "The purpose of this AI Risk Classification Framework is to establish an objective, repeatable, and mathematically grounded methodology for evaluating, categorizing, and managing the multi-dimensional risks associated with artificial intelligence applications across the enterprise. By establishing four distinct risk tiers—LOW, MEDIUM, HIGH, and CRITICAL—this framework ensures that governance controls, testing rigor, approval gates, and monitoring frequencies scale proportionately with the potential impact on human well-being, organizational continuity, data confidentiality, and legal compliance.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "466fedecdd0212885fc76321f0862ac96f40a6f2198d98419ad1f3164c47ba2d",
+      "created_at": "2026-09-06T17:38:10.476987+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0003",
+      "document_id": "AIG-002",
+      "chunk_index": 3,
+      "text": "2. Multi-Dimensional Risk Assessment Methodology Every artificial intelligence system, model, RAG pipeline, and autonomous agent proposed at Threshold must undergo formal multi-dimensional risk evaluation prior to architectural approval. The risk assessment evaluates eight core dimensions: 1. Data Sensitivity and Classification: Evaluates the classification tier of training, fine-tuning, and inference data under SEC-005 (PUBLIC, INTERNAL, CONFIDENTIAL, or RESTRICTED), including personal data, health records, financial telemetry, or intellectual property.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "d95524ab8be350fe76b9931913f379a9e37d82ccf94e51fe2b50282f421f6c00",
+      "created_at": "2026-09-06T17:38:10.477043+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0004",
+      "document_id": "AIG-002",
+      "chunk_index": 4,
+      "text": "2. User Impact and Affected Population: Evaluates the scale, vulnerability, and nature of the affected user cohort, distinguishing between internal technical staff, general enterprise employees, commercial enterprise clients, and external public consumers. 3. Decision Autonomy and Intervention Latency: Evaluates whether the model operates in a purely advisory capacity, acts with human oversight, or executes automated actions without real-time human intervention. 4. Model Architecture Complexity and Interpretability: Evaluates the opacity of the model (e.g., deterministic linear models vs. multi-billion parameter deep neural networks and black-box foundation models) and the feasibility of generating post-hoc explainability.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "7e7c33d21c1f846be792277be23275a170265cc758f825b4e52f29dceec7791e",
+      "created_at": "2026-09-06T17:38:10.477089+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0005",
+      "document_id": "AIG-002",
+      "chunk_index": 5,
+      "text": "5. External Exposure and Attack Surface: Evaluates whether the model endpoint is isolated on an internal air-gapped subnet, exposed to authenticated enterprise users via SSO, or accessible to unauthenticated public internet traffic. 6. Security and Adversarial Vulnerability: Evaluates susceptibility to prompt injection (AIG-007), data poisoning, model extraction, training data inversion, and hallucination propagation. 7. Potential Harm Reversibility: Evaluates the velocity and friction required to revert an erroneous automated decision before physical, financial, legal, or reputational injury manifests.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "e537aa45fc0fb3f6cc4abe9806aa2608071507d4e6aa46e26f1136f971719a6b",
+      "created_at": "2026-09-06T17:38:10.477132+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0006",
+      "document_id": "AIG-002",
+      "chunk_index": 6,
+      "text": "8. Human Oversight Feasibility: Evaluates the cognitive feasibility, domain competence requirements, and operational latency available for a human reviewer to scrutinize model recommendations before downstream execution. 3. The Four Enterprise AI Risk Tiers Threshold Enterprise Systems categorizes all AI use cases into exactly four risk tiers: 1. LOW Risk Tier: Systems with negligible operational impact and minimal user consequences. 2. MEDIUM Risk Tier: Systems affecting internal operational workflows or business resource allocations.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "7d0f9db75c7746ff364ba7d96360baa2ff2a8da8db38635d202eb60b846e0a19",
+      "created_at": "2026-09-06T17:38:10.477175+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0007",
+      "document_id": "AIG-002",
+      "chunk_index": 7,
+      "text": "2. MEDIUM Risk Tier: Systems affecting internal operational workflows or business resource allocations. 3. HIGH Risk Tier: Systems significantly affecting customers, employees' legal rights, career advancement, financial outcomes, or processing CONFIDENTIAL corporate data. 4. CRITICAL Risk Tier: Systems whose autonomous failure or compromise presents severe, catastrophic threats to human safety, platform availability, or RESTRICTED enterprise assets. Every registered AI application must receive a formal risk tier assignment certified by the Enterprise AI Ethics and Governance Board before technical approval (AIG-003) or deployment (AIG-010) may proceed.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "7da9ff6ea707652fca5ab9e8801565b4ee75f54fcbb9ebedd81c40aa9fdd3a60",
+      "created_at": "2026-09-06T17:38:10.477219+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0008",
+      "document_id": "AIG-002",
+      "chunk_index": 8,
+      "text": "4. LOW Risk Tier Specification - Risk Description: AI applications whose malfunction, failure, or hallucination causes negligible operational impact, zero financial disruption, and no potential harm to human rights, safety, or career prospects. - Example Use Cases: Developer code syntax autocompletion, automated code formatting, text summarization of publicly available documents, internal documentation search over PUBLIC datasets, spelling/grammar checking assistants, and automated test-case stub generation. - Potential Impact: Minor user inconvenience or negligible localized rework. Zero compliance, privacy, or security liability. - Required Controls: Standard peer code review, unit test coverage (>80%), automated vulnerability dependency scanning, basic Model Card authoring. - Approval Requirements: Approval by Technical Squad Lead and Direct Engineering Manager within seven (7) business days.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "ef922689e5aeef5a5a25240af9e6138340a88c791787f5b5d7275084f6401666",
+      "created_at": "2026-09-06T17:38:10.477265+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0009",
+      "document_id": "AIG-002",
+      "chunk_index": 9,
+      "text": "- Approval Requirements: Approval by Technical Squad Lead and Direct Engineering Manager within seven (7) business days. - Human Oversight Requirements: Optional; post-hoc user discretion. Users evaluate output utility at point of consumption. - Monitoring Requirements: Monthly availability and error rate telemetry logging. - Deployment Restrictions: Standard CI/CD automated deployment pipeline to staging and production. 5. MEDIUM Risk Tier Specification - Risk Description: AI systems that influence internal operational workflows, optimize business resource allocations, or process non-sensitive operational telemetry where errors could cause moderate productivity loss or operational inefficiency. - Example Use Cases: Internal IT service desk automated ticket routing, customer support response drafting (with mandatory agent review), sales pipeline forecasting, internal document translation of INTERNAL documents, system log anomaly detection, and operational metric summarization.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "06b63489689659eceb282e23e8f887860ad15b0bbddd3a0ae8bd66ae3290a3fd",
+      "created_at": "2026-09-06T17:38:10.477308+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0010",
+      "document_id": "AIG-002",
+      "chunk_index": 10,
+      "text": "- Potential Impact: Moderate operational disruption, customer dissatisfaction, minor misallocation of internal staffing or compute capacity. - Required Controls: Comprehensive bias and fairness evaluation, prompt injection testing (AIG-007), data privacy review (AIG-006), standardized Model Card, and documented fallback procedures. - Approval Requirements: Joint approval by Department Vice President, Lead AI Engineer, and Information Security representative within fourteen (14) business days. - Human Oversight Requirements: Mandatory human review for designated decision gates (as defined in AIG-005). - Monitoring Requirements: Weekly performance tracking, drift detection, and daily error logging. - Deployment Restrictions: Staged canary deployment with 10% traffic routing and 48-hour soak testing.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "abaf5bc8ec3f35db4954671ed06adf15341defc7cdd7c4ad129e7b22c722e1c6",
+      "created_at": "2026-09-06T17:38:10.477354+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0011",
+      "document_id": "AIG-002",
+      "chunk_index": 11,
+      "text": "- Deployment Restrictions: Staged canary deployment with 10% traffic routing and 48-hour soak testing. 6. HIGH Risk Tier Specification - Risk Description: AI systems whose automated outputs, inferences, or classifications significantly affect customers, employees' legal rights, career advancement, financial health, or involve processing of CONFIDENTIAL corporate records. - Example Use Cases: Automated resume screening or talent evaluation assistance, credit risk and financial underwriting scoring, enterprise RAG platforms querying CONFIDENTIAL engineering and HR repositories, medical/health benefit claims processing, customer-facing autonomous conversational agents, and automated software vulnerability remediation bots. - Potential Impact: Severe financial penalties, regulatory investigation (GDPR, EU AI Act, EEOC), systemic discrimination claims, competitive IP exposure, or customer contract termination.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "6b4c05e6dbea404be04934c20e4c0ea8ffee4ec5fb7925b856d1dae46f56d1a7",
+      "created_at": "2026-09-06T17:38:10.477396+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0012",
+      "document_id": "AIG-002",
+      "chunk_index": 12,
+      "text": "- Required Controls: Independent red-team security penetration testing, rigorous demographic parity and disparate impact statistical auditing (p-value > 0.8), comprehensive prompt firewall integration, cryptographic data lineage verification, and detailed System Card documentation. - Approval Requirements: Formal unanimous approval by the Enterprise AI Ethics and Governance Board (AIEGB), Chief Information Security Officer (CISO), and Chief Legal Officer. - Human Oversight Requirements: Mandatory human approval required before any consequential action is finalized (Human-in-the-Loop Policy AIG-005). AI operates strictly in an advisory capacity. - Monitoring Requirements: Continuous real-time telemetry, daily hallucination and drift indexing, and automated threshold alerts. - Deployment Restrictions: Multi-stage blue/green deployment with mandatory rollback runbooks and 7-day shadow mode execution.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "3d616bf27ec8a878d54c33e0e2f39150e38f1429563ddf8bc4c78b5c0492e870",
+      "created_at": "2026-09-06T17:38:10.477443+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0013",
+      "document_id": "AIG-002",
+      "chunk_index": 13,
+      "text": "- Deployment Restrictions: Multi-stage blue/green deployment with mandatory rollback runbooks and 7-day shadow mode execution. 7. CRITICAL Risk Tier Specification - Risk Description: The highest echelon of enterprise AI risk. Systems whose autonomous failure, catastrophic hallucination, or compromise presents immediate, severe threat to human life, critical infrastructure availability, massive data exfiltration of RESTRICTED assets, or existential regulatory sanctions. - Example Use Cases: Autonomous cybersecurity incident mitigation engines capable of severing production network links, automated privileged credential modifications (SEC-007), medical triage diagnostics, direct autonomous database schema altering bots, and models controlling physical facility safety or power distribution systems. - Potential Impact: Catastrophic infrastructure outages, irreversible loss of critical customer data, massive regulatory fines, physical harm, criminal liability, or enterprise insolvency.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "aad93b15e97743088b4eb7a43a5fdc57b1d6450c582b8e86daf14136489f1b31",
+      "created_at": "2026-09-06T17:38:10.477493+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0014",
+      "document_id": "AIG-002",
+      "chunk_index": 14,
+      "text": "- Required Controls: Formal mathematical verification where feasible, dual-enclave hardware isolation, immutable air-gapped audit logging, continuous red-teaming, zero autonomous write privileges, and hardware-enforced fail-safe tripwires. - Approval Requirements: Unanimous ratification by the Board of Directors Risk Committee, Chief Executive Officer (CEO), CISO, and Chief AI Officer. - Human Oversight Requirements: Mandatory Dual-Authorized Human-in-the-Loop (Two-Person Rule). AI must NEVER execute consequential actions autonomously. - Monitoring Requirements: Sub-second latency telemetry, automated circuit breakers triggering instantaneous rollback upon any safety threshold breach. - Deployment Restrictions: Dedicated private enclave infrastructure, continuous shadow-mode validation for thirty (30) days prior to any live traffic.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "c3151db246eda4814477e911dea23f936f59977bc040cc0c17336fe839c64cc3",
+      "created_at": "2026-09-06T17:38:10.477537+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0015",
+      "document_id": "AIG-002",
+      "chunk_index": 15,
+      "text": "- Deployment Restrictions: Dedicated private enclave infrastructure, continuous shadow-mode validation for thirty (30) days prior to any live traffic. 8. Risk Classification Scoring Workflow and Formula The classification process utilizes a standardized, weighted scoring rubric combining the eight assessment dimensions. Each dimension is assigned an integer rating from 1 (Minimal Risk) to 5 (Catastrophic Risk): Total Risk Score = SUM(Dimension Score * Dimension Weight). - Score 8 to 15: LOW Risk Tier. - Score 16 to 25: MEDIUM Risk Tier. - Score 26 to 34: HIGH Risk Tier. - Score 35 to 40: CRITICAL Risk Tier. Regardless of the aggregate score, any system that processes RESTRICTED corporate data, interacts with safety-critical infrastructure, or executes automated privileged credential changes is automatically classified as CRITICAL Risk.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "2a8290433d0ef8dde0cfad1241cd6be0dfbce0acf54181faa47b8f44a3dd34f3",
+      "created_at": "2026-09-06T17:38:10.477582+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0016",
+      "document_id": "AIG-002",
+      "chunk_index": 16,
+      "text": "9. Downstream Governance Enforcement and Dependencies The assigned risk tier establishes the mandatory legal and operational constraints enforced across subsequent governance policies: - AI Model Approval Policy (AIG-003): Approval gates, documentation depth, and committee review levels strictly depend on the AIG-002 tier. - Human-in-the-Loop Review Policy (AIG-005): Mandates whether human oversight is optional, selective, mandatory, or dual-authorized. - AI Model Deployment Policy (AIG-010): Establishes deployment readiness criteria, canary soak windows, and rollback requirements based on the assigned tier. - AI Model Monitoring Policy (AIG-008): Calibrates telemetry ingestion frequencies, drift alerting thresholds, and hallucination monitoring rigor.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "2980b4f4bc8dac5d9eba27ee84b32c52b65b8de200a8799fa2fb0916f9887529",
+      "created_at": "2026-09-06T17:38:10.477627+00:00"
+    },
+    {
+      "chunk_id": "AIG-002_CHUNK_0017",
+      "document_id": "AIG-002",
+      "chunk_index": 17,
+      "text": "- AI Model Monitoring Policy (AIG-008): Calibrates telemetry ingestion frequencies, drift alerting thresholds, and hallucination monitoring rigor. 10. Governance Oversight and Framework Administration This framework is owned by the Enterprise AI Ethics and Governance Board and administered by the Information Security GRC team. It is reviewed annually to incorporate evolving international AI regulations, including the European Union AI Act, NIST AI Risk Management Framework (AI RMF 1.0), and ISO/IEC 42001 standards. Inquiries regarding risk scoring disputes or tier reclassification appeals should be addressed to the Enterprise Governance Office at ai-risk@threshold-systems.internal.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "FRAMEWORK",
+        "status": "ACTIVE",
+        "title": "AI Risk Classification Framework",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential multi-dimensional risk classification framework defining four enterprise AI risk levels: LOW, MEDIUM, HIGH, and CRITICAL. Details risk scoring methodology, evaluation dimensions, required controls, approval requirements, oversight, and monitoring.",
+        "keywords": [
+          "ai risk",
+          "risk classification",
+          "risk levels",
+          "low risk",
+          "medium risk",
+          "high risk",
+          "critical risk",
+          "risk assessment",
+          "data sensitivity",
+          "decision autonomy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_risk_classification_framework.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "a8608cc3ba6e7c54ac6c8970494f88279b77879982adb392e1c8362456fbdf77",
+      "chunk_content_hash": "f8561644d4011b73a0f4eace159c844fef2981b3c4870af5d314c187ad8a1f2a",
+      "created_at": "2026-09-06T17:38:10.477752+00:00"
+    }
+  ]
+}

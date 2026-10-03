@@ -1,0 +1,621 @@
+{
+  "document_id": "OPS-002",
+  "chunks": [
+    {
+      "chunk_id": "OPS-002_CHUNK_0001",
+      "document_id": "OPS-002",
+      "chunk_index": 1,
+      "text": "Document Id | OPS-002\nTitle | Change Management Policy\nDepartment | Operations\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nChange Management Policy\n\n1. CONFIDENTIAL CLASSIFICATION AND GOVERNANCE PURPOSE\n\n*** CONFIDENTIAL POLICY - RESTRICTED TO TECHNICAL, MANAGERIAL, AND OPERATIONAL ROLES ***",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "f781d8bb57a1d71392efe76868b1ed10ec5162243c89f8b1174795846dd4e808",
+      "created_at": "2026-09-06T17:38:10.641860+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0002",
+      "document_id": "OPS-002",
+      "chunk_index": 2,
+      "text": "1. CONFIDENTIAL CLASSIFICATION AND GOVERNANCE PURPOSE *** CONFIDENTIAL POLICY - RESTRICTED TO TECHNICAL, MANAGERIAL, AND OPERATIONAL ROLES *** This document establishes the proprietary enterprise change governance frameworks, risk classification matrices, Change Advisory Board (CAB) review protocols, emergency change mechanisms, and release gating criteria for Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is strictly restricted to authorized operational, technical, and managerial personnel (MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, ADMIN). Workforce members holding the general EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "7d5de902463f5fc5691a203782d621cfc72b64d7e345fa075e3e3abeeada96b4",
+      "created_at": "2026-09-06T17:38:10.642367+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0003",
+      "document_id": "OPS-002",
+      "chunk_index": 3,
+      "text": "The purpose of this Change Management Policy is to minimize business disruption, eliminate unauthorized production modifications, guarantee cryptographic and architectural auditability, and ensure that every modification to corporate IT systems, cloud platforms, database schemas, and AI inference pipelines transitions through rigorous peer review, risk modeling, tested rollback runbooks, and formal operational approval. In strict accordance with corporate governance mandates, this policy omits live production IP addresses, credentials, server hostnames, or specific cloud infrastructure identifiers, focusing exclusively on operational governance, review gates, and risk mitigation methodologies. Uncontrolled changes represent the single largest contributor to enterprise system outages. Strict adherence to this policy protects customer trust, system availability, and statutory compliance.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "de6c26ef7d1e950720e18be873553b844f1bb5d9b29931cdc9db011f36cbb7dc",
+      "created_at": "2026-09-06T17:38:10.642502+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0004",
+      "document_id": "OPS-002",
+      "chunk_index": 4,
+      "text": "2. Scope and Definition of an Enterprise Change This policy governs all modifications executed within production, staging, corporate network, and multi-tenant cloud environments across all global operating hubs in India, the United States, the United Kingdom, and Singapore. An Enterprise Change is formally defined as any intentional addition, modification, relocation, or removal of any component, service, configuration, database state, or architectural dependency that could directly or indirectly impact enterprise service availability, data security, transactional performance, or regulatory compliance. Examples governed include: microservice code deployments (ENG-004), database schema alterations (ENG-005), AI model version cutovers (AIG-010), firewall and DNS modifications (SEC-001), IAM permission updates (SEC-002), and operating system kernel upgrades.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "f215be50c3753117f285037bfe8fff6058e9a166519a72846f40a375c0f5af45",
+      "created_at": "2026-09-06T17:38:10.642639+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0005",
+      "document_id": "OPS-002",
+      "chunk_index": 5,
+      "text": "Exclusions: Pure documentation edits in internal non-production wikis and sandbox code commits in isolated local developer laptops do not constitute enterprise changes. 3. Tri-Tier Change Categorization Taxonomy To optimize operational agility while enforcing robust oversight, all changes must be classified into one of three standardized change tiers: 1. Standard Changes (Low Risk, Pre-Approved): Routine, repeatable, and thoroughly understood operational activities with negligible risk profile and proven procedural history. Requires no advance CAB review. Must be executed in strict adherence to a published, versioned SOP (OPS-003). Examples: routine SSL/TLS certificate rotation via automated Vault daemons, planned monthly synthetic test user credential rotation, and horizontal autoscaling policy threshold tuning within pre-approved parameters. Standard changes must still be logged in the ITSM portal for traceability.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "877f9c8cc051846aa0b00774bbf0337ea20e7b09a1d72d352ba7b2256193c7b1",
+      "created_at": "2026-09-06T17:38:10.642713+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0006",
+      "document_id": "OPS-002",
+      "chunk_index": 6,
+      "text": "2. Normal Changes (Medium to High Risk, Full CAB Review): Non-routine modifications that alter application logic, database schemas, infrastructure topologies, or AI model endpoints. Requires formal Request for Change (RFC) submission, comprehensive impact analysis, peer review certification (ENG-002), tested rollback automation, and formal CAB approval prior to scheduling within approved maintenance windows. 3. Emergency Changes (Critical Active Restoration): Unplanned urgent interventions required to restore a degraded or failed production service during a Severity 1 or 2 engineering incident (ENG-006) or to remediate an active, zero-day security vulnerability (SEC-004). Bypasses standard CAB scheduling but requires Emergency CAB (ECAB) dual-custody authorization.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "ad5d955a77dda010563fd0779b5899283cc2008979993df7f63c4f92eb7b2920",
+      "created_at": "2026-09-06T17:38:10.642765+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0007",
+      "document_id": "OPS-002",
+      "chunk_index": 7,
+      "text": "4. Request for Change (RFC) Mandatory Documentation Requirements Every Normal Change submitted to the enterprise change management system must include ten mandatory technical artifacts: 1. Change Description and Business Rationale: Clear articulation of functional objectives, Jira ticket references, and owning squad. 2. Detailed Technical Scope: Exhaustive list of affected microservices, repositories, database tables, and network endpoints. 3. Risk and Impact Assessment: Evaluation of potential user blast radius, dependency chains, and failure modes using a standardized Risk Score matrix (Impact x Likelihood).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "ab13b2b19a075b87c8cf2686f92db5b6b0fbaf86cac1a306c0403a7e707f66b7",
+      "created_at": "2026-09-06T17:38:10.642815+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0008",
+      "document_id": "OPS-002",
+      "chunk_index": 8,
+      "text": "4. Pre-Deployment Verification Evidence: Proof of 100% automated test pass rates, integration test results, and container security vulnerability scans (SEC-001). 5. Peer Review and Ownership Sign-Off: Minimum two senior peer approvals and designated Code Owner sign-off (ENG-002). 6. Step-by-Step Implementation Runbook: Explicit sequential execution instructions with estimated time durations, commands, and expected outputs. 7. Deterministic Rollback Plan: Fully automated, tested rollback procedure capable of execution within thirty (30) minutes to restore pre-change baseline.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "9671f484e6bb8f317735f2b3fc52910bfb3d4c1a95be79af82526e7457bac098",
+      "created_at": "2026-09-06T17:38:10.642862+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0009",
+      "document_id": "OPS-002",
+      "chunk_index": 9,
+      "text": "8. Post-Implementation Verification (Smoke Tests): Synthetic test suites to validate functional integrity post-cutover across all global regions. 9. Schedule and Window Justification: Proposed execution timeframe conforming to enterprise release windows. 10. AI Governance Clearance: For AI service changes, active Model Approval Certification under AIG-003 and deployment checklist compliance under AIG-010. 5. The Change Advisory Board (CAB) and Review Governance The Change Advisory Board (CAB) is the governing authority responsible for evaluating and authorizing Normal Changes across Threshold Enterprise Systems: - CAB Composition: The CAB comprises the Director of Operations (Chair), Principal Site Reliability Engineers, Information Security Lead, Enterprise Architecture Lead, Database Administrator Lead, and Engineering Squad Representatives.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "d0c266efbdf8014532f2bf319e31f1a3d081502a1099dba3c3bbcea6d63fe8f5",
+      "created_at": "2026-09-06T17:38:10.642909+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0010",
+      "document_id": "OPS-002",
+      "chunk_index": 10,
+      "text": "- Review Cadence: Standard CAB meetings convene weekly on Mondays and Wednesdays at 2:00 PM UTC. RFCs must be submitted at least twenty-four (24) hours prior to the scheduled review session to allow adequate technical inspection. - Evaluation Criteria: The CAB evaluates submissions across five dimensions: technical completeness, blast radius containment, rollback feasibility, cross-service scheduling conflicts, and regulatory compliance. - Voting and Determination: Approvals require consensus among Operations, Security, and Engineering leads. Rejected RFCs must be returned with detailed remediation feedback. - Appeal Mechanism: If an urgent normal change is rejected, the sponsoring Director may appeal to the VP of Engineering and VP of Operations for an exceptional determination.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "c284a741507c65cb9da74d583e12718f943596cdba3a5cb841ed02e5ea2fff10",
+      "created_at": "2026-09-06T17:38:10.642957+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0011",
+      "document_id": "OPS-002",
+      "chunk_index": 11,
+      "text": "6. Emergency Change Advisory Board (ECAB) Protocols When a critical production failure threatens enterprise continuity, standard CAB timelines must yield to rapid, disciplined emergency governance: - ECAB Activation Criteria: Permitted exclusively during active Severity 1 or Severity 2 incidents under ENG-006 or emergency security patching under SEC-004. - Dual-Custody Fast-Track Authorization: Emergency changes require concurrent cryptographic approval from the Incident Commander and an authorized Operations Manager or CISO delegate. - Verbal War Room Approval: In live production triage bridges, verbal authorization by both ECAB members is logged by the Scribe, followed by retroactive ticket approval. - Post-Incident Retroactive Review: Within twenty-four (24) hours following emergency implementation, the change author must submit a comprehensive post-implementation RFC and incident timeline to the CAB for retrospective scrutiny.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "5d86b6e5c8b6fcd0e8c5375fe58dcace99a9238d8525749b12e14e14ce53bda9",
+      "created_at": "2026-09-06T17:38:10.643016+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0012",
+      "document_id": "OPS-002",
+      "chunk_index": 12,
+      "text": "7. Release Windows, Deployment Freezes, and Operational Blackouts To maintain system stability during high-stakes commercial periods, strict scheduling policies govern all changes: - Standard Deployment Windows: Tuesday through Thursday between 10:00 AM and 3:00 PM regional local time, ensuring maximum engineering and operational coverage (ENG-004). - Friday and Weekend Blackouts: Non-emergency changes are strictly prohibited on Fridays, weekends, or statutory holidays across our operating regions. - Global Deployment Freezes: Enforced during global financial quarter-ends, fiscal year closings, and major retail enterprise peak cycles. Only critical hotfixes authorized by the ECAB are permitted during freeze windows. - Maintenance Windows for Infrastructure: Major cloud infrastructure updates requiring brief restarts occur on Saturdays between 1:00 AM and 4:00 AM UTC, pre-notified to enterprise clients.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "e030c0a7d1cfae72d17a07b8dd21b05adf47f30a33e2974d0668351d22965b59",
+      "created_at": "2026-09-06T17:38:10.643054+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0013",
+      "document_id": "OPS-002",
+      "chunk_index": 13,
+      "text": "8. Post-Implementation Review (PIR) and Continuous Change Hardening Every completed Normal Change undergoes operational review within forty-eight (48) hours of completion: - Successful Change Closure: Confirmed when post-implementation smoke tests pass and the 2-hour hypercare window elapses with zero defect tickets. - Failed or Aborted Changes: Any change that results in a service rollback, user disruption, or tripwire trigger must conduct a formal Post-Implementation Review (PIR) examining root causes and updating automated testing suites. - Change Success Metrics: Operations tracks Change Failure Rate (CFR), Mean Time to Recover (MTTR), and Unauthorized Change Incidents as primary operational KPIs. - Automated Audit Trails: All change records, approval timestamps, implementation logs, and rollback executions are archived immutably under OPS-007 for SOC 2 Type II audit compliance.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "8b1df5e3503e374f891e3b64312407dce2453cee4f155bb4ead3478b24c39bd4",
+      "created_at": "2026-09-06T17:38:10.643088+00:00"
+    },
+    {
+      "chunk_id": "OPS-002_CHUNK_0014",
+      "document_id": "OPS-002",
+      "chunk_index": 14,
+      "text": "9. Cross-Document Governance Interconnections This policy operates in direct structural alignment with related enterprise standards: - ENG-004: Production Deployment Guide (Defines release runbooks, canary gates, and rollback tripwires). - ENG-006: Engineering Incident Management Runbook (Governs emergency hotfix changes during outages). - AIG-010: AI Model Deployment Policy (Mandates pre-flight verification gates for model releases). - OPS-001: Service Management Policy (Establishes overall service lifecycle and operational ownership). - OPS-006: Operational Incident Escalation Procedure (Coordinates operational triage of failed changes).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Change Management Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential change governance policy defining tri-tier categorization (Standard, Normal, Emergency), mandatory Request for Change (RFC) artifacts, Change Advisory Board (CAB) review protocols, Emergency CAB (ECAB) dual-custody authorization, deployment freezes, and post-implementation reviews.",
+        "keywords": [
+          "change management",
+          "confidential",
+          "cab",
+          "change advisory board",
+          "ecab",
+          "request for change",
+          "rfc",
+          "standard change",
+          "emergency change",
+          "rollback plan",
+          "deployment freezes"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/change_management_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "21bcb4f0ae2d050209c50ca018559a284261a41d8c8f33d567acc548364beb94",
+      "chunk_content_hash": "30726f0456307dfc0ecd6ecc0e5b45af7340e0cceacf11ef21dfd3af70ce06c1",
+      "created_at": "2026-09-06T17:38:10.643133+00:00"
+    }
+  ]
+}

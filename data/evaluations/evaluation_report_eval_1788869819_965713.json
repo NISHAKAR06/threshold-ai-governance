@@ -1,0 +1,149 @@
+{
+  "evaluation_run_id": "eval_1788869819_965713",
+  "timestamp": "2026-09-08T12:16:59.177781+00:00",
+  "total_cases": 4,
+  "retrieval_metrics": {
+    "mean_precision_at_k": 0.0,
+    "mean_recall_at_k": 0.0,
+    "mrr": 0.0,
+    "mean_authorized_accuracy": 1.0,
+    "mean_unauthorized_rate": 0.0
+  },
+  "rag_metrics": {
+    "answer_generation_rate": 1.0,
+    "citation_presence_rate": 0.0,
+    "citation_validity_rate": 0.0,
+    "mean_grounding_score": 0.0
+  },
+  "governance_metrics": {
+    "authorization_accuracy": 0.0,
+    "governance_enforcement_rate": 1.0,
+    "unauthorized_exposure_rate": 0.0
+  },
+  "case_results": [
+    {
+      "evaluation_id": "eval-case-001",
+      "question": "What are the engineering backend deployment protocols and CI standards?",
+      "retrieval": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "authorized_retrieval_accuracy": 1.0,
+        "unauthorized_retrieval_rate": 0.0,
+        "k": 3,
+        "retrieved_chunk_ids": [
+          "ENG-002_CHUNK_0008",
+          "ENG-003_CHUNK_0003",
+          "SEC-003_CHUNK_0016"
+        ]
+      },
+      "rag": {
+        "answer_generated": true,
+        "source_citations_present": false,
+        "citations_valid": false,
+        "grounding_score": 0.0,
+        "similarity_score": 0.0,
+        "citations_found": []
+      },
+      "governance": {
+        "authorization_decision": "INSUFFICIENT_CONTEXT",
+        "expected_decision": "ALLOW",
+        "decision_matches": false,
+        "unauthorized_exposure": false,
+        "denied_chunks_count": 0,
+        "leaked_chunks_count": 0
+      },
+      "execution_time_ms": 9846.15
+    },
+    {
+      "evaluation_id": "eval-case-002",
+      "question": "What is the executive Q4 executive board compensation and payroll bonus structure?",
+      "retrieval": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "authorized_retrieval_accuracy": 1.0,
+        "unauthorized_retrieval_rate": 0.0,
+        "k": 3,
+        "retrieved_chunk_ids": []
+      },
+      "rag": {
+        "answer_generated": true,
+        "source_citations_present": false,
+        "citations_valid": false,
+        "grounding_score": 0.0,
+        "similarity_score": 0.0,
+        "citations_found": []
+      },
+      "governance": {
+        "authorization_decision": "INSUFFICIENT_CONTEXT",
+        "expected_decision": "DENY",
+        "decision_matches": false,
+        "unauthorized_exposure": false,
+        "denied_chunks_count": 0,
+        "leaked_chunks_count": 0
+      },
+      "execution_time_ms": 37.54
+    },
+    {
+      "evaluation_id": "eval-case-003",
+      "question": "Show the quarterly financial audit summary and compliance risk filings.",
+      "retrieval": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "authorized_retrieval_accuracy": 1.0,
+        "unauthorized_retrieval_rate": 0.0,
+        "k": 3,
+        "retrieved_chunk_ids": []
+      },
+      "rag": {
+        "answer_generated": true,
+        "source_citations_present": false,
+        "citations_valid": false,
+        "grounding_score": 0.0,
+        "similarity_score": 0.0,
+        "citations_found": []
+      },
+      "governance": {
+        "authorization_decision": "INSUFFICIENT_CONTEXT",
+        "expected_decision": "ALLOW",
+        "decision_matches": false,
+        "unauthorized_exposure": false,
+        "denied_chunks_count": 0,
+        "leaked_chunks_count": 0
+      },
+      "execution_time_ms": 24.18
+    },
+    {
+      "evaluation_id": "eval-case-004",
+      "question": "What is the enterprise employee disciplinary action record for department staff?",
+      "retrieval": {
+        "precision_at_k": 0.0,
+        "recall_at_k": 0.0,
+        "mrr": 0.0,
+        "authorized_retrieval_accuracy": 1.0,
+        "unauthorized_retrieval_rate": 0.0,
+        "k": 3,
+        "retrieved_chunk_ids": []
+      },
+      "rag": {
+        "answer_generated": true,
+        "source_citations_present": false,
+        "citations_valid": false,
+        "grounding_score": 0.0,
+        "similarity_score": 0.0,
+        "citations_found": []
+      },
+      "governance": {
+        "authorization_decision": "INSUFFICIENT_CONTEXT",
+        "expected_decision": "DENY",
+        "decision_matches": false,
+        "unauthorized_exposure": false,
+        "denied_chunks_count": 0,
+        "leaked_chunks_count": 0
+      },
+      "execution_time_ms": 22.62
+    }
+  ]
+}

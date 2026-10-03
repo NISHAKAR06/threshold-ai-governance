@@ -1,0 +1,620 @@
+{
+  "document_id": "ENG-002",
+  "chunks": [
+    {
+      "chunk_id": "ENG-002_CHUNK_0001",
+      "document_id": "ENG-002",
+      "chunk_index": 1,
+      "text": "Document Id | ENG-002\nTitle | Code Review Policy\nDepartment | Engineering\nClassification | INTERNAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | ENGINEER, AI_ENGINEER, MANAGER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nCode Review Policy\n\n1. Policy Purpose and Engineering Standards\n\nThis Code Review Policy establishes the mandatory standards, review procedures, quality gates, and approval authorities governing all software source code authored, modified, or integrated across Threshold Enterprise Systems ('Threshold').",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "b7268916f8cb63573723e4926bdf28b07b6f01b39aac583840d2300eda777951",
+      "created_at": "2026-09-06T17:38:10.544199+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0002",
+      "document_id": "ENG-002",
+      "chunk_index": 2,
+      "text": "Code review is a cornerstone of our software engineering culture. It serves as our primary peer-driven mechanism for defect detection, architectural alignment, knowledge sharing, maintainability, and security verification. In a distributed engineering organization supporting mission-critical enterprise systems, unreviewed or cursorily reviewed code introduces fatal bugs, security breaches, performance regressions, and architectural rot. The objective of this policy is to ensure that no code modification reaches staging or production environments without rigorous, thoughtful, and standardized peer scrutiny, balancing velocity with uncompromising engineering excellence.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "bffe18e70bd491c0c37789df32a2987236313b4eab65f9480a0bd67ac011acba",
+      "created_at": "2026-09-06T17:38:10.544290+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0003",
+      "document_id": "ENG-002",
+      "chunk_index": 3,
+      "text": "2. Scope and Functional Domains Covered This policy applies universally to all software engineers, AI engineers, data platform engineers, security engineers, and DevOps/SRE personnel across all operating hubs in India, the United States, the United Kingdom, and Singapore. The scope encompasses all source code repositories, including: 1. Application Codebases: Python backend microservices, web user interfaces, integration adapters, and client libraries. 2. AI and Data Engineering Pipelines: Model training scripts, feature engineering pipelines, RAG ingestion architectures, and vector database query routines.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "40a67f770ae38577ff7fefebb831b208a19c0b97e563f7fbf06d35b8df204fa7",
+      "created_at": "2026-09-06T17:38:10.544350+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0004",
+      "document_id": "ENG-002",
+      "chunk_index": 4,
+      "text": "3. Infrastructure as Code (IaC): Terraform configurations, Kubernetes manifests, Helm charts, Dockerfiles, and CI/CD workflow definitions. 4. Database Schema Migrations: Alembic migration scripts, SQL schema definitions, indexing strategies, and stored procedures governed under ENG-005. 3. Pull Request (PR) Pre-Submission Requirements Prior to opening a Pull Request (PR) for peer evaluation, the authoring engineer must ensure the branch adheres to strict preparation standards: - Atomic and Scoped Changes: PRs must address a single logical feature, bug fix, or refactoring task. Multi-purpose or sprawling PRs exceeding 400 lines of modified code (excluding auto-generated code and test snapshots) must be decomposed into smaller sequential changes.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "e98bbd67418bdd8a2dba9364e5a0247663502c12db129ff62c8933788cdb3816",
+      "created_at": "2026-09-06T17:38:10.544399+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0005",
+      "document_id": "ENG-002",
+      "chunk_index": 5,
+      "text": "- Comprehensive PR Description: Every PR must utilize the enterprise standard template detailing: business context, linked Jira issue ID, technical summary of changes, testing evidence (local test results and coverage), and rollback instructions. - Automated CI Pipeline Success: All automated pre-commit hooks and CI checks—including static code analysis (flake8, black, ruff), security vulnerability scanning (bandit, safety), type checking (mypy), and automated unit tests—must pass with zero failures before reviewers are tagged. - Documentation Updates: If a PR modifies an API contract, database schema, or configuration parameter, the corresponding documentation and OpenAPI definitions must be included in the same PR.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "10682ad0ab442487b1b2b82163a99aa07ca20e6b50d7500520115f0168670470",
+      "created_at": "2026-09-06T17:38:10.544455+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0006",
+      "document_id": "ENG-002",
+      "chunk_index": 6,
+      "text": "4. Reviewer Responsibilities and Evaluation Dimensions Peer review is a rigorous professional responsibility. Reviewers must evaluate pull requests across six fundamental dimensions: 1. Architectural Correctness and Design: Does the code adhere to enterprise system architecture guidelines (ENG-007) and API guidelines (ENG-001)? Does it maintain clean separation of concerns and avoid unnecessary coupling? 2. Code Quality and Readability: Is the code clean, modular, and self-documenting? Does it adhere to language-specific idioms (PEP 8 for Python)? Are variable, function, and class names descriptive and unambiguous?",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "4864e9edfe32daab2d0637793c97c51f259cf02883e347023fe9cdcd64e1996c",
+      "created_at": "2026-09-06T17:38:10.544503+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0007",
+      "document_id": "ENG-002",
+      "chunk_index": 7,
+      "text": "3. Test Adequacy and Edge Case Handling: Does the PR include automated unit, integration, or regression tests? Are edge cases, boundary conditions, null/empty values, and failure modes thoroughly evaluated? Does test coverage meet or exceed 80% for new code? 4. Security and Vulnerability Resistance: Does the code introduce injection vulnerabilities, insecure deserialization, unvetted dependencies, or hardcoded secrets? Does it respect data classification rules under SEC-005? 5. Performance and Resource Efficiency: Does the code introduce algorithmic inefficiencies (e.g., O(N^2) loops over large collections), unindexed database queries, N+1 query patterns, memory leaks, or unoptimized network round-trips?",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "80507b8152902343c56365df087ac75541fb432d0f503b31c0004af5a43b5354",
+      "created_at": "2026-09-06T17:38:10.544554+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0008",
+      "document_id": "ENG-002",
+      "chunk_index": 8,
+      "text": "6. Maintainability and Technical Debt: Does the change introduce duplicated logic or fragile workarounds? Are complex algorithms accompanied by clear, explanatory inline comments? 5. Language-Specific Engineering Standards: Python and Backend Frameworks Because Python serves as our primary backend and AI engineering language, reviewers must enforce explicit Python idioms and quality gates: - Strict Type Hinting: All Python function signatures, method parameters, and return types must declare explicit type annotations verified by mypy in strict mode. Untyped Any declarations must include an inline rationale comment. - Cyclomatic Complexity Thresholds: Functions must maintain a McCabe cyclomatic complexity score under 10. Complex branching logic exceeding this threshold must be refactored into modular helper functions.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "4636a105595fbce0ac17935c3bffe6ffdfa87ce8723dd90f4d956622d3860390",
+      "created_at": "2026-09-06T17:38:10.544601+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0009",
+      "document_id": "ENG-002",
+      "chunk_index": 9,
+      "text": "- Context Managers and Resource Safety: Database connections, file handles, and network sockets must be managed using Python context managers (with blocks) to guarantee deterministic resource cleanup. - AsyncIO and Concurrency Safety: Reviewers must ensure asynchronous handlers (FastAPI async def) do not execute blocking synchronous I/O operations (e.g., standard requests.get or time.sleep), which stall the Python event loop. Asynchronous clients (e.g., httpx, aiofiles) must be utilized exclusively.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "811df5d8a7349b78dad9e2f5a67404aeb8830f741b0125d597a2ac81a1394fff",
+      "created_at": "2026-09-06T17:38:10.544645+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0010",
+      "document_id": "ENG-002",
+      "chunk_index": 10,
+      "text": "6. Specialized Review Criteria for AI and Data Systems Software components interacting with artificial intelligence models, Large Language Models (LLMs), or RAG vector databases require dedicated review scrutiny: - Prompt Security and Injection Guardrails: Reviewers must verify that all user prompts and dynamic inputs are sanitized and bounded in compliance with the Prompt Security Policy (AIG-007). User input must never be directly concatenated into raw system instructions. - Deterministic Fallback Handling: Where code invokes external AI model APIs, reviewers must verify that timeouts, retries with exponential backoff, and deterministic fallback responses are implemented to prevent cascade service outages. - Vector Retrieval Permission Filtering: RAG retrieval query logic must be scrutinized to confirm that pre-filtering metadata checks enforce role-based access control (allowed_roles) prior to vector similarity calculation, as mandated by AIG-006.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "c205d70ceaf3b27ccef2aab8b126f59955257be047da91be1476cb6ec14a911e",
+      "created_at": "2026-09-06T17:38:10.544687+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0011",
+      "document_id": "ENG-002",
+      "chunk_index": 11,
+      "text": "- Grounding and Citation Checks: Reviewers must verify that generative completion endpoints validate citation grounding and enforce hallucination mitigation guardrails. 7. Approval Quotas, Merge Requirements, and Branch Protection Threshold enforces strict branch protection policies across all corporate version control repositories in accordance with ENG-003: - Minimum Approvals Required: Every PR targeting protected main or release branches requires a minimum of two (2) independent peer approvals from qualified squad engineers. - Code Owner Enforcement: Changes affecting core security middleware, cryptographic logic, shared database schemas, or infrastructure manifests require mandatory approval from designated Code Owners (e.g., Security Engineers or Principal Architects). - Linear Git History: Repositories enforce squash-and-merge or rebase-and-merge strategies to maintain a clean, bisectable, and linear commit history.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "5bf36e9de36d7e6d4e0bfcd03c805da45ee331af618a1acae7007ebb91e459f1",
+      "created_at": "2026-09-06T17:38:10.544736+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0012",
+      "document_id": "ENG-002",
+      "chunk_index": 12,
+      "text": "- Linear Git History: Repositories enforce squash-and-merge or rebase-and-merge strategies to maintain a clean, bisectable, and linear commit history. - Author Disqualification: PR authors may never approve or merge their own pull requests under any circumstances. 8. Review SLAs, Constructive Culture, and Stale PR Management Maintaining high engineering velocity requires mutual respect and rapid review turnaround: - Review Turnaround SLA: Tagged reviewers are required to provide an initial review or constructive feedback within twenty-four (24) business hours of PR submission. - Managing Stale Pull Requests: PRs that remain inactive without author response or review for more than seven (7) business days are automatically flagged by repository bots and closed after fourteen (14) days if unaddressed.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "e6e82c5220494e894ccc93caf60d02cc34b70c81a4b8ad4cc568282fd9319d56",
+      "created_at": "2026-09-06T17:38:10.544783+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0013",
+      "document_id": "ENG-002",
+      "chunk_index": 13,
+      "text": "- Constructive and Actionable Feedback: Reviewers must provide specific, actionable explanations rather than subjective criticism. Prefixing comments with standard tags (e.g., [nitpick], [blocking], [question], [suggestion]) is strongly encouraged. - Resolution of Comments: All reviewer comments marked as blocking must be explicitly addressed, resolved by the author, and acknowledged by the commenting reviewer before merging can proceed. 9. Emergency Hotfix Review Exception Workflows During active Severity 1 or Severity 2 production outages managed under the Engineering Incident Management Runbook (ENG-006), expedited review procedures may be invoked: - Accelerated Single-Approval Gate: In an emergency hotfix scenario, a PR may be merged with a single expedited approval from an on-call Engineering Manager or Principal Engineer.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "ccc080e2b34379405dbbbd23336bb1ad8ff71953b04f38ecb9088c2819150196",
+      "created_at": "2026-09-06T17:38:10.544832+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0014",
+      "document_id": "ENG-002",
+      "chunk_index": 14,
+      "text": "- Mandatory Post-Incident Audit: Emergency hotfix PRs merged under expedited rules must undergo full retrospective peer review and automated regression testing within twenty-four (24) hours following incident stabilization. - Incident Linkage: The emergency PR description must cite the active incident ticket ID, incident commander name, and authorized hotfix rationale. 10. Compliance, Auditing, and Policy Administration The Engineering Quality Assurance team conducts monthly automated audits of repository merge logs to verify 100% adherence to review quotas, branch protection rules, and CI pass criteria. Bypassing branch protection rules via administrative overrides without documented incident authorization constitutes a severe security violation. This policy operates in direct harmony with related enterprise standards: - ENG-003: Git Workflow and Branching Policy (Governs repository structure and branching lifecycle).",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "4dbd86b6f5c7d527181a01a06abd8cd2f9d2dc2362664ad8469a35fe12aa0b3f",
+      "created_at": "2026-09-06T17:38:10.544879+00:00"
+    },
+    {
+      "chunk_id": "ENG-002_CHUNK_0015",
+      "document_id": "ENG-002",
+      "chunk_index": 15,
+      "text": "- ENG-003: Git Workflow and Branching Policy (Governs repository structure and branching lifecycle). - ENG-004: Production Deployment Guide (Requires certified code review sign-off before deployment). - SEC-001: Information Security Policy (Establishes secure development lifecycle requirements). - AIG-007: Prompt Security Policy (Mandates prompt injection defense review for AI code).",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Code Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Engineering policy mandating peer code review standards across all repositories. Enforces two-approver minimum, mandatory Code Owner approvals, PR size limits (<400 lines), 24-hour SLA, automated CI gate pass, constructive critique standards, and security checklist integration.",
+        "keywords": [
+          "code review",
+          "peer review",
+          "pull request",
+          "code owners",
+          "pr size limit",
+          "automated ci",
+          "security review",
+          "constructive feedback",
+          "clean code"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/code_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "b1b468787c7e1e90ff23c948a3073b2b68573b7d5bee9912e71919ae8e181472",
+      "chunk_content_hash": "29fa3527f6a4008ed775b67c7e96851cb5a824e4b871983e0ec968a35b5fa998",
+      "created_at": "2026-09-06T17:38:10.544924+00:00"
+    }
+  ]
+}

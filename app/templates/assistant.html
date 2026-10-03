@@ -9,26 +9,115 @@
   .app-shell { height: 100vh !important; max-height: 100vh !important; overflow: hidden !important; }
   .app-main { height: 100vh !important; max-height: 100vh !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; }
   .app-content { flex: 1 !important; height: calc(100vh - var(--navbar-height)) !important; max-height: calc(100vh - var(--navbar-height)) !important; overflow: hidden !important; display: flex !important; flex-direction: column !important; padding: var(--space-3) var(--space-6) var(--space-4) !important; }
+  
+  .source-citation-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 11px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    vertical-align: baseline;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+  }
+  .source-citation-badge:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+  .rag-source-item {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: var(--space-3);
+    margin-bottom: var(--space-3);
+    transition: all 0.2s ease;
+  }
+  .rag-source-item.highlighted {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+    background: var(--bg-surface);
+  }
+  .mode-tab-btn.active {
+    background: var(--color-primary) !important;
+    color: #fff !important;
+  }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="assistant-page-wrapper">
-<div class="page-header" style="margin-bottom:var(--space-3)">
+<div class="page-header" style="margin-bottom:var(--space-2)">
   <div class="page-header-row">
     <div>
-      <h1 class="page-title" data-i18n="assistant.title">AI Assistant</h1>
-      <p class="page-subtitle" data-i18n="assistant.subtitle">Interact with governed AI actions</p>
+      <h1 class="page-title" data-i18n="assistant.title">Governance AI Assistant</h1>
+      <p class="page-subtitle" id="assistant-subtitle">Grounded, source-attributed RAG answer generation with security context enforcement</p>
     </div>
     <div class="flex items-center gap-3">
+      <!-- Mode Toggle -->
+      <div class="inline-flex rounded-md shadow-sm" role="group" style="background:var(--bg-surface-2);padding:2px;border:1px solid var(--border-color);border-radius:var(--border-radius-lg);">
+        <button type="button" class="btn btn-sm mode-tab-btn active" id="mode-rag-btn" style="border:none;padding:4px 10px;font-size:var(--font-size-xs);">
+          <i class="fa-solid fa-book-bookmark mr-1"></i> Governance RAG
+        </button>
+        <button type="button" class="btn btn-sm mode-tab-btn" id="mode-action-btn" style="border:none;padding:4px 10px;font-size:var(--font-size-xs);background:transparent;color:var(--text-secondary);">
+          <i class="fa-solid fa-terminal mr-1"></i> Action Chat
+        </button>
+      </div>
       <button class="btn btn-secondary btn-sm" id="new-conversation-btn">
         <i class="fa-solid fa-plus"></i>
-        <span data-i18n="assistant.new_conversation">New Conversation</span>
+        <span data-i18n="assistant.new_conversation">New</span>
       </button>
       <button class="btn btn-ghost btn-sm" id="chat-clear-btn" aria-label="Clear conversation">
         <i class="fa-solid fa-trash"></i>
       </button>
     </div>
+  </div>
+</div>
+
+<!-- Governance RAG Context Bar -->
+<div id="rag-context-bar" class="flex items-center flex-wrap gap-3" style="background:var(--bg-surface-1);border:1px solid var(--border-color);border-radius:var(--border-radius-lg);padding:var(--space-2) var(--space-4);margin-bottom:var(--space-3);font-size:var(--font-size-xs);">
+  <span class="text-secondary font-medium"><i class="fa-solid fa-shield-halved text-primary mr-1"></i> Access Context:</span>
+  <div class="flex items-center gap-1">
+    <label for="rag-clearance" class="text-tertiary">Clearance:</label>
+    <select id="rag-clearance" class="form-select text-xs" style="padding:2px 6px;height:26px;border-radius:var(--border-radius-sm);">
+      <option value="PUBLIC">PUBLIC</option>
+      <option value="INTERNAL" selected>INTERNAL</option>
+      <option value="CONFIDENTIAL">CONFIDENTIAL</option>
+      <option value="RESTRICTED">RESTRICTED</option>
+    </select>
+  </div>
+  <div class="flex items-center gap-1">
+    <label for="rag-role" class="text-tertiary">Role:</label>
+    <select id="rag-role" class="form-select text-xs" style="padding:2px 6px;height:26px;border-radius:var(--border-radius-sm);">
+      <option value="EMPLOYEE" selected>EMPLOYEE</option>
+      <option value="SECURITY_ANALYST">SECURITY_ANALYST</option>
+      <option value="ADMIN">ADMIN</option>
+      <option value="AUDITOR">AUDITOR</option>
+    </select>
+  </div>
+  <div class="flex items-center gap-1">
+    <label for="rag-dept" class="text-tertiary">Dept:</label>
+    <select id="rag-dept" class="form-select text-xs" style="padding:2px 6px;height:26px;border-radius:var(--border-radius-sm);">
+      <option value="Information Security" selected>Information Security</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Human Resources">Human Resources</option>
+      <option value="Finance">Finance</option>
+      <option value="Legal">Legal</option>
+    </select>
+  </div>
+  <div class="flex items-center gap-1">
+    <label for="rag-top-k" class="text-tertiary">Top K:</label>
+    <input type="number" id="rag-top-k" class="form-input text-xs" value="5" min="1" max="20" style="width:48px;padding:2px 6px;height:26px;border-radius:var(--border-radius-sm);">
+  </div>
+  <div class="ml-auto flex items-center gap-2">
+    <span class="badge badge-outline-success text-xs" id="rag-guardrail-badge">
+      <i class="fa-solid fa-shield-check mr-1"></i> Responsible AI Guardrails Active
+    </span>
   </div>
 </div>
 
@@ -41,39 +130,36 @@
       <div class="chat-panel-title">
         <div class="chat-THRESHOLD-avatar">AI</div>
         <div>
-          <div class="chat-THRESHOLD-name" data-i18n="assistant.assistant_label">THRESHOLD AI</div>
+          <div class="chat-THRESHOLD-name" id="assistant-brand-label">THRESHOLD Governance RAG</div>
           <div class="chat-THRESHOLD-status">
             <span class="chat-status-dot"></span>
-            <span class="text-xs" style="color:var(--color-success)">Online &amp; Governed</span>
+            <span class="text-xs" style="color:var(--color-success)">Grounded &amp; Policy Enforced</span>
           </div>
         </div>
       </div>
-      <span class="badge badge-success badge-dot text-xs">Policy Active</span>
+      <div class="flex items-center gap-2">
+        <span class="badge badge-primary badge-dot text-xs" id="retrieval-mode-badge">Hybrid RRF Fusion</span>
+        <span class="badge badge-success badge-dot text-xs">Policy Active</span>
+      </div>
     </div>
 
     <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
       <div class="chat-welcome" id="chat-welcome">
-        <div class="chat-welcome-icon"><i class="fa-solid fa-robot"></i></div>
-        <h2 class="chat-welcome-title" data-i18n="assistant.empty_state">Start a conversation to get started</h2>
-        <p class="chat-welcome-desc" data-i18n="assistant.empty_hint">Ask THRESHOLD AI to perform governed operations on your infrastructure</p>
-        <div class="suggested-prompts-grid">
-          <button class="suggested-prompt-btn" data-prompt="List all S3 buckets with public access in production">
-            <i class="suggested-prompt-icon fa-solid fa-magnifying-glass"></i>List all S3 buckets with public access
+        <div class="chat-welcome-icon"><i class="fa-solid fa-book-shield"></i></div>
+        <h2 class="chat-welcome-title" id="welcome-title">Ask Governance &amp; Security Questions</h2>
+        <p class="chat-welcome-desc" id="welcome-desc">Every answer is strictly grounded in retrieved and authorized enterprise policy documents with verifiable source citations.</p>
+        <div class="suggested-prompts-grid" id="suggested-prompts">
+          <button class="suggested-prompt-btn" data-prompt="What are the requirements for accessing confidential AI systems?">
+            <i class="suggested-prompt-icon fa-solid fa-shield-halved"></i>Confidential AI access requirements
           </button>
-          <button class="suggested-prompt-btn" data-prompt="Scale down the staging Kubernetes cluster by 50%">
-            <i class="suggested-prompt-icon fa-solid fa-sliders"></i>Scale down staging cluster by 50%
+          <button class="suggested-prompt-btn" data-prompt="Who is authorized to access production encryption keys?">
+            <i class="suggested-prompt-icon fa-solid fa-key"></i>Production encryption keys authorization
           </button>
-          <button class="suggested-prompt-btn" data-prompt="Rotate API keys for inactive service accounts older than 90 days">
-            <i class="suggested-prompt-icon fa-solid fa-rotate"></i>Rotate stale API keys
+          <button class="suggested-prompt-btn" data-prompt="What are the data retention and disposal rules under security policy?">
+            <i class="suggested-prompt-icon fa-solid fa-box-archive"></i>Data retention &amp; disposal rules
           </button>
-          <button class="suggested-prompt-btn" data-prompt="Generate a GDPR compliance report for the last 30 days">
-            <i class="suggested-prompt-icon fa-solid fa-file-shield"></i>Generate GDPR compliance report
-          </button>
-          <button class="suggested-prompt-btn" data-prompt="Archive all log files older than 180 days">
-            <i class="suggested-prompt-icon fa-solid fa-box-archive"></i>Archive old log files
-          </button>
-          <button class="suggested-prompt-btn" data-prompt="Block SSH access from public IPs on firewall">
-            <i class="suggested-prompt-icon fa-solid fa-shield-halved"></i>Block public SSH access
+          <button class="suggested-prompt-btn" data-prompt="What controls are enforced when fine-tuning external foundation models?">
+            <i class="suggested-prompt-icon fa-solid fa-brain"></i>Foundation model fine-tuning controls
           </button>
         </div>
       </div>
@@ -82,8 +168,7 @@
     <div class="chat-input-area">
       <div class="chat-input-box">
         <textarea id="chat-textarea" class="chat-textarea" rows="1"
-                  data-i18n-placeholder="assistant.placeholder"
-                  placeholder="Describe an action you want the AI to perform…"
+                  placeholder="Ask about enterprise AI security policies or describe an action…"
                   aria-label="Message input" maxlength="2000"></textarea>
         <button id="chat-send-btn" class="chat-send-btn" aria-label="Send message" disabled>
           <i class="fa-solid fa-paper-plane"></i>
@@ -101,7 +186,35 @@
   <!-- Right Panel -->
   <div class="assistant-side-panel">
 
-    <div id="action-preview-card" class="action-preview-card">
+    <!-- RAG Sources Panel (visible in RAG mode) -->
+    <div id="rag-sources-panel" class="action-preview-card">
+      <div class="action-preview-header flex items-center justify-between">
+        <div class="action-preview-title">
+          <i class="fa-solid fa-book-open-reader" style="color:var(--color-primary)"></i>
+          <span>Retrieved Sources &amp; Evidence</span>
+        </div>
+        <span class="badge badge-secondary text-xs" id="sources-count-badge">0 sources</span>
+      </div>
+      
+      <div id="rag-sources-summary" class="p-3" style="display:none;background:var(--bg-surface-1);border-bottom:1px solid var(--border-color);font-size:var(--font-size-xs);">
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-secondary"><i class="fa-solid fa-shield-check text-success mr-1"></i> Authorized: <strong id="rag-auth-count" class="text-primary">0</strong></span>
+          <span class="text-secondary"><i class="fa-solid fa-ban text-warning mr-1"></i> Filtered: <strong id="rag-denied-count" class="text-primary">0</strong></span>
+          <span class="text-tertiary"><i class="fa-solid fa-stopwatch mr-1"></i> <span id="rag-latency">0ms</span></span>
+        </div>
+      </div>
+
+      <div id="rag-sources-empty" class="action-preview-empty">
+        <div class="action-preview-empty-icon"><i class="fa-solid fa-file-shield"></i></div>
+        <p class="text-sm text-secondary text-center">Ask a governance question to inspect retrieved source chunks and clearance attribution.</p>
+      </div>
+
+      <div id="rag-sources-list" class="action-preview-body" style="display:none;padding:var(--space-3);max-height:500px;overflow-y:auto;">
+      </div>
+    </div>
+
+    <!-- Action Preview Card (visible in Action Chat mode) -->
+    <div id="action-preview-card" class="action-preview-card" style="display:none;">
       <div class="action-preview-header">
         <div class="action-preview-title">
           <i class="fa-solid fa-eye" style="color:var(--color-primary)"></i>
@@ -116,16 +229,17 @@
       <div id="action-preview-footer" class="action-preview-footer" style="display:none"></div>
     </div>
 
+    <!-- Conversation History -->
     <div class="conversation-history">
       <div class="action-preview-header">
         <div class="action-preview-title">
           <i class="fa-solid fa-clock-rotate-left" style="color:var(--text-tertiary)"></i>
-          <span data-i18n="assistant.conversation_history">Conversation History</span>
+          <span data-i18n="assistant.conversation_history">Recent Inquiries</span>
         </div>
       </div>
       <div id="conversation-history-list">
         <div class="empty-state" style="padding:var(--space-8) var(--space-4)">
-          <span class="text-xs text-tertiary">No conversations yet</span>
+          <span class="text-xs text-tertiary">No questions asked yet</span>
         </div>
       </div>
     </div>
@@ -139,9 +253,10 @@
 {% block page_init %}
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const ta  = document.getElementById('chat-textarea');
-    const btn = document.getElementById('chat-send-btn');
-    ta?.addEventListener('input', () => { btn.disabled = !ta.value.trim(); });
+    if (typeof AssistantPage !== 'undefined') {
+      AssistantPage.init();
+    }
   });
 </script>
 {% endblock %}
+

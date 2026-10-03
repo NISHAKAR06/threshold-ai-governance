@@ -1,0 +1,677 @@
+{
+  "document_id": "OPS-004",
+  "chunks": [
+    {
+      "chunk_id": "OPS-004_CHUNK_0001",
+      "document_id": "OPS-004",
+      "chunk_index": 1,
+      "text": "THRESHOLD ENTERPRISE SYSTEMS\nBusiness Continuity Policy\nDocument Id\nOPS-004\nTitle\nBusiness Continuity Policy\nDepartment\nOperations\nClassification\nCONFIDENTIAL\nVersion\n1.0\nStatus\nACTIVE\nEffective Date\n2026-01-15\nDocument Type\nPOLICY\nAllowed Roles\nMANAGER, OPERATIONS_MANAGER, SECURITY_ENGINEER, ADMIN\n\n1. CONFIDENTIAL CLASSIFICATION AND STRATEGIC OBJECTIVE\n\n*** CONFIDENTIAL POLICY - RESTRICTED TO OPERATIONS MANAGEMENT, SECURITY LEADERSHIP, AND\nEXECUTIVE INCIDENT TEAMS ***\nThis document establishes the proprietary enterprise business continuity management framework, disaster recovery\nobjectives, Business Impact Analysis (BIA) methodologies, crisis command structures, and multi-region failover protocols\nfor Threshold Enterprise Systems.\n\nIt is classified as CONFIDENTIAL.\n\nAccess is restricted strictly to authorized operational\nleaders and senior technical managers (MANAGER, OPERATIONS_MANAGER, SECURITY_ENGINEER, ADMIN).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "fbe36cfbe33d38a74ac73ccb377c29923bea73b939a3df41b73ee31ea0f75f8c",
+      "created_at": "2026-09-06T17:38:10.657665+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0002",
+      "document_id": "OPS-004",
+      "chunk_index": 2,
+      "text": "Access is restricted strictly to authorized operational\nleaders and senior technical managers (MANAGER, OPERATIONS_MANAGER, SECURITY_ENGINEER, ADMIN).\n\nGeneral employees and non-administrative technical roles are not authorized to retrieve this document within the knowledge\nbase.\n\nThe strategic objective of this Business Continuity Policy is to ensure that Threshold Enterprise Systems can withstand,\nrapidly respond to, and successfully recover from catastrophic operational disruptions—including major regional cloud\ndatacenter outages, physical infrastructure devastation, global telecommunications severances, cyber disasters, or key\nsupplier insolvencies—while preserving client data integrity, maintaining statutory compliance, and restoring mission-critical\ncustomer operations within strict Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "3980fecc0c10dad682368757d079104d1c2a88dfa7c8a3e3fdfe44e380db2fed",
+      "created_at": "2026-09-06T17:38:10.657753+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0003",
+      "document_id": "OPS-004",
+      "chunk_index": 3,
+      "text": "In accordance with corporate governance mandates, this policy strictly omits live disaster recovery IP ranges, cryptographic\nmaster keys, server addresses, or physical security facility schematics, focusing comprehensively on crisis governance,\nimpact criteria, and failover frameworks.\n\n2. Clear Tri-Partite Scope Distinction: Business Continuity vs. Incidents\n\nTo ensure organizational precision and prevent operational role confusion, Threshold Enterprise Systems enforces strict\nboundaries separating Business Continuity from localized operational incident categories:",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "4d75087327d3266edf6740ec25f15f3adc505e91faa0c128431305c9801b40c1",
+      "created_at": "2026-09-06T17:38:10.657816+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0004",
+      "document_id": "OPS-004",
+      "chunk_index": 4,
+      "text": "1. Business Continuity (OPS-004): Focuses on macro-level organizational survival, disaster recovery, regional infrastructure\n\nfailover, crisis communications, and sustained business operations during catastrophic, multi-service disruptions. Owned by\nthe Business Continuity Steering Committee and Global Operations Management.\n\n2. Engineering Incident Management (ENG-006): Focuses on localized microservice outages, application code defects,\n\ndatabase connection exhaustion, or broken deployments managed by on-call engineers and SREs.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "12f19c3b85be45e4051b01097e8b9ac971de340a5aabace2fdefeee454065811",
+      "created_at": "2026-09-06T17:38:10.657864+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0005",
+      "document_id": "OPS-004",
+      "chunk_index": 5,
+      "text": "database connection exhaustion, or broken deployments managed by on-call engineers and SREs. 3. Cybersecurity Incident Response (SEC-004): Focuses on defending against and investigating intentional adversarial cyberattacks, malware incursions, credential theft, or unauthorized data exfiltration managed by the SOC. 4. Artificial Intelligence Incident Management (AIG-009): Focuses on model-specific autonomous failures, hallucinations, toxic output generation, or prompt injection poisoning managed by AI Engineering.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "f78bf90ebac3e2029c39174ddb2a7ef5d9f44324778a21e3d4da6bfc1bf0b714",
+      "created_at": "2026-09-06T17:38:10.657914+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0006",
+      "document_id": "OPS-004",
+      "chunk_index": 6,
+      "text": "toxic output generation, or prompt injection poisoning managed by AI Engineering.\n\n5. Operational Incident Escalation (OPS-006): Focuses on day-to-day service degradation triage, cross-functional dispatch,\n\nand operational ticket escalation across squads.\n\n3. Business Impact Analysis (BIA) and Critical Business Services\n\nThe Business Continuity Steering Committee conducts annual Business Impact Analyses (BIA) across all global business\nunits to identify critical dependencies and classify enterprise services into four Recovery Priority Tiers:\n- Priority Tier 0 - Vital Enterprise Foundation: Identity federation (SSO/OAuth2), cryptographic key management (KMS),\nDNS authoritative resolution, and core multi-tenant customer database clusters.\n\nRecovery Time Objective (RTO): <= 1 hour.\n\nRecovery Point Objective (RPO): <= 5 minutes.\n\nMaximum Tolerable Downtime (MTD): 2 hours.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "f22b752e62467c66cf2e838605d8ac5f13e26005837a4e03d10c98f7702db03e",
+      "created_at": "2026-09-06T17:38:10.657961+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0007",
+      "document_id": "OPS-004",
+      "chunk_index": 7,
+      "text": "Recovery Time Objective (RTO): <= 1 hour.\n\nRecovery Point Objective (RPO): <= 5 minutes.\n\nMaximum Tolerable Downtime (MTD): 2 hours.\n\n- Priority Tier 1 - Mission-Critical Commercial Services: Customer-facing RAG inference APIs, AI governance policy\nevaluation engines, and commercial customer web applications.\n\nRTO: <= 4 hours.\n\nRPO: <= 15 minutes.\n\nMTD: 8 hours.\n\n- Priority Tier 2 - Business-Essential Services: Customer billing portals, internal analytics pipelines, enterprise HRIS\nsystems, and corporate email/collaboration systems.\n\nRTO: <= 12 hours.\n\nRPO: <= 1 hour.\n\nMTD: 24 hours.\n\n- Priority Tier 3 - Non-Critical Support Functions: Internal developer staging sandboxes, historical knowledge archives, and\nnon-essential reporting tools.\n\nRTO: <= 48 hours.\n\nRPO: <= 24 hours.\n\nMTD: 72 hours.\n\nEach tier defines explicit resource allocations, redundant cloud standby capacities, and executive notification priority during\ndisasters.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "f9b081626ae3abb5503b5f83b8e5962b0fee5e3cd6910d5b5daafa0cf616a764",
+      "created_at": "2026-09-06T17:38:10.658011+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0008",
+      "document_id": "OPS-004",
+      "chunk_index": 8,
+      "text": "Each tier defines explicit resource allocations, redundant cloud standby capacities, and executive notification priority during\ndisasters.\n\n4. Enterprise Disaster Recovery Strategies and Cloud Redundancy\n\nThreshold enforces high-availability multi-region cloud resilience architectures across our primary operating hubs in India\n(Bangalore/Hyderabad), the United States (North America), the United Kingdom (Europe), and Singapore (Asia-Pacific):\n- Active-Passive Regional Warm Standby: Mission-critical Tier 0 and Tier 1 services operate on primary active cloud regions\nwith asynchronous, continuous data replication to geographically separated secondary warm standby regions (> 500 miles\napart).\n\n- Automated Health Probes and Traffic Failover: Global latency-based DNS routing with automated health checks\ncontinually monitors regional ingress gateways.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "978011f63d15d3a855c7e3f71dd072a25d80ba76cfba26ab3e513f5aa3b04a10",
+      "created_at": "2026-09-06T17:38:10.658053+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0009",
+      "document_id": "OPS-004",
+      "chunk_index": 9,
+      "text": "If a primary cloud region suffers catastrophic loss of connectivity or compute\ninfrastructure, global routing automatically diverts traffic to the secondary warm standby region.\n\n- Database Snapshot and Vector Index Synchronization: Relational database transaction logs (WAL) stream continuously to\nsecondary storage enclaves (ENG-005), and vector indexes (AIG-006) maintain hourly immutable cross-region snapshots\nto guarantee point-in-time recovery.\n\n- Immutable Air-Gapped Backups: Daily encrypted system backups are replicated to air-gapped, write-once-read-many\n(WORM) cloud storage enclaves to protect against catastrophic ransomware or administrative account compromise.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "29397eb160f7a8b5a7a0d6032a0c6262a648189fc9d92fb9066e0cb81be27f9e",
+      "created_at": "2026-09-06T17:38:10.658099+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0010",
+      "document_id": "OPS-004",
+      "chunk_index": 10,
+      "text": "5. The Crisis Management Team (CMT) Command Structure\n\nUpon declaration of a formal Business Continuity Disaster, the Crisis Management Team (CMT) immediately assumes\ncentralized command:\n- Incident Commander (VP of Global Operations): Exercises executive decision-making authority over failover execution,\nresource requisition, and business continuity activations.\n- Technical Recovery Director (Chief Technology Officer / VP of Engineering): Directs engineering squads executing\ninfrastructure reconstitution, database restore runbooks, and microservice validation.\n- Information Security Lead (Chief Information Security Officer): Assesses threat conditions, validates secure cryptographic\nkey restoration, and guarantees compliance with data privacy regulations.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "81ddb99f5ad052965888d8f723399c18568b13c3926b572cb91e6769a3079d2f",
+      "created_at": "2026-09-06T17:38:10.658149+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0011",
+      "document_id": "OPS-004",
+      "chunk_index": 11,
+      "text": "- Communications Officer (VP of Corporate Communications): Owns all authorized external communications with\ncustomers, regulatory bodies, media, and executive stakeholders.\n- Legal & Regulatory Counsel (General Counsel): Assesses statutory breach notification obligations, contractual SLA\nliabilities, and international regulatory reporting requirements.\n- Alternate Role Succession: Every CMT role must designate two qualified alternates with full operational authority in the\nevent that the primary lead is unreachable.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "0d083fb827e0bd9bfa1e81a7caa69260118ad03ca2e4ffa89fa7285b0748df40",
+      "created_at": "2026-09-06T17:38:10.658195+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0012",
+      "document_id": "OPS-004",
+      "chunk_index": 12,
+      "text": "6. Disaster Declaration Criteria and Activation Workflow\n\nA formal Business Continuity Disaster may only be declared when one or more of the following activation triggers are\ncertified by the Incident Commander:\n\n1. Complete loss or catastrophic unavailability of a primary regional cloud datacenter lasting more than thirty (30) minutes\n\nwith no immediate resolution.\n\n2. Widespread, irreversible data corruption across primary database clusters affecting multiple multi-tenant customers.\n\n3. Prolonged power, environmental, or physical security destruction compromising a primary engineering development or\n\noperations facility.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "4045e63096f95cecf57d8662c915bc141fe29d926750e939ba60905a0e731ee2",
+      "created_at": "2026-09-06T17:38:10.658241+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0013",
+      "document_id": "OPS-004",
+      "chunk_index": 13,
+      "text": "3. Prolonged power, environmental, or physical security destruction compromising a primary engineering development or\n\noperations facility.\n\n4. Catastrophic cyber attack (e.g., destructive malware, widespread infrastructure encryption) that completely disables\n\nproduction operations.\nActivation Workflow: CMT War Room Convened -> Disaster Declared -> Regional Failover Initiated -> Secondary Systems\nVerified -> Internal & External Communications Published -> Continuous Recovery Telemetry Tracked.\n\n7. Emergency Communication Protocols and Customer Notifications\n\nClear, transparent communication is vital during enterprise crises to maintain customer trust and regulatory compliance:\n- Out-of-Band Communication Fabric: The CMT maintains isolated, out-of-band communication systems (e.g., dedicated\noff-network mobile calling bridges, alternative encrypted messaging channels) independent of primary enterprise\ninfrastructure.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "f9fc576fb261a98c2b4850340499703b3449ed83e5ae065a7a4da2503a593f77",
+      "created_at": "2026-09-06T17:38:10.658288+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0014",
+      "document_id": "OPS-004",
+      "chunk_index": 14,
+      "text": "- Customer Advisory Thresholds: For Priority Tier 0 and Tier 1 disruptions, formal customer advisories must be transmitted\nto designated enterprise customer contacts within sixty (60) minutes of disaster declaration.\n\n- Regulatory Notification: If disaster events involve cross-border data availability loss or personal data risk, Legal Counsel\nexecutes formal statutory notifications to data protection authorities within mandatory statutory timelines.\n\n- Employee Safety and Accountability: In physical disasters, HR activates the automated emergency employee roll-call\nsystem to verify the safety of all workforce members in the affected region.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "5f59a99b211dc1b2dd9a9f66581c191b2a4159967dc8be16deef5b1e6d6f830e",
+      "created_at": "2026-09-06T17:38:10.658333+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0015",
+      "document_id": "OPS-004",
+      "chunk_index": 15,
+      "text": "8. Annual Disaster Recovery Exercises, Drills, and Testing\n\nA business continuity plan is only as reliable as its most recent successful exercise. Threshold enforces mandatory testing\nschedules:\n- Semi-Annual Tabletop Disaster Simulations: The CMT and senior engineering leaders participate in structured tabletop\nexercises simulating complex regional failure scenarios and evaluating decision-making velocity.\n- Annual Production Regional Failover Drill: SRE and Operations teams execute an unannounced, planned regional traffic\nfailover drill, shifting 100% of live traffic to the secondary standby region to validate RTO and RPO benchmarks under real\nproduction loads.\n- Third-Party Resilience Audits: Independent SOC 2 Type II and ISO 22301 auditors inspect disaster recovery logs, backup\nrestorations, and failover drill reports annually.",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "b37dc9dd65335c206a32353042b57ba489e8992b5f56a06255579815c4b59ad5",
+      "created_at": "2026-09-06T17:38:10.658381+00:00"
+    },
+    {
+      "chunk_id": "OPS-004_CHUNK_0016",
+      "document_id": "OPS-004",
+      "chunk_index": 16,
+      "text": "- Remediation of Drill Deficiencies: Any recovery step that fails to meet targeted RTO/RPO during a drill must be\ninvestigated, patched, and re-tested within sixty (60) calendar days.\n\n9. Cross-Document Governance Interconnections\n\nThis policy operates in direct harmony with foundational enterprise operational standards:\n- OPS-001: Service Management Policy (Defines service ownership and baseline operational responsibilities).\n- OPS-006: Operational Incident Escalation Procedure (Defines operational escalation leading to disaster declaration).\n- ENG-004: Production Deployment Guide (Supplies rollback and deployment mechanisms).\n- ENG-006: Engineering Incident Management Runbook (Delineates technical engineering incident handling).\n- SEC-004: Security Incident Response Policy (Coordinates response to destructive cyber events).\n- AIG-009: AI Incident Management Policy (Coordinates handling of catastrophic AI model failures).",
+      "metadata": {
+        "department": "Operations",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "OPERATIONS_MANAGER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Business Continuity Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential enterprise business continuity management policy. Defines annual Business Impact Analysis (BIA), four recovery priority tiers with RTO and RPO benchmarks, active-passive multi-region cloud resilience, Crisis Management Team (CMT) governance, disaster declaration triggers, and annual failover drills.",
+        "keywords": [
+          "business continuity",
+          "confidential",
+          "disaster recovery",
+          "business impact analysis",
+          "bia",
+          "rto",
+          "rpo",
+          "crisis management team",
+          "cmt",
+          "failover drill",
+          "regional redundancy"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/operations/business_continuity_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "b303c1efe35885464a00194228e04ec82a8260e354e579cc917e85cbfa67bbd6",
+      "chunk_content_hash": "737c6b01ad389e5220f0441b5d8ba53dbfa48873a2e9d1cec489e5c975425d38",
+      "created_at": "2026-09-06T17:38:10.658435+00:00"
+    }
+  ]
+}

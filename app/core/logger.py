@@ -36,6 +36,16 @@ class JSONFormatter(logging.Formatter):
             }:
                 payload[key] = val
 
+        # Automatically bind request_id from context if not explicitly provided
+        if "request_id" not in payload:
+            try:
+                from app.observability.tracing import get_request_id
+                rid = get_request_id()
+                if rid:
+                    payload["request_id"] = rid
+            except Exception:
+                pass
+
         if record.exc_info:
             payload["exception"] = traceback.format_exception(*record.exc_info)
 

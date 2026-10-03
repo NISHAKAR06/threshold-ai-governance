@@ -19,14 +19,32 @@ class EmployeeRepository(BaseRepository[Employee]):
         super().__init__(session)
 
     async def get_by_username(self, username: str) -> Optional[Employee]:
-        stmt = select(Employee).where(Employee.username == username)
+        cleaned = username.strip().lower()
+        stmt = select(Employee).where(func.lower(Employee.username) == cleaned)
         result = await self.session.execute(stmt)
         return result.scalar_one_or_none()
 
     async def get_by_email(self, email: str) -> Optional[Employee]:
-        stmt = select(Employee).where(Employee.email == email)
+        cleaned = email.strip().lower()
+        stmt = select(Employee).where(func.lower(Employee.email) == cleaned)
         result = await self.session.execute(stmt)
         return result.scalar_one_or_none()
+
+    async def get_by_username_or_email(self, identifier: str) -> Optional[Employee]:
+        cleaned = identifier.strip().lower()
+        stmt = select(Employee).where(
+            (func.lower(Employee.username) == cleaned) | (func.lower(Employee.email) == cleaned)
+        )
+        result = await self.session.execute(stmt)
+        return result.scalar_one_or_none()
+
+    async def update_password(self, identifier: str, new_hashed_password: str) -> bool:
+        emp = await self.get_by_username_or_email(identifier)
+        if not emp:
+            return False
+        emp.hashed_password = new_hashed_password
+        await self.session.commit()
+        return True
 
     async def get_by_employee_id(self, employee_id: str) -> Optional[Employee]:
         stmt = select(Employee).where(Employee.employee_id == employee_id)

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <script>
@@ -450,10 +450,10 @@
 
         <form class="login-form" id="login-form" novalidate autocomplete="on">
           <div class="form-group">
-            <label class="form-label" for="username">Username</label>
+            <label class="form-label" for="username">Username or Email</label>
             <div class="login-input-group">
               <i class="login-input-icon fa-solid fa-user" aria-hidden="true"></i>
-              <input id="username" type="text" class="login-input" name="username" placeholder="Enter your username" required autocomplete="username" autofocus>
+              <input id="username" type="text" class="login-input" name="username" placeholder="Enter your username or email" required autocomplete="username" autofocus>
             </div>
           </div>
 
@@ -473,7 +473,7 @@
               <input type="checkbox" id="remember-me" name="remember" value="1">
               <span>Remember me</span>
             </label>
-            <a href="#" onclick="alert('Demo account passwords can be reset via admin.');return false;" class="login-forgot">Forgot Password?</a>
+            <a href="#" id="link-forgot-pwd" class="login-forgot">Forgot Password?</a>
           </div>
 
           <button type="submit" id="login-btn" class="login-btn">
@@ -573,6 +573,37 @@
   </div>
 </div>
 
+<!-- Reset Password Modal -->
+<div id="reset-pwd-modal" class="modal-overlay" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.65);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(4px);">
+  <div class="modal-dialog" style="background:var(--bg-surface);border:1px solid var(--border-color);border-radius:var(--border-radius-xl);padding:var(--space-6);max-width:400px;width:90%;box-shadow:var(--shadow-xl);">
+    <div class="flex items-center justify-between mb-4" style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+      <h3 class="font-bold text-base text-primary m-0" style="margin:0;font-size:16px;font-weight:600;"><i class="fa-solid fa-key" style="margin-right:8px;color:var(--color-primary);"></i>Reset Password</h3>
+      <button type="button" id="close-reset-modal" class="btn btn-ghost btn-xs" style="padding:4px 8px;border:none;background:transparent;cursor:pointer;color:var(--text-secondary);"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <form id="reset-pwd-form">
+      <div class="form-group" style="margin-bottom:12px;">
+        <label class="form-label" style="font-size:12px;display:block;margin-bottom:4px;color:var(--text-secondary);">Username or Email</label>
+        <div class="login-input-group">
+          <i class="login-input-icon fa-solid fa-user" aria-hidden="true"></i>
+          <input id="reset-ident" type="text" class="login-input" placeholder="Enter username or email" required>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:16px;">
+        <label class="form-label" style="font-size:12px;display:block;margin-bottom:4px;color:var(--text-secondary);">New Password</label>
+        <div class="login-input-group">
+          <i class="login-input-icon fa-solid fa-lock" aria-hidden="true"></i>
+          <input id="reset-new-pwd" type="password" class="login-input" placeholder="Enter new password" required minlength="4">
+        </div>
+      </div>
+      <div id="reset-msg" class="alert mb-3" style="display:none;font-size:12px;padding:8px 12px;border-radius:6px;margin-bottom:12px;"></div>
+      <div class="flex items-center justify-end gap-2" style="display:flex;align-items:center;justify-content:flex-end;gap:8px;">
+        <button type="button" id="cancel-reset-btn" class="btn btn-secondary btn-sm">Cancel</button>
+        <button type="submit" id="submit-reset-btn" class="btn btn-primary btn-sm">Update Password</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <!-- Toast container -->
 <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
@@ -639,6 +670,63 @@
       icon.className = show ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye';
     });
 
+    /* Forgot Password Modal */
+    const resetModal = document.getElementById('reset-pwd-modal');
+    document.getElementById('link-forgot-pwd')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      resetModal.style.display = 'flex';
+      const currentVal = document.getElementById('username')?.value?.trim() || '';
+      document.getElementById('reset-ident').value = currentVal;
+      document.getElementById('reset-msg').style.display = 'none';
+      if (currentVal) {
+        document.getElementById('reset-new-pwd').focus();
+      } else {
+        document.getElementById('reset-ident').focus();
+      }
+    });
+
+    document.getElementById('close-reset-modal')?.addEventListener('click', () => {
+      resetModal.style.display = 'none';
+    });
+    document.getElementById('cancel-reset-btn')?.addEventListener('click', () => {
+      resetModal.style.display = 'none';
+    });
+
+    document.getElementById('reset-pwd-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const ident = document.getElementById('reset-ident').value.trim();
+      const pwd   = document.getElementById('reset-new-pwd').value;
+      const msgEl = document.getElementById('reset-msg');
+      const submitBtn = document.getElementById('submit-reset-btn');
+
+      if (!ident || !pwd) return;
+      submitBtn.disabled = true;
+      msgEl.style.display = 'none';
+
+      try {
+        await THRESHOLDAPI.auth.resetPassword({ username_or_email: ident, new_password: pwd });
+        msgEl.className = 'alert alert-success mb-3';
+        msgEl.style.background = 'rgba(22,163,74,0.15)';
+        msgEl.style.color = '#16A34A';
+        msgEl.textContent = 'Password reset successfully! You can now sign in.';
+        msgEl.style.display = 'block';
+        setTimeout(() => {
+          resetModal.style.display = 'none';
+          document.getElementById('username').value = ident;
+          document.getElementById('password').value = pwd;
+          document.getElementById('password').focus();
+        }, 1200);
+      } catch (err) {
+        msgEl.className = 'alert alert-danger mb-3';
+        msgEl.style.background = 'rgba(220,38,38,0.15)';
+        msgEl.style.color = '#DC2626';
+        msgEl.textContent = err.message || 'Reset failed';
+        msgEl.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+
     /* Login Submit */
     document.getElementById('login-form').addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -663,7 +751,7 @@
       } catch (err) {
         document.getElementById('loader-overlay').classList.remove('active');
         errorEl.style.display = 'flex';
-        errorText.textContent = err.status === 401 ? 'Invalid username or password' : (err.message || 'Login failed');
+        errorText.textContent = err.status === 401 ? 'Invalid username/email or password' : (err.message || 'Login failed');
         btn.disabled = false;
         btnText.textContent = 'Sign In';
         document.getElementById('username').focus();
@@ -694,28 +782,31 @@
       document.getElementById('loader-overlay').classList.add('active');
 
       try {
-        await THRESHOLDAPI.auth.signup({
+        const result = await THRESHOLDAPI.auth.signup({
           full_name, email, username, password, department, role: 'reviewer'
         });
         document.getElementById('loader-overlay').classList.remove('active');
+
+        // Automatic instant login on successful signup!
+        if (result && (result.access_token || result.token)) {
+          THRESHOLDAPI.setToken(result.access_token ?? result.token, true, result.user);
+          window.location.href = '/dashboard';
+          return;
+        }
+
         btn.disabled = false;
         btnText.textContent = 'Create Account';
 
-        // Clear signup fields
+        // Fallback: Clear signup fields & switch to Login tab
         document.getElementById('signup-form').reset();
-
-        // Switch to Login tab & prefill username
         showMode('login');
         document.getElementById('username').value = username;
         
-        // Show success alert
         const successEl = document.getElementById('auth-success');
         if (successEl) {
           successEl.style.display = 'flex';
           document.getElementById('auth-success-text').textContent = `Account for '${username}' created successfully! Please enter your password to sign in.`;
         }
-
-        Toast.success('Account Created', 'Please sign in with your credentials.');
         document.getElementById('password').focus();
 
       } catch (err) {

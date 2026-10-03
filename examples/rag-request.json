@@ -1,0 +1,12 @@
+{
+  "question": "What is the retention and disposal policy for financial records?",
+  "access_context": {
+    "user_id": "EMP-4921",
+    "role": "ANALYST",
+    "department": "FINANCE",
+    "clearance_level": "INTERNAL",
+    "is_admin": false
+  },
+  "top_k": 5,
+  "include_raw_chunks": false
+}

@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block title %}Hybrid Document Search{% endblock %}
+
+{% block page_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/search.css') }}?v={{ asset_version }}">
+{% endblock %}
+
+{% block content %}
+<div class="search-page-container">
+  <!-- Page Header -->
+  <div class="page-header" style="margin-bottom:var(--space-2)">
+    <div class="page-header-row">
+      <div>
+        <h1 class="page-title">Hybrid Document Search</h1>
+        <p class="page-subtitle">Governance-aware semantic vector + BM25 keyword retrieval over enterprise knowledge</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="badge badge-info"><i class="fa-solid fa-filter-circle-check"></i> Zero-Trust Filtered</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search & Filter Controls -->
+  <div class="search-controls-card">
+    <form id="search-form" onsubmit="return false;">
+      <div class="search-bar-row">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+          <input
+            type="text"
+            id="search-query-input"
+            class="search-main-input"
+            placeholder="Search enterprise policies, engineering guides, compliance filings…"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button type="submit" id="search-submit-btn" class="btn btn-primary">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </div>
+
+      <!-- Access Context & Filters -->
+      <div class="search-filters-row">
+        <div class="filter-group">
+          <span class="filter-label"><i class="fa-solid fa-shield"></i> Clearance:</span>
+          <select id="filter-clearance" class="filter-select">
+            <option value="PUBLIC">PUBLIC</option>
+            <option value="INTERNAL" selected>INTERNAL</option>
+            <option value="CONFIDENTIAL">CONFIDENTIAL</option>
+            <option value="RESTRICTED">RESTRICTED</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label"><i class="fa-solid fa-user-tag"></i> Role:</span>
+          <select id="filter-role" class="filter-select">
+            <option value="reviewer" selected>Reviewer / Engineer</option>
+            <option value="admin">Administrator</option>
+            <option value="finance">Finance Specialist</option>
+            <option value="hr">HR Representative</option>
+            <option value="intern">Intern / Guest</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label"><i class="fa-solid fa-building"></i> Department:</span>
+          <select id="filter-department" class="filter-select">
+            <option value="Engineering" selected>Engineering</option>
+            <option value="Finance">Finance</option>
+            <option value="Human Resources">Human Resources</option>
+            <option value="Operations">Operations</option>
+            <option value="Security">Security</option>
+          </select>
+        </div>
+
+        <div class="filter-group" style="margin-left:auto;">
+          <span class="filter-label">Top Results:</span>
+          <select id="filter-top-k" class="filter-select">
+            <option value="5" selected>Top 5</option>
+            <option value="10">Top 10</option>
+            <option value="15">Top 15</option>
+            <option value="20">Top 20</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Summary Stats Bar -->
+  <div id="search-summary" class="search-summary-banner" style="display:none;">
+    <div class="summary-stats-pills">
+      <span class="stats-pill text-primary">
+        <i class="fa-solid fa-list-check"></i> <span id="stat-authorized-count">0</span> Authorized Results
+      </span>
+      <span class="stats-pill text-danger">
+        <i class="fa-solid fa-shield-xmark"></i> <span id="stat-denied-count">0</span> Denied (Policy Filtered)
+      </span>
+    </div>
+    <div class="flex items-center gap-3 text-secondary text-xs">
+      <span>Strategy: <strong id="stat-strategy" class="font-mono">RRF Fused</strong></span>
+      <span>Latency: <strong id="stat-latency" class="font-mono">0ms</strong></span>
+    </div>
+  </div>
+
+  <!-- Loading State -->
+  <div id="search-loading" style="display:none; padding:var(--space-8) 0; text-align:center;">
+    <div class="loading-dots" style="justify-content:center; margin-bottom:var(--space-2);">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="text-sm text-secondary">Executing hybrid semantic + keyword retrieval &amp; governance filtering…</p>
+  </div>
+
+  <!-- Error State -->
+  <div id="search-error" class="card" style="display:none; border-left:4px solid var(--color-danger); padding:var(--space-4);">
+    <div class="flex items-center gap-3">
+      <i class="fa-solid fa-circle-exclamation text-danger" style="font-size:20px;"></i>
+      <div>
+        <h4 class="text-danger" style="margin-bottom:2px;">Search Request Failed</h4>
+        <p id="search-error-msg" class="text-sm text-secondary"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Container -->
+  <div id="search-results" class="search-results-list">
+    <!-- Initial Empty State -->
+    <div class="empty-state" style="padding:var(--space-12) var(--space-4); text-align:center;">
+      <div class="empty-state-icon" style="font-size:36px; color:var(--text-tertiary); margin-bottom:var(--space-3);">
+        <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+      </div>
+      <h3 class="text-base font-semi" style="margin-bottom:var(--space-1);">Explore Knowledge Base</h3>
+      <p class="text-sm text-secondary" style="max-width:440px; margin:0 auto;">
+        Enter keywords or natural language questions above. Results are automatically authorized against your selected clearance and department.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block page_init %}
+<script>
+  if (typeof SearchPage !== 'undefined') SearchPage.init();
+</script>
+{% endblock %}

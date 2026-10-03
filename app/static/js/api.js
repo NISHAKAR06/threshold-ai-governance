@@ -110,11 +110,12 @@ const THRESHOLDAPI = (() => {
 
   /* ── Auth ────────────────────────────────────────────────── */
   const auth = {
-    login:   (creds)  => post('/auth/login', creds, { silent: true, retry: 0 }),
-    signup:  (data)   => post('/auth/signup', data, { silent: true, retry: 0 }),
-    me:      ()       => get('/auth/me', { silent: true }),
-    profile: ()       => get('/auth/me', { silent: true }),
-    logout:  ()       => { clearToken(); window.location.href = '/logout'; },
+    login:         (creds) => post('/auth/login', creds, { silent: true, retry: 0 }),
+    signup:        (data)  => post('/auth/signup', data, { silent: true, retry: 0 }),
+    resetPassword: (data)  => post('/auth/reset-password', data, { silent: true, retry: 0 }),
+    me:            ()      => get('/auth/me', { silent: true }),
+    profile:       ()      => get('/auth/me', { silent: true }),
+    logout:        ()      => { clearToken(); window.location.href = '/logout'; },
   };
 
   /* ── Dashboard ───────────────────────────────────────────── */
@@ -193,6 +194,36 @@ const THRESHOLDAPI = (() => {
   }
   const _sleep = ms => new Promise(r => setTimeout(r, ms));
 
+  /* ── Phase 12-16: RAG, Retrieval, Agent, Evaluation, Monitoring ─ */
+  const rag = {
+    ask: (payload, opts = {}) => post('/rag/ask', payload, { timeout: 120000, ...opts }),
+  };
+
+  const retrieval = {
+    search:           (payload, opts = {}) => post('/retrieval/search', payload, opts),
+    governanceSearch: (payload, opts = {}) => post('/retrieval/governance-search', payload, opts),
+  };
+
+  const agent = {
+    execute:      (payload, opts = {}) => post('/agent/execute', payload, { timeout: 120000, ...opts }),
+    executeGraph: (payload, opts = {}) => post('/agent/graph/execute', payload, { timeout: 120000, ...opts }),
+    audit:        (limit = 50)          => get(`/agent/audit?limit=${limit}`, { silent: true }),
+  };
+
+  const evaluation = {
+    latest:       ()             => get('/evaluation/latest', { silent: true }),
+    runs:         ()             => get('/evaluation/runs',   { silent: true }),
+    getRun:       (runId)        => get(`/evaluation/runs/${runId}`, { silent: true }),
+    runBenchmark: (opts = {})    => post('/evaluation/run', opts, { timeout: 180000 }),
+  };
+
+  const monitoring = {
+    summary: () => get('/monitoring/summary', { silent: true }),
+    health:  () => get('/health',             { silent: true }),
+    ready:   () => get('/ready',              { silent: true }),
+    metrics: () => get('/metrics',            { silent: true, raw: true }),
+  };
+
   /* ── Download helper ─────────────────────────────────────── */
   async function downloadFile(url, filename) {
     const res = await fetch(url, {
@@ -213,6 +244,8 @@ const THRESHOLDAPI = (() => {
     auth, dashboard, chat, governance,
     review, execution, audit, analytics,
     settings, profile,
+    rag, retrieval, agent, evaluation, monitoring,
     downloadFile, APIError,
   };
 })();
+

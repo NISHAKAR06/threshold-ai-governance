@@ -1,0 +1,779 @@
+{
+  "document_id": "HR-001",
+  "chunks": [
+    {
+      "chunk_id": "HR-001_CHUNK_0001",
+      "document_id": "HR-001",
+      "chunk_index": 1,
+      "text": "Document Id | HR-001\nTitle | Employee Handbook\nDepartment | Human Resources\nClassification | INTERNAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | HANDBOOK\nAllowed Roles | EMPLOYEE, MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, OPERATIONS_MANAGER, HR_MANAGER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nEmployee Handbook\n\n1. Document Overview and Executive Summary\n\nWelcome to Threshold Enterprise Systems. As a global technology enterprise operating across India, the United States, the United Kingdom, and Singapore, our organization empowers approximately 5,000 professionals driving cutting-edge advancements in Artificial Intelligence solutions, cloud platforms, and enterprise data ecosystems. This Employee Handbook serves as the foundational cultural and operational guide for every team member.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "d283670ddc5f5916b5a9694209b139a298d785df72af4fb44e2659d1ef6cc187",
+      "created_at": "2026-09-06T17:38:10.581914+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0002",
+      "document_id": "HR-001",
+      "chunk_index": 2,
+      "text": "This handbook outlines the essential operating principles, employee rights, behavioral standards, workplace standards, and organizational expectations across all Threshold Enterprise Systems subsidiaries and operating facilities. While this document establishes our general employment framework, specific operational procedures and compliance mandates are detailed in individual topic-specific policies published across our enterprise knowledge repository. Every employee, regardless of tenure, job family, or geographic location, is required to read, understand, and adhere to the guidelines set forth in this document. Compliance with this handbook fosters a transparent, inclusive, ethical, and high-performance environment where innovative engineering and responsible corporate governance thrive.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "9b09792c389c015c0a0222094101ffce05272af538903c77ba39a7799da018fd",
+      "created_at": "2026-09-06T17:38:10.582003+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0003",
+      "document_id": "HR-001",
+      "chunk_index": 3,
+      "text": "2. Purpose, Scope, and Organizational Applicability The primary purpose of the Employee Handbook is to establish a shared standard of operational excellence, mutual respect, and accountability. It provides practical guidance regarding daily working norms, performance expectations, professional conduct, and the protection of enterprise assets. This handbook applies universally to all full-time employees, part-time employees, fixed-term contractors, and corporate interns across all operating entities of Threshold Enterprise Systems. Regional supplements may provide local administrative details to comply with national labor laws in India, the US, the UK, or Singapore; however, the core principles defined herein represent non-negotiable enterprise baselines.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "088e5cc13ecb5d18ce934ce8b328b9fadd39a4dcf71d8994a2c48b480bf88392",
+      "created_at": "2026-09-06T17:38:10.582060+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0004",
+      "document_id": "HR-001",
+      "chunk_index": 4,
+      "text": "Where a local statutory requirement imposes a stricter obligation than this handbook, the local statutory rule shall take precedence. In all other scenarios, the standards established by Threshold Enterprise Systems govern employee conduct and corporate obligations. 3. Mission, Core Values, and Enterprise Philosophy Threshold Enterprise Systems is dedicated to engineering reliable, secure, and governed intelligent platforms that transform modern digital enterprises. Our mission is realized through relentless technical rigor, absolute customer trust, and adherence to our five core corporate values. First, Integrity: We uphold the highest ethical standards in our business transactions, software development practices, and collegial relationships. We prioritize transparency and honesty in all circumstances.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "1f4e13ed97667621a1f27d8ef626b913887f2aad02ff8a8b9ae18726b9b807b9",
+      "created_at": "2026-09-06T17:38:10.582108+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0005",
+      "document_id": "HR-001",
+      "chunk_index": 5,
+      "text": "Second, Innovation with Purpose: We pioneer advancements in enterprise AI, distributed cloud infrastructure, and data platforms while maintaining strict adherence to safety, reliability, and human-centric governance. Third, Security-First Mindset: Information security, data privacy, and systemic resilience are embedded in every workflow, architecture design, and operational routine across the company. Fourth, Accountability and Ownership: We take proactive ownership of our outcomes, support our colleagues, acknowledge errors constructively, and follow through on our commitments to customers, teammates, and stakeholders. Fifth, Inclusion and Respect: We cultivate a diverse global workforce where varied perspectives, backgrounds, and technical disciplines collaborate without bias, harassment, or prejudice.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "db321c475e85cf26b92901ff31e2f198d7693b5eff749e3307459ab103df53c9",
+      "created_at": "2026-09-06T17:38:10.582151+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0006",
+      "document_id": "HR-001",
+      "chunk_index": 6,
+      "text": "4. Workplace Expectations, Culture, and Psychological Safety Threshold Enterprise Systems maintains an open, collaborative, and psychologically safe workplace culture. We believe that groundbreaking engineering and successful business operations flourish when individuals feel valued, empowered to question assumptions, and safe to voice concerns. Employees are expected to treat colleagues, clients, vendors, and community members with dignity, professionalism, and courtesy. Disparaging remarks, intimidation, exclusionary behaviors, and offensive speech are strictly prohibited across all physical workplaces, virtual collaboration platforms, and company events. We champion continuous learning and professional development. Employees are encouraged to participate in enterprise technical mentorship programs, cross-departmental hackathons, and corporate educational reimbursement programs coordinated through Human Resources.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "d02a7081975764dd3fd824049b30a6b757ad347ff8a41275a493167adf1fc619",
+      "created_at": "2026-09-06T17:38:10.582195+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0007",
+      "document_id": "HR-001",
+      "chunk_index": 7,
+      "text": "5. Standard Working Hours, Flexibility, and Global Collaboration Standard full-time employment at Threshold Enterprise Systems comprises 40 hours per work week, distributed across Monday through Friday. Due to the multinational composition of our engineering, operations, and governance teams, we operate with a flexible work model that balances local team synchronization with asynchronous global collaboration. To ensure effective cross-functional collaboration, all departments observe 'Core Collaboration Hours' from 10:00 AM to 4:00 PM in their respective local time zones (IST in India, EST/PST in the United States, GMT/BST in the United Kingdom, and SGT in Singapore). Employees must be accessible and responsive on primary enterprise channels during these core hours.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "21c20fdb0010403c9013b846f02795e252bc1c8460889e302450dec1a779da45",
+      "created_at": "2026-09-06T17:38:10.582244+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0008",
+      "document_id": "HR-001",
+      "chunk_index": 8,
+      "text": "Employees requiring alternative scheduling arrangements due to personal obligations, academic pursuits, or caregiving responsibilities may request flexible working arrangements with their primary people manager and local HR Business Partner. Flexible schedules must maintain operational continuity and must not degrade team deliverables or SLA commitments. 6. Professional Communication and Collaboration Standards Professional communication is vital for maintaining productivity and mutual respect across distributed teams. Threshold Enterprise Systems provides modern collaboration tools, including enterprise Slack, Microsoft 365, Google Workspace, and video conferencing systems.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "6e27d814f75610f39747f7a988552ef96ac4ed434b6b1ca0e3452cfc4ca4e23b",
+      "created_at": "2026-09-06T17:38:10.582296+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0009",
+      "document_id": "HR-001",
+      "chunk_index": 9,
+      "text": "When communicating on corporate platforms, employees must maintain clear, constructive, and respectful dialogue. Professional etiquette requires timely responses to urgent requests, maintaining updated calendar availability, and using video conference etiquette that respects participants' focus and diverse cultural norms. All communication conducted through corporate infrastructure is subject to enterprise data governance, compliance monitoring, and retention schedules. Internal messaging platforms must never be used to transmit unlawful content, derogatory comments, unauthorized commercial solicitations, or unapproved AI system prompts.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "e250df9c666c80747ba1755b7b153b0ad6d314ae122f4751434ea5c0a5f4d4a4",
+      "created_at": "2026-09-06T17:38:10.582343+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0010",
+      "document_id": "HR-001",
+      "chunk_index": 10,
+      "text": "7. Workplace Conduct, Civility, and Anti-Harassment Standards Threshold Enterprise Systems maintains an unequivocal zero-tolerance stance regarding workplace harassment, discrimination, bullying, and retaliation. Every employee has the right to perform their duties in an environment free from intimidation and hostility. Prohibited conduct includes, but is not limited to: unwanted physical contact, derogatory slurs regarding protected personal characteristics, offensive jokes or imagery, stalking, unwelcome romantic advances, and subtle microaggressions. These prohibitions apply equally in physical office buildings, client sites, virtual messaging channels, and off-site business gatherings.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "3442b727d39a755ddba137780705f9d5487ef9d5924ea37cd56299029956e3ec",
+      "created_at": "2026-09-06T17:38:10.582391+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0011",
+      "document_id": "HR-001",
+      "chunk_index": 11,
+      "text": "Employees who witness or experience conduct violating our civility standards are strongly encouraged to report the incident immediately through our designated reporting channels. Reports are investigated impartially, swiftly, and confidentially in accordance with our Workplace Incident Reporting Policy (HR-008). 8. Attendance, Punctuality, and Absence Notification Reliable attendance and punctuality are essential components of professional accountability. Team members are expected to arrive punctually for scheduled meetings, project stand-ups, client presentations, and operational on-call rotations. In the event of an unavoidable delay or unexpected absence resulting from illness, family emergency, or transportation disruption, the employee must notify their direct manager as early as practicable, and no later than two hours after the scheduled start of their working shift.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "7bc561b1bda43d08dad796b2227f0c2e4fe133b85999f1a954fb16ba31533626",
+      "created_at": "2026-09-06T17:38:10.582440+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0012",
+      "document_id": "HR-001",
+      "chunk_index": 12,
+      "text": "Unexcused or persistent unreported absences ('no-call, no-show') undermine team productivity and constitute a serious breach of workplace standards. Unreported absences extending beyond three consecutive business days are treated as job abandonment, subject to formal disciplinary action and termination of employment. 9. Care and Custody of Physical and Digital Enterprise Assets Employees are entrusted with corporate assets to support their job functions, including laptops, mobile devices, security hardware keys, cloud computing infrastructure, software licenses, and proprietary technical documentation. All hardware and digital assets remain the exclusive property of Threshold Enterprise Systems. Employees must exercise reasonable care to prevent theft, loss, damage, or unauthorized access. Laptops must not be left unattended in public spaces, and corporate equipment must never be loaned to friends, family members, or third parties.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "e68e0bcc68f82cd8cf99ef50b213a590fb18e4bee9edc73abc6aabcc5bb69974",
+      "created_at": "2026-09-06T17:38:10.582492+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0013",
+      "document_id": "HR-001",
+      "chunk_index": 13,
+      "text": "Upon termination of employment or formal request by management or IT Operations, all company assets, including physical equipment, access badges, and confidential documents, must be surrendered promptly within forty-eight hours in accordance with enterprise offboarding checklists. 10. Escalation, Conflict Resolution, and Reporting Channels Constructive resolution of workplace disagreements and ethical concerns is fundamental to healthy organizational operations. When interpersonal conflicts arise, employees are encouraged to seek informal, professional resolution directly with the involved parties where safe and appropriate. When informal resolution is insufficient, impractical, or involves potential policy violations, employees have access to structured escalation pathways. Primary reporting points include the employee's direct manager, next-level leadership, designated departmental HR Business Partners, and the Employee Relations team.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "4cbc89abac0054d6c62e09f2aba88d906daafdde294e28cfe8ca459ece2f51f0",
+      "created_at": "2026-09-06T17:38:10.582542+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0014",
+      "document_id": "HR-001",
+      "chunk_index": 14,
+      "text": "For sensitive ethical matters, potential fraud, financial misconduct, or severe harassment, employees may utilize the confidential Threshold Enterprise Ethics Hotline. This reporting hotline operates 24/7/365 and allows employees to submit reports anonymously where permitted by regional law. The company strictly forbids any form of retaliation against employees who raise good-faith concerns. 11. Roles and Responsibilities Across the Organization Maintaining the standards defined in this handbook is a collaborative commitment across several organizational roles. Employees are responsible for familiarizing themselves with company policies, upholding behavioral standards, completing required annual training modules, and reporting known or suspected violations.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "d60dff292067345690ad13ebbe787cf8830cd88dbfd9b8fd2a75d2eea4b99931",
+      "created_at": "2026-09-06T17:38:10.582686+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0015",
+      "document_id": "HR-001",
+      "chunk_index": 15,
+      "text": "People Managers are responsible for modeling exemplary conduct, fostering inclusive team environments, addressing workplace conflicts promptly, enforcing attendance and operational standards fairly, and ensuring team awareness of corporate resources. The Human Resources Department is responsible for maintaining and updating policy documentation, providing advisory support to managers and employees, conducting objective investigations, and administering workforce compliance programs. Executive Leadership and the Enterprise Governance Committee are responsible for strategic oversight, ensuring alignment between corporate policies and ethical commitments, and allocating resources to support workforce well-being and safety.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "999dbfa507ded3ba81fa3eda73f31b64941e1d102ae8c068edb08680f36b9db6",
+      "created_at": "2026-09-06T17:38:10.582767+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0016",
+      "document_id": "HR-001",
+      "chunk_index": 16,
+      "text": "12. Integration with Related Enterprise Policies This Employee Handbook functions as an overarching charter and operates in direct conjunction with specialized policies across our corporate knowledge base. Employees must consult related documents for granular rules governing specific operational domains: - HR-002: Leave and Time-Off Policy (Comprehensive entitlements for annual, sick, parental, and emergency leave). - HR-004: Remote Work Policy Version 2.0 (Authoritative guidelines for hybrid work schedules, maximum 3 remote days per week, and home workspace security). - HR-005: Employee Code of Conduct (Detailed ethical baselines, conflicts of interest, and anti-bribery standards). - HR-006: Performance Management Policy (Performance calibration cycles, review cadence, and improvement frameworks). - HR-007: Employee Data Privacy Policy (Safeguards governing employee personal information and records).",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "0d02c13f988c1d849916e40fe1385a31c2df67ba74d6626ca076dff2fd886446",
+      "created_at": "2026-09-06T17:38:10.582830+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0017",
+      "document_id": "HR-001",
+      "chunk_index": 17,
+      "text": "- HR-007: Employee Data Privacy Policy (Safeguards governing employee personal information and records). - HR-008: Workplace Incident Reporting Policy (Detailed reporting protocols and investigation workflows for workplace incidents). 13. Policy Acknowledgment, Annual Review, and Administration As a condition of employment, all newly hired personnel must electronically sign an acknowledgment confirming they have received, reviewed, and agreed to adhere to this Employee Handbook during initial onboarding in the Workday portal. All existing personnel must complete an annual electronic recertification and policy acknowledgment following our company-wide compliance training window in January of each calendar year.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "2b0eb3a4dd529a259eb0546058a341028ce2f6ae13b755a4c1a26802a2f083bd",
+      "created_at": "2026-09-06T17:38:10.582882+00:00"
+    },
+    {
+      "chunk_id": "HR-001_CHUNK_0018",
+      "document_id": "HR-001",
+      "chunk_index": 18,
+      "text": "This document is formally reviewed on an annual basis by the Vice President of Human Resources and ratified by the Enterprise Governance Committee. Minor administrative updates may occur periodically to reflect evolving statutory requirements or operational enhancements. Continued employment with Threshold Enterprise Systems constitutes ongoing agreement to comply with the authoritative version of this handbook published in the enterprise knowledge base.",
+      "metadata": {
+        "department": "Human Resources",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "EMPLOYEE",
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "OPERATIONS_MANAGER",
+          "HR_MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "HANDBOOK",
+        "status": "ACTIVE",
+        "title": "Employee Handbook",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Comprehensive organizational handbook defining Threshold Enterprise Systems company values, workplace culture, core working hours, professional conduct, asset stewardship, and escalation channels across global offices.",
+        "keywords": [
+          "employee handbook",
+          "company values",
+          "workplace culture",
+          "working hours",
+          "core hours",
+          "code of conduct",
+          "asset care",
+          "escalation channels"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/hr/employee_handbook.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "1257e99442f81359f99be5a6c8000ad7d143a03717aab1238b41740043077537",
+      "chunk_content_hash": "1cab05b6e5f43ee0577d018f8093acb8a840f8473d295ae5b45ef91fada526ad",
+      "created_at": "2026-09-06T17:38:10.582926+00:00"
+    }
+  ]
+}

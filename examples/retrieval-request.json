@@ -1,0 +1,11 @@
+{
+  "query": "model card evaluation guidelines and bias thresholds",
+  "access_context": {
+    "user_id": "EMP-8023",
+    "role": "ENGINEER",
+    "department": "DATA_SCIENCE",
+    "clearance_level": "INTERNAL",
+    "is_admin": false
+  },
+  "top_k": 5
+}

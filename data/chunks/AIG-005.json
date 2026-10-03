@@ -1,0 +1,620 @@
+{
+  "document_id": "AIG-005",
+  "chunks": [
+    {
+      "chunk_id": "AIG-005_CHUNK_0001",
+      "document_id": "AIG-005",
+      "chunk_index": 1,
+      "text": "Document Id | AIG-005\nTitle | Human-in-the-Loop Review Policy\nDepartment | Enterprise Governance\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nHuman-in-the-Loop Review Policy\n\n1. CONFIDENTIAL CLASSIFICATION AND OPERATIONAL PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED TO MANAGERIAL AND TECHNICAL GOVERNANCE ROLES ***\n\nThis document establishes the proprietary operational standards, human intervention protocols, reviewer qualification baselines, and override recording procedures for Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is restricted to authorized roles (MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN). Workforce members holding the general EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "8171305b0d024c7874014557009e8b8533900ab805b2cf7db8d7ff9e60278bc3",
+      "created_at": "2026-09-06T17:38:10.498950+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0002",
+      "document_id": "AIG-005",
+      "chunk_index": 2,
+      "text": "The purpose of this Human-in-the-Loop (HITL) Review Policy is to ensure that automated artificial intelligence systems never execute consequential, high-risk, or irreversible decisions without meaningful, qualified human oversight. This policy establishes the operational mechanisms through which human judgment, moral accountability, and contextual reasoning supervise algorithmic outputs. By anchoring automated decisions in qualified human judgment, Threshold Enterprise Systems ensures compliance with emerging international legal mandates, prevents runaway autonomous failure modes, and maintains our core ethical commitment to human agency.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "570ae72f480a37e50a1a6cfbaa84311a39ea7feb69d667e9052e34637ce2ec16",
+      "created_at": "2026-09-06T17:38:10.499040+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0003",
+      "document_id": "AIG-005",
+      "chunk_index": 3,
+      "text": "2. The Spectrum of Human Oversight: HITL, HOTL, and HIC Threshold Enterprise Systems recognizes three distinct operational paradigms of human oversight: 1. Human-in-the-Loop (HITL): The AI system generates recommendations, classifications, or draft actions, but CANNOT execute the decision. An authorized human must actively review, validate, and endorse the action before execution occurs. 2. Human-on-the-Loop (HOTL): The AI system executes actions automatically within pre-authorized operational boundaries, while a human supervisor monitors telemetry in real time and retains immediate capability to intervene, halt, or override execution.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "213ba961b238d458c7472e3d7183269878819eda189b8b110c07aae0f1bea352",
+      "created_at": "2026-09-06T17:38:10.499099+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0004",
+      "document_id": "AIG-005",
+      "chunk_index": 4,
+      "text": "3. Human-in-Command (HIC): Strategic human oversight over the macro operational goals, policy constraints, and operational boundaries of the AI system, including the decision to activate, restrict, or permanently decommission the capability. 3. Risk-Based Human Oversight Rules Matrix The mandatory human oversight requirements for any AI system are strictly determined by its certified risk classification under AIG-002: - LOW Risk AI Systems: Human review is OPTIONAL at the discretion of the end user. Periodic sampling audits are conducted quarterly. - MEDIUM Risk AI Systems: Human review is MANDATORY for designated decision thresholds (e.g., customer-facing responses, resource allocations > $10,000 USD, or operational changes affecting > 50 users). Low-impact routing may operate with HOTL telemetry.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "6696843433563ee1538c7ba8aa28be19722ff549c6dfb6228166025ca1d5a623",
+      "created_at": "2026-09-06T17:38:10.499151+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0005",
+      "document_id": "AIG-005",
+      "chunk_index": 5,
+      "text": "- HIGH Risk AI Systems: STRICT HUMAN-IN-THE-LOOP (HITL) MANDATORY. The AI system is restricted strictly to an advisory role. No consequential decision—such as hiring evaluation, financial credit allocation, disciplinary action, or production code deployment—may be finalized without prior written or electronic human endorsement. - CRITICAL Risk AI Systems: DUAL-AUTHORIZED HUMAN-IN-THE-LOOP MANDATORY. Autonomous execution is strictly blocked. Every execution command requires two independent qualified human approvers executing cryptographic sign-off.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "5e21185071f54e7dc6d4b9d37f9cdb73f1740197a99e07f880364962c687aa9d",
+      "created_at": "2026-09-06T17:38:10.499208+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0006",
+      "document_id": "AIG-005",
+      "chunk_index": 6,
+      "text": "4. Qualified Human Reviewer Standards and Qualifications To ensure that human oversight represents genuine, meaningful supervision rather than rubber-stamping, designated reviewers must satisfy strict qualification standards: - Domain Competency: The reviewer must possess formal professional qualifications, training, and operational experience in the specific subject matter domain (e.g., HR professionals review HR AI recommendations; senior security engineers review security AI alerts). - Cognitive Feasibility and Review Time: Systems must be engineered to provide reviewers with adequate time, context, and diagnostic rationale to conduct thoughtful evaluations. Imposing unreasonable time constraints (e.g., expecting a reviewer to evaluate 50 complex loan applications per hour) is strictly prohibited.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "571dacb64eed45ef4c701b70c78b75ec99a40290f7ed28b2ad7e03fcb380445b",
+      "created_at": "2026-09-06T17:38:10.499262+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0007",
+      "document_id": "AIG-005",
+      "chunk_index": 7,
+      "text": "- Automation Bias Training: All designated reviewers must complete specialized training on 'Automation Bias'—the psychological tendency for humans to uncritically trust automated systems over their own critical judgment. - Authority and Protection: Reviewers must hold unambiguous managerial authority to reject, modify, or override AI recommendations without fear of operational friction or negative performance appraisal. 5. Workload Quotas, Cognitive Fatigue, and Anti-Rubber-Stamping Protocols Human cognitive performance degrades under sustained repetitive decision pressure. To prevent reviewer fatigue from eroding oversight quality, operational managers must enforce strict workload limits: - Continuous Review Shifts: Designated human reviewers must not evaluate consequential AI decisions for more than ninety (90) consecutive minutes without a mandatory thirty-minute operational break.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "fca141448b5f160beb75013920630bdd04b443f9469811468919d106384336cf",
+      "created_at": "2026-09-06T17:38:10.499457+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0008",
+      "document_id": "AIG-005",
+      "chunk_index": 8,
+      "text": "- Maximum Daily Quota: For HIGH-risk decision pipelines (e.g., credit approvals or employment reviews), reviewers must not evaluate more than forty (40) cases per work shift. - Randomized Synthetic Spot-Checking: Quality assurance leads inject randomized synthetic benchmark cases with deliberate subtle errors into review queues to test reviewer alertness and measure uncritical agreement rates. - Speed Bump Enforcements: User interfaces for HIGH-risk review queues must enforce a mandatory minimum dwell time (e.g., 45 seconds) before the approval button becomes active, preventing unread batch approvals.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "f120c1be3f476dc78dd3ea3761d6f548848f63f50e225df130a15c78402b3239",
+      "created_at": "2026-09-06T17:38:10.499539+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0009",
+      "document_id": "AIG-005",
+      "chunk_index": 9,
+      "text": "6. Human Override Workflows and Technical Mechanisms Every application interface utilizing AI-assisted decision-making must incorporate prominent, accessible, and intuitive technical override mechanisms: 1. 'Reject Recommendation' Action: A single-click control allowing the reviewer to reject the AI suggestion entirely and input an alternative human determination. 2. 'Modify and Approve' Action: Allows the reviewer to edit, refine, or correct specific elements of the AI draft before approval. 3. 'Emergency System Pause': In HOTL monitoring environments, a dedicated master tripwire button that immediately pauses autonomous processing and switches to manual fallback mode.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "b6927c49757139fa0543c70b2606c23e7a14252fa3fb7a218e21fdc4362e9603",
+      "created_at": "2026-09-06T17:38:10.499596+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0010",
+      "document_id": "AIG-005",
+      "chunk_index": 10,
+      "text": "4. Mandatory Justification Logging: Whenever an AI recommendation is overridden or rejected, the human reviewer must record a brief, structured justification in the interface. These records are ingested into our continuous retraining pipeline to address systematic model blind spots. 7. Domain-Specific Human Oversight Protocols Operational procedures vary across functional domains to address specific operational risks: - Human Resources and Talent Acquisition: In compliance with HR-006, AI screening algorithms may only rank candidate resumes; human recruiters must independently evaluate candidate work histories and make all interview shortlisting determinations. Automatic candidate rejection by AI is strictly prohibited. - Information Security Operations: AI alert triage systems may prioritize security events, but revoking user access credentials, severing network segments, or executing containment actions requires explicit SOC Lead authorization.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "7a9e5d7f8577f6ed9bd1a4aa8ffa05b235e2daa97f386025ac01a59535ccf9eb",
+      "created_at": "2026-09-06T17:38:10.499859+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0011",
+      "document_id": "AIG-005",
+      "chunk_index": 11,
+      "text": "- Financial Transactions and Resource Allocation: AI budget optimization models may propose vendor reallocations, but disbursements exceeding $5,000 USD require formal human sign-off in the ERP system. - Production Software Deployments: AI automated code remediation bots may propose pull requests, but cannot merge code into production branches without senior engineer code review and staging verification. 8. Cognitive Bias Mitigation Curriculum and Mandatory Reviewer Certification To maintain rigorous oversight integrity, all designated human reviewers must complete an annual certification curriculum administered by the Enterprise Governance Office: - Automation Complacency Module: Teaches reviewers how to identify subtle edge-case errors that appear superficially coherent but contain catastrophic factual or logical flaws.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "a08f0a4e35250cdd165baa1da23526e723101d4cafa1969520f4c139ab39cbff",
+      "created_at": "2026-09-06T17:38:10.499930+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0012",
+      "document_id": "AIG-005",
+      "chunk_index": 12,
+      "text": "- Algorithmic Aversion vs. Algorithmic Over-Trust: Trains reviewers to strike an objective balance—avoiding both reflexive rejection of valid AI telemetry and unquestioning rubber-stamping of automated outputs. - Contextual Verification Drills: Practical hands-on simulations where reviewers must cross-reference AI model outputs against underlying ground-truth documentation, source code, and enterprise policy databases. - Annual Re-Certification: Reviewers who fail the practical evaluation or whose production override audit reveals severe complacency are temporarily removed from review queues until retrained.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "7ed1990ed63f0cfd8dd7d23f0a13e4a8ec245cf69799e7bfa4e31d2f45a3b8eb",
+      "created_at": "2026-09-06T17:38:10.499985+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0013",
+      "document_id": "AIG-005",
+      "chunk_index": 13,
+      "text": "9. Service Level Agreements (SLAs), Response Windows, and Operational Escalations Human review queues must operate within defined operational SLAs to prevent operational bottlenecks: - High-Priority Customer Workflows: Customer support escalations requiring human review must be evaluated within fifteen (15) minutes during business hours. - Internal Operational Approvals: Routine internal decision reviews (e.g., ticket routing or low-risk code remediation) must be completed within four (4) business hours. - Queue Overflow Protocols: If an unreviewed queue exceeds 80% capacity or an item breaches its SLA window, the application orchestrator automatically routes excess volume to designated secondary backup reviewers and dispatches an alert to the operational supervisor. - Fail-Safe Queue Behavior: If human review queues become completely unresponsive, the system must FAIL CLOSED—pausing automated decisions rather than defaulting to unreviewed execution.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "65bc495c3765bfd5b62a315e8910d90d2cef341742c8c497c158ddbbaf8046a7",
+      "created_at": "2026-09-06T17:38:10.500035+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0014",
+      "document_id": "AIG-005",
+      "chunk_index": 14,
+      "text": "10. Documentation, Audit Evidence, and Record Keeping All human oversight transactions must generate immutable electronic audit evidence cataloged in the Enterprise Governance Registry. Logged attributes include: unique transaction ID, model version, raw model recommendation and confidence score, human reviewer identity, review timestamp and duration, final disposition (Approved, Modified, or Rejected), and reviewer justification notes. Audit logs must be cryptographically signed, protected against tampering, and retained for a minimum of seven (7) years to satisfy regulatory inspection under international AI governance mandates. Quarterly Human Oversight Audits are conducted by Enterprise Governance to calculate human override rates, measure average review duration, and detect signs of rubber-stamping.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "bf26adc53e31caddb5bdf6658d5e2b485b46ea0195611269ecfd1b1723c3cba6",
+      "created_at": "2026-09-06T17:38:10.500080+00:00"
+    },
+    {
+      "chunk_id": "AIG-005_CHUNK_0015",
+      "document_id": "AIG-005",
+      "chunk_index": 15,
+      "text": "11. Accountability, Escalation, and Inter-Policy References The designated human reviewer bears full legal, organizational, and professional responsibility for the final decision. Endorsing an AI recommendation that causes foreseeable harm due to negligent review constitutes professional misconduct. If a reviewer encounters an AI system repeatedly generating dangerous, biased, or erroneous recommendations, the reviewer must escalate the issue immediately to the AI Incident Management desk under AIG-009. This policy operates in direct alignment with related enterprise governance policies: - AIG-002: AI Risk Classification Framework (Defines the risk tiers governing HITL requirements). - AIG-003: AI Model Approval Policy (Requires HITL operational plan prior to model approval). - AIG-008: AI Model Monitoring Policy (Monitors reviewer override rates and telemetry). - AIG-010: AI Model Deployment Policy (Validates HITL interface readiness prior to deployment).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Human-in-the-Loop Review Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines mandatory human oversight requirements across AI risk levels (LOW, MEDIUM, HIGH, CRITICAL). Details reviewer qualification standards, cognitive fatigue mitigation, technical override workflows, audit evidence logging, and reviewer accountability.",
+        "keywords": [
+          "human-in-the-loop",
+          "hitl",
+          "human oversight",
+          "human-on-the-loop",
+          "override procedures",
+          "automation bias",
+          "reviewer qualifications",
+          "audit logging",
+          "two-person rule",
+          "accountability"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/human_in_the_loop_review_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "9e85a3eafefab658a3ffc6951d3072c29fef57e0578a5af737d8e2a474480c5c",
+      "chunk_content_hash": "04868210a8da412848c3f28af5b27724db2b7b2e11a33cc9d0eb6a1f3516b320",
+      "created_at": "2026-09-06T17:38:10.500130+00:00"
+    }
+  ]
+}

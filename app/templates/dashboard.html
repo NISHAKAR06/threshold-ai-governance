@@ -12,8 +12,8 @@
 <div class="page-header">
   <div class="page-header-row">
     <div>
-      <h1 class="page-title" data-i18n="dashboard.title">Dashboard</h1>
-      <p class="page-subtitle" data-i18n="dashboard.subtitle">Overview of AI governance activity</p>
+      <h1 class="page-title" data-i18n="dashboard.title">Enterprise AI Governance Dashboard</h1>
+      <p class="page-subtitle" data-i18n="dashboard.subtitle">Unified control plane for Hybrid Search, RAG attribution, Agent execution, and Responsible AI guardrails</p>
     </div>
     <div class="flex items-center gap-3">
       <span class="text-xs text-tertiary" id="last-updated"></span>
@@ -24,6 +24,92 @@
     </div>
   </div>
 </div>
+
+<!-- ── Enterprise AI Governance Capabilities Quick-Launch ─── -->
+<div class="grid grid-cols-5 gap-3 mb-5" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:var(--space-3);margin-bottom:var(--space-5);">
+  
+  <a href="/assistant" class="p-4 bg-surface border border-color rounded-xl hover:border-primary transition-all flex flex-col justify-between" style="text-decoration:none;">
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-light text-primary" style="width:32px;height:32px;background:rgba(37,99,235,0.12);color:var(--color-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <span class="badge badge-success text-xs">Phase 13</span>
+      </div>
+      <div class="font-semibold text-sm text-primary mb-1">RAG Assistant</div>
+      <div class="text-xs text-secondary leading-relaxed">Grounded Q&amp;A with citations and clearance verification.</div>
+    </div>
+    <div class="text-xs text-primary font-medium mt-3 flex items-center gap-1">
+      Open Assistant <i class="fa-solid fa-arrow-right text-xs"></i>
+    </div>
+  </a>
+
+  <a href="/search" class="p-4 bg-surface border border-color rounded-xl hover:border-primary transition-all flex flex-col justify-between" style="text-decoration:none;">
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-light text-primary" style="width:32px;height:32px;background:rgba(37,99,235,0.12);color:var(--color-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <span class="badge badge-success text-xs">Phase 12</span>
+      </div>
+      <div class="font-semibold text-sm text-primary mb-1">Hybrid Search</div>
+      <div class="text-xs text-secondary leading-relaxed">Dense semantic vector + BM25 keyword fusion with policy filtering.</div>
+    </div>
+    <div class="text-xs text-primary font-medium mt-3 flex items-center gap-1">
+      Explore Index <i class="fa-solid fa-arrow-right text-xs"></i>
+    </div>
+  </a>
+
+  <a href="/agent" class="p-4 bg-surface border border-color rounded-xl hover:border-primary transition-all flex flex-col justify-between" style="text-decoration:none;">
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-light text-primary" style="width:32px;height:32px;background:rgba(37,99,235,0.12);color:var(--color-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <span class="badge badge-success text-xs">Phase 14</span>
+      </div>
+      <div class="font-semibold text-sm text-primary mb-1">AI Agent Workspace</div>
+      <div class="text-xs text-secondary leading-relaxed">Deterministic 5-stage pipeline with approved tool execution.</div>
+    </div>
+    <div class="text-xs text-primary font-medium mt-3 flex items-center gap-1">
+      Execute Workflow <i class="fa-solid fa-arrow-right text-xs"></i>
+    </div>
+  </a>
+
+  <a href="/evaluation" class="p-4 bg-surface border border-color rounded-xl hover:border-primary transition-all flex flex-col justify-between" style="text-decoration:none;">
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-light text-primary" style="width:32px;height:32px;background:rgba(37,99,235,0.12);color:var(--color-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="badge badge-success text-xs">Phase 15</span>
+      </div>
+      <div class="font-semibold text-sm text-primary mb-1">RAG Evaluation</div>
+      <div class="text-xs text-secondary leading-relaxed">Recall@K, MRR, citation validity, and zero-exposure verification.</div>
+    </div>
+    <div class="text-xs text-primary font-medium mt-3 flex items-center gap-1">
+      View Benchmarks <i class="fa-solid fa-arrow-right text-xs"></i>
+    </div>
+  </a>
+
+  <a href="/monitoring" class="p-4 bg-surface border border-color rounded-xl hover:border-primary transition-all flex flex-col justify-between" style="text-decoration:none;">
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-light text-primary" style="width:32px;height:32px;background:rgba(37,99,235,0.12);color:var(--color-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <span class="badge badge-success text-xs">Phase 15</span>
+      </div>
+      <div class="font-semibold text-sm text-primary mb-1">System Monitoring</div>
+      <div class="text-xs text-secondary leading-relaxed">Health probes, Prometheus telemetry, and RAI guardrails.</div>
+    </div>
+    <div class="text-xs text-primary font-medium mt-3 flex items-center gap-1">
+      Inspect Telemetry <i class="fa-solid fa-arrow-right text-xs"></i>
+    </div>
+  </a>
+
+</div>
+
 
 <!-- ── Stat Cards ───────────────────────────────────────── -->
 <div class="stats-grid" role="region" aria-label="Key metrics">

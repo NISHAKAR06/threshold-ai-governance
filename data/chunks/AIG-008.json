@@ -1,0 +1,620 @@
+{
+  "document_id": "AIG-008",
+  "chunks": [
+    {
+      "chunk_id": "AIG-008_CHUNK_0001",
+      "document_id": "AIG-008",
+      "chunk_index": 1,
+      "text": "Document Id | AIG-008\nTitle | AI Model Monitoring Policy\nDepartment | Enterprise Governance\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nAI Model Monitoring Policy\n\n1. CONFIDENTIAL CLASSIFICATION AND OPERATIONAL PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED TO MANAGERIAL AND TECHNICAL ROLES ***\n\nThis document establishes the proprietary telemetry specifications, statistical drift thresholds, automated alerting rules, and performance degradation protocols governing all artificial intelligence systems deployed at Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is restricted to authorized roles (MANAGER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN). Workforce members holding the general EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "15875d73b22d20e19e7f904d738d568df2dec2ad6f4baaf93208da7c4c96fd2a",
+      "created_at": "2026-09-06T17:38:10.518990+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0002",
+      "document_id": "AIG-008",
+      "chunk_index": 2,
+      "text": "The purpose of this AI Model Monitoring Policy is to ensure that all production artificial intelligence models, Large Language Models (LLMs), and retrieval-augmented generation (RAG) systems operate with sustained accuracy, safety, and reliability throughout their operational lifespan. Production machine learning systems inherently degrade over time due to data drift, concept drift, upstream schema changes, and evolving adversarial tactics. This policy mandates continuous, multi-dimensional operational telemetry, automated threshold triggers, and structured incident escalation pathways to detect and remediate performance decay before it impacts business continuity or customer trust.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "ffb5b5970fdf609d6da4bb45aad0b505df0c3e739daac6f08d39169dfcf73cc7",
+      "created_at": "2026-09-06T17:38:10.519079+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0003",
+      "document_id": "AIG-008",
+      "chunk_index": 3,
+      "text": "2. Scope and Monitoring Cadence Across Risk Tiers This policy applies to all production AI applications across Threshold operating entities in India, the United States, the United Kingdom, and Singapore. The frequency and rigor of telemetry collection are strictly governed by the certified risk tier assigned under AIG-002: - LOW Risk Tier AI Systems: Telemetry aggregated weekly. Monthly automated performance reports reviewed by the Squad Technical Lead. - MEDIUM Risk Tier AI Systems: Continuous daily telemetry aggregation. Weekly drift detection scans and error log reviews conducted by AI Engineers. - HIGH Risk Tier AI Systems: Real-time telemetry streaming (sub-minute aggregation). Daily automated drift calculations, daily hallucination sampling, and immediate alerting for any threshold violation.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "17bd78445a2949b79cedf2f5ef8a766a10d933837b60070be14347d87ef08ffe",
+      "created_at": "2026-09-06T17:38:10.519136+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0004",
+      "document_id": "AIG-008",
+      "chunk_index": 4,
+      "text": "- CRITICAL Risk Tier AI Systems: Sub-second telemetry streaming with real-time automated circuit breakers capable of triggering instant model rollback within 500 milliseconds of safety violation detection. 3. The Five Core Dimensions of Enterprise AI Monitoring Every production AI system must implement continuous monitoring across five foundational dimensions: 1. Operational Infrastructure Health: Server CPU/GPU utilization, VRAM consumption, inference latency (P50, P95, P99), request throughput, error rates (HTTP 4xx/5xx), and system availability uptime.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "32bf480d3e39a34201d40129b374f8671ff10ad18041a3370088a47d55cd54e9",
+      "created_at": "2026-09-06T17:38:10.519187+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0005",
+      "document_id": "AIG-008",
+      "chunk_index": 5,
+      "text": "2. Statistical Data and Concept Drift: Inbound feature distribution drift, embedding space displacement, target concept divergence, and vocabulary shift across incoming user queries. 3. Model Output Quality and Accuracy: Ground-truth accuracy benchmarks, precision/recall stability, F1 score degradation, customer feedback sentiment, and human reviewer override rates (AIG-005). 4. Hallucination and Generation Safety: Hallucination rate trends, toxic content emission rates, safety filter trigger frequencies, and factual consistency scores.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "070b9c247fd24eafad90acd3d8be4f6974318d07e72ab9c0c80b3566a066ab4b",
+      "created_at": "2026-09-06T17:38:10.519235+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0006",
+      "document_id": "AIG-008",
+      "chunk_index": 6,
+      "text": "5. Security and Adversarial Signals: Prompt injection detection spikes (AIG-007), brute-force query probing, anomalous context extraction attempts, and token budget abuse. 4. Mathematical Drift Detection Methodologies and Thresholds Data and concept drift must be quantified using rigorous statistical distance metrics evaluated against certified baseline training distributions: - Kolmogorov-Smirnov (KS) Test: Applied to continuous numerical input features. A p-value < 0.05 triggers a warning alert; a p-value < 0.01 indicates significant drift requiring investigation. - Population Stability Index (PSI): Applied to categorical variables and prediction probability distributions. PSI < 0.10 denotes stable distribution; 0.10 <= PSI < 0.25 triggers a moderate drift warning; PSI >= 0.25 denotes severe drift requiring immediate model retraining.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "f85a015fc221d63fcbe9cd7bb17f200192b8d654e7b0fea3a3397b59b810912a",
+      "created_at": "2026-09-06T17:38:10.519282+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0007",
+      "document_id": "AIG-008",
+      "chunk_index": 7,
+      "text": "- Wasserstein Distance (Earth Mover's Distance): Applied to high-dimensional embedding spaces to detect semantic shift in user query distributions over 7-day rolling windows. - Vocabulary Drift Monitoring: Tracking the ratio of out-of-vocabulary (OOV) tokens and novel semantic clusters in incoming user prompts compared to baseline training corpora. 5. Specialized Monitoring Telemetry for RAG Systems Retrieval-Augmented Generation architectures possess unique points of failure requiring specialized retrieval-specific telemetry: - Retrieval Relevance and MRR: Continuous tracking of Mean Reciprocal Rank (MRR) and Normalized Discounted Cumulative Gain (NDCG@k) across sampled production retrieval queries. - Context Precision and Recall: Evaluating whether retrieved context chunks are pertinent to the user query and whether all necessary factual chunks were successfully fetched from the vector store.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "f45e2821b256f6b8e9de7591c3f53db2f4b50489b18bf7a2e220a1515f106f0f",
+      "created_at": "2026-09-06T17:38:10.519328+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0008",
+      "document_id": "AIG-008",
+      "chunk_index": 8,
+      "text": "- Answer Grounding Index: Evaluating whether model claims are mathematically grounded in retrieved context chunks. A grounding score falling below 90% triggers immediate alert escalation. - Unauthorized Retrieval Attempts: Monitoring vector search pre-filtering rejections where user queries attempt to access unpermitted document classifications (CONFIDENTIAL or RESTRICTED chunks). - Citation Provenance Integrity: Verifying that emitted document citations correspond to valid, existing document IDs in the enterprise registry (e.g., verifying AIG, SEC, or HR references).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "7aedc0927417372ad8e887316fa304d2283daca9768bbc390a5bc856c6b431be",
+      "created_at": "2026-09-06T17:38:10.519378+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0009",
+      "document_id": "AIG-008",
+      "chunk_index": 9,
+      "text": "6. Real-Time Hallucination Tracking and Continuous Calibration Generative outputs must be sampled and audited continuously to detect subtle hallucination spikes: - Automated Consistency Sampling: Automated background evaluators query production completions with perturbed semantic variations to test factual stability. - Human Feedback Telemetry (RLHF Calibration): End-user feedback thumbs-up/thumbs-down signals and explicit user corrections are streamed directly into telemetry dashboards. A sudden drop in user satisfaction (> 10% negative swing over 24 hours) triggers an automated engineering alert. - Factual Consistency Scores: RAG completions undergo automated Natural Language Inference (NLI) contradiction checking against retrieved source chunks; contradictions trigger automatic quarantine of the completion.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "7dbb7046fd1b946a179943972ce48e103e73384fd0d184ecb445c86e2aac3a37",
+      "created_at": "2026-09-06T17:38:10.519427+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0010",
+      "document_id": "AIG-008",
+      "chunk_index": 10,
+      "text": "7. Bias and Demographic Parity Drift Telemetry Models deployed in sensitive human-impact workflows (such as talent acquisition under HR-006 or customer credit evaluations) require dedicated algorithmic fairness monitoring: - Rolling Disparate Impact Ratio: Telemetry pipelines calculate weekly demographic selection ratios across protected personal attributes (e.g., gender, ethnicity, age groups). Any drop below the 0.80 parity threshold triggers immediate alert escalation. - Equalized Odds and False Positive Parity: Comparing false positive and false negative classification error rates across sub-populations to identify emergent disparate mistreatment. - Quarterly Fairness Audits: Formal quarterly statistical fairness reports are compiled and presented to the Enterprise AI Ethics and Governance Board.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "4a9a11c24ed376318fe44d19d736a683d376f93b889f1e2c68e89f7a38f8a953",
+      "created_at": "2026-09-06T17:38:10.519475+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0011",
+      "document_id": "AIG-008",
+      "chunk_index": 11,
+      "text": "8. Alerting Tiers, Notification Channels, and Escalation Thresholds Monitoring systems must dispatch alerts based on standardized severity thresholds: - Severity Level 3 (Informational Warning): PSI between 0.10 and 0.25, P95 latency increase of 20%, or retrieval cache hit rate drop. Dispatched via automated Slack/Teams notification to squad engineering channels during business hours. - Severity Level 2 (Degraded Performance): PSI >= 0.25, hallucination rate > 5.0%, P99 latency exceeding SLA budget, or accuracy degradation > 5%. Dispatched via automated PagerDuty alert to the primary on-call AI Engineer; requires investigation within four (4) hours. - Severity Level 1 (Critical Operational Failure): Safety guardrail failure, unauthorized data retrieval breach, prompt injection spike, or total inference endpoint outage. Dispatched immediately via PagerDuty incident page to Lead AI Engineer, Security On-Call, and Department VP; requires response within fifteen (15) minutes.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "7d0c2b59cd450bc349684e855d6dba005bd2193b1eef92d9bd02bb6360462a6d",
+      "created_at": "2026-09-06T17:38:10.519518+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0012",
+      "document_id": "AIG-008",
+      "chunk_index": 12,
+      "text": "9. Automated Circuit Breakers and Graceful Fallback Runbooks For HIGH and CRITICAL risk systems, monitoring telemetry must be integrated directly with automated circuit breaker tripwires: - Automated Traffic Throttling: If error rates exceed 3% over a five-minute window, traffic is automatically throttled by 50% and redirected to cached responses. - Automated Fallback Activation: If hallucination rates breach 8% or adversarial injection spikes are detected, the system automatically transitions to deterministic, rule-based fallback responses or pauses the service with a user maintenance notification. - Instant Model Rollback: For CRITICAL systems, a verified safety violation automatically triggers an instantaneous rollback to the previous certified model version or activates cold-standby backup nodes.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "4ebb0af6f0f111190196ce5a5857b8be8786ffe0c4fa21885c2e712b336b4dde",
+      "created_at": "2026-09-06T17:38:10.519549+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0013",
+      "document_id": "AIG-008",
+      "chunk_index": 13,
+      "text": "10. Drift Remediation Pipelines and Continuous Model Retraining When monitoring identifies actionable drift, engineering squads execute standardized remediation workflows: - Automated Data Ingestion Triggers: When PSI exceeds 0.25, incoming telemetry triggers automated dataset curation pipelines that sample recent production queries for human annotation. - Retraining and Fine-Tuning Sprints: Engineering squads deploy fine-tuning jobs on updated datasets, running complete benchmark evaluation suites. - Model Card Updates: Any material retraining requires updating the Model Card in the Enterprise AI Registry and submitting the revised artifact for governance re-approval under AIG-003. - Automated Continuous Regression Suites: Every retrained candidate model must pass an automated suite of over 5,000 historical regression test cases to verify that correcting recent drift does not reintroduce previously resolved failure modes.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "99b338e0f386d9c83f47294633e8e22aea3f142ce7ece5b09b913b789a581d32",
+      "created_at": "2026-09-06T17:38:10.519589+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0014",
+      "document_id": "AIG-008",
+      "chunk_index": 14,
+      "text": "11. Enterprise Monitoring Tooling Architecture and Observability Dashboards Enterprise AI telemetry is unified through an enterprise observability architecture: - Prometheus and OpenTelemetry Collectors: Ingest low-latency operational infrastructure metrics, query latency distributions, and GPU cluster compute utilization. - Dedicated AI Quality Observability Platforms: Deep integration with specialized LLM observability platforms (e.g., Arize, Evidently AI, or internal equivalents) tracking semantic cluster embeddings, drift distances, and retrieval MRR in real time. - Executive Governance Dashboards: Enterprise Governance and department leadership access aggregated monthly compliance dashboards displaying average latency, uptime SLA compliance, human override rates, and quarterly fairness indices across all registered enterprise AI models.",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "e25ed79e31717bbc637222e874d69900d0228f330e95989d0f1861110b1962f6",
+      "created_at": "2026-09-06T17:38:10.519629+00:00"
+    },
+    {
+      "chunk_id": "AIG-008_CHUNK_0015",
+      "document_id": "AIG-008",
+      "chunk_index": 15,
+      "text": "12. Audit Trails, Governance Compliance, and References All monitoring telemetry, drift calculations, alert histories, and incident resolutions are preserved in immutable time-series data stores for twenty-four (24) months, with aggregated monthly compliance summaries archived in the Enterprise Governance Registry for seven (7) years. Quarterly Model Health Reviews are conducted jointly by AI Engineering and Enterprise Governance to certify ongoing operational stability or mandate scheduled model retraining under AIG-003. This policy operates in direct alignment with related enterprise standards: - AIG-002: AI Risk Classification Framework (Calibrates monitoring frequency). - AIG-005: Human-in-the-Loop Review Policy (Monitors human override telemetry). - AIG-009: AI Incident Management Policy (Defines incident response upon monitoring alert). - AIG-010: AI Model Deployment Policy (Verifies telemetry streaming and alert hooks).",
+      "metadata": {
+        "department": "Enterprise Governance",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "AI Model Monitoring Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Defines multi-dimensional monitoring requirements for production AI and RAG applications. Details statistical drift detection (KS test, PSI, Wasserstein), RAG retrieval telemetry (MRR, grounding index), hallucination tracking, fairness monitoring, alerting thresholds, and automated circuit breakers.",
+        "keywords": [
+          "model monitoring",
+          "drift detection",
+          "population stability index",
+          "kolmogorov-smirnov",
+          "rag telemetry",
+          "answer grounding",
+          "hallucination tracking",
+          "circuit breakers",
+          "automated alerting",
+          "pagerduty"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/ai_governance/ai_model_monitoring_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "c4bf87ef30af4a8b90ecb1b7f4d4b3504c9a444a6428289f3ad0e4d86390b5bc",
+      "chunk_content_hash": "e8ba17c4c5b8d63e3aea2a3ef84936bcc5b8974d70f4bd30eb06cd59f410d260",
+      "created_at": "2026-09-06T17:38:10.519667+00:00"
+    }
+  ]
+}

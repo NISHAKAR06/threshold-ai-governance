@@ -40,6 +40,10 @@
   <link rel="stylesheet" href="{{ url_for('static', path='css/review.css') }}?v={{ asset_version }}">
   <link rel="stylesheet" href="{{ url_for('static', path='css/analytics.css') }}?v={{ asset_version }}">
   <link rel="stylesheet" href="{{ url_for('static', path='css/settings.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/search.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/agent.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/evaluation.css') }}?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ url_for('static', path='css/monitoring.css') }}?v={{ asset_version }}">
 
   <!-- Per-page CSS -->
   {% block page_css %}{% endblock %}
@@ -104,6 +108,10 @@
 <script src="{{ url_for('static', path='js/analytics.js') }}?v={{ asset_version }}"></script>
 <script src="{{ url_for('static', path='js/settings.js') }}?v={{ asset_version }}"></script>
 <script src="{{ url_for('static', path='js/profile.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/search.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/agent.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/evaluation.js') }}?v={{ asset_version }}"></script>
+<script src="{{ url_for('static', path='js/monitoring.js') }}?v={{ asset_version }}"></script>
 
 {# -- Per-page JS -- #}
 {# -- Inline page init -- #}

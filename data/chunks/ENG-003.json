@@ -1,0 +1,702 @@
+{
+  "document_id": "ENG-003",
+  "chunks": [
+    {
+      "chunk_id": "ENG-003_CHUNK_0001",
+      "document_id": "ENG-003",
+      "chunk_index": 1,
+      "text": "================================================================================\nTHRESHOLD ENTERPRISE SYSTEMS - OFFICIAL DOCUMENTATION\nGIT WORKFLOW AND BRANCHING POLICY\n================================================================================\n\n--- DOCUMENT METADATA ---\nDocument Id: ENG-003\nTitle: Git Workflow and Branching Policy\nDepartment: Engineering\nClassification: INTERNAL\nVersion: 1.0\nStatus: ACTIVE\nEffective Date: 2026-01-15\nDocument Type: STANDARD\nAllowed Roles: ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n-------------------------\n\n################################################################################",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "3328842a188cffb35ac4efd0ec970284b380b53a367b850679d174af4f4631da",
+      "created_at": "2026-09-06T17:38:10.549344+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0002",
+      "document_id": "ENG-003",
+      "chunk_index": 2,
+      "text": "################################################################################ 1. STANDARD PURPOSE AND ENGINEERING CONTEXT ################################################################################ This Git Workflow and Branching Policy defines the enterprise version control standards, branch lifecycle management, commit conventions, and repository security protocols for Threshold Enterprise Systems ('Threshold'). As an enterprise developing distributed cloud applications, real-time data pipelines, and AI governance engines across multiple global engineering centers (India, United States, United Kingdom, and Singapore), maintaining a disciplined, predictable, and clean version control workflow is vital. Inconsistent branching models, disorganized commit histories, and unmanaged merge practices introduce release instability, complicate code auditing, and hinder automated continuous integration.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "3cbc9b30516a5cb6fb4505d079ca508e645de42436a9c85dce9343c2e3016020",
+      "created_at": "2026-09-06T17:38:10.549432+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0003",
+      "document_id": "ENG-003",
+      "chunk_index": 3,
+      "text": "The purpose of this standard is to establish a unified Trunk-Based Development workflow with short-lived feature branches, ensuring high deployment velocity, seamless collaboration, rapid defect isolation, and rigorous auditability across all software assets. ################################################################################ 2. SCOPE AND REPOSITORY GOVERNANCE ################################################################################ This standard applies to all software repositories hosted within the enterprise version control platform (GitHub Enterprise / GitLab Enterprise) across all engineering disciplines: backend engineering, frontend development, AI and machine learning engineering, data engineering, and infrastructure platforms. Every official enterprise repository must maintain:",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "47bd8e246040884add3934e745a226a6579be1cfc8649da4eb7b3ba6f5bb9018",
+      "created_at": "2026-09-06T17:38:10.549488+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0004",
+      "document_id": "ENG-003",
+      "chunk_index": 4,
+      "text": "Every official enterprise repository must maintain: 1. A comprehensive README.md detailing project architecture, local setup, testing commands, and maintainers. 2. Standardized configuration files: .gitignore, .editorconfig, and automated pre-commit hook manifests. 3. Enforced branch protection rules on main, release/*, and staging branches. 4. A CODEOWNERS file designating required reviewers for security, architectural, and database components. ################################################################################",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "19decb4f339417f8a6cf561da24b51e8ab0947accdfde7c393b7a84f8750fd04",
+      "created_at": "2026-09-06T17:38:10.549532+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0005",
+      "document_id": "ENG-003",
+      "chunk_index": 5,
+      "text": "################################################################################ 3. THE ENTERPRISE BRANCHING MODEL ################################################################################ Threshold Enterprise Systems enforces a modified Trunk-Based Development model centered on a single authoritative production branch (main) supported by short-lived ephemeral branches: - The 'main' Branch: Represents the perpetually stable, deployable state of the software. Direct pushes, force pushes, and branch deletions are permanently disabled. All modifications must arrive via approved Pull Requests that pass 100% of automated CI checks. - Feature Branches (feature/*): Created from main for developing new functional capabilities, API endpoints, or architectural components. Feature branches must be short-lived, ideally lasting no longer than two (2) to three (3) business days before merging.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "ecc485afb5d7e5999df7da34eff6ab893833a5d6547f2968bb6ae8d7d351d24d",
+      "created_at": "2026-09-06T17:38:10.549574+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0006",
+      "document_id": "ENG-003",
+      "chunk_index": 6,
+      "text": "- Bug Fix Branches (fix/*): Created from main to resolve non-critical defects, broken unit tests, or cosmetic UI/UX flaws identified during development or testing cycles. - Release Branches (release/*): Created from main to stabilize candidate versions prior to major commercial releases. Only bug fixes may be backported to release branches; new feature commits are strictly prohibited. - Hotfix Branches (hotfix/*): Created directly from production release tags to remediate urgent Severity 1 or Severity 2 production incidents under ENG-006. ################################################################################",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "8b9ac23f6a5105ed11559e8234591e5db2de113b098d7d8b772f63f697ab0255",
+      "created_at": "2026-09-06T17:38:10.549616+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0007",
+      "document_id": "ENG-003",
+      "chunk_index": 7,
+      "text": "################################################################################ 4. STANDARDIZED BRANCH NAMING CONVENTIONS ################################################################################ Branch names must follow a strict, lowercase, hyphen-delimited format incorporating the associated Jira issue key and a brief description: Syntax: <category>/<jira-ticket-id>-<brief-description> Approved Examples: - feature/eng-1042-user-authentication-oauth2 - feature/eng-1088-rag-vector-metadata-filtering - fix/eng-1120-api-query-pagination-offset - fix/eng-1155-database-connection-pool-leak - hotfix/eng-1201-critical-auth-token-validation-error - release/v2.4.0-stabilization Branches failing to adhere to this naming taxonomy are automatically rejected by server-side git pre-receive hooks. ################################################################################",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "f6e4bfc3a24ad042149cd43418346eac73d970ec76f4f0a11d1f6caa02dff6ef",
+      "created_at": "2026-09-06T17:38:10.549656+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0008",
+      "document_id": "ENG-003",
+      "chunk_index": 8,
+      "text": "################################################################################ 5. COMMIT MESSAGE STANDARDS AND SEMANTIC VERSIONING ################################################################################ Commit messages provide the historical record of software evolution and drive automated changelog generation. Threshold enforces the Conventional Commits 1.0.0 specification: Syntax: <type>(<optional scope>): <imperative description> Approved Commit Types: - feat: A new user-facing feature or API capability. - fix: A defect fix in production or staging code. - docs: Documentation-only modifications (e.g., README, API docs). - style: Code formatting, whitespace, or linting adjustments that do not affect code execution. - refactor: Code refactoring that neither fixes a bug nor adds a feature. - perf: Performance improvements optimizing CPU, memory, or network usage. - test: Adding missing unit tests or refactoring test suites.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "9ebd23744793bb44a48a5ca59a6426b99e15e9332e56958a61155bc5879afd44",
+      "created_at": "2026-09-06T17:38:10.549697+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0009",
+      "document_id": "ENG-003",
+      "chunk_index": 9,
+      "text": "- perf: Performance improvements optimizing CPU, memory, or network usage. - test: Adding missing unit tests or refactoring test suites. - chore: Maintenance tasks, dependency bumps, or build script updates. Commit Message Formatting Rules: The subject line must not exceed 72 characters, must use the imperative mood ('add feature' not 'added feature'), and must reference the Jira ticket ID in the commit body. ################################################################################ 6. REBASE STRATEGIES, MERGE CONFLICTS, AND HISTORY SANITIZATION ################################################################################ Engineers must keep feature branches synchronized with main to avoid large, painful merge conflicts at the end of feature development:",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "b45633e529eb9cb98a563e71a82751f3129810d10a8ca881b3a6b069562a236a",
+      "created_at": "2026-09-06T17:38:10.549753+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0010",
+      "document_id": "ENG-003",
+      "chunk_index": 10,
+      "text": "Engineers must keep feature branches synchronized with main to avoid large, painful merge conflicts at the end of feature development: - Daily Rebasing Mandate: Developers must rebase their active working branches against origin/main daily (git pull --rebase origin main) to detect and resolve integration conflicts incrementally. Merging main into feature branches creates reverse merge commits ('bubble merges') that pollute the git commit graph, obscure semantic history, and disrupt automated code review tools. - Resolving Merge Conflicts: When conflicts arise during rebasing, engineers must resolve conflicts thoughtfully, re-running automated unit tests locally before pushing updated branches to origin. Authors must never force-push with destructive flags without lease verification; always use git push --force-with-lease to protect unpulled upstream commits.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "e365adef23feae4fea42ca381b4e22bd6acca1460b9fde0077bdc65cb69a179e",
+      "created_at": "2026-09-06T17:38:10.549815+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0011",
+      "document_id": "ENG-003",
+      "chunk_index": 11,
+      "text": "- Clean Commit Hygiene: Prior to marking a PR as ready for review, authors must clean up redundant 'checkpoint' or 'wip' commits using interactive git rebase (git rebase -i), producing a clean, understandable sequence of atomic commits where each commit compiles cleanly and passes automated tests independently. ################################################################################ 7. PULL REQUEST AND MERGE STRATEGIES ################################################################################ Repositories must enforce standardized merge strategies to preserve a clean, linear, and bisectable git history: - Squash and Merge (Default): For all standard feature and bug fix branches. The author squashes multiple work-in-progress commits into a single cohesive commit referencing the PR number and Jira ID. - Rebase and Merge: Permitted for large, complex architectural refactors where preserving distinct, highly structured historical commits is critical for auditability.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "1b6ae69c4db3d282876de349c4e522f2311fe781ba87bba8428824935563e367",
+      "created_at": "2026-09-06T17:38:10.549875+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0012",
+      "document_id": "ENG-003",
+      "chunk_index": 12,
+      "text": "- Merge Commits Prohibited: Creating non-linear merge commits (git merge --no-ff) on main is strictly prohibited to prevent tangled commit graphs that hinder automated git bisect debugging. - Post-Merge Deletion: Feature and bug fix branches must be automatically deleted immediately following a successful merge to prevent stale branch clutter. ################################################################################ 8. TAGGING, SEMANTIC RELEASE AUTOMATION, AND CRYPTOGRAPHIC SIGNATURES ################################################################################ Official production releases must be cataloged and certified via immutable version control tags: - Semantic Versioning 2.0.0 (SemVer): All release tags must adhere to SemVer format (vMAJOR.MINOR.PATCH). Breaking changes increment MAJOR; backwards-compatible features increment MINOR; backwards-compatible fixes increment PATCH.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "e1ed8a1bde52b57f8400ae2e14a4ecc6ae0988d6a488f692c5c265bc2dca9c6a",
+      "created_at": "2026-09-06T17:38:10.549943+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0013",
+      "document_id": "ENG-003",
+      "chunk_index": 13,
+      "text": "- Cryptographic GPG Commit and Tag Signing: Production deployment tags and master branch merges must be cryptographically signed using enterprise-managed GPG keys associated with the engineer's corporate identity. Unsigned release tags are rejected by automated deployment pipelines (ENG-004). This cryptographic provenance guarantees that release binaries trace directly back to verified, authorized engineering personnel. - Automated Changelog Generation: Continuous release automation tools parse Conventional Commit logs to compile release notes and changelog documents published with each tagged release, categorizing updates into Features, Fixes, Breaking Changes, and Performance Optimizations for enterprise stakeholders. ################################################################################",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "067479db5e89da3ed30941f9ff92a42005132967b7fe902c7994ae29487946ac",
+      "created_at": "2026-09-06T17:38:10.549991+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0014",
+      "document_id": "ENG-003",
+      "chunk_index": 14,
+      "text": "################################################################################ 9. REPOSITORY SECURITY AND SECRET LEAKAGE PREVENTION ################################################################################ Protecting enterprise code repositories from credential leakage is a critical information security imperative: - Pre-Commit Secret Scanning: All developer workstations must install enterprise pre-commit hooks running automated secret scanning (e.g., detect-secrets, gitleaks). Commits containing API keys, private certificates, database passwords, or auth tokens are blocked locally. - Server-Side Push Protection: Enterprise git servers enforce automated server-side push protection. Any push attempt containing high-entropy strings matching enterprise secret signatures is rejected at the network layer.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "a31c8c4f8e70b8847f84d58bc0ab5fd556f001616ce16d4321705965a24aed3a",
+      "created_at": "2026-09-06T17:38:10.550028+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0015",
+      "document_id": "ENG-003",
+      "chunk_index": 15,
+      "text": "- Accidental Leakage Protocol: If a credential or secret is committed to any branch, the credential must be treated as fully compromised. The engineer must immediately rotate the credential in production, notify the SOC under SEC-004, and rewrite git history using git-filter-repo under Security guidance. ################################################################################ 10. PROHIBITED GIT PRACTICES AND CROSS-DOCUMENT GOVERNANCE ################################################################################ The following version control practices are strictly forbidden and constitute serious engineering violations:",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "a373c57d9bf95fb8b5a70963930d083141df355dd5f4985ab7442c88c761898e",
+      "created_at": "2026-09-06T17:38:10.550063+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0016",
+      "document_id": "ENG-003",
+      "chunk_index": 16,
+      "text": "The following version control practices are strictly forbidden and constitute serious engineering violations: 1. Force pushing (git push --force) to main, staging, or release/* branches. 2. Committing sensitive enterprise data, customer PII (SEC-005), or production credentials. 3. Checking in compiled binaries, heavy model weights (>50MB), or node_modules/venv dependencies directly into git repositories (use Git LFS or artifact registries). 4. Bypassing pull request reviews via administrative overrides outside of authorized emergency incident procedures.",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "b8295cacf2025d882c76b5fc161c90bf94b0681528bc06a15e0f58c4ef9f5988",
+      "created_at": "2026-09-06T17:38:10.550104+00:00"
+    },
+    {
+      "chunk_id": "ENG-003_CHUNK_0017",
+      "document_id": "ENG-003",
+      "chunk_index": 17,
+      "text": "4. Bypassing pull request reviews via administrative overrides outside of authorized emergency incident procedures.\n\n5. Rewriting public branch histories after commits have been shared across squad members.\n\nCross-Document Governance Interconnections:\n\n- ENG-002: Code Review Policy (Defines review rules and approval requirements prior to merge).\n\n- ENG-004: Production Deployment Guide (Governs release tagging and deployment from main).\n\n- ENG-006: Engineering Incident Management Runbook (Governs emergency hotfix branching workflows).\n\n- SEC-001: Information Security Policy (Establishes secure development lifecycle requirements).\n\n================================================================================\nEND OF DOCUMENT - THRESHOLD ENTERPRISE SYSTEMS\n================================================================================",
+      "metadata": {
+        "department": "Engineering",
+        "classification": "INTERNAL",
+        "allowed_roles": [
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "STANDARD",
+        "status": "ACTIVE",
+        "title": "Git Workflow and Branching Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Standard defining trunk-based development, branch naming conventions, Conventional Commits 1.0.0, daily rebase rules, squash and merge strategies, GPG cryptographic commit signing, SemVer release tagging, pre-commit secret scanning, and prohibited git practices.",
+        "keywords": [
+          "git workflow",
+          "branching policy",
+          "trunk-based development",
+          "conventional commits",
+          "daily rebase",
+          "squash and merge",
+          "gpg signing",
+          "semantic versioning",
+          "secret scanning",
+          "branch protection"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/engineering/git_workflow_and_branching_policy.txt",
+        "file_format": "TXT"
+      },
+      "parent_content_hash": "6ee0d575313534309d76ad8083f994c7e9f3e9da69a90e2c35a3cbb593ced1c0",
+      "chunk_content_hash": "aab08d7d935541a91a9fbf7fe792383b8e87f5374f53901186edbd3de079d8b7",
+      "created_at": "2026-09-06T17:38:10.550135+00:00"
+    }
+  ]
+}

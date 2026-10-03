@@ -1,0 +1,605 @@
+{
+  "document_id": "SEC-004",
+  "chunks": [
+    {
+      "chunk_id": "SEC-004_CHUNK_0001",
+      "document_id": "SEC-004",
+      "chunk_index": 1,
+      "text": "THRESHOLD ENTERPRISE SYSTEMS\nSecurity Incident Response Policy\nDocument Id\nSEC-004\nTitle\nSecurity Incident Response Policy\nDepartment\nInformation Security\nClassification\nCONFIDENTIAL\nVersion\n1.0\nStatus\nACTIVE\nEffective Date\n2026-01-15\nDocument Type\nPROCEDURE\nAllowed Roles\nSECURITY_ENGINEER, MANAGER, ADMIN\n\n1. CONFIDENTIAL CLASSIFICATION AND OPERATIONAL OBJECTIVES",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "fd3d6ec399fd447c11c8a49271fa57d07a652948bf819a7c9339d95b12da2f8d",
+      "created_at": "2026-09-06T17:38:10.709250+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0002",
+      "document_id": "SEC-004",
+      "chunk_index": 2,
+      "text": "1. CONFIDENTIAL CLASSIFICATION AND OPERATIONAL OBJECTIVES\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED OPERATIONAL PROCEDURE ***\nThis document contains proprietary incident response workflows, containment playbooks, forensic handling protocols,\nseverity classification criteria, and executive escalation trees for Threshold Enterprise Systems. It is classified as\nCONFIDENTIAL. Access is restricted to authorized roles (SECURITY_ENGINEER, MANAGER, ADMIN). Standard\nworkforce members holding the EMPLOYEE role are not permitted to access this operational procedure in the knowledge\nbase.\nThe primary objectives of this Security Incident Response Policy and Standard Operating Procedure are: to establish a\ncoordinated, rapid, and structured capability to detect, analyze, contain, eradicate, and recover from cybersecurity incidents;\nto minimize operational disruption and financial loss; to protect client and proprietary data assets; to preserve digital\nevidence; and to meet statutory breach disclosure mandates across our global jurisdictions.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "654f2253dced5f616fb8446bf719e2b06bc34817cc28475029703e1856c5d77b",
+      "created_at": "2026-09-06T17:38:10.709344+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0003",
+      "document_id": "SEC-004",
+      "chunk_index": 3,
+      "text": "2. CRITICAL DISTINCTION: CYBERSECURITY INCIDENT VS. WORKPLACE INCIDENT\n\n*** MANDATORY SCOPE CLARIFICATION: CYBERSECURITY VS.\n\nPHYSICAL WORKPLACE INCIDENTS ***\nIt is essential that all management and engineering staff maintain a clear operational distinction between Cybersecurity\nIncidents and Workplace Incidents:\nA Cybersecurity Incident (governed exclusively by this document, SEC-004) is defined as any confirmed or suspected event\nthat compromises the confidentiality, integrity, availability, or authenticity of enterprise digital assets, electronic\ncommunications, cloud infrastructure, customer databases, or proprietary algorithms.\n\nA Workplace Incident (governed separately by Human Resources under HR-008: Workplace Incident Reporting Policy)\nencompasses physical safety hazards, slips, trips, falls, occupational medical emergencies, workplace violence, behavioral\nharassment, discrimination, or physical facility property damage.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "031c8021fa8d061d32c803c5bf7d67eeecc963bcb9eaf43fb057e2899e5e00fb",
+      "created_at": "2026-09-06T17:38:10.709407+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0004",
+      "document_id": "SEC-004",
+      "chunk_index": 4,
+      "text": "THE HR WORKPLACE INCIDENT REPORTING POLICY (HR-008) MUST NEVER BE TREATED AS OR SUBSTITUTED\nFOR CYBERSECURITY INCIDENT RESPONSE PROCEDURES.\n\nIf an incident involves both domains (e.g., physical theft\nof a laptop containing confidential data), reporting must occur concurrently to both HR/Facilities and the Information Security\nOperations Center (ISOC).\n\n3. Incident Severity Classification Framework\n\nTo ensure rapid, proportional mobilization of resources, cybersecurity incidents are categorized into four standardized\nseverity tiers upon initial triage:\n- Severity Level 1 - Critical Incident (P1): Active systemic compromise of production cloud environments; widespread\nransomware infection; unauthorized exfiltration of RESTRICTED or CONFIDENTIAL customer databases; complete outage\nof customer-facing AI platforms; or active nation-state adversary infiltration.\n\nRequires 24/7 war room activation, executive\nnotification within 30 minutes, and technical response mobilization within 15 minutes.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "10077013874b6d71c469312bc37213d85ab3d291acf1c2cdfdf871dfe0fb03ca",
+      "created_at": "2026-09-06T17:38:10.709459+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0005",
+      "document_id": "SEC-004",
+      "chunk_index": 5,
+      "text": "Requires 24/7 war room activation, executive\nnotification within 30 minutes, and technical response mobilization within 15 minutes.\n\n- Severity Level 2 - Major Incident (P2): Significant unauthorized access to sensitive internal systems; compromise of\nelevated administrator credentials without confirmed data exfiltration; high-volume DDoS attacks causing partial service\ndegradation; or critical zero-day vulnerabilities actively exploited in enterprise dependencies.\n\nRequires technical response\nmobilization within 60 minutes.\n\n- Severity Level 3 - Moderate Incident (P3): Isolated endpoint malware infections contained by EDR software; localized\ncredential phishing incidents without privilege elevation; minor policy violations; or vulnerability scanning probes.\n\nManaged\nduring business hours with initial analysis completed within 4 hours.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "5eaeead2e169a17bb6f3c9f5ba853a9b81033f8e63638d1db630e6311866cea3",
+      "created_at": "2026-09-06T17:38:10.709508+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0006",
+      "document_id": "SEC-004",
+      "chunk_index": 6,
+      "text": "Managed\nduring business hours with initial analysis completed within 4 hours.\n\n- Severity Level 4 - Minor Security Event (P4): Low-risk automated alerts, false-positive alerts, single-user account lockouts,\nor routine security anomalies requiring informational logging.\n\nAddressed within standard 24-hour operational ticketing SLAs.\n\n4. Detection, Reporting, and Initial Intake Mechanisms\n\nCybersecurity incidents are detected through multiple proactive and reactive intake channels:\n\n1. Automated Threat Detection: Real-time SIEM alerts, Endpoint Detection and Response (EDR) telemetry, Cloud Security\n\nPosture Management (CSPM) anomalies, Web Application Firewall (WAF) triggers, and automated network intrusion\nprevention alarms.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "bc5ebd0ef93321727d6be42cf17823d5ed9c125cc24e8039ec13bfda691d45b5",
+      "created_at": "2026-09-06T17:38:10.709560+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0007",
+      "document_id": "SEC-004",
+      "chunk_index": 7,
+      "text": "Posture Management (CSPM) anomalies, Web Application Firewall (WAF) triggers, and automated network intrusion\nprevention alarms.\n\n2. Workforce Reporting: Any employee observing suspicious digital activity, unexpected MFA prompts, or phishing attempts\n\nsubmits an urgent ticket to security-incident@threshold-systems.internal or calls the 24/7 ISOC emergency hotline at ext.\n#7777.\n\n3. External Threat Intelligence and Responsible Disclosures: Notifications from external security researchers, vulnerability\n\ndisclosure programs (VDP), law enforcement agencies, or national CERT advisories (e.g. CERT-In, CISA, NCSC).\nUpon intake, the on-duty ISOC Tier 2 Analyst logs an Incident Record in the Security Orchestration, Automation, and\nResponse (SOAR) platform, timestamps the alert, and executes initial validation.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "f9225141216eb7f569d9d98c1f43b2395969074ea5de716a14a8671d2693b243",
+      "created_at": "2026-09-06T17:38:10.709614+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0008",
+      "document_id": "SEC-004",
+      "chunk_index": 8,
+      "text": "5. Incident Triage and Incident Commander Assignment\n\nDuring initial triage, the lead analyst assesses threat validity, determines preliminary severity (P1-P4), and establishes an\nIncident Response Docket.\nFor all P1 (Critical) and P2 (Major) incidents, a certified Lead Security Engineer is immediately designated as the 'Incident\nCommander' (IC). The IC assumes complete operational authority over technical containment, resource mobilization, and\ninter-departmental coordination.\nThe Incident Commander activates the Computer Security Incident Response Team (CSIRT), comprising: Technical Lead,\nDigital Forensics Specialist, Infrastructure/Cloud Engineer, Legal Counsel, Communications Lead, and HR Liaison.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "7781a3c7dd571525aa6c3599653bf42e62af33636827ecf25f02b68141d28029",
+      "created_at": "2026-09-06T17:38:10.709661+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0009",
+      "document_id": "SEC-004",
+      "chunk_index": 9,
+      "text": "6. Containment Strategies and Tactical Isolation\n\nContainment prevents an intrusion from spreading laterally across enterprise networks, exfiltrating data, or causing\ncollateral damage. Containment is executed in two structured phases:\nShort-Term Containment: Immediate actions executed within minutes of verification to halt ongoing threat activity. Tactics\ninclude: isolating affected virtual machines or endpoints from the network via EDR network containment; revoking\ncompromised SSO sessions and rotating credentials; blocking malicious IP addresses and domains at the edge firewall;\n\nand disabling compromised service principals.\nLong-Term Containment: Actions taken to stabilize the environment while preserving evidence for forensic analysis. Tactics\ninclude: establishing clean, segmented sandbox networks; applying temporary firewall filtering rules; snapshotting volatile\nvirtual machine memory; and deploying enhanced monitoring probes across adjacent infrastructure tiers.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "3adc3b295684a83e5736437be77c2d44098a091dd4b3bf5aa6295c2624afb77a",
+      "created_at": "2026-09-06T17:38:10.709709+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0010",
+      "document_id": "SEC-004",
+      "chunk_index": 10,
+      "text": "7. Digital Forensics, Evidence Preservation, and Investigation\n\nOnce containment is secured, forensic investigators determine the root cause, scope of compromise, threat actor tactics,\ntechniques, and procedures (TTPs), and whether data exfiltration occurred.\nForensic Integrity and Chain of Custody: Investigators must follow strict forensic protocols adhering to ISO/IEC 27037\nstandards. Volatile memory (RAM) must be captured prior to rebooting or powering down systems. Bit-stream disk images\nmust be generated using cryptographic write-blockers. All forensic images must be verified against SHA-256 cryptographic\nhashes and cataloged in a physical or digital Chain of Custody Log.\nRoot Cause Analysis: Analysts examine system event logs, firewall telemetry, web proxy records, cloud audit trails, and\nmemory dumps to reconstruct the complete attack kill chain according to the MITRE ATT&CK; framework.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "a0417bc22212cbed198f0635aa43f4f7e845e47d27162c66538ad1d9a90cf485",
+      "created_at": "2026-09-06T17:38:10.709757+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0011",
+      "document_id": "SEC-004",
+      "chunk_index": 11,
+      "text": "8. Eradication, Hardening, and System Recovery",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "1773fe6fe1d2d98f19f9c27316f911040fc05fc969317e94dcf90441efec44df",
+      "created_at": "2026-09-06T17:38:10.709803+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0012",
+      "document_id": "SEC-004",
+      "chunk_index": 12,
+      "text": "Eradication eliminates all traces of the threat actor and malware from the environment, while recovery safely restores\nsystems to full operational status.\nEradication Actions: Deleting malicious binaries, scripts, and backdoors; closing unauthorized persistence mechanisms\n(scheduled tasks, registry keys, hidden accounts); revoking and re-issuing all administrative cryptographic keys, certificates,\nand secrets; and patching underlying software vulnerabilities.\nRecovery and Validation: Rebuilding affected systems from known-clean golden machine images or verified backups;\nrestoring validated configuration parameters; re-establishing network connectivity under enhanced monitoring; and\nperforming active vulnerability scanning and penetration testing to verify remediation.\nPhased Restoration: Production services are brought online in controlled phases, validating functionality, performance, and\nsecurity telemetry before declaring operational restoration.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "6e9d07378410e8af79f34087a8755e4447bfb23a6056ca4fe8b815ae425ba941",
+      "created_at": "2026-09-06T17:38:10.709850+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0013",
+      "document_id": "SEC-004",
+      "chunk_index": 13,
+      "text": "9. Post-Incident Review (PIR) and Continuous Improvement\n\nWithin seven (7) business days of declaring incident resolution for any P1 or P2 incident, the Incident Commander convenes\na mandatory Post-Incident Review (PIR) meeting with all CSIRT participants, engineering leads, and departmental\nleadership.\nThe PIR examines the complete chronological timeline, evaluates what worked effectively, identifies communication or\ntechnical bottlenecks, and determines root cause deficiencies.\nThe findings are synthesized into a formal Post-Incident Review Report, detailing: executive summary, incident timeline,\ntechnical root cause, business impact metrics, and a prioritized Corrective and Preventative Actions (CAPA) tracking matrix.\nCAPA items are assigned to engineering owners with strict remediation SLAs and tracked to completion by the Information\nSecurity GRC team.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "7cd3ee930b0b5c06b9f13c65d37b1afc5b421b2acdaae60e9ba2ef7e6d8b4096",
+      "created_at": "2026-09-06T17:38:10.709902+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0014",
+      "document_id": "SEC-004",
+      "chunk_index": 14,
+      "text": "10. Communications, Regulatory Reporting, and Legal Coordination\n\nExternal communications regarding cybersecurity incidents are strictly managed to protect client confidentiality, preserve\nlegal privilege, and comply with international disclosure mandates.\nUnder no circumstances may any employee discuss active security incidents with external parties, journalists, or on\npersonal social media channels without explicit written authorization from the Chief Legal Officer and Corporate\nCommunications Director.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "fba0b3101f70f853cb1fa89064af6c9f323d880aadd40a59fb89932966a38d6a",
+      "created_at": "2026-09-06T17:38:10.709951+00:00"
+    },
+    {
+      "chunk_id": "SEC-004_CHUNK_0015",
+      "document_id": "SEC-004",
+      "chunk_index": 15,
+      "text": "Regulatory Disclosure Mandates: When an incident involves unauthorized access to personal data, our Legal and Privacy\nteams coordinate mandatory statutory notifications within strict jurisdictional timelines:\n- European Union / United Kingdom GDPR: Formal notification to the relevant Data Protection Authority (e.g. UK ICO) within\nseventy-two (72) hours of becoming aware of a personal data breach.\n- United States: Notification to affected individuals, state Attorneys General, and regulatory bodies (e.g. SEC for material\nevents) within applicable federal and state statutory deadlines.\n- India / Singapore: Notification to the Indian Computer Emergency Response Team (CERT-In) within prescribed statutory\nwindows (6 hours for specified critical incidents) and the Singapore Personal Data Protection Commission (PDPC) within\nthree (3) calendar days.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "SECURITY_ENGINEER",
+          "MANAGER",
+          "ADMIN"
+        ],
+        "document_type": "PROCEDURE",
+        "status": "ACTIVE",
+        "title": "Security Incident Response Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential standard operating procedure establishing technical cybersecurity incident severity tiers (P1-P4), 24/7 CSIRT activation, containment playbooks, forensic evidence preservation, and 72-hour regulatory breach disclosure. Strictly distinguished from workplace safety incidents.",
+        "keywords": [
+          "incident response",
+          "cybersecurity incident",
+          "csirt",
+          "p1 critical",
+          "containment",
+          "digital forensics",
+          "evidence preservation",
+          "regulatory disclosure",
+          "confidential",
+          "distinguished from workplace incidents"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/security_incident_response_policy.pdf",
+        "file_format": "PDF"
+      },
+      "parent_content_hash": "32faf1faee62fd69ca1dc6255c5151f058687bd22462b5271abe05260f01acdb",
+      "chunk_content_hash": "6bb6af2a6646c517528b17b4dff3545bca3f5b42d5c376758a3ee286542d33c4",
+      "created_at": "2026-09-06T17:38:10.709998+00:00"
+    }
+  ]
+}

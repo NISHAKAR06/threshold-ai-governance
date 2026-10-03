@@ -1,0 +1,538 @@
+{
+  "document_id": "SEC-002",
+  "chunks": [
+    {
+      "chunk_id": "SEC-002_CHUNK_0001",
+      "document_id": "SEC-002",
+      "chunk_index": 1,
+      "text": "Document Id | SEC-002\nTitle | Access Control Policy\nDepartment | Information Security\nClassification | CONFIDENTIAL\nVersion | 1.0\nStatus | ACTIVE\nEffective Date | 2026-01-15\nDocument Type | POLICY\nAllowed Roles | MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN\n\nTHRESHOLD ENTERPRISE SYSTEMS\nAccess Control Policy\n\n1. CONFIDENTIAL CLASSIFICATION AND PURPOSE\n\n*** CONFIDENTIAL DOCUMENT - RESTRICTED ACCESS FOR MANAGERIAL AND TECHNICAL ROLES ***\n\nThis document contains proprietary access control architecture models, authorization lifecycle procedures, privileged entitlement protocols, and identity governance frameworks for Threshold Enterprise Systems. It is classified as CONFIDENTIAL. Access is restricted to authorized roles (MANAGER, ENGINEER, AI_ENGINEER, SECURITY_ENGINEER, ADMIN). Standard workforce members holding the EMPLOYEE role are not authorized to retrieve this document within the knowledge base.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "be51c36044bd2b13349fba3938270ace720b8a3a4b184bd1461c2c6d7b0dd636",
+      "created_at": "2026-09-06T17:38:10.697330+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0002",
+      "document_id": "SEC-002",
+      "chunk_index": 2,
+      "text": "The purpose of this Access Control Policy is to establish rigorous, automated, and auditable controls governing identity verification, access provisioning, privileged escalation, and entitlement revocation across all enterprise digital assets, cloud tenants, developer tools, and operational repositories. 2. Scope and Organizational Applicability This policy applies to all computing systems, software applications, network boundaries, cloud infrastructure partitions, virtual machines, container clusters, databases, and digital information repositories operated by Threshold Enterprise Systems across its global facilities in India, the United States, the United Kingdom, and Singapore. It governs all user identities, service principals, automated pipelines, API integrations, and third-party vendor credentials that request or maintain logical access to corporate networks or proprietary datasets.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "a0f204cef9a0149b943fae13205d58c456e1c2a86a6229685a5cd9ef88a8bcca",
+      "created_at": "2026-09-06T17:38:10.697440+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0003",
+      "document_id": "SEC-002",
+      "chunk_index": 3,
+      "text": "Policy-level access requirements are defined herein. This document deliberately excludes operational secrets, actual administrative passwords, active API tokens, private cryptographic keys, database connection strings, or live production network addresses. 3. Foundational Access Principles All identity and access management implementations across Threshold Enterprise Systems must adhere to three foundational security tenets: 1. Principle of Least Privilege: Users and automated service identities must be provisioned with the minimum set of permissions strictly necessary to execute their assigned professional duties. Access rights must never be granted speculatively or in anticipation of hypothetical future requirements.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "ea6c900beb9753ea9c2f836291ce8c4ae239460b60a658f0a626a58778d61126",
+      "created_at": "2026-09-06T17:38:10.697535+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0004",
+      "document_id": "SEC-002",
+      "chunk_index": 4,
+      "text": "2. Need-to-Know Basis: The possession of an authorized role or managerial title does not confer automatic entitlement to sensitive corporate assets. Access to confidential records, source code repositories, and customer datasets requires an explicit, demonstrable business need-to-know. 3. Separation of Duties (SoD): High-risk operational capabilities must be divided among multiple individuals to prevent single-operator compromise, fraud, or catastrophic error. Specifically, the individual who writes code cannot be the sole approver who deploys that code to live production environments.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "4d63cd2cbe8e122bf67550675df480e5d247927dbd982e0a7231403f09c1ee6e",
+      "created_at": "2026-09-06T17:38:10.697609+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0005",
+      "document_id": "SEC-002",
+      "chunk_index": 5,
+      "text": "4. Role-Based and Attribute-Based Access Control Architecture Threshold Enterprise Systems enforces access governance through a hybrid model combining Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC): - Standard RBAC: Core job families are assigned baseline enterprise roles (e.g., ENGINEER, AI_ENGINEER, SECURITY_ENGINEER). System permissions are mapped directly to these functional roles within our central Identity Provider (IdP). Individual users inherit permissions solely through active role membership. - ABAC Dynamic Context: For sensitive internal systems and confidential repositories, access decisions dynamically evaluate runtime attributes, including: user geographic location, corporate device compliance posture, network egress point, time of day, and risk score generated by our continuous adaptive trust engine.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "b1e5ffa8f58c39000aa94bb55b0b2e904544d16d75359b6dc2b151a64b926526",
+      "created_at": "2026-09-06T17:38:10.697667+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0006",
+      "document_id": "SEC-002",
+      "chunk_index": 6,
+      "text": "- Default Deny Stance: All access control lists (ACLs), firewall boundaries, and identity policies default to an implicit deny. Permissions must be explicitly granted through formal administrative configuration. 5. Access Request and Provisioning Lifecycle Provisioning of logical access follows a structured, auditable electronic workflow managed through the Enterprise Identity Governance and Administration (IGA) portal: Step 1 - Request Initiation: The employee or their manager submits an access request in the IGA portal, detailing the target resource, specific permission scope (read, write, execute, or manage), business justification, and requested duration. Step 2 - Primary Manager Review: The direct people manager reviews the request to validate that the requested access is necessary for the employee's active project assignments. Managers must action requests within forty-eight hours.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "d20b95f182955729e29c6154365bc398f6c17be856cfcdcbcbae1530ccb4b91d",
+      "created_at": "2026-09-06T17:38:10.697717+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0007",
+      "document_id": "SEC-002",
+      "chunk_index": 7,
+      "text": "Step 3 - Resource Custodian / Technical Approval: If the request involves CONFIDENTIAL data, source code repositories, or production services, the designated Data Owner or Technical Lead must independently endorse the request. Step 4 - Automated Fulfillment: Upon receipt of all required approvals, the IGA system provisions the entitlement via automated SCIM (System for Cross-domain Identity Management) connectors, logging the transaction with an immutable timestamp. 6. Privileged Access Management (PAM) and Just-in-Time Elevation Privileged access—defined as administrative, root, schema-altering, or system-configuring capabilities—carries elevated risk and requires specialized oversight: - Zero Standing Privileges (ZSP): Permanent standing administrative access is strictly prohibited across all enterprise cloud accounts, hypervisors, and production databases. System engineers and administrators operate daily with standard non-privileged accounts.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "fbc52a778c313c1da6cd9c3a3efbfe53ca2fefefd0dc2570530686eda075cc82",
+      "created_at": "2026-09-06T17:38:10.697771+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0008",
+      "document_id": "SEC-002",
+      "chunk_index": 8,
+      "text": "- Just-in-Time (JIT) Elevation: When administrative intervention is required for scheduled maintenance or operational troubleshooting, engineers request ephemeral elevation through our enterprise Privileged Access Management (PAM) vault. Ephemeral grants expire automatically after a maximum window of four hours. - Multi-Factor Step-Up: Accessing the PAM vault requires step-up authentication using a dedicated hardware security key (FIDO2) and verification of a valid change management ticket identifier. - Session Recording: Privileged terminal, command-line, and graphical console sessions executed through PAM proxies are recorded, indexed, and audited for anomalous operations.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "6c9bbf3069db37f9f7c7f75755bf91d35491f519f8d1647e025a7230f9294594",
+      "created_at": "2026-09-06T17:38:10.697812+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0009",
+      "document_id": "SEC-002",
+      "chunk_index": 9,
+      "text": "7. User Access Reviews (UAR) and Entitlement Recertification To prevent 'privilege creep'—where workforce members accumulate unnecessary permissions over time as they change projects—Threshold Enterprise Systems mandates quarterly User Access Reviews (UAR). Every ninety days, the IGA platform automatically generates recertification campaigns for all people managers and resource owners. Managers must review every active entitlement held by their direct reports, certifying whether each permission remains necessary for active business duties. Any entitlement that is not explicitly recertified by the designated deadline (within fourteen calendar days of campaign launch) is automatically revoked by the system. UAR completion metrics and exception reports are audited by the Information Security GRC team and presented to external compliance auditors.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "8c65b33443a4638751c2b94097c9909aaf56b84343e0c1e9259e6efc7011e9ba",
+      "created_at": "2026-09-06T17:38:10.697858+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0010",
+      "document_id": "SEC-002",
+      "chunk_index": 10,
+      "text": "8. Access Revocation, Employee Transfers, and Offboarding Protocols Timely and complete revocation of access rights is critical to prevent insider threats, unauthorized data exfiltration, or orphaned account exploitation. - Involuntary Terminations: When an employment relationship is terminated involuntarily, Human Resources coordinates with Information Security for immediate, synchronized access termination. All corporate accounts, VPN profiles, active SSO sessions, and building badges are disabled within fifteen minutes of notification. - Voluntary Resignations and Standard Offboarding: For voluntary separations, access rights remain active until the employee's final working hour, after which the automated HR-IdP connector initiates full deprovisioning.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "8e40515c40216fcaf5550c2b652eca64c5dd600b950113f3fef7f17eea182b92",
+      "created_at": "2026-09-06T17:38:10.697937+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0011",
+      "document_id": "SEC-002",
+      "chunk_index": 11,
+      "text": "- Internal Role Transfers: When an employee transitions between departments (e.g., transferring from Engineering to Product Management), the IGA system automatically revokes all departmental role-specific entitlements on the transfer effective date. The employee's new manager must submit fresh access requests aligned with the new role. 9. Access Logging, SIEM Telemetry, and Audit Oversight All identity and access activities must generate comprehensive, tamper-evident audit logs. Logged events include: successful and failed authentication attempts, MFA challenges, privilege elevations, access request approvals/denials, permission modifications, and account disablements. Audit logs are streamed in real time to the centralized Security Information and Event Management (SIEM) data lake, where machine-learning analytics detect unusual access patterns, brute-force attacks, concurrent logins from disparate geographies, and suspicious off-hours activity.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "4af099ca964c20e2ef7b5349258e201bd9511152814b012e635539f1042ab690",
+      "created_at": "2026-09-06T17:38:10.698048+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0012",
+      "document_id": "SEC-002",
+      "chunk_index": 12,
+      "text": "Access logs are cryptographically sealed, protected against modification or unauthorized deletion, and retained for a minimum of twelve months to support regulatory audits and digital forensic investigations. 10. Roles, Responsibilities, and Policy Exceptions Workforce Members: Responsible for safeguarding assigned credentials, utilizing access rights ethically, and reporting accidental over-permissioning to their manager. People Managers: Responsible for vetting access requests, conducting diligent quarterly access recertifications, and initiating prompt deprovisioning upon personnel departures. Resource Owners: Responsible for defining role-entitlement mappings for their software assets, evaluating non-standard access requests, and auditing access patterns. Information Security Operations: Responsible for maintaining PAM infrastructure, monitoring access logs, investigating authentication anomalies, and enforcing zero-standing privilege architectures.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "732bf54dcf42c0bbbc346a9bcc1ed0255a7736c2add12fd2c56220e11d5ceb78",
+      "created_at": "2026-09-06T17:38:10.698117+00:00"
+    },
+    {
+      "chunk_id": "SEC-002_CHUNK_0013",
+      "document_id": "SEC-002",
+      "chunk_index": 13,
+      "text": "Policy Exceptions: Any temporary deviation from this policy (such as extending temporary access during prolonged emergency troubleshooting) requires formal written authorization from the CISO and must be recorded in the Enterprise Risk Register with an assigned expiration date.",
+      "metadata": {
+        "department": "Information Security",
+        "classification": "CONFIDENTIAL",
+        "allowed_roles": [
+          "MANAGER",
+          "ENGINEER",
+          "AI_ENGINEER",
+          "SECURITY_ENGINEER",
+          "ADMIN"
+        ],
+        "document_type": "POLICY",
+        "status": "ACTIVE",
+        "title": "Access Control Policy",
+        "version": "1.0",
+        "effective_date": "2026-01-15",
+        "summary": "Confidential policy defining identity governance, least privilege, RBAC/ABAC models, access provisioning workflows, Privileged Access Management (PAM), quarterly access reviews, and termination deprovisioning.",
+        "keywords": [
+          "access control",
+          "least privilege",
+          "need to know",
+          "rbac",
+          "abac",
+          "pam",
+          "just-in-time elevation",
+          "user access reviews",
+          "confidential"
+        ]
+      },
+      "source": {
+        "file_path": "source_documents/security/access_control_policy.docx",
+        "file_format": "DOCX"
+      },
+      "parent_content_hash": "3697f4cf91e54e7cfaadec34f828a6bba395e422d019a9edc9cb1a601c80aa87",
+      "chunk_content_hash": "c3443062006ce5d026135ff1f3abd10b0b4ced144b364d4282f7307273f926b3",
+      "created_at": "2026-09-06T17:38:10.698165+00:00"
+    }
+  ]
+}
