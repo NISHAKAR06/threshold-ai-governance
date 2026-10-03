@@ -67,3 +67,7 @@ Every graph execution produces an immutable audit record with the following fiel
   "timestamp": "2026-10-03T09:14:26Z"
 }
 ```
+
+## 5. Security observability
+
+HTTP responses include `X-Request-ID`, which is propagated to structured request logs, metrics, and governed execution audit records. Unhandled errors return a safe request ID to callers while diagnostic details stay in server-side logs. Logs must not contain passwords, JWTs, API keys, or raw sensitive document content.

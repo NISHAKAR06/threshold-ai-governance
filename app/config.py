@@ -16,8 +16,8 @@ class Settings:
     # ── App ──────────────────────────────────────────────────
     APP_NAME: str         = "THRESHOLD AI Governance"
     APP_VERSION: str      = os.getenv("APP_VERSION", "2.0.0")
-    DEBUG: bool           = os.getenv("DEBUG", "true").lower() == "true"
-    ENABLE_DOCS: bool     = os.getenv("ENABLE_DOCS", "true").lower() == "true"
+    DEBUG: bool           = os.getenv("DEBUG", "false").lower() == "true"
+    ENABLE_DOCS: bool     = os.getenv("ENABLE_DOCS", "false").lower() == "true"
     SECRET_KEY: str       = os.getenv("SECRET_KEY", "THRESHOLD-secret-change-in-production-x9k2p")
 
     # ── Server ───────────────────────────────────────────────
@@ -73,6 +73,9 @@ class Settings:
 
     # ── CORS ─────────────────────────────────────────────────
     CORS_ORIGINS: List[str] = os.getenv("CORS_ORIGINS", "http://localhost:8000,http://localhost:3000").split(",")
+    TRUSTED_HOSTS: List[str] = [
+        host.strip() for host in os.getenv("TRUSTED_HOSTS", "localhost,127.0.0.1,testserver").split(",") if host.strip()
+    ]
 
     # ── Logging ───────────────────────────────────────────────
     LOG_LEVEL: str        = os.getenv("LOG_LEVEL", "INFO")
@@ -254,6 +257,10 @@ class Settings:
                 raise ValueError("Insecure or default SECRET_KEY detected in production environment.")
             if not cfg.JWT_SECRET or cfg.JWT_SECRET in insecure_keys:
                 raise ValueError("Insecure or default JWT_SECRET detected in production environment.")
+            if cfg.DEBUG or cfg.ENABLE_DOCS:
+                raise ValueError("DEBUG and ENABLE_DOCS must be disabled in production.")
+            if not cfg.CORS_ORIGINS or "*" in cfg.CORS_ORIGINS:
+                raise ValueError("CORS_ORIGINS must list explicit origins in production.")
 
         if cfg.RAI_MAX_INPUT_LENGTH <= 0:
             raise ValueError(f"RAI_MAX_INPUT_LENGTH must be > 0, got {cfg.RAI_MAX_INPUT_LENGTH}")

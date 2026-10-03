@@ -43,3 +43,17 @@ jobs:
       - name: Run Evaluation Benchmark Smoke Test
         run: |
           python scripts/run_evaluation.py --smoke-test --top-k 3
+
+  docker-build:
+    name: Build Production Image
+    runs-on: ubuntu-latest
+    needs: test
+    permissions:
+      contents: read
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build production Docker image
+        run: docker build --tag threshold-ai-governance:ci .

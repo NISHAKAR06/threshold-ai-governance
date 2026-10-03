@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 from app.models.access_context import AccessContext
 from app.models.vector_record import VectorRecord
 from app.services.retrieval_service import RetrievalService
@@ -288,9 +289,10 @@ def test_api_endpoint_execute(governed_agent_environment):
                 "is_admin": False,
             },
         }
+        headers = {"Authorization": f"Bearer {create_access_token('SEC-01', extra={'role': 'SECURITY_ENGINEER', 'dept': 'Security', 'clearance_level': 'RESTRICTED'})}"}
 
         # Test direct /agent/execute
-        res = client.post("/agent/execute", json=payload)
+        res = client.post("/agent/execute", json=payload, headers=headers)
         assert res.status_code == 200
         data = res.json()
         assert data["status"] == "SUCCESS"
@@ -298,7 +300,7 @@ def test_api_endpoint_execute(governed_agent_environment):
         assert data["audit_reference"] is not None
 
         # Test /api/v1/agent/execute
-        res_v1 = client.post("/api/v1/agent/execute", json=payload)
+        res_v1 = client.post("/api/v1/agent/execute", json=payload, headers=headers)
         assert res_v1.status_code == 200
         data_v1 = res_v1.json()
         assert data_v1["status"] == "SUCCESS"
@@ -309,7 +311,7 @@ def test_api_endpoint_execute(governed_agent_environment):
             "request": "   ",
             "access_context": payload["access_context"],
         }
-        res_bad = client.post("/agent/execute", json=bad_payload)
+        res_bad = client.post("/agent/execute", json=bad_payload, headers=headers)
         assert res_bad.status_code == 422
 
     finally:

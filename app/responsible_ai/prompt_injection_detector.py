@@ -61,6 +61,8 @@ class PromptInjectionDetector:
         r"(?i)\bgrant\s+(?:me\s+)?(?:admin|root|unrestricted|god)\s+(?:access|clearance|privileges)\b",
         r"(?i)\bpretend\s+(?:i\s+have|to\s+have)\s+top[- ]secret\s+clearance\b",
         r"(?i)\bshow\s+(?:me\s+)?all\s+(?:restricted|confidential|classified)\s+data\s+without\s+(?:permission|clearance|authorization)\b",
+        r"(?i)\b(?:bypass|disable|circumvent|override)\b.{0,80}\b(?:governance|authorization|administrator\s+policy|admin\s+policy)\b",
+        r"(?i)\b(?:execute|run)\b.{0,80}\b(?:unauthorized|restricted|protected)\s+tool\b",
     ]
 
     # Category 3: System Prompt Exfiltration
@@ -68,6 +70,7 @@ class PromptInjectionDetector:
         r"(?i)\b(?:print|display|output|show|reveal|repeat)\s+(?:the\s+)?(?:initial|system|hidden|underlying)\s+(?:prompt|instructions|preamble|guidelines)\b",
         r"(?i)\bwhat\s+are\s+your\s+(?:exact\s+)?(?:system\s+instructions|system\s+prompts)\b",
         r"(?i)\brepeat\s+everything\s+above\s+(?:verbatim|word\s+for\s+word)\b",
+        r"(?i)\b(?:reveal|show|expose|provide)\s+(?:your\s+)?(?:hidden|internal)\s+(?:reasoning|chain[ -]of[ -]thought)\b",
     ]
 
     # Category 4: Unrestricted Tool / Command Forcing

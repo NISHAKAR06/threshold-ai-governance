@@ -12,7 +12,7 @@ Channels
 from __future__ import annotations
 
 import json
-from typing import Optional
+from typing import Any, Optional
 
 from fastapi import APIRouter, WebSocket, WebSocketDisconnect, Query
 from starlette.websockets import WebSocketState
@@ -25,22 +25,33 @@ from app.core.logger import ws_logger
 router = APIRouter()
 
 
-async def _authenticate_ws(websocket: WebSocket) -> Optional[str]:
-    """Extract user identity from WS token query param, return sub or None."""
+async def _authenticate_ws(websocket: WebSocket) -> Optional[dict[str, Any]]:
+    """Return validated JWT claims from the WebSocket query token."""
     token = websocket.query_params.get("token")
     if not token:
         return None
     try:
         payload = decode_access_token(token)
-        return payload.get("sub")
+        return payload if payload.get("sub") and payload.get("role") else None
     except Exception:
         return None
+
+
+async def _require_ws_user(websocket: WebSocket, required_roles: Optional[set[str]] = None) -> Optional[dict[str, Any]]:
+    claims = await _authenticate_ws(websocket)
+    if not claims or (required_roles and str(claims.get("role", "")).lower() not in required_roles):
+        await websocket.close(code=1008, reason="Authentication or authorization required")
+        return None
+    return claims
 
 
 @router.websocket("/ws")
 async def ws_global(websocket: WebSocket, token: Optional[str] = Query(default=None)):
     """Global WebSocket — receives all platform events."""
-    user_id = await _authenticate_ws(websocket)
+    claims = await _require_ws_user(websocket)
+    if claims is None:
+        return
+    user_id = claims["sub"]
     await ws_manager.connect(websocket, channel="global", user_id=user_id)
     ws_logger.info("Global WS connected", extra={"user": user_id})
     try:
@@ -58,7 +69,10 @@ async def ws_global(websocket: WebSocket, token: Optional[str] = Query(default=N
 @router.websocket("/ws/dashboard")
 async def ws_dashboard(websocket: WebSocket, token: Optional[str] = Query(default=None)):
     """Dashboard channel — receives dashboard stat update events."""
-    user_id = await _authenticate_ws(websocket)
+    claims = await _require_ws_user(websocket)
+    if claims is None:
+        return
+    user_id = claims["sub"]
     await ws_manager.connect(websocket, channel="dashboard", user_id=user_id)
     try:
         while True:
@@ -72,7 +86,10 @@ async def ws_dashboard(websocket: WebSocket, token: Optional[str] = Query(defaul
 @router.websocket("/ws/review")
 async def ws_review(websocket: WebSocket, token: Optional[str] = Query(default=None)):
     """Review channel — receives new review and status update events."""
-    user_id = await _authenticate_ws(websocket)
+    claims = await _require_ws_user(websocket, {"admin", "superadmin", "reviewer"})
+    if claims is None:
+        return
+    user_id = claims["sub"]
     await ws_manager.connect(websocket, channel="review", user_id=user_id)
     try:
         while True:
@@ -86,7 +103,10 @@ async def ws_review(websocket: WebSocket, token: Optional[str] = Query(default=N
 @router.websocket("/ws/audit")
 async def ws_audit(websocket: WebSocket, token: Optional[str] = Query(default=None)):
     """Audit channel — receives new audit log events."""
-    user_id = await _authenticate_ws(websocket)
+    claims = await _require_ws_user(websocket, {"admin", "superadmin"})
+    if claims is None:
+        return
+    user_id = claims["sub"]
     await ws_manager.connect(websocket, channel="audit", user_id=user_id)
     try:
         while True:
@@ -100,7 +120,10 @@ async def ws_audit(websocket: WebSocket, token: Optional[str] = Query(default=No
 @router.websocket("/ws/notifications")
 async def ws_notifications(websocket: WebSocket, token: Optional[str] = Query(default=None)):
     """Notifications channel (alias for global notification events)."""
-    user_id = await _authenticate_ws(websocket)
+    claims = await _require_ws_user(websocket)
+    if claims is None:
+        return
+    user_id = claims["sub"]
     await ws_manager.connect(websocket, channel="global", user_id=user_id)
     try:
         while True:
@@ -131,9 +154,11 @@ async def _handle_client_message(websocket: WebSocket, raw: str, channel: str) -
             )
 
     elif msg_type == "subscribe":
-        # Client wants to also receive a different channel's events
+        # Do not allow a client to subscribe to a channel with a different
+        # authorization policy than the endpoint that authenticated it.
         new_channel = msg.get("channel", "global")
-        ws_manager._channels[new_channel].add(websocket)
+        if new_channel == channel:
+            ws_manager._channels[new_channel].add(websocket)
 
     elif msg_type == "unsubscribe":
         rm_channel = msg.get("channel", "")

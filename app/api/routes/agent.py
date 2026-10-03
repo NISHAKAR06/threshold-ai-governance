@@ -8,6 +8,7 @@ from fastapi import APIRouter, Depends, status
 from app.core.logger import get_logger
 from app.schemas.agent_schema import AgentExecuteRequestSchema, AgentExecuteResponseSchema
 from app.services.agent_service import AgentService
+from app.dependencies import get_current_user, require_admin, trusted_access_context
 
 logger = get_logger("threshold.api.agent")
 
@@ -35,15 +36,17 @@ def get_agent_service() -> AgentService:
 async def execute_agent(
     payload: AgentExecuteRequestSchema,
     service: AgentService = Depends(get_agent_service),
+    current_user: dict = Depends(get_current_user),
 ) -> AgentExecuteResponseSchema:
     """
     Controlled agent execution endpoint.
     """
+    access_context = trusted_access_context(payload.access_context.model_dump(), current_user)
     logger.info(
         "API agent execute invoked",
         extra={
-            "user_id": payload.access_context.user_id,
-            "role": payload.access_context.role,
+            "user_id": access_context["user_id"],
+            "role": access_context["role"],
             "request_len": len(payload.request),
         },
     )
@@ -68,7 +71,7 @@ async def execute_agent(
     # ── Execute Agent Workflow ────────────────────────────────
     response = service.execute(
         request=in_res.sanitized_text or payload.request,
-        access_context=payload.access_context.model_dump(),
+        access_context=access_context,
         request_id=payload.request_id,
         conversation_id=payload.conversation_id,
     )
@@ -106,7 +109,7 @@ async def execute_agent(
     summary="List Agent Execution Audit Records",
     description="Returns read-only immutable audit records of all Controlled AI Agent workflow executions.",
 )
-async def list_agent_audit(limit: int = 50):
+async def list_agent_audit(limit: int = 50, _: dict = Depends(require_admin)):
     """
     Returns recorded agent execution audit trail events.
     """
@@ -133,13 +136,14 @@ async def list_agent_audit(limit: int = 50):
 )
 async def execute_agent_graph(
     payload: AgentExecuteRequestSchema,
+    current_user: dict = Depends(get_current_user),
 ) -> AgentExecuteResponseSchema:
     """
     Executes a governed request through the LangGraph StateGraph workflow engine.
     """
     from app.agent_graph.graph import run_governance_graph
 
-    access_ctx = payload.access_context.model_dump()
+    access_ctx = trusted_access_context(payload.access_context.model_dump(), current_user)
     final_state = run_governance_graph(
         user_request=payload.request,
         access_context=access_ctx,
@@ -163,4 +167,3 @@ async def execute_agent_graph(
         audit_reference=audit_id,
         execution_time_ms=final_state.get("execution_time_ms", 0.0),
     )
-

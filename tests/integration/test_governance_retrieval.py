@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 from app.models.access_context import AccessContext
 from app.models.vector_record import VectorRecord
 from app.services.retrieval_service import RetrievalService
@@ -297,9 +298,10 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
                 "clearance_level": "INTERNAL",
             },
         }
+        employee_headers = {"Authorization": f"Bearer {create_access_token('EMP-001', extra={'role': 'EMPLOYEE', 'dept': 'Human Resources'})}"}
 
         # Direct /retrieval/governance-search
-        res = client.post("/retrieval/governance-search", json=payload)
+        res = client.post("/retrieval/governance-search", json=payload, headers=employee_headers)
         assert res.status_code == 200, res.text
         data = res.json()
         assert data["query"] == "remote work guidelines and core hours"
@@ -309,7 +311,7 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
         assert isinstance(data["results"], list)
 
         # 2. Prefixed /api/v1/retrieval/governance-search
-        res_v1 = client.post("/api/v1/retrieval/governance-search", json=payload)
+        res_v1 = client.post("/api/v1/retrieval/governance-search", json=payload, headers=employee_headers)
         assert res_v1.status_code == 200, res_v1.text
         data_v1 = res_v1.json()
         assert data_v1["requested_top_k"] == 3
@@ -324,7 +326,8 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
                 "clearance_level": "PUBLIC",
             },
         }
-        res_sec = client.post("/retrieval/governance-search", json=sec_payload)
+        guest_headers = {"Authorization": f"Bearer {create_access_token('EMP-GUEST', extra={'role': 'GUEST'})}"}
+        res_sec = client.post("/retrieval/governance-search", json=sec_payload, headers=guest_headers)
         assert res_sec.status_code == 200
         sec_data = res_sec.json()
         assert sec_data["authorized_result_count"] == 0
@@ -337,7 +340,7 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
                 "query": "   ",
                 "top_k": 5,
                 "access_context": {"user_id": "U1", "role": "EMPLOYEE"},
-            },
+            }, headers=employee_headers,
         )
         assert bad_query_res.status_code in (400, 422)
 
@@ -348,7 +351,7 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
                 "query": "Valid query",
                 "top_k": -5,
                 "access_context": {"user_id": "U1", "role": "EMPLOYEE"},
-            },
+            }, headers=employee_headers,
         )
         assert bad_k_res.status_code in (400, 422)
 
@@ -356,6 +359,7 @@ def test_governance_search_api_endpoint(test_hybrid_environment):
         missing_ctx_res = client.post(
             "/retrieval/governance-search",
             json={"query": "Valid query", "top_k": 5},
+            headers=employee_headers,
         )
         assert missing_ctx_res.status_code in (400, 422)
 

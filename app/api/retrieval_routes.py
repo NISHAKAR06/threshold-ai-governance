@@ -12,6 +12,7 @@ from fastapi import APIRouter, Depends, status
 from app.core.logger import get_logger
 from app.schemas.retrieval_schema import RetrievalQueryRequestSchema, RetrievalResponseSchema
 from app.services.retrieval_service import RetrievalService
+from app.dependencies import get_current_user, require_admin, trusted_access_context
 
 logger = get_logger("threshold.api.retrieval")
 
@@ -36,6 +37,7 @@ def get_retrieval_service() -> RetrievalService:
 async def semantic_search(
     payload: RetrievalQueryRequestSchema,
     service: RetrievalService = Depends(get_retrieval_service),
+    _: dict = Depends(require_admin),
 ) -> RetrievalResponseSchema:
     """
     Search indexed knowledge base chunks using semantic query embeddings.
@@ -101,23 +103,25 @@ def get_hybrid_retrieval_service() -> HybridRetrievalService:
 async def governance_search(
     payload: GovernanceRetrievalRequestSchema,
     service: HybridRetrievalService = Depends(get_hybrid_retrieval_service),
+    current_user: dict = Depends(get_current_user),
 ) -> GovernanceRetrievalResponseSchema:
     """
     Search indexed knowledge base chunks using hybrid retrieval and governance filtering.
     """
+    access_context = trusted_access_context(payload.access_context.model_dump(), current_user)
     logger.info(
         "API governance search invoked",
         extra={
             "query_len": len(payload.query or ""),
             "top_k": payload.top_k,
-            "user_id": payload.access_context.user_id,
-            "role": payload.access_context.role,
+            "user_id": access_context["user_id"],
+            "role": access_context["role"],
         },
     )
 
     response = service.retrieve(
         query=payload.query,
-        access_context=payload.access_context.model_dump(),
+        access_context=access_context,
         top_k=payload.top_k,
     )
 

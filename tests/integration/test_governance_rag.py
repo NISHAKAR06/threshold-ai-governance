@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 from app.models.access_context import AccessContext
 from app.models.vector_record import VectorRecord
 from app.services.retrieval_service import RetrievalService
@@ -240,9 +241,10 @@ def test_rag_api_endpoints(test_rag_environment):
                 "clearance_level": "INTERNAL",
             },
         }
+        headers = {"Authorization": f"Bearer {create_access_token('EMP-100', extra={'role': 'EMPLOYEE', 'dept': 'Human Resources'})}"}
 
         # 1. Direct /rag/ask
-        res = client.post("/rag/ask", json=payload)
+        res = client.post("/rag/ask", json=payload, headers=headers)
         assert res.status_code == 200, res.text
         data = res.json()
         assert data["question"] == payload["question"]
@@ -252,7 +254,7 @@ def test_rag_api_endpoints(test_rag_environment):
         assert "retrieval_metadata" in data
 
         # 2. Prefixed /api/v1/rag/ask
-        res_v1 = client.post("/api/v1/rag/ask", json=payload)
+        res_v1 = client.post("/api/v1/rag/ask", json=payload, headers=headers)
         assert res_v1.status_code == 200, res_v1.text
         data_v1 = res_v1.json()
         assert data_v1["status"] in ("SUCCESS", "INSUFFICIENT_CONTEXT")
@@ -263,7 +265,7 @@ def test_rag_api_endpoints(test_rag_environment):
             json={
                 "question": "   ",
                 "access_context": {"user_id": "U1", "role": "EMPLOYEE"},
-            },
+            }, headers=headers,
         )
         assert bad_res.status_code in (400, 422)
 
@@ -274,7 +276,7 @@ def test_rag_api_endpoints(test_rag_environment):
                 "question": "Valid question?",
                 "top_k": -1,
                 "access_context": {"user_id": "U1", "role": "EMPLOYEE"},
-            },
+            }, headers=headers,
         )
         assert bad_k_res.status_code in (400, 422)
 
@@ -282,6 +284,7 @@ def test_rag_api_endpoints(test_rag_environment):
         missing_ctx = client.post(
             "/rag/ask",
             json={"question": "Valid question?"},
+            headers=headers,
         )
         assert missing_ctx.status_code in (400, 422)
 

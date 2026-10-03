@@ -15,6 +15,7 @@ from app.schemas.rag_schema import (
     RAGSourceSchema,
 )
 from app.services.rag_service import RAGService
+from app.dependencies import get_current_user, trusted_access_context
 
 logger = get_logger("threshold.api.rag")
 
@@ -41,17 +42,19 @@ def get_rag_service() -> RAGService:
 async def ask_question(
     payload: RAGRequestSchema,
     service: RAGService = Depends(get_rag_service),
+    current_user: dict = Depends(get_current_user),
 ) -> RAGResponseSchema:
     """
     Generate an authorized, grounded answer to an enterprise governance question.
     """
+    access_context = trusted_access_context(payload.access_context.model_dump(), current_user)
     logger.info(
         "API RAG ask invoked",
         extra={
             "question_len": len(payload.question or ""),
             "top_k": payload.top_k,
-            "user_id": payload.access_context.user_id,
-            "role": payload.access_context.role,
+            "user_id": access_context["user_id"],
+            "role": access_context["role"],
         },
     )
 
@@ -75,7 +78,7 @@ async def ask_question(
     # ── Execute RAG generation ────────────────────────────────
     response = service.generate_answer(
         question=in_res.sanitized_text or payload.question,
-        access_context=payload.access_context.model_dump(),
+        access_context=access_context,
         top_k=payload.top_k,
     )
 

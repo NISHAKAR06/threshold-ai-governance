@@ -11,6 +11,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 
 
 @pytest.fixture
@@ -126,7 +127,8 @@ def test_api_monitoring_summary(client: TestClient):
 
 
 def test_api_agent_audit_feed(client: TestClient):
-    response = client.get("/api/v1/agent/audit")
+    headers = {"Authorization": f"Bearer {create_access_token('admin-test', extra={'role': 'admin', 'dept': 'Security'})}"}
+    response = client.get("/api/v1/agent/audit", headers=headers)
     assert response.status_code == 200
     data = response.json()
     assert "total" in data

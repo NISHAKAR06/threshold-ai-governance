@@ -14,8 +14,9 @@ services:
       - HOST=0.0.0.0
       - PORT=8000
       - DATABASE_URL=${DATABASE_URL:-sqlite+aiosqlite:///THRESHOLD.db}
-      - SECRET_KEY=${SECRET_KEY:-THRESHOLD-secret-change-in-production-x9k2p}
-      - JWT_SECRET=${JWT_SECRET:-THRESHOLD-secret-change-in-production-x9k2p}
+      - SYNC_DATABASE_URL=${SYNC_DATABASE_URL:-sqlite:///THRESHOLD.db}
+      - SECRET_KEY=${SECRET_KEY:?Set SECRET_KEY in your environment or .env file}
+      - JWT_SECRET=${JWT_SECRET:?Set JWT_SECRET in your environment or .env file}
       - GEMINI_API_KEY=${GEMINI_API_KEY:-}
       - EMBEDDING_PROVIDER=${EMBEDDING_PROVIDER:-mock}
       - VECTOR_STORE_PROVIDER=${VECTOR_STORE_PROVIDER:-chroma}
@@ -23,6 +24,10 @@ services:
       - METRICS_ENABLED=true
       - RAI_ENABLED=true
       - RAI_INJECTION_DETECTION_ENABLED=true
+      - CORS_ORIGINS=${CORS_ORIGINS:-http://localhost:8000}
+      - TRUSTED_HOSTS=${TRUSTED_HOSTS:-localhost,127.0.0.1}
+      - DEBUG=false
+      - ENABLE_DOCS=false
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs
@@ -44,7 +49,7 @@ services:
       - postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-threshold_admin}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-threshold_secure_pw}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in your environment or .env file}
       POSTGRES_DB: ${POSTGRES_DB:-threshold_governance}
     ports:
       - "5432:5432"

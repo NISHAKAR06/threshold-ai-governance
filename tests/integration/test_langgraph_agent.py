@@ -5,6 +5,7 @@ import pytest
 from starlette.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 from app.agent_graph.graph import run_governance_graph
 from app.services.agent_service import AgentService
 
@@ -83,7 +84,8 @@ def test_api_execute_agent_graph(client):
         },
         "request_id": "req-api-test-lg-001",
     }
-    response = client.post("/api/v1/agent/graph/execute", json=payload)
+    headers = {"Authorization": f"Bearer {create_access_token('EMP-5002', extra={'role': 'ANALYST', 'dept': 'FINANCE'})}"}
+    response = client.post("/api/v1/agent/graph/execute", json=payload, headers=headers)
     assert response.status_code == 200
 
     data = response.json()

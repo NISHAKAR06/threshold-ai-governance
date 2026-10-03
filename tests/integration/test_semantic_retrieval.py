@@ -6,6 +6,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app.main import app
+from app.core.security import create_access_token
 from app.services.retrieval_service import RetrievalService
 from app.engines.embeddings.embedding_engine import EmbeddingEngine, MockEmbeddingProvider
 from app.database.vector_store import ChromaVectorStore, InMemoryVectorStore
@@ -162,6 +163,7 @@ def test_retrieval_api_endpoint(populated_test_repo):
     app.dependency_overrides[get_retrieval_service] = lambda: service
 
     client = TestClient(app)
+    headers = {"Authorization": f"Bearer {create_access_token('admin-test', extra={'role': 'admin', 'dept': 'Security'})}"}
 
     try:
         # Test direct /retrieval/search
@@ -169,7 +171,7 @@ def test_retrieval_api_endpoint(populated_test_repo):
             "query": "remote work policy guidelines",
             "top_k": 2,
         }
-        res = client.post("/retrieval/search", json=payload)
+        res = client.post("/retrieval/search", json=payload, headers=headers)
         assert res.status_code == 200
         data = res.json()
         assert data["query"] == "remote work policy guidelines"
@@ -179,17 +181,17 @@ def test_retrieval_api_endpoint(populated_test_repo):
         assert "department" in data["results"][0]["metadata"]
 
         # Test /api/v1/retrieval/search
-        res_v1 = client.post("/api/v1/retrieval/search", json=payload)
+        res_v1 = client.post("/api/v1/retrieval/search", json=payload, headers=headers)
         assert res_v1.status_code == 200
         data_v1 = res_v1.json()
         assert data_v1["result_count"] == 2
 
         # Test validation error on empty query
-        err_res = client.post("/retrieval/search", json={"query": "   ", "top_k": 5})
+        err_res = client.post("/retrieval/search", json={"query": "   ", "top_k": 5}, headers=headers)
         assert err_res.status_code in (400, 422)
 
         # Test validation error on invalid top_k
-        err_k_res = client.post("/retrieval/search", json={"query": "Valid query", "top_k": -1})
+        err_k_res = client.post("/retrieval/search", json={"query": "Valid query", "top_k": -1}, headers=headers)
         assert err_k_res.status_code == 422 or err_k_res.status_code == 400
 
     finally:

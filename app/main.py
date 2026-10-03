@@ -7,8 +7,9 @@ import time
 import hashlib
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request
+from fastapi import Depends, FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -63,6 +64,7 @@ from app.api.middleware.error_tracking import ErrorTrackingMiddleware
 
 # ── Production Middlewares ─────────────────────────────────────
 app.add_middleware(GZipMiddleware, minimum_size=1000)
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=settings.TRUSTED_HOSTS)
 app.add_middleware(ErrorTrackingMiddleware)
 app.add_middleware(RequestMetricsMiddleware)
 app.add_middleware(RequestIdMiddleware, header_name=settings.TRACE_HEADER)
@@ -229,7 +231,7 @@ import random
 from fastapi import Depends, Header
 from app.repositories.employee_repository import EmployeeRepository
 from app.core.security import verify_password, hash_password, create_access_token
-from app.dependencies import get_db
+from app.dependencies import get_current_user, get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel, EmailStr
 
@@ -242,8 +244,6 @@ class SignupRequest(BaseModel):
     username: str
     email: str
     password: str
-    department: Optional[str] = "Engineering"
-    role: Optional[str] = "reviewer"
 
 class ResetPasswordRequest(BaseModel):
     username_or_email: str
@@ -265,8 +265,21 @@ async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)):
     return {"access_token": token, "token_type": "bearer", "user": {"name": employee.full_name, "role": employee.role, "username": employee.username}}
 
 @app.post("/api/v1/auth/reset-password", tags=["Auth"], summary="Reset password by username or email")
-async def reset_password(payload: ResetPasswordRequest, db: AsyncSession = Depends(get_db)):
+async def reset_password(
+    payload: ResetPasswordRequest,
+    db: AsyncSession = Depends(get_db),
+    current_user: dict = Depends(get_current_user),
+):
+    """Allow an authenticated user to reset only their own password.
+
+    Administrative reset workflows belong in an explicitly audited admin route;
+    this endpoint must not act as an unauthenticated account-takeover primitive.
+    """
     repo = EmployeeRepository(db)
+    requester = str(current_user.get("sub", "")).strip().lower()
+    requested = payload.username_or_email.strip().lower()
+    if requester != requested and str(current_user.get("role", "")).lower() not in ("admin", "superadmin"):
+        return JSONResponse(status_code=403, content={"detail": {"code": "AUTHZ_ERROR", "message": "You may only reset your own password"}})
     new_hashed = hash_password(payload.new_password)
     ok = await repo.update_password(payload.username_or_email, new_hashed)
     if not ok:
@@ -297,10 +310,12 @@ async def signup(payload: SignupRequest, db: AsyncSession = Depends(get_db)):
         email=email_clean,
         full_name=payload.full_name.strip(),
         hashed_password=hashed_pwd,
-        department=payload.department or "Engineering",
-        role=payload.role or "reviewer",
+        # Self-registration cannot select an authorization-bearing department
+        # or role. Privileged assignment must use an audited admin workflow.
+        department="General",
+        role="employee",
         is_active=True,
-        is_admin=(payload.role == "admin"),
+        is_admin=False,
     )
 
     token = create_access_token(
